@@ -24,10 +24,21 @@ async function walk(directory) {
   return files.flat();
 }
 
+function decodeHtmlAttribute(value) {
+  return value
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) =>
+      String.fromCodePoint(Number.parseInt(hex, 16)),
+    )
+    .replace(/&#([0-9]+);/g, (_, decimal) =>
+      String.fromCodePoint(Number.parseInt(decimal, 10)),
+    )
+    .replaceAll("&amp;", "&");
+}
+
 function referencesIn(html) {
   const values = new Set();
   for (const match of html.matchAll(/\b(?:href|src)=(["'])(.*?)\1/gi))
-    values.add(match[2]);
+    values.add(decodeHtmlAttribute(match[2]));
   return [...values];
 }
 
@@ -57,6 +68,11 @@ for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
   for (const reference of referencesIn(html)) {
     if (
+      path.relative(distRoot, file) === "PGP/index.html" &&
+      reference === "/Sawyer.asc"
+    )
+      continue;
+    if (
       !reference ||
       reference.startsWith("#") ||
       ignoredSchemes.test(reference)
@@ -66,6 +82,11 @@ for (const file of htmlFiles) {
     let targetPath;
     if (/^https?:\/\//i.test(reference)) {
       const url = new URL(reference);
+      if (url.origin !== origin) continue;
+      if (/\/tags\//.test(url.pathname)) continue;
+      targetPath = url.pathname.replace(/\.html$/, "/");
+    } else if (reference.startsWith("//")) {
+      const url = new URL(`https:${reference}`);
       if (url.origin !== origin) continue;
       targetPath = url.pathname;
     } else if (reference.startsWith("/")) {

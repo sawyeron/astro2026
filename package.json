@@ -16,9 +16,12 @@
     "format": "prettier --check .",
     "format:write": "prettier --write .",
     "lint": "eslint .",
-    "verify": "npm run format && npm run lint && npm run check && npm run check:assets && npm run build:site && npm run check:links",
+    "verify": "npm run format && npm run lint && npm run check && npm run check:assets && npm run check:migration && npm run build:site && npm run check:links",
     "check:links": "node scripts/check-dist-links.mjs",
-    "check:assets": "node scripts/check-asset-recovery.mjs"
+    "check:assets": "node scripts/check-asset-recovery.mjs",
+    "migrate:content": "node scripts/migrate-legacy-content.mjs",
+    "migrate:content:dry": "node scripts/migrate-legacy-content.mjs --dry-run",
+    "check:migration": "node scripts/check-content-migration.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
@@ -27,7 +30,8 @@
     "astro": "^5.18.2",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript": "~5.9.3"
+    "typescript": "~5.9.3",
+    "yaml": "^2.9.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",

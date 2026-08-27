@@ -1,0 +1,5 @@
+dist/
+.astro/
+node_modules/
+docs/audit/generated/
+public/google3756ddc34336b7b9.html

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">原始图片未能恢复</title>
+  <desc id="description">该图片在旧博客源文件和旧站构建产物中均已缺失，迁移时未从授权备份中找到。</desc>
+  <rect width="1200" height="675" fill="#f2efe7" />
+  <rect x="28" y="28" width="1144" height="619" rx="12" fill="none" stroke="#a9a69d" stroke-width="2" stroke-dasharray="10 12" />
+  <g fill="#273337" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif">
+    <text x="600" y="310" font-size="42" font-weight="600">原始图片未能恢复</text>
+    <text x="600" y="365" font-size="24" fill="#68767a">Legacy image unavailable in the authorized archive</text>
+  </g>
+</svg>

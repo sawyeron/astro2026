@@ -1,0 +1,16 @@
+---
+import { getEntry, render } from "astro:content";
+import ArticleLayout from "../layouts/ArticleLayout.astro";
+
+const page = await getEntry("pages", "pgp");
+if (!page) throw new Error("Migrated PGP page not found");
+const { Content } = await render(page);
+---
+
+<ArticleLayout
+  title={page.data.title}
+  description={page.data.description}
+  updated={page.data.updated}
+>
+  <Content />
+</ArticleLayout>

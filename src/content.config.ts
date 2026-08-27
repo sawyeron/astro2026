@@ -14,8 +14,8 @@ const legacyMetadata = z
   .object({
     id: z.string().optional(),
     thumbnail: z.string().url().optional(),
-    cover: z.string().optional(),
-    coverimg: z.string().optional(),
+    cover: z.union([z.boolean(), z.string()]).optional(),
+    coverimg: z.union([z.boolean(), z.string()]).optional(),
     permalink: z.string().optional(),
     comment: z.union([z.boolean(), z.string()]).optional(),
   })

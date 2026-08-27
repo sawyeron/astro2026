@@ -1,0 +1,61 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const articles = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const formatter = new Intl.DateTimeFormat("zh-CN", {
+  timeZone: "Asia/Shanghai",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+---
+
+<BaseLayout title="时间线 · 小法进阶" description="小法进阶公开文章时间线。">
+  <header>
+    <a href="/">小法进阶</a>
+    <h1>时间线</h1>
+  </header>
+  <ol class="timeline">
+    {
+      articles.map((article) => (
+        <li>
+          <time datetime={article.data.date.toISOString()}>
+            {formatter.format(article.data.date)}
+          </time>
+          <a href={article.data.legacyPath}>{article.data.title}</a>
+        </li>
+      ))
+    }
+  </ol>
+</BaseLayout>
+
+<style>
+  header {
+    border-top: 4px solid var(--ink);
+    padding-top: 1rem;
+  }
+  h1 {
+    font-size: clamp(2.8rem, 9vw, 6rem);
+    margin: 1rem 0 4rem;
+  }
+  .timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .timeline li {
+    border-top: 1px solid var(--rule);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 8rem 1fr;
+    padding: 0.8rem 0;
+  }
+  time {
+    color: var(--muted);
+    font-family: ui-monospace, monospace;
+    font-size: 0.85rem;
+  }
+</style>

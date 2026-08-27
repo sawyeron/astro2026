@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/imouyang
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://imouyang.com
+  * I am imouyang (https://keybase.io/imouyang) on keybase.
+  * I have a public key ASBimOqklPR3-tg9C2V0UJ00pZ_LsEV1ynPsxhX_AFWlRAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01206298eaa494f477fad83d0b6574509d34a59fcbb04575ca73ecc615ff0055a5440a",
+      "host": "keybase.io",
+      "kid": "01206298eaa494f477fad83d0b6574509d34a59fcbb04575ca73ecc615ff0055a5440a",
+      "uid": "498e51bb27fc289dd540176d177f6019",
+      "username": "imouyang"
+    },
+    "merkle_root": {
+      "ctime": 1553132366,
+      "hash": "7849428d4f117089ad8e4bd9a43714b5d3583509243426c647b73f4c8e1dacf7d2c67407adf03cf7bc3b4f54df1dd80a3d60d01479c5c1d3057ab3f971b347e7",
+      "hash_meta": "42f37160cc84b8aedd39226d7e962c30b7cf1d30196437626f200f5b0a88bfe6",
+      "seqno": 4992837
+    },
+    "service": {
+      "entropy": "GLIVJCtFa7lb9lj/K9leyCfH",
+      "hostname": "imouyang.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.1.2"
+  },
+  "ctime": 1553132389,
+  "expire_in": 504576000,
+  "prev": "ab1040d6d1856e20362eac35be58329ce3c683cc77edf4c26a4d3309f78f8797",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgYpjqpJT0d/rYPQtldFCdNKWfy7BFdcpz7MYV/wBVpUQKp3BheWxvYWTESpcCBcQgqxBA1tGFbiA2Lqw1vlgynOPGg8x37fTCak0zCfePh5fEIIZYs/GKp8XAPgSQCKZxVnYovWqQGqvC0cKDhFiWVKcqAgHCo3NpZ8RA6ODZDUSv8TvOHBZWrZ3vwPdAceuX4/BP3kRXySY3vQ44bKkoqxuvIfDEQC1n2MONLx4tVb11DinH8D+Wity5BKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIGBzqnmX1fU5u7PID2MSvvFWAur7/L4cmnFvVDBJYT6fo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/imouyang
+
+==================================================================

@@ -1,0 +1,16 @@
+---
+import { getEntry, render } from "astro:content";
+import ArticleLayout from "../layouts/ArticleLayout.astro";
+
+const page = await getEntry("pages", "about");
+if (!page) throw new Error("Migrated about page not found");
+const { Content } = await render(page);
+---
+
+<ArticleLayout
+  title="关于"
+  description={page.data.description}
+  updated={page.data.updated}
+>
+  <Content />
+</ArticleLayout>
