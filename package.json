@@ -10,13 +10,13 @@
     "prebuild": "node scripts/check-node-version.mjs",
     "dev": "node scripts/check-node-version.mjs && astro dev",
     "start": "node scripts/check-node-version.mjs && astro dev",
-    "build": "astro check && astro build",
-    "build:site": "astro build",
+    "build": "astro check && astro build && pagefind --site dist",
+    "build:site": "astro build && pagefind --site dist",
     "check": "node scripts/check-node-version.mjs && astro check",
     "format": "prettier --check .",
     "format:write": "prettier --write .",
     "lint": "eslint .",
-    "verify": "npm run format && npm run lint && npm run check && npm run check:assets && npm run check:migration && npm run check:urls && npm run build:site && npm run check:links && npm run check:urls -- --check-dist && npm run check:syndication",
+    "verify": "npm run format && npm run lint && npm run check && npm run check:assets && npm run check:migration && npm run check:urls && npm run build:site && npm run check:links && npm run check:urls -- --check-dist && npm run check:syndication && npm run check:search",
     "check:links": "node scripts/check-dist-links.mjs",
     "check:assets": "node scripts/check-asset-recovery.mjs",
     "migrate:content": "node scripts/migrate-legacy-content.mjs",
@@ -25,7 +25,8 @@
     "generate:urls": "node scripts/generate-auxiliary-url-manifest.mjs",
     "check:urls": "node scripts/check-auxiliary-urls.mjs",
     "check:syndication": "node scripts/check-syndication.mjs",
-    "generate:governance": "node scripts/generate-content-governance-candidates.mjs"
+    "generate:governance": "node scripts/generate-content-governance-candidates.mjs",
+    "check:search": "node scripts/check-search.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",
@@ -41,6 +42,7 @@
     "@eslint/js": "^9.39.5",
     "eslint": "^9.39.4",
     "eslint-plugin-astro": "^1.7.0",
+    "pagefind": "^1.5.2",
     "typescript-eslint": "^8.68.0"
   },
   "private": "true",

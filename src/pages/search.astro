@@ -1,0 +1,86 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="搜索 | 小法进阶"
+  description="在小法进阶的公开文章中全文搜索。"
+>
+  <header>
+    <a class="home" href="/">← 小法进阶</a>
+    <p class="eyebrow">LOCAL FULL-TEXT INDEX</p>
+    <h1>搜索</h1>
+    <p>
+      搜索索引在构建时生成，查询在浏览器本地完成，不会将关键词发送给第三方搜索服务。
+    </p>
+  </header>
+  <main id="search" aria-live="polite"></main>
+</BaseLayout>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+<script is:inline src="/pagefind/pagefind-ui.js"></script>
+<script is:inline>
+  window.addEventListener("DOMContentLoaded", () => {
+    new PagefindUI({
+      element: "#search",
+      showSubResults: true,
+      showImages: false,
+      translations: {
+        placeholder: "搜索文章标题与正文…",
+        clear_search: "清除",
+        load_more: "加载更多",
+        search_label: "搜索本站",
+        filters_label: "筛选",
+        zero_results: "没有找到 [SEARCH_TERM] 的相关内容",
+        many_results: "找到 [COUNT] 条结果",
+        one_result: "找到 1 条结果",
+        alt_search: "没有找到 [SEARCH_TERM]。显示 [DIFFERENT_TERM] 的结果",
+        search_suggestion: "没有找到 [SEARCH_TERM]。可以尝试：",
+        searching: "正在搜索 [SEARCH_TERM]…",
+      },
+    });
+  });
+</script>
+
+<style>
+  header,
+  main {
+    max-width: 52rem;
+  }
+  header {
+    border-top: 4px solid var(--ink);
+    padding-top: 1rem;
+  }
+  .home,
+  .eyebrow {
+    font-family: ui-monospace, monospace;
+  }
+  .home,
+  header > p:last-child {
+    color: var(--muted);
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+    margin: 3rem 0 0.8rem;
+  }
+  h1 {
+    font-size: clamp(3rem, 10vw, 7rem);
+    letter-spacing: -0.08em;
+    line-height: 0.9;
+    margin: 0;
+  }
+  main {
+    margin-top: 4rem;
+    --pagefind-ui-scale: 1;
+    --pagefind-ui-primary: var(--accent);
+    --pagefind-ui-text: var(--ink);
+    --pagefind-ui-background: var(--paper);
+    --pagefind-ui-border: var(--rule);
+    --pagefind-ui-tag: #ebe6da;
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 0;
+    --pagefind-ui-font: inherit;
+  }
+</style>
