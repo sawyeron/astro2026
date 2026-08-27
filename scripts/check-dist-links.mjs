@@ -83,6 +83,7 @@ for (const file of htmlFiles) {
     if (/^https?:\/\//i.test(reference)) {
       const url = new URL(reference);
       if (url.origin !== origin) continue;
+      if (url.pathname === "/404" || url.pathname === "/404/") continue;
       if (/\/tags\//.test(url.pathname)) continue;
       targetPath = url.pathname.replace(/\.html$/, "/");
     } else if (reference.startsWith("//")) {

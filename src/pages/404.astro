@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="页面未找到 | 小法进阶" description="请求的页面不存在。">
+  <main>
+    <p class="code">404 · ARCHIVE GAP</p>
+    <h1>这一页不在档案里。</h1>
+    <p>
+      地址可能输入有误，也可能是尚未纳入兼容清单的旧路径。可以返回首页，或从归档、分类和标签继续查找。
+    </p>
+    <nav aria-label="错误页导航">
+      <a href="/">返回首页</a>
+      <a href="/archives/">文章归档</a>
+      <a href="/categories/">分类</a>
+      <a href="/tags/">标签</a>
+    </nav>
+  </main>
+</BaseLayout>
+
+<style>
+  main {
+    border-left: 4px solid var(--accent);
+    margin: clamp(2rem, 12vw, 9rem) 0;
+    max-width: 48rem;
+    padding: 1rem 0 1rem clamp(1.5rem, 5vw, 4rem);
+  }
+  .code {
+    color: var(--accent);
+    font-family: ui-monospace, monospace;
+    font-size: 0.76rem;
+    letter-spacing: 0.14em;
+  }
+  h1 {
+    font-size: clamp(2.8rem, 9vw, 6rem);
+    letter-spacing: -0.07em;
+    line-height: 0.96;
+    margin: 1rem 0 2rem;
+  }
+  main > p:not(.code) {
+    color: var(--muted);
+    max-width: 38rem;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem 1.5rem;
+    margin-top: 2.5rem;
+  }
+</style>
