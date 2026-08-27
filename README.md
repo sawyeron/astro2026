@@ -19,6 +19,10 @@ npm run verify
 
 `npm run check`, `npm run build`, and `npm run dev` refuse to run outside Node 22. `npm run verify` runs formatting, linting, Astro type/content validation, and a static build. The initial homepage is deliberately a migration probe, not the future public design.
 
+## Asset recovery
+
+[`docs/audit/asset-recovery-register.json`](docs/audit/asset-recovery-register.json) tracks every legacy image reference that was already missing from both the Hexo source tree and generated site. Authorized recoveries from `sawyeron/Pics` are committed under `public/images/` at their historical public paths with pinned source commits and SHA-256 values. `npm run check:assets` validates the register and recovered files. Unresolved entries must be recovered, replaced with authorized media, or given an explicit accessible placeholder before production cutover.
+
 ## Deployment baseline
 
 - [`.github/workflows/verify.yml`](.github/workflows/verify.yml) uses `.nvmrc` and runs `npm ci` followed by `npm run verify` on pull requests and `main`.

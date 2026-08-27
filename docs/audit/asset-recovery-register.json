@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "generatedFrom": "docs/audit/generated/asset-reference-report.json",
+  "legacyRoot": "/Users/otis/Documents/hexoblog/blog",
+  "policy": {
+    "allowedDecisions": ["recover", "replace", "placeholder", "unresolved"],
+    "productionRequirement": "Every entry must resolve to a local file or an accessible missing-resource placeholder before production cutover.",
+    "rightsRequirement": "Recovered or replacement media must have a documented source and authorization basis."
+  },
+  "recoverySource": {
+    "repository": "https://github.com/sawyeron/Pics",
+    "commit": "1057fcd228b7673a41d14e4c07b98ce04a70257b",
+    "authorization": "Repository identified by its owner as an authorized source for this migration."
+  },
+  "assets": [
+    {
+      "legacyPath": "/images/2018/dnt.jpg",
+      "sourcePost": "source/_posts/2018-06-25-杠精五个半.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2018/yjs.jpg",
+      "sourcePost": "source/_posts/2018-06-25-杠精五个半.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2019/min-wages.jpg",
+      "sourcePost": "source/_posts/2019-03-14-湖北省分区域最低工资标准.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2019/googlenms.jpg",
+      "sourcePost": "source/_posts/2019-04-30-我在用的安卓APP-201904.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2020/mz-newloan.gif",
+      "sourcePost": "source/_posts/2020-02-19-MoneyWiz中新建贷款帐户付款计划闪烁的处理.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2020/mz-support.png",
+      "sourcePost": "source/_posts/2020-02-19-MoneyWiz中新建贷款帐户付款计划闪烁的处理.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2020/min-wages.png",
+      "sourcePost": "source/_posts/2020-02-25-四地关于新冠肺炎疫情期间生活费发放标准的梳理.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2020/zsh-commit.png",
+      "sourcePost": "source/_posts/2020-03-06-oh-my-zsh升级失败的解决方法.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2020/zsh-done.png",
+      "sourcePost": "source/_posts/2020-03-06-oh-my-zsh升级失败的解决方法.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2020/zsh-status.png",
+      "sourcePost": "source/_posts/2020-03-06-oh-my-zsh升级失败的解决方法.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2020/zsh-upgrade.png",
+      "sourcePost": "source/_posts/2020-03-06-oh-my-zsh升级失败的解决方法.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2020/t&t-wechat.jpeg",
+      "sourcePost": "source/_posts/2020-05-02-为什么你就不喜欢发关于我的朋友圈了呢.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2020/t&t-zhihu.png",
+      "sourcePost": "source/_posts/2020-05-02-为什么你就不喜欢发关于我的朋友圈了呢.md",
+      "decision": "recover",
+      "status": "recovered",
+      "sourceRepositoryPath": "uPic/202005-t&t-zhihu.png",
+      "targetPath": "public/images/2020/t&t-zhihu.png",
+      "sha256": "8471e50329ea26fe7da873cba7e94512291a2a19a6ed35588d9dc72ae4b3a37e"
+    },
+    {
+      "legacyPath": "/images/2020/cs1-hubei-2020.png",
+      "sourcePost": "source/_posts/2020-09-20-2020年度湖北省道路交通事故损害赔偿标准.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2020/cs2-hubei-2020.png",
+      "sourcePost": "source/_posts/2020-09-20-2020年度湖北省道路交通事故损害赔偿标准.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2021/A.jpeg",
+      "sourcePost": "source/_posts/2021-02-28-伪手写HTML排版公众号文章的几点笔记.md",
+      "decision": "unresolved",
+      "status": "pending"
+    },
+    {
+      "legacyPath": "/images/2021/min-wages-2021.png",
+      "sourcePost": "source/_posts/2021-07-28-湖北省分区域最低工资标准2021.md",
+      "decision": "recover",
+      "status": "recovered",
+      "sourceRepositoryPath": "uPic/202107-min-wages-2021.png",
+      "targetPath": "public/images/2021/min-wages-2021.png",
+      "sha256": "3bed1018d24b10ae551958e341546520476f4dcdfbc179c5c8a366606fc1c04d"
+    },
+    {
+      "legacyPath": "/images/2021/cs-hubei-2021.jpg",
+      "sourcePost": "source/_posts/2021-10-10-2021年度湖北省交通事故赔偿标准.md",
+      "decision": "recover",
+      "status": "recovered",
+      "sourceRepositoryPath": "uPic/202110-cs-hubei-2021.jpg",
+      "targetPath": "public/images/2021/cs-hubei-2021.jpg",
+      "sha256": "c6e61471f62c3628ca7b831c9225b8f390471950b1f088f7c65cf79aca6cad66"
+    },
+    {
+      "legacyPath": "/images/2021/cs-hubei-2023.jpg",
+      "sourcePost": "source/_posts/2024-01-29-2023年度湖北省交通事故赔偿标准的统计数据.md",
+      "decision": "unresolved",
+      "status": "pending"
+    }
+  ]
+}
