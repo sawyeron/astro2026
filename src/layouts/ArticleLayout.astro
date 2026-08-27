@@ -8,6 +8,8 @@ interface Props {
   updated?: Date;
   categories?: string[];
   tags?: string[];
+  contentKind?:
+    "legal" | "technical" | "note" | "culture" | "personal" | "mixed";
   timeSensitive?: boolean;
   legalDisclaimer?: boolean;
 }
@@ -19,6 +21,7 @@ const {
   updated,
   categories = [],
   tags = [],
+  contentKind,
   timeSensitive = false,
   legalDisclaimer = false,
 } = Astro.props;
@@ -34,6 +37,7 @@ const formatter = new Intl.DateTimeFormat("zh-CN", {
   <article class="article">
     <header class="article-header">
       <a class="home-link" href="/">小法进阶</a>
+      {contentKind && <p class="content-kind">{contentKind}</p>}
       <h1>{title}</h1>
       {
         date && (
@@ -46,7 +50,18 @@ const formatter = new Intl.DateTimeFormat("zh-CN", {
       }
       {
         (categories.length > 0 || tags.length > 0) && (
-          <p class="taxonomy">{[...categories, ...tags].join(" · ")}</p>
+          <p class="taxonomy">
+            {categories.map((category) => (
+              <a href={`/categories/${encodeURIComponent(category)}/`}>
+                {category === "null" ? "未分类" : category}
+              </a>
+            ))}
+            {tags.map((tag) => (
+              <a href={`/tags/${encodeURIComponent(tag)}/`}>
+                #{tag === "null" ? "未分类" : tag}
+              </a>
+            ))}
+          </p>
         )
       }
     </header>
@@ -81,12 +96,20 @@ const formatter = new Intl.DateTimeFormat("zh-CN", {
     margin-bottom: 3rem;
     padding-top: 1rem;
   }
-  .home-link {
+  .home-link,
+  .content-kind {
     color: var(--accent);
     font-family: ui-monospace, monospace;
     font-size: 0.78rem;
     letter-spacing: 0.08em;
     text-decoration: none;
+  }
+  .content-kind {
+    color: var(--muted);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    margin: 2.5rem 0 0;
+    text-transform: uppercase;
   }
   h1 {
     font-size: clamp(2.3rem, 7vw, 4.8rem);
@@ -98,6 +121,14 @@ const formatter = new Intl.DateTimeFormat("zh-CN", {
   .taxonomy {
     color: var(--muted);
     font-size: 0.9rem;
+  }
+  .taxonomy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.8rem;
+  }
+  .taxonomy a {
+    text-decoration: none;
   }
   .notice,
   .disclaimer {

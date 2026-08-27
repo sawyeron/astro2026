@@ -4,6 +4,7 @@ import { site } from "../config/site";
 const { title = site.name, description = "法律、技术与个人知识档案。" } =
   Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const fullTitle = title === site.name ? title : `${title} | ${site.name}`;
 ---
 
 <!doctype html>
@@ -12,6 +13,15 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#f7f5ef" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -25,12 +35,32 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       href="/atom.xml"
     />
     <link rel="canonical" href={canonical} />
-    <title>{title}</title>
+    <title>{fullTitle}</title>
   </head>
   <body>
-    <main class="site-shell">
-      <slot />
-    </main>
+    <div class="site-shell">
+      <main><slot /></main>
+      <footer class="site-footer">
+        <div>
+          <a href="/">小法进阶</a>
+          <span aria-hidden="true">/</span>
+          <a href="/archives/">归档</a>
+          <span aria-hidden="true">/</span>
+          <a href="/search/">搜索</a>
+          <span aria-hidden="true">/</span>
+          <a href="/about/">关于</a>
+          <span aria-hidden="true">/</span>
+          <a href="/rss.xml">RSS</a>
+        </div>
+        <p>
+          本站无评论系统，不使用 Google Analytics。计划使用 Cloudflare Web
+          Analytics 统计汇总访问数据，不建立访客画像。
+        </p>
+        <p>
+          原创内容除特别说明外采用 CC BY 4.0；历史文章请结合其发布日期阅读。
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
 
@@ -51,6 +81,10 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     margin: 0;
     min-width: 320px;
@@ -60,7 +94,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   .site-shell {
     width: min(100% - 2rem, 70rem);
     margin: 0 auto;
-    padding: clamp(2rem, 8vw, 7rem) 0;
+    padding: clamp(2rem, 8vw, 7rem) 0 2rem;
   }
 
   a {
@@ -70,5 +104,34 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   }
   a:hover {
     color: var(--accent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.78rem;
+    margin-top: clamp(5rem, 12vw, 10rem);
+    padding-top: 1.2rem;
+  }
+  .site-footer > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.7rem;
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  }
+  .site-footer p {
+    margin: 0.6rem 0;
+    max-width: 52rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 </style>
