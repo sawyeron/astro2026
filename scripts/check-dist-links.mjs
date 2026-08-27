@@ -68,11 +68,6 @@ for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
   for (const reference of referencesIn(html)) {
     if (
-      path.relative(distRoot, file) === "PGP/index.html" &&
-      reference === "/Sawyer.asc"
-    )
-      continue;
-    if (
       !reference ||
       reference.startsWith("#") ||
       ignoredSchemes.test(reference)

@@ -1,16 +1,122 @@
 ---
-import { getEntry, render } from "astro:content";
-import ArticleLayout from "../layouts/ArticleLayout.astro";
-
-const page = await getEntry("pages", "about");
-if (!page) throw new Error("Migrated about page not found");
-const { Content } = await render(page);
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<ArticleLayout
-  title="关于"
-  description={page.data.description}
-  updated={page.data.updated}
+<BaseLayout
+  title="关于 | 小法进阶"
+  description="小法进阶是一个以法律专业为主轴、以技术和方法为细节的个人知识档案。"
 >
-  <Content />
-</ArticleLayout>
+  <article>
+    <header>
+      <a class="home" href="/">小法进阶</a>
+      <p class="eyebrow">ABOUT THIS ARCHIVE</p>
+      <h1>法律是主轴，<br />技术是方法。</h1>
+      <p class="lede">
+        这里是一份持续整理的个人知识档案：保存法律学习与实务思考，也记录软件、效率工具、数字生活和一些私人观察。
+      </p>
+    </header>
+
+    <section>
+      <h2>关于本站</h2>
+      <p>
+        “小法进阶”始于学生时代。旧文章保留其原始标题、正文、发布日期和公开地址；它们反映的是写作当时的认识，不会因为站点改版而被悄悄重写。
+      </p>
+      <p>
+        新站使用 Astro 静态生成，以 Markdown 和 Git
+        维护。没有评论系统、数据库或运行时内容服务，尽量让文章在多年后仍可访问和迁移。
+      </p>
+    </section>
+
+    <section>
+      <h2>内容边界</h2>
+      <p>
+        本站不是律所官网，不展示机构、地区或明确业务营销信息。法律文章是一般知识记录，不针对任何具体事实提供法律意见；涉及规则、数据和软件版本的历史文章，应结合现行资料核验。
+      </p>
+    </section>
+
+    <section>
+      <h2>联系与身份</h2>
+      <p>
+        公开联系邮箱将在确认后补充。历史 PGP 指纹和 Keybase
+        域名证明保留在身份页面，但旧密钥在重新确认之前不应直接用于敏感通信。
+      </p>
+      <p><a href="/PGP/">查看 PGP 与身份验证信息</a></p>
+    </section>
+
+    <section>
+      <h2>许可与更正</h2>
+      <p>
+        除特别说明外，原创文章继续按照
+        <a href="https://creativecommons.org/licenses/by/4.0/deed.zh-hans"
+          >CC BY 4.0</a
+        > 分享。转载时请保留作者信息和原文链接。
+      </p>
+      <p>
+        若本站内容或资源侵犯了您的合法权益，可在公开联系方式确认后提出更正或移除请求。
+      </p>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  article {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+  header {
+    border-top: 4px solid var(--ink);
+    padding-top: 1rem;
+  }
+  .home,
+  .eyebrow {
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  }
+  .home {
+    color: var(--accent);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+    margin: 3rem 0 0.9rem;
+  }
+  h1 {
+    font-size: clamp(3rem, 9vw, 6.5rem);
+    letter-spacing: -0.075em;
+    line-height: 0.94;
+    margin: 0;
+  }
+  .lede {
+    color: var(--muted);
+    font-size: clamp(1.08rem, 2.5vw, 1.35rem);
+    margin: 2rem 0 5rem;
+    max-width: 42rem;
+  }
+  section {
+    border-top: 1px solid var(--rule);
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 10rem 1fr;
+    padding: 1.8rem 0 2.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  section p {
+    grid-column: 2;
+    margin: 0;
+  }
+  @media (max-width: 38rem) {
+    section {
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+    section p {
+      grid-column: 1;
+    }
+  }
+</style>

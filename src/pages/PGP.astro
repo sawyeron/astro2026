@@ -1,16 +1,111 @@
 ---
-import { getEntry, render } from "astro:content";
-import ArticleLayout from "../layouts/ArticleLayout.astro";
-
-const page = await getEntry("pages", "pgp");
-if (!page) throw new Error("Migrated PGP page not found");
-const { Content } = await render(page);
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<ArticleLayout
-  title={page.data.title}
-  description={page.data.description}
-  updated={page.data.updated}
+<BaseLayout
+  title="PGP 与身份验证 | 小法进阶"
+  description="历史 PGP 指纹和 Keybase 身份验证信息。旧密钥尚待站主确认，不应直接用于敏感通信。"
 >
-  <Content />
-</ArticleLayout>
+  <article>
+    <header>
+      <a class="home" href="/">小法进阶</a>
+      <p class="eyebrow">IDENTITY / ENCRYPTION</p>
+      <h1>PGP 与身份验证</h1>
+      <p class="lede">
+        这里保留旧站公开过的密钥标识，但不把未经确认的历史密钥描述为现行通信密钥。
+      </p>
+    </header>
+
+    <aside aria-label="密钥状态">
+      <strong>状态：等待站主确认</strong>
+      <p>
+        以下 Key ID 与指纹来自 2018
+        年的旧页面。目前仓库内没有对应的公钥文件，旧下载地址也无法从已授权来源恢复。请勿仅凭本页将其用于敏感通信。
+      </p>
+    </aside>
+
+    <section>
+      <h2>历史 Key ID</h2>
+      <code>0D6F056A</code>
+    </section>
+
+    <section>
+      <h2>历史指纹</h2>
+      <code>2666 6CAA 5523 834F F7C6 B284 3B50 7F8B 0D6F 056A</code>
+    </section>
+
+    <section>
+      <h2>Keybase 身份证明</h2>
+      <p>
+        旧站保留了一份公开可审计的 Keybase 域名所有权证明。它用于证明 Keybase
+        账户与本站域名之间的历史关联，不等同于确认上述 PGP 密钥仍在使用。
+      </p>
+      <p><a href="/keybase.txt">查看本站保存的 Keybase 证明</a></p>
+      <p>
+        <a href="https://keybase.io/imouyang" rel="me"
+          >访问 Keybase 公开身份页</a
+        >
+      </p>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  article {
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+  header {
+    border-top: 4px solid var(--ink);
+    padding-top: 1rem;
+  }
+  .home,
+  .eyebrow,
+  code {
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  }
+  .home {
+    color: var(--accent);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+    margin: 3rem 0 0.8rem;
+  }
+  h1 {
+    font-size: clamp(2.7rem, 8vw, 5.5rem);
+    letter-spacing: -0.065em;
+    line-height: 0.96;
+    margin: 0;
+  }
+  .lede {
+    color: var(--muted);
+    font-size: 1.08rem;
+    margin: 1.5rem 0 3rem;
+    max-width: 40rem;
+  }
+  aside {
+    background: #eee6d8;
+    border-left: 4px solid var(--accent);
+    margin: 2.5rem 0 4rem;
+    padding: 1.2rem 1.4rem;
+  }
+  aside p {
+    margin-bottom: 0;
+  }
+  section {
+    border-top: 1px solid var(--rule);
+    padding: 1.4rem 0 2rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+  code {
+    overflow-wrap: anywhere;
+  }
+</style>
