@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <header>
+    <p class="eyebrow">IMOUYANG.COM · ASTRO MIGRATION</p>
+    <h1>小法进阶</h1>
+  </header>
+
+  <section aria-labelledby="foundation-heading">
+    <h2 id="foundation-heading">静态站点基座已就绪</h2>
+    <p>
+      本页只是 Phase 1
+      的构建探针。历史文章、独立页面、资源及最终视觉设计将在后续阶段迁入；当前生产域名不会发生任何变化。
+    </p>
+    <dl>
+      <div><dt>构建目标</dt><dd>Astro 静态输出</dd></div>
+      <div><dt>运行时基线</dt><dd>Node.js 22 LTS</dd></div>
+      <div><dt>规范地址</dt><dd>https://imouyang.com</dd></div>
+    </dl>
+  </section>
+
+  <footer>
+    <p>迁移进行中。遗留 Hexo 站点继续作为只读内容与回滚基线。</p>
+  </footer>
+</BaseLayout>
+
+<style>
+  header {
+    border-top: 4px solid var(--ink);
+    padding-top: 1rem;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-family: ui-monospace, monospace;
+    font-size: 0.76rem;
+    letter-spacing: 0.12em;
+  }
+  h1 {
+    font-size: clamp(3.6rem, 12vw, 8rem);
+    letter-spacing: -0.09em;
+    line-height: 0.88;
+    margin: 0.5rem 0 5rem;
+  }
+  h2 {
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    line-height: 1.2;
+  }
+  section {
+    max-width: 42rem;
+  }
+  dl {
+    border-top: 1px solid var(--rule);
+    margin-top: 2.5rem;
+  }
+  dl div {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(7rem, 1fr) 2fr;
+    border-bottom: 1px solid var(--rule);
+    padding: 0.8rem 0;
+  }
+  dt {
+    color: var(--muted);
+  }
+  dd {
+    margin: 0;
+  }
+  footer {
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 7rem;
+  }
+</style>

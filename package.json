@@ -1,0 +1,44 @@
+{
+  "name": "imouyang-archive",
+  "version": "0.1.0",
+  "description": "Astro static archive for imouyang.com",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "node scripts/check-node-version.mjs",
+    "dev": "node scripts/check-node-version.mjs && astro dev",
+    "start": "node scripts/check-node-version.mjs && astro dev",
+    "build": "astro check && astro build",
+    "build:site": "astro build",
+    "check": "node scripts/check-node-version.mjs && astro check",
+    "format": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint": "eslint .",
+    "verify": "npm run format && npm run lint && npm run check && npm run build:site && npm run check:links",
+    "check:links": "node scripts/check-dist-links.mjs"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^5.18.2",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "~5.9.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "eslint": "^9.39.4",
+    "eslint-plugin-astro": "^1.7.0",
+    "typescript-eslint": "^8.68.0"
+  },
+  "private": "true",
+  "type": "module",
+  "packageManager": "npm@10.9.8",
+  "engines": {
+    "node": ">=22.0.0 <23",
+    "npm": ">=10.0.0 <11"
+  }
+}

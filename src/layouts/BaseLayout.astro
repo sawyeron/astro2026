@@ -1,0 +1,62 @@
+---
+import { site } from "../config/site";
+
+const { title = site.name, description = "法律、技术与个人知识档案。" } =
+  Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main class="site-shell">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    color-scheme: light;
+    --paper: #f7f5ef;
+    --ink: #1b2529;
+    --muted: #607075;
+    --rule: #c8c6bc;
+    --accent: #a23d2b;
+    font-family: "Noto Serif CJK SC", "Songti SC", "STSong", serif;
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    line-height: 1.7;
+  }
+
+  .site-shell {
+    width: min(100% - 2rem, 70rem);
+    margin: 0 auto;
+    padding: clamp(2rem, 8vw, 7rem) 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+  a:hover {
+    color: var(--accent);
+  }
+</style>
