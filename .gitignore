@@ -18,3 +18,8 @@ docs/audit/generated/
 
 # Image processing cache
 .cache/
+
+.pi/
+.agent/
+
+.gitignore
