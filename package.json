@@ -24,7 +24,8 @@
     "check:migration": "node scripts/check-content-migration.mjs",
     "generate:urls": "node scripts/generate-auxiliary-url-manifest.mjs",
     "check:urls": "node scripts/check-auxiliary-urls.mjs",
-    "check:syndication": "node scripts/check-syndication.mjs"
+    "check:syndication": "node scripts/check-syndication.mjs",
+    "generate:governance": "node scripts/generate-content-governance-candidates.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",

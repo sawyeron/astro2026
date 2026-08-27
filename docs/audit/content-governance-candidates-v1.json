@@ -1,0 +1,1899 @@
+{
+  "schemaVersion": 1,
+  "policy": "Candidates only. Do not publish or write to front matter without owner review.",
+  "topicLabels": {
+    "civil-commercial": "民商事与公司法",
+    "labor-social-security": "劳动与社会保障",
+    "tort-traffic": "侵权与交通事故",
+    "legal-practice-research": "法律实务与研究方法",
+    "lawyer-toolbox": "律师工具箱",
+    "technology-digital-life": "技术、效率与数字生活",
+    "notes-observations": "随笔与观察"
+  },
+  "summary": {
+    "total": 84,
+    "legal": 40,
+    "technical": 20,
+    "mixed": 4,
+    "timeSensitive": 34,
+    "legalDisclaimer": 44
+  },
+  "candidates": [
+    {
+      "source": "src/content/blog/021.md",
+      "title": "《从 0 到 1》读书笔记",
+      "legacyPath": "/021/",
+      "date": "2016-04-08 15:50:40",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "culture",
+        "topics": ["notes-observations"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "medium",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-04-12-剑桥分析.md",
+      "title": "谈谈剑桥分析公司的Logo",
+      "legacyPath": "/jian-qiao-fen-xi/",
+      "date": "2018-04-12 19:58:54",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "note",
+        "topics": [],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "low",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-04-13-冷冻胚胎的法律地位.md",
+      "title": "冷冻胚胎案的后续？",
+      "legacyPath": "/leng-dong-pei-tai-de-fa-lu-di-wei/",
+      "date": "2018-04-13 16:34:28",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["civil-commercial", "legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-05-05-那个可爱的老头子走了.md",
+      "title": "那个可爱的老头子走了",
+      "legacyPath": "/na-ge-ke-ai-de-lao-tou-zi-zou-liao/",
+      "date": "2018-05-05 21:22:45",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "note",
+        "topics": [],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "low",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-06-07-大雄的金银岛.md",
+      "title": "【0分作文】大雄的金银岛",
+      "legacyPath": "/da-xiong-de-jin-yin-dao/",
+      "date": "2018-06-07 10:02:24",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "culture",
+        "topics": ["notes-observations"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "medium",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-06-25-杠精五个半.md",
+      "title": "【流水账】杠精五个半",
+      "legacyPath": "/gang-jing-wu-ge-ban/",
+      "date": "2018-06-25 23:33:24",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "personal",
+        "topics": ["notes-observations"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "medium",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-06-30-2018年度湖北省道路交通事故损害赔偿标准.md",
+      "title": "2018年度湖北省道路交通事故损害赔偿标准",
+      "legacyPath": "/2018-nian-du-hu-bei-sheng-dao-lu-jiao-tong-shi-gu-sun-hai-pei-chang-biao-zhun/",
+      "date": "2018-06-30 16:47:54",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["tort-traffic", "legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-07-01-LaTeX与论文排版.md",
+      "title": "LaTeX 与论文排版二三事",
+      "legacyPath": "/latex-yu-lun-wen-pai-ban/",
+      "date": "2018-07-01 14:49:31",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life", "lawyer-toolbox"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-07-25-Vcard与二维码名片.md",
+      "title": "Vcard与二维码名片",
+      "legacyPath": "/vcard-yu-er-wei-ma-ming-pian/",
+      "date": "2018-07-25 15:41:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life", "lawyer-toolbox"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-08-22-Expert.md",
+      "title": "流水账之 PDF Expert",
+      "legacyPath": "/expert/",
+      "date": "2018-08-22 21:23:58",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": [
+          "technology-digital-life",
+          "lawyer-toolbox",
+          "notes-observations"
+        ],
+        "timeSensitive": true,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": [
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-08-24-Mackup备份出错的临时解决办法.md",
+      "title": "Mackup 备份出错的临时解决办法",
+      "legacyPath": "/mackup-bei-fen-chu-cuo-de-lin-shi-jie-jue-ban-fa/",
+      "date": "2018-08-24 10:12:26",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "mixed",
+        "topics": ["legal-practice-research", "technology-digital-life"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-09-03-我的macOS和iOS设置.md",
+      "title": "【流水账】我的 macOS 和 iOS 设置",
+      "legacyPath": "/wo-de-macos-he-ios-she-zhi/",
+      "date": "2018-09-03 22:21:59",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life", "notes-observations"],
+        "timeSensitive": true,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": [
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-09-06-金钱不能买什么.md",
+      "title": "【读书笔记】金钱不能买什么",
+      "legacyPath": "/jin-qian-bu-neng-mai-shi-me/",
+      "date": "2018-09-06 22:55:07",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research", "notes-observations"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-09-09-Homebrew离线安装方式变更.md",
+      "title": "Homebrew 离线安装方式变更",
+      "legacyPath": "/homebrew-chi-xian-an-zhuang-fang-shi-bian-geng/",
+      "date": "2018-09-09 20:26:29",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
+        "timeSensitive": true,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": [
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-09-09-趁着Tampermonkey回归的脚本盘点.md",
+      "title": "趁着 Tampermonkey 回归的脚本盘点",
+      "legacyPath": "/chen-zhao-tampermonkey-hui-gui-de-jiao-ben-pan-dian/",
+      "date": "2018-09-07 20:46:19",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life", "lawyer-toolbox"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-09-13-AppleScript脚本两个半.md",
+      "title": "AppleScript 脚本两个半",
+      "legacyPath": "/applescript-jiao-ben-liang-ge-ban/",
+      "date": "2018-09-13 19:27:11",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
+        "timeSensitive": true,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": [
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-09-16-iPhone-Xʀ与小型大写字母.md",
+      "title": "iPhone Xʀ 与小型大写字母",
+      "legacyPath": "/iphone-xryu-xiao-xing-da-xie-zi-mu/",
+      "date": "2018-09-16 20:00:46",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "mixed",
+        "topics": ["legal-practice-research", "technology-digital-life"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-10-26-macOS更新后Homebrew报错处理方案.md",
+      "title": "macOS 更新后 Homebrew 报错处理方案",
+      "legacyPath": "/macos-geng-xin-hou-homebrew-bao-cuo-chu-li-fang-an/",
+      "date": "2018-10-20 15:12:14",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
+        "timeSensitive": true,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": [
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-10-26-已预付全部房租的未到期房屋租赁合同不应解除.md",
+      "title": "破产管理人能否解除已预付全部房租的未到期房屋租赁合同",
+      "legacyPath": "/yi-yu-fu-quan-bu-fang-zu-de-wei-dao-qi-fang-wu-zu-ren-he-tong-bu-ying-jie-chu/",
+      "date": "2018-10-26 11:04:06",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["civil-commercial", "legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-10-31-银行能否就破产债务人的存款行使抵销权.md",
+      "title": "银行能否就破产债务人的存款行使抵销权",
+      "legacyPath": "/yin-xing-neng-fou-jiu-po-chan-zhai-wu-ren-de-cun-kuan-xing-shi-di-xiao-quan/",
+      "date": "2018-10-31 21:18:11",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["civil-commercial", "legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-11-16-第三次签订劳动合同与二倍工资.md",
+      "title": "第三次签订劳动合同与二倍工资",
+      "legacyPath": "/di-san-ci-qian-ding-lao-dong-he-tong-yu-er-bei-gong-zi/",
+      "date": "2018-11-16 15:39:44",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": [
+          "labor-social-security",
+          "civil-commercial",
+          "legal-practice-research"
+        ],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-11-17-乱弹20181116.md",
+      "title": "乱弹 20181116",
+      "legacyPath": "/luan-dan-20181116/",
+      "date": "2018-11-17 22:16:43",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "personal",
+        "topics": ["notes-observations"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "medium",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-12-05-盘古之白.md",
+      "title": "盘古之白",
+      "legacyPath": "/pan-gu-zhi-bai/",
+      "date": "2018-12-03 13:39:22",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "note",
+        "topics": ["lawyer-toolbox"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "low",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2018-12-05-省司法厅关于律师服务和基层法律服务收费不再实行政府定价的通知.md",
+      "title": "省司法厅关于律师服务和基层法律服务收费不再实行政府定价的通知",
+      "legacyPath": "/sheng-si-fa-ting-guan-yu-lu-shi-fu-wu-he-ji-ceng-fa-lu-fu-wu-shou-fei-bu-zai-shi-xing-zheng-fu-ding-jie-de-tong-zhi/",
+      "date": "2018-12-05 14:09:37",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2019-03-14-武汉产假是多久.md",
+      "title": "武汉产假是多久?",
+      "legacyPath": "/wu-han-chan-jia-shi-duo-jiu/",
+      "date": "2019-03-14 19:43:12",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["labor-social-security", "legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2019-03-14-湖北省分区域最低工资标准.md",
+      "title": "湖北省分区域最低工资标准(2017)",
+      "legacyPath": "/hu-bei-sheng-fen-qu-yu-zui-di-gong-zi-biao-zhun/",
+      "date": "2019-03-14 19:43:27",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["labor-social-security", "legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2019-04-18-碎碎念之「我们与恶的距离」.md",
+      "title": "碎碎念之「我们与恶的距离」",
+      "legacyPath": "/sui-sui-nian-zhi-wo-men-yu-e-de-ju-chi/",
+      "date": "2019-04-18 22:48:29",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research", "notes-observations"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2019-04-30-我在用的安卓APP-201904.md",
+      "title": "我在用的安卓APP-201904",
+      "legacyPath": "/wo-zai-yong-de-an-zhuo-app-201904/",
+      "date": "2019-04-30 14:53:23",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
+        "timeSensitive": true,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": [
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2019-05-02-2019年度湖北省道路交通事故损害赔偿标准.md",
+      "title": "2019年度湖北省道路交通事故损害赔偿标准",
+      "legacyPath": "/2019-nian-du-hu-bei-sheng-dao-lu-jiao-tong-shi-gu-sun-hai-pei-chang-biao-zhun/",
+      "date": "2019-05-02 23:12:56",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["tort-traffic", "legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2019-05-05-碎碎念之《何以为家》.md",
+      "title": "碎碎念之《何以为家》",
+      "legacyPath": "/sui-sui-nian-zhi-he-yi-wei-jia/",
+      "date": "2019-05-05 21:44:04",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "personal",
+        "topics": ["notes-observations"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "medium",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2020-02-02-latex-times-new-roman.md",
+      "title": "LaTeX下使用 Times New Roman 字体的正确姿势",
+      "legacyPath": "/latex-times-new-roman/",
+      "date": "2020-02-02 22:49:31",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2020-02-15-湖北高院民二庭通知.md",
+      "title": "湖北高院民二庭《关于审理涉及新型冠状病毒肺炎疫情商事案件若干问题的解答》",
+      "legacyPath": "/hu-bei-gao-yuan-min-er-ting-tong-zhi/",
+      "date": "2020-02-15 07:11:36",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2020-02-16-Poker键盘自定义备忘.md",
+      "title": "Poker键盘自定义备忘",
+      "legacyPath": "/poker-jian-pan-zi-ding-yi-bei-wang/",
+      "date": "2020-02-16 22:34:38",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2020-02-17-乱弹20200217.md",
+      "title": "乱弹20200217",
+      "legacyPath": "/luan-dan-20200217/",
+      "date": "2020-02-17 14:50:19",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "personal",
+        "topics": ["notes-observations"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "medium",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2020-02-19-MoneyWiz中新建贷款帐户付款计划闪烁的处理.md",
+      "title": "MoneyWiz中新建贷款帐户付款计划闪烁的处理",
+      "legacyPath": "/moneywiz-zhong-xin-jian-dai-kuan-zhang-hu-fu-kuan-ji-hua-shan-shuo-de-chu-li/",
+      "date": "2020-02-19 23:59:40",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
+        "timeSensitive": true,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": [
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2020-02-25-四地关于新冠肺炎疫情期间生活费发放标准的梳理.md",
+      "title": "四地关于新冠肺炎疫情期间生活费发放标准的梳理",
+      "legacyPath": "/si-di-guan-yu-xin-guan-fei-yan-yi-qing-qi-jian-sheng-huo-fei-fa-fang-biao-zhun-de-shu-li/",
+      "date": "2020-02-25 00:39:22",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "note",
+        "topics": [],
+        "timeSensitive": true,
+        "legalDisclaimer": false,
+        "confidence": "low",
+        "reasons": ["包含年度、标准、通知、软件版本或现行规则线索"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2020-03-06-oh-my-zsh升级失败的解决方法.md",
+      "title": "oh-my-zsh升级失败的解决方法",
+      "legacyPath": "/oh-my-zsh-sheng-ji-shi-bai-de-jie-jue-fang-fa/",
+      "date": "2020-03-06 21:59:51",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "mixed",
+        "topics": ["legal-practice-research", "technology-digital-life"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2020-05-02-为什么你就不喜欢发关于我的朋友圈了呢.md",
+      "title": "为什么你就不喜欢发关于我的朋友圈了呢",
+      "legacyPath": "/wei-shi-me-ni-jiu-bu-xi-huan-fa-guan-yu-wo-de-peng-you-quan-liao-ni/",
+      "date": "2020-05-02 22:47:01",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "note",
+        "topics": [],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "low",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2020-05-02-说说消费券.md",
+      "title": "说说消费券",
+      "legacyPath": "/shuo-shuo-xiao-fei-quan/",
+      "date": "2020-05-02 17:55:32",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "note",
+        "topics": [],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "low",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2020-06-14-Node14报错.md",
+      "title": "Node14报错",
+      "legacyPath": "/node14-bao-cuo/",
+      "date": "2020-06-14 09:13:08",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
+        "timeSensitive": true,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": [
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2020-09-20-2020年度湖北省道路交通事故损害赔偿标准.md",
+      "title": "2020年度湖北省道路交通事故损害赔偿标准",
+      "legacyPath": "/2020-nian-du-hu-bei-sheng-dao-lu-jiao-tong-shi-gu-sun-hai-pei-chang-biao-zhun/",
+      "date": "2020-09-20 21:34:56",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["tort-traffic", "legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2020-10-02-qpdf使用笔记.md",
+      "title": "qpdf使用笔记",
+      "legacyPath": "/qpdf-shi-yong-bi-ji/",
+      "date": "2020-10-02 17:07:29",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life", "lawyer-toolbox"],
+        "timeSensitive": true,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": [
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2021-02-09-flash的卸载.md",
+      "title": "flash的卸载",
+      "legacyPath": "/flash-de-xie-zai/",
+      "date": "2021-02-09 14:58:25",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2021-02-19-碎碎念之你好李焕英.md",
+      "title": "碎碎念之你好李焕英",
+      "legacyPath": "/sui-sui-nian-zhi-ni-hao-li-huan-ying/",
+      "date": "2021-02-19 23:24:22",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "personal",
+        "topics": ["notes-observations"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "medium",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2021-02-28-伪手写HTML排版公众号文章的几点笔记.md",
+      "title": "伪手写HTML排版公众号文章的几点笔记",
+      "legacyPath": "/wei-shou-xie-html-pai-ban-gong-zhong-hao-wen-zhang-de-ji-dian-bi-ji/",
+      "date": "2021-02-28 21:18:48",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life", "lawyer-toolbox"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2021-07-28-湖北省分区域最低工资标准2021.md",
+      "title": "湖北省分区域最低工资标准（2021）",
+      "legacyPath": "/hu-bei-sheng-fen-qu-yu-zui-di-gong-zi-biao-zhun-2021/",
+      "date": "2021-07-28 21:30:31",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["labor-social-security", "legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2021-07-29-用来处理标签的两个as脚本.md",
+      "title": "用来处理标签的两个as脚本",
+      "legacyPath": "/yong-lai-chu-li-biao-qian-de-liang-ge-as-jiao-ben/",
+      "date": "2021-07-29 12:54:47",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
+        "timeSensitive": true,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": [
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2021-10-09-突然就三十了.md",
+      "title": "突然就三十了",
+      "legacyPath": "/tu-ran-jiu-san-shi-liao/",
+      "date": "2021-10-09 21:30:28",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "personal",
+        "topics": ["notes-observations"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "medium",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2021-10-10-2021年度湖北省交通事故赔偿标准.md",
+      "title": "2021年度湖北省交通事故赔偿标准",
+      "legacyPath": "/2021-nian-du-hu-bei-sheng-jiao-tong-shi-gu-pei-chang-biao-zhun/",
+      "date": "2021-10-10 12:43:49",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["tort-traffic", "legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2021-11-28-2021年之「武汉市产假是多久」.md",
+      "title": "2021年之「武汉市产假是多久」",
+      "legacyPath": "/2021-nian-zhi-wu-han-shi-chan-jia-shi-duo-jiu/",
+      "date": "2021-11-28 13:23:53",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["labor-social-security", "legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/2024-01-29-2023年度湖北省交通事故赔偿标准的统计数据.md",
+      "title": "2021年度湖北省交通事故赔偿标准",
+      "legacyPath": "/2023-nian-du-hu-bei-sheng-jiao-tong-shi-gu-pei-chang-biao-zhun-de-tong-ji-shu-ju/",
+      "date": "2024-01-29 17:03:44",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["tort-traffic", "legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/ban-dao-mac.md",
+      "title": "［折腾记］安装黑苹果，外加迁移本地环境",
+      "legacyPath": "/ban-dao-mac/",
+      "date": "2014-07-28 11:24:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "note",
+        "topics": [],
+        "timeSensitive": true,
+        "legalDisclaimer": false,
+        "confidence": "low",
+        "reasons": ["包含年度、标准、通知、软件版本或现行规则线索"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/bao-guan-qin-zhan.md",
+      "title": "一个侵占罪案例的诈骗成分分析",
+      "legacyPath": "/bao-guan-qin-zhan/",
+      "date": "2014-08-20 05:20:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/bao-li-yu-qu-cai-qiang-jie.md",
+      "title": "暴力与取财，在抢劫罪中，仅仅是手段与目的关系吗？",
+      "legacyPath": "/bao-li-yu-qu-cai-qiang-jie/",
+      "date": "2014-09-04 13:35:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/bei-dai-li-ren-sang.md",
+      "title": "被代理人丧失民事行为能力不影响代理权的分析",
+      "legacyPath": "/bei-dai-li-ren-sang/",
+      "date": "2014-09-28 05:49:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["civil-commercial", "legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/cc.md",
+      "title": "知识共享协议",
+      "legacyPath": "/cclisence/",
+      "date": "2016-04-06 19:51:39",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/cetrain-issues-iv-for-company-law.md",
+      "title": "公司法司法解释四-引文版",
+      "legacyPath": "/cetrain-issues-iv-for-company-law/",
+      "date": "2017-08-28 15:01:08",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["civil-commercial", "legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/cs-hubei-2017.md",
+      "title": "2017 年度湖北省道路交通事故损害赔偿标准",
+      "legacyPath": "/cs-hubei-2017/",
+      "date": "2017-05-03 21:56:17",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["tort-traffic", "legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/due-pin-workflow.md",
+      "title": "我常用的三款效率APP",
+      "legacyPath": "/due-pin-workflow/",
+      "date": "2017-07-18 21:46:42",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life", "lawyer-toolbox"],
+        "timeSensitive": true,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": [
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/duo-ci-zha-pian-shu-e.md",
+      "title": "多次诈骗的犯罪数额，这样认定真的好吗？",
+      "legacyPath": "/duo-ci-zha-pian-shu-e/",
+      "date": "2014-09-03 05:05:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/hustlaw13.md",
+      "title": "2013年华中科技大学法学院考研真题",
+      "legacyPath": "/hustlaw13/",
+      "date": "2015-01-11 03:48:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/hustlaw14.md",
+      "title": "2014年华中科技大学法学院考研真题",
+      "legacyPath": "/hustlaw14/",
+      "date": "2015-01-11 07:31:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/hustlaw15.md",
+      "title": "2015年华中科技大学法学院考研真题",
+      "legacyPath": "/hustlaw15/",
+      "date": "2015-01-13 04:32:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/hustlaw16.md",
+      "title": "2016年华中科技大学法学院考研真题",
+      "legacyPath": "/hustlaw16/",
+      "date": "2015-12-29 08:09:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/iCloud.md",
+      "title": "从服务协议看 iCloud 迁移",
+      "legacyPath": "/icloud-terms/",
+      "date": "2018-01-25 15:39:43",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
+        "timeSensitive": true,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": [
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/jdsnk.md",
+      "title": "评北京精雕诉上海奈凯计算机软件侵权案（第 48 号指导案例）",
+      "legacyPath": "/jdsnk/",
+      "date": "2017-02-20 15:16:31",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["tort-traffic", "legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/jianguoyun-keepass.md",
+      "title": "坚果云&KeePass（多图）",
+      "legacyPath": "/jianguoyun-keepass/",
+      "date": "2017-03-23 21:00:33",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "high",
+        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/lao-dong-zhe-wei-yue-jin.md",
+      "title": "一个暗藏杀机的劳动法考点",
+      "legacyPath": "/lao-dong-zhe-wei-yue-jin/",
+      "date": "2014-09-04 12:14:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": [
+          "labor-social-security",
+          "civil-commercial",
+          "legal-practice-research"
+        ],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/llfxdmw.md",
+      "title": "《理论法学的迷雾》笔记",
+      "legacyPath": "/llfxdmw/",
+      "date": "2016-05-17 12:27:08",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/opoo-zhe-teng.md",
+      "title": "OpooPress折腾后记",
+      "legacyPath": "/opoo-zhe-teng/",
+      "date": "2014-07-23 03:22:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "note",
+        "topics": [],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "low",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/others-00s.md",
+      "title": "别人家的「零零后」？",
+      "legacyPath": "/others-00s/",
+      "date": "2017-10-05 11:24:37",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "culture",
+        "topics": ["notes-observations"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "medium",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/posner-homosexual.md",
+      "title": "[搬运]看波大爷的同性恋婚姻的经济分析",
+      "legacyPath": "/posner-homosexual/",
+      "date": "2015-07-03 09:18:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/qxpj.md",
+      "title": "缺席审判时，法院是否有权调整违约金数额",
+      "legacyPath": "/qxpj/",
+      "date": "2017-01-14 21:36:07",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["civil-commercial", "legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/shuang-pin-vs-quan-pin.md",
+      "title": "双拼 VS 全拼",
+      "legacyPath": "/shuang-pin-vs-quan-pin/",
+      "date": "2017-10-03 10:31:30",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "mixed",
+        "topics": ["legal-practice-research", "technology-digital-life"],
+        "timeSensitive": true,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": [
+          "旧分类或标题/标签包含明确法律主题",
+          "标题/标签包含软件、系统或效率工具主题",
+          "包含年度、标准、通知、软件版本或现行规则线索"
+        ]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/software-reverse-engineering.md",
+      "title": "软件反向工程",
+      "legacyPath": "/software-reverse-engineering/",
+      "date": "2017-02-24 21:13:57",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/tai-er-gu-shang.md",
+      "title": "对如何认定故意伤害胎儿中“他人”的思考",
+      "legacyPath": "/tai-er-gu-shang/",
+      "date": "2014-08-23 08:32:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/webfont-yu-zhe-zuo-quan.md",
+      "title": "WebFont 与著作权",
+      "legacyPath": "/webfont-yu-zhe-zuo-quan/",
+      "date": "2017-10-17 21:09:05",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/wei-ji-hou-ban-quan.md",
+      "title": "维基百科与摄影师版权之争",
+      "legacyPath": "/wei-ji-hou-ban-quan/",
+      "date": "2014-08-08 09:31:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/weixianfan.md",
+      "title": "危险犯与行为犯",
+      "legacyPath": "/weixianfan/",
+      "date": "2014-10-16 10:12:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/work-rules-mindmap.md",
+      "title": "【读书笔记】重新定义团队——谷歌如何工作",
+      "legacyPath": "/work-rules-mindmap/",
+      "date": "2017-08-26 01:40:06",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "culture",
+        "topics": ["lawyer-toolbox", "notes-observations"],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "medium",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/xzlfbzw.md",
+      "title": "行政立法不作为的简单分析",
+      "legacyPath": "/xzlfbzw/",
+      "date": "2014-10-25 13:05:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/yu-ming-zhuan-yi.md",
+      "title": "域名转移申诉",
+      "legacyPath": "/yu-ming-zhuan-yi/",
+      "date": "2014-09-02 08:17:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "note",
+        "topics": [],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "low",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/zhetengb.md",
+      "title": "自家小站再折腾",
+      "legacyPath": "/zhetengb/",
+      "date": "2015-01-28 06:19:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "note",
+        "topics": [],
+        "timeSensitive": false,
+        "legalDisclaimer": false,
+        "confidence": "low",
+        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+      },
+      "reviewStatus": "pending"
+    },
+    {
+      "source": "src/content/blog/zzq.md",
+      "title": "著作权法课程流水账",
+      "legacyPath": "/zzq/",
+      "date": "2015-10-29 09:55:00",
+      "current": {
+        "topics": [],
+        "contentKind": null,
+        "timeSensitive": false,
+        "legalDisclaimer": false
+      },
+      "candidate": {
+        "contentKind": "legal",
+        "topics": ["legal-practice-research", "notes-observations"],
+        "timeSensitive": false,
+        "legalDisclaimer": true,
+        "confidence": "high",
+        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+      },
+      "reviewStatus": "pending"
+    }
+  ]
+}
