@@ -1,0 +1,89 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { displayTaxonomyValue, legacyTaxonomyPath } from "../../lib/taxonomy";
+
+const articles = await getCollection("blog", ({ data }) => !data.draft);
+const tags = new Map<string, number>();
+for (const article of articles)
+  for (const tag of article.data.tags) tags.set(tag, (tags.get(tag) ?? 0) + 1);
+const sorted = [...tags].sort(([a], [b]) =>
+  displayTaxonomyValue(a).localeCompare(displayTaxonomyValue(b), "zh-CN"),
+);
+---
+
+<BaseLayout title="标签 | 小法进阶" description="按旧站标签浏览文章。">
+  <header>
+    <a class="back" href="/">← 小法进阶</a>
+    <p class="eyebrow">LEGACY TAG INDEX</p>
+    <h1>标签</h1>
+    <p>保留历史标签，共 {sorted.length} 个索引词。</p>
+  </header>
+  <main>
+    <ul>
+      {
+        sorted.map(([tag, count]) => (
+          <li>
+            <a href={legacyTaxonomyPath("tags", tag)}>
+              {displayTaxonomyValue(tag)} <sup>{count}</sup>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</BaseLayout>
+
+<style>
+  header {
+    border-top: 4px solid var(--ink);
+    max-width: 50rem;
+    padding-top: 1rem;
+  }
+  .back,
+  .eyebrow,
+  sup {
+    font-family: ui-monospace, monospace;
+  }
+  .back,
+  header > p:last-child {
+    color: var(--muted);
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+    margin-top: 3rem;
+  }
+  h1 {
+    font-size: clamp(3rem, 9vw, 6rem);
+    letter-spacing: -0.07em;
+    line-height: 0.95;
+    margin: 0;
+  }
+  main {
+    margin-top: 4rem;
+    max-width: 58rem;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+    padding: 0;
+  }
+  a {
+    border: 1px solid var(--rule);
+    display: inline-block;
+    padding: 0.45rem 0.75rem;
+    text-decoration: none;
+  }
+  a:hover {
+    border-color: var(--accent);
+  }
+  sup {
+    color: var(--muted);
+    font-size: 0.65rem;
+    margin-left: 0.2rem;
+  }
+</style>

@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import IndexLayout from "../../layouts/IndexLayout.astro";
+
+const articles = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<IndexLayout
+  eyebrow="CHRONOLOGICAL ARCHIVE"
+  title="文章归档"
+  description={`按时间整理的全部 ${articles.length} 篇公开文章。历史归档路径继续保留并汇入此索引。`}
+  items={articles.map((article) => ({
+    href: article.data.legacyPath ?? "/",
+    title: article.data.title,
+    date: article.data.date,
+    description: article.data.description,
+  }))}
+/>

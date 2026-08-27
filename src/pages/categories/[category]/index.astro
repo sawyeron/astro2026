@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import IndexLayout from "../../../layouts/IndexLayout.astro";
+import { displayTaxonomyValue } from "../../../lib/taxonomy";
+
+export async function getStaticPaths() {
+  const articles = await getCollection("blog", ({ data }) => !data.draft);
+  const values = new Set(
+    articles.flatMap((article) => article.data.categories),
+  );
+  return [...values].map((category) => ({
+    params: { category },
+    props: { category },
+  }));
+}
+
+const { category } = Astro.props;
+const articles = (await getCollection("blog", ({ data }) => !data.draft))
+  .filter((article) => article.data.categories.includes(category))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const title = displayTaxonomyValue(category);
+---
+
+<IndexLayout
+  eyebrow="CATEGORY"
+  title={title}
+  description={`旧站分类“${title}”下的 ${articles.length} 篇文章。`}
+  items={articles.map((article) => ({
+    href: article.data.legacyPath ?? "/",
+    title: article.data.title,
+    date: article.data.date,
+    description: article.data.description,
+  }))}
+/>

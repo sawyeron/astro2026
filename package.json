@@ -16,12 +16,14 @@
     "format": "prettier --check .",
     "format:write": "prettier --write .",
     "lint": "eslint .",
-    "verify": "npm run format && npm run lint && npm run check && npm run check:assets && npm run check:migration && npm run build:site && npm run check:links",
+    "verify": "npm run format && npm run lint && npm run check && npm run check:assets && npm run check:migration && npm run check:urls && npm run build:site && npm run check:links && npm run check:urls -- --check-dist",
     "check:links": "node scripts/check-dist-links.mjs",
     "check:assets": "node scripts/check-asset-recovery.mjs",
     "migrate:content": "node scripts/migrate-legacy-content.mjs",
     "migrate:content:dry": "node scripts/migrate-legacy-content.mjs --dry-run",
-    "check:migration": "node scripts/check-content-migration.mjs"
+    "check:migration": "node scripts/check-content-migration.mjs",
+    "generate:urls": "node scripts/generate-auxiliary-url-manifest.mjs",
+    "check:urls": "node scripts/check-auxiliary-urls.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",

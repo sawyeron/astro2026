@@ -15,7 +15,9 @@ const articles = (await getCollection("blog", ({ data }) => !data.draft)).sort(
       法律、技术与个人知识档案。历史文章已按原公开地址迁入 Astro 静态站点。
     </p>
     <nav aria-label="主要导航">
-      <a href="/timeline/">时间线</a><a href="/about/">关于</a><a href="/PGP/"
+      <a href="/archives/">归档</a><a href="/categories/">分类</a><a
+        href="/tags/">标签</a
+      ><a href="/timeline/">时间线</a><a href="/about/">关于</a><a href="/PGP/"
         >PGP</a
       >
     </nav>
@@ -63,6 +65,7 @@ const articles = (await getCollection("blog", ({ data }) => !data.draft)).sort(
   }
   nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
     margin: 2rem 0 6rem;
   }

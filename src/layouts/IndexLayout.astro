@@ -1,0 +1,133 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+interface Item {
+  href: string;
+  title: string;
+  date?: Date;
+  description?: string;
+}
+
+const {
+  eyebrow = "ARCHIVE INDEX",
+  title,
+  description,
+  items = [],
+  emptyMessage = "暂无内容。",
+} = Astro.props as {
+  eyebrow?: string;
+  title: string;
+  description: string;
+  items?: Item[];
+  emptyMessage?: string;
+};
+---
+
+<BaseLayout title={`${title} | 小法进阶`} description={description}>
+  <header class="index-header">
+    <a class="back" href="/">← 小法进阶</a>
+    <p class="eyebrow">{eyebrow}</p>
+    <h1>{title}</h1>
+    <p class="description">{description}</p>
+  </header>
+
+  <main class="index-body">
+    {
+      items.length ? (
+        <ol>
+          {items.map((item) => (
+            <li>
+              {item.date && (
+                <time datetime={item.date.toISOString()}>
+                  {item.date.toLocaleDateString("zh-CN", {
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "2-digit",
+                    timeZone: "Asia/Shanghai",
+                  })}
+                </time>
+              )}
+              <div>
+                <a href={item.href}>{item.title}</a>
+                {item.description && <p>{item.description}</p>}
+              </div>
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <p>{emptyMessage}</p>
+      )
+    }
+  </main>
+</BaseLayout>
+
+<style>
+  .index-header,
+  .index-body {
+    max-width: 52rem;
+  }
+  .index-header {
+    border-top: 4px solid var(--ink);
+    padding-top: 1rem;
+  }
+  .back,
+  .eyebrow,
+  time {
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  }
+  .back {
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+    margin: 3rem 0 0.8rem;
+  }
+  h1 {
+    font-size: clamp(2.8rem, 9vw, 6rem);
+    letter-spacing: -0.065em;
+    line-height: 0.95;
+    margin: 0;
+  }
+  .description {
+    color: var(--muted);
+    font-size: 1.08rem;
+    margin: 1.5rem 0 4.5rem;
+    max-width: 40rem;
+  }
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border-top: 1px solid var(--rule);
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 7.5rem 1fr;
+    padding: 1rem 0 1.2rem;
+  }
+  li > div > a {
+    font-size: 1.08rem;
+    font-weight: 650;
+  }
+  li p {
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin: 0.4rem 0 0;
+  }
+  time {
+    color: var(--muted);
+    font-size: 0.78rem;
+    padding-top: 0.18rem;
+  }
+  @media (max-width: 38rem) {
+    li {
+      gap: 0.3rem;
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

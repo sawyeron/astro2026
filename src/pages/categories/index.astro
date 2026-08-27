@@ -1,0 +1,91 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { displayTaxonomyValue, legacyTaxonomyPath } from "../../lib/taxonomy";
+
+const articles = await getCollection("blog", ({ data }) => !data.draft);
+const categories = new Map<string, number>();
+for (const article of articles)
+  for (const category of article.data.categories)
+    categories.set(category, (categories.get(category) ?? 0) + 1);
+const sorted = [...categories].sort(([a], [b]) =>
+  displayTaxonomyValue(a).localeCompare(displayTaxonomyValue(b), "zh-CN"),
+);
+---
+
+<BaseLayout title="分类 | 小法进阶" description="按旧站分类浏览文章。">
+  <header>
+    <a class="back" href="/">← 小法进阶</a>
+    <p class="eyebrow">LEGACY CATEGORIES</p>
+    <h1>分类</h1>
+    <p>保留旧站分类结构，共 {sorted.length} 个分类。</p>
+  </header>
+  <main>
+    <ul>
+      {
+        sorted.map(([category, count]) => (
+          <li>
+            <a href={legacyTaxonomyPath("categories", category)}>
+              {displayTaxonomyValue(category)}
+            </a>
+            <span>{count} 篇</span>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</BaseLayout>
+
+<style>
+  header,
+  main {
+    max-width: 48rem;
+  }
+  header {
+    border-top: 4px solid var(--ink);
+    padding-top: 1rem;
+  }
+  .back,
+  .eyebrow {
+    font-family: ui-monospace, monospace;
+  }
+  .back,
+  header > p:last-child {
+    color: var(--muted);
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+    margin-top: 3rem;
+  }
+  h1 {
+    font-size: clamp(3rem, 9vw, 6rem);
+    letter-spacing: -0.07em;
+    line-height: 0.95;
+    margin: 0;
+  }
+  main {
+    margin-top: 4rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    align-items: baseline;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  li a {
+    font-size: 1.25rem;
+    font-weight: 650;
+  }
+  span {
+    color: var(--muted);
+    font-family: ui-monospace, monospace;
+    font-size: 0.8rem;
+  }
+</style>
