@@ -16,7 +16,7 @@
     "format": "prettier --check .",
     "format:write": "prettier --write .",
     "lint": "eslint .",
-    "verify": "npm run format && npm run lint && npm run check && npm run check:assets && npm run check:migration && npm run check:urls && npm run build:site && npm run check:links && npm run check:urls -- --check-dist && npm run check:syndication && npm run check:search",
+    "verify": "npm run format && npm run lint && npm run check && npm run check:assets && npm run check:migration && npm run check:urls && npm run check:snapshots:manifest && npm run build:site && npm run check:links && npm run check:urls -- --check-dist && npm run check:syndication && npm run check:search && npm run check:snapshots",
     "check:links": "node scripts/check-dist-links.mjs",
     "check:assets": "node scripts/check-asset-recovery.mjs",
     "migrate:content": "node scripts/migrate-legacy-content.mjs",
@@ -26,7 +26,10 @@
     "check:urls": "node scripts/check-auxiliary-urls.mjs",
     "check:syndication": "node scripts/check-syndication.mjs",
     "generate:governance": "node scripts/generate-content-governance-candidates.mjs",
-    "check:search": "node scripts/check-search.mjs"
+    "check:search": "node scripts/check-search.mjs",
+    "generate:snapshots": "node scripts/generate-render-snapshot-manifest.mjs",
+    "check:snapshots:manifest": "node scripts/generate-render-snapshot-manifest.mjs --check",
+    "check:snapshots": "node scripts/check-render-snapshots.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",

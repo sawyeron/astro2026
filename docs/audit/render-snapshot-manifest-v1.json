@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Deterministic render fixtures for migrated articles with complex Markdown or legacy HTML.",
+  "snapshots": [
+    {
+      "source": "src/content/blog/2018-07-25-Vcard与二维码名片.md",
+      "features": ["table", "code", "footnotes"],
+      "title": "Vcard与二维码名片",
+      "legacyPath": "/vcard-yu-er-wei-ma-ming-pian/",
+      "output": "dist/vcard-yu-er-wei-ma-ming-pian/index.html",
+      "expectations": {
+        "articleTitle": "Vcard与二维码名片",
+        "hasTable": true,
+        "hasCodeBlock": true,
+        "hasFootnotes": true,
+        "hasInlineSvg": false,
+        "rawHtmlMarkers": []
+      }
+    },
+    {
+      "source": "src/content/blog/2021-02-28-伪手写HTML排版公众号文章的几点笔记.md",
+      "features": ["rawHtml", "svg", "code"],
+      "title": "伪手写HTML排版公众号文章的几点笔记",
+      "legacyPath": "/wei-shou-xie-html-pai-ban-gong-zhong-hao-wen-zhang-de-ji-dian-bi-ji/",
+      "output": "dist/wei-shou-xie-html-pai-ban-gong-zhong-hao-wen-zhang-de-ji-dian-bi-ji/index.html",
+      "expectations": {
+        "articleTitle": "伪手写HTML排版公众号文章的几点笔记",
+        "hasTable": false,
+        "hasCodeBlock": true,
+        "hasFootnotes": false,
+        "hasInlineSvg": true,
+        "rawHtmlMarkers": ["display: flex", "user-select:text"]
+      }
+    },
+    {
+      "source": "src/content/blog/cetrain-issues-iv-for-company-law.md",
+      "features": ["rawHtml"],
+      "title": "公司法司法解释四-引文版",
+      "legacyPath": "/cetrain-issues-iv-for-company-law/",
+      "output": "dist/cetrain-issues-iv-for-company-law/index.html",
+      "expectations": {
+        "articleTitle": "公司法司法解释四-引文版",
+        "hasTable": false,
+        "hasCodeBlock": false,
+        "hasFootnotes": false,
+        "hasInlineSvg": false,
+        "rawHtmlMarkers": ["footnotes-area", "footnote-line"]
+      }
+    },
+    {
+      "source": "src/content/blog/software-reverse-engineering.md",
+      "features": ["footnotes"],
+      "title": "软件反向工程",
+      "legacyPath": "/software-reverse-engineering/",
+      "output": "dist/software-reverse-engineering/index.html",
+      "expectations": {
+        "articleTitle": "软件反向工程",
+        "hasTable": false,
+        "hasCodeBlock": false,
+        "hasFootnotes": true,
+        "hasInlineSvg": false,
+        "rawHtmlMarkers": []
+      }
+    }
+  ]
+}
