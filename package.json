@@ -16,7 +16,7 @@
     "format": "prettier --check .",
     "format:write": "prettier --write .",
     "lint": "eslint .",
-    "verify": "npm run format && npm run lint && npm run check && npm run check:assets && npm run check:migration && npm run check:governance && npm run check:urls && npm run check:snapshots:manifest && npm run build:site && npm run check:links && npm run check:html && npm run check:analytics && npm run check:urls -- --check-dist && npm run check:syndication && npm run check:search && npm run check:snapshots && npm run check:navigation && npm run check:editorial",
+    "verify": "npm run format && npm run lint && npm run check && npm run check:assets && npm run check:migration && npm run check:governance && npm run check:urls && npm run check:snapshots:manifest && npm run build:site && npm run check:links && npm run check:html && npm run check:analytics && npm run check:brand && npm run check:urls -- --check-dist && npm run check:syndication && npm run check:search && npm run check:snapshots && npm run check:navigation && npm run check:editorial",
     "check:links": "node scripts/check-dist-links.mjs",
     "check:assets": "node scripts/check-asset-recovery.mjs",
     "migrate:content": "node scripts/migrate-legacy-content.mjs",
@@ -37,7 +37,8 @@
     "check:governance": "node scripts/check-content-governance.mjs",
     "generate:governance-review": "node scripts/generate-content-governance-review-sheet.mjs",
     "check:editorial": "node scripts/check-editorial-structure.mjs",
-    "check:analytics": "node scripts/check-analytics.mjs"
+    "check:analytics": "node scripts/check-analytics.mjs",
+    "check:brand": "node scripts/check-brand-assets.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",

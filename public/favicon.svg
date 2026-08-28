@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">小法进阶</title>
+  <rect width="64" height="64" rx="4" fill="#1b2529"/>
+  <path d="M14 16h36v4H14zm0 28h36v4H14z" fill="#f7f5ef"/>
+  <path d="M22 25h20v14H22z" fill="none" stroke="#a23d2b" stroke-width="4"/>
+  <path d="M32 20v24" stroke="#f7f5ef" stroke-width="3"/>
+</svg>
