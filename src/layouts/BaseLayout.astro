@@ -5,6 +5,8 @@ const { title = site.name, description = "法律、技术与个人知识档案�
   Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const fullTitle = title === site.name ? title : `${title} | ${site.name}`;
+const cloudflareBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN?.trim();
+const analyticsEnabled = import.meta.env.PROD && Boolean(cloudflareBeaconToken);
 ---
 
 <!doctype html>
@@ -36,6 +38,16 @@ const fullTitle = title === site.name ? title : `${title} | ${site.name}`;
     />
     <link rel="canonical" href={canonical} />
     <title>{fullTitle}</title>
+    {
+      analyticsEnabled && (
+        <script
+          is:inline
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={JSON.stringify({ token: cloudflareBeaconToken })}
+        />
+      )
+    }
   </head>
   <body>
     <div class="site-shell">
@@ -56,8 +68,8 @@ const fullTitle = title === site.name ? title : `${title} | ${site.name}`;
           <a href="/rss.xml">RSS</a>
         </div>
         <p>
-          本站无评论系统，不使用 Google Analytics。计划使用 Cloudflare Web
-          Analytics 统计汇总访问数据，不建立访客画像。
+          本站无评论系统，不使用 Google Analytics。Cloudflare Web Analytics
+          仅统计汇总访问数据，不使用 Cookie，也不建立访客画像。
         </p>
         <p>
           原创内容除特别说明外采用 CC BY 4.0；历史文章请结合其发布日期阅读。
