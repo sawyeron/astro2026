@@ -12,8 +12,9 @@ interface Props {
     "legal" | "technical" | "note" | "culture" | "personal" | "mixed";
   timeSensitive?: boolean;
   legalDisclaimer?: boolean;
+  previousArticle?: { title: string; href: string };
+  nextArticle?: { title: string; href: string };
 }
-
 const {
   title,
   description,
@@ -24,6 +25,8 @@ const {
   contentKind,
   timeSensitive = false,
   legalDisclaimer = false,
+  previousArticle,
+  nextArticle,
 } = Astro.props;
 const formatter = new Intl.DateTimeFormat("zh-CN", {
   timeZone: "Asia/Shanghai",
@@ -83,6 +86,29 @@ const formatter = new Intl.DateTimeFormat("zh-CN", {
         </aside>
       )
     }
+
+    <nav class="article-navigation" aria-label="文章导航">
+      <div>
+        {
+          previousArticle && (
+            <>
+              <span>上一篇</span>
+              <a href={previousArticle.href}>{previousArticle.title}</a>
+            </>
+          )
+        }
+      </div>
+      <div>
+        {
+          nextArticle && (
+            <>
+              <span>下一篇</span>
+              <a href={nextArticle.href}>{nextArticle.title}</a>
+            </>
+          )
+        }
+      </div>
+    </nav>
   </article>
 </BaseLayout>
 
@@ -208,5 +234,35 @@ const formatter = new Intl.DateTimeFormat("zh-CN", {
     color: var(--muted);
     font-size: 0.9rem;
     margin-top: 4rem;
+  }
+  .article-navigation {
+    border-top: 1px solid var(--rule);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 4rem;
+    padding-top: 1.4rem;
+  }
+  .article-navigation div:last-child {
+    text-align: right;
+  }
+  .article-navigation span {
+    color: var(--muted);
+    display: block;
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.35rem;
+  }
+  .article-navigation a {
+    font-weight: 650;
+  }
+  @media (max-width: 38rem) {
+    .article-navigation {
+      grid-template-columns: 1fr;
+    }
+    .article-navigation div:last-child {
+      text-align: left;
+    }
   }
 </style>

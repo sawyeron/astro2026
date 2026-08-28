@@ -3,18 +3,32 @@ import { getCollection, render } from "astro:content";
 import ArticleLayout from "../layouts/ArticleLayout.astro";
 
 export async function getStaticPaths() {
-  const articles = await getCollection("blog", ({ data }) => !data.draft);
-  return articles.map((article) => ({
-    params: {
-      legacyPath: article.data.legacyPath
-        ?.replace(/^\//, "")
-        .replace(/\/$/, ""),
-    },
-    props: { article },
-  }));
+  const articles = (
+    await getCollection("blog", ({ data }) => !data.draft)
+  ).sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+  return articles.map((article, index) => {
+    const previous = articles[index - 1];
+    const next = articles[index + 1];
+    return {
+      params: {
+        legacyPath: article.data.legacyPath
+          ?.replace(/^\//, "")
+          .replace(/\/$/, ""),
+      },
+      props: {
+        article,
+        previousArticle: previous
+          ? { title: previous.data.title, href: previous.data.legacyPath! }
+          : undefined,
+        nextArticle: next
+          ? { title: next.data.title, href: next.data.legacyPath! }
+          : undefined,
+      },
+    };
+  });
 }
 
-const { article } = Astro.props;
+const { article, previousArticle, nextArticle } = Astro.props;
 const { Content } = await render(article);
 ---
 
@@ -28,6 +42,8 @@ const { Content } = await render(article);
   contentKind={article.data.contentKind}
   timeSensitive={article.data.timeSensitive}
   legalDisclaimer={article.data.legalDisclaimer}
+  previousArticle={previousArticle}
+  nextArticle={nextArticle}
 >
   <Content />
 </ArticleLayout>
