@@ -39,7 +39,8 @@ const fullTitle = title === site.name ? title : `${title} | ${site.name}`;
   </head>
   <body>
     <div class="site-shell">
-      <main><slot /></main>
+      <a class="skip-link" href="#main-content">跳至主要内容</a>
+      <main id="main-content" data-pagefind-body><slot /></main>
       <footer class="site-footer">
         <div>
           <a href="/">小法进阶</a>
@@ -109,6 +110,21 @@ const fullTitle = title === site.name ? title : `${title} | ${site.name}`;
   :focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 4px;
+  }
+
+  .skip-link {
+    background: var(--ink);
+    color: var(--paper);
+    left: 1rem;
+    padding: 0.55rem 0.8rem;
+    position: fixed;
+    top: 0;
+    transform: translateY(-130%);
+    z-index: 100;
+  }
+  .skip-link:focus {
+    color: var(--paper);
+    transform: translateY(0);
   }
 
   .site-footer {
