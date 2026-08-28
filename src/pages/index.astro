@@ -1,93 +1,313 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { topicLabels, type Topic } from "../lib/topics";
 
 const articles = (await getCollection("blog", ({ data }) => !data.draft)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
+const reviewed = articles.filter((article) => article.data.topics.length > 0);
+const topicCounts = new Map<Topic, number>();
+for (const article of reviewed)
+  for (const topic of article.data.topics)
+    topicCounts.set(topic, (topicCounts.get(topic) ?? 0) + 1);
+const featuredTopics = [...topicCounts].sort((a, b) => b[1] - a[1]).slice(0, 4);
+const legalCount = articles.filter(
+  (article) =>
+    article.data.contentKind === "legal" ||
+    article.data.contentKind === "mixed",
+).length;
 ---
 
-<BaseLayout description="法律、技术与个人知识档案。">
-  <header>
-    <p class="eyebrow">IMOUYANG.COM · PERSONAL ARCHIVE</p>
-    <h1>小法进阶</h1>
-    <p class="lede">
-      法律、技术与个人知识档案。历史文章已按原公开地址迁入 Astro 静态站点。
-    </p>
-    <nav aria-label="主要导航">
-      <a href="/archives/">归档</a><a href="/categories/">分类</a><a
-        href="/tags/">标签</a
-      ><a href="/timeline/">时间线</a><a href="/search/">搜索</a><a
-        href="/about/">关于</a
-      ><a href="/PGP/">PGP</a>
-    </nav>
+<BaseLayout
+  description="小法进阶：以法律专业为主轴、以技术和方法为细节的个人知识档案。"
+>
+  <header class="hero">
+    <div class="masthead">
+      <span>IMOUYANG.COM</span><span>EST. 2013</span><span
+        >{articles.length} ESSAYS</span
+      >
+    </div>
+    <p class="eyebrow">LAW · TECHNOLOGY · PERSONAL ARCHIVE</p>
+    <h1>小法<br /><em>进阶</em></h1>
+    <div class="hero-footer">
+      <p>以法律专业为主轴、以技术和方法为细节的个人知识档案。</p>
+      <nav aria-label="主要导航">
+        <a href="/topics/">专题</a><a href="/archives/">归档</a><a
+          href="/timeline/">时间线</a
+        ><a href="/search/">搜索</a><a href="/about/">关于</a>
+      </nav>
+    </div>
   </header>
 
-  <section aria-labelledby="articles-heading">
-    <h2 id="articles-heading">最近文章</h2>
+  <section class="manifesto" aria-labelledby="manifesto-heading">
+    <p class="section-number">01 / ARCHIVE</p>
+    <div>
+      <h2 id="manifesto-heading">
+        旧文章不被悄悄重写，<br />旧地址也不被轻易遗忘。
+      </h2>
+      <p>
+        本站保存从学生时代至今的法律分析、规则资料、软件笔记与个人观察。历史文本反映写作当时的认识；涉及现行规则和数据时，请结合发布日期阅读。
+      </p>
+    </div>
+    <dl>
+      <div><dt>{articles.length}</dt><dd>公开文章</dd></div>
+      <div><dt>{legalCount || "—"}</dt><dd>已审核法律文章</dd></div>
+      <div><dt>{reviewed.length}</dt><dd>已纳入精选专题</dd></div>
+    </dl>
+  </section>
+
+  <section class="topics" aria-labelledby="topics-heading">
+    <div class="section-heading">
+      <p class="section-number">02 / TOPICS</p>
+      <h2 id="topics-heading">精选专题</h2>
+      <a href="/topics/">查看全部 →</a>
+    </div>
+    {
+      featuredTopics.length ? (
+        <ol>
+          {featuredTopics.map(([topic, count], index) => (
+            <li>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <a href={`/topics/${topic}/`}>{topicLabels[topic]}</a>
+              <strong>{count}</strong>
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <div class="pending">
+          <p>专题编目正在人工复核。</p>
+          <span>
+            候选清单已经覆盖全部 84 篇文章；只有审核通过的条目才会出现在这里。
+          </span>
+        </div>
+      )
+    }
+  </section>
+
+  <section class="latest" aria-labelledby="latest-heading">
+    <div class="section-heading">
+      <p class="section-number">03 / LATEST</p>
+      <h2 id="latest-heading">最近文章</h2>
+      <a href="/archives/">完整归档 →</a>
+    </div>
     <ol>
       {
-        articles.slice(0, 12).map((article) => (
+        articles.slice(0, 10).map((article, index) => (
           <li>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <div>
+              <a href={article.data.legacyPath}>{article.data.title}</a>
+              {article.data.description && <p>{article.data.description}</p>}
+            </div>
             <time datetime={article.data.date.toISOString()}>
               {article.data.date.getFullYear()}
             </time>
-            <a href={article.data.legacyPath}>{article.data.title}</a>
           </li>
         ))
       }
     </ol>
-    <p><a href="/timeline/">查看全部 {articles.length} 篇文章 →</a></p>
   </section>
 </BaseLayout>
 
 <style>
-  header {
+  .hero {
+    min-height: min(48rem, 80vh);
+  }
+  .masthead {
+    border-bottom: 1px solid var(--ink);
     border-top: 4px solid var(--ink);
-    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.65rem 0;
+    font:
+      0.68rem/1 ui-monospace,
+      "SFMono-Regular",
+      Consolas,
+      monospace;
+    letter-spacing: 0.1em;
+  }
+  .eyebrow,
+  .section-number {
+    color: var(--accent);
+    font:
+      0.72rem/1.2 ui-monospace,
+      "SFMono-Regular",
+      Consolas,
+      monospace;
+    letter-spacing: 0.14em;
   }
   .eyebrow {
-    color: var(--accent);
-    font-family: ui-monospace, monospace;
-    font-size: 0.76rem;
-    letter-spacing: 0.12em;
+    margin: clamp(4rem, 10vw, 8rem) 0 1rem;
   }
   h1 {
-    font-size: clamp(3.6rem, 12vw, 8rem);
-    letter-spacing: -0.09em;
-    line-height: 0.88;
-    margin: 0.5rem 0 2rem;
+    font-size: clamp(5rem, 18vw, 13rem);
+    letter-spacing: -0.105em;
+    line-height: 0.68;
+    margin: 0;
   }
-  .lede {
-    color: var(--muted);
-    font-size: 1.15rem;
-    max-width: 38rem;
+  h1 em {
+    color: var(--accent);
+    font-style: normal;
+    margin-left: 0.7em;
+  }
+  .hero-footer {
+    align-items: end;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(16rem, 31rem) 1fr;
+    margin-top: clamp(5rem, 11vw, 9rem);
+  }
+  .hero-footer > p {
+    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+    margin: 0;
   }
   nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 2rem 0 6rem;
+    gap: 0.7rem 1.2rem;
+    justify-content: end;
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-size: 0.78rem;
   }
   section {
-    max-width: 48rem;
+    border-top: 1px solid var(--ink);
+    margin-top: clamp(6rem, 14vw, 11rem);
+    padding-top: 1rem;
   }
-  h2 {
-    font-size: clamp(1.7rem, 4vw, 2.6rem);
+  .manifesto {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 7rem minmax(0, 1fr) 15rem;
   }
-  ol {
+  .manifesto h2,
+  .section-heading h2 {
+    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    letter-spacing: -0.055em;
+    line-height: 1.06;
+    margin: 0;
+  }
+  .manifesto > div > p {
+    color: var(--muted);
+    max-width: 39rem;
+  }
+  dl {
+    margin: 0;
+  }
+  dl div {
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+  dt {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  dd {
+    color: var(--muted);
+    font-size: 0.78rem;
+    margin: 0;
+  }
+  .section-heading {
+    align-items: end;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 7rem 1fr auto;
+    margin-bottom: 3rem;
+  }
+  .topics ol,
+  .latest ol {
     list-style: none;
+    margin: 0;
     padding: 0;
   }
-  li {
+  .topics li {
+    align-items: baseline;
     border-top: 1px solid var(--rule);
     display: grid;
     gap: 1rem;
-    grid-template-columns: 4rem 1fr;
-    padding: 0.8rem 0;
+    grid-template-columns: 4rem 1fr auto;
+    padding: 1rem 0;
   }
-  time {
+  .topics li span,
+  .topics li strong,
+  .latest li > span,
+  .latest time {
     color: var(--muted);
-    font-family: ui-monospace, monospace;
+    font:
+      0.75rem/1 ui-monospace,
+      "SFMono-Regular",
+      Consolas,
+      monospace;
+  }
+  .topics li a {
+    font-size: clamp(1.5rem, 4vw, 2.8rem);
+    font-weight: 700;
+  }
+  .pending {
+    background: #ebe7dc;
+    border-left: 4px solid var(--accent);
+    padding: 1.5rem;
+  }
+  .pending p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  .pending span {
+    color: var(--muted);
+  }
+  .latest li {
+    align-items: start;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    gap: 1.3rem;
+    grid-template-columns: 3rem 1fr 3rem;
+    padding: 1rem 0 1.3rem;
+  }
+  .latest li a {
+    font-size: 1.18rem;
+    font-weight: 700;
+  }
+  .latest li p {
+    color: var(--muted);
+    display: -webkit-box;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin: 0.35rem 0 0;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  @media (max-width: 48rem) {
+    .hero-footer,
+    .manifesto,
+    .section-heading {
+      grid-template-columns: 1fr;
+    }
+    nav {
+      justify-content: start;
+    }
+    .manifesto dl {
+      max-width: 20rem;
+    }
+    .section-heading {
+      align-items: start;
+    }
+  }
+  @media (max-width: 38rem) {
+    .masthead span:nth-child(2) {
+      display: none;
+    }
+    h1 {
+      font-size: clamp(5rem, 28vw, 8rem);
+    }
+    .latest li {
+      grid-template-columns: 2rem 1fr;
+    }
+    .latest time {
+      grid-column: 2;
+    }
   }
 </style>

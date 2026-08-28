@@ -45,6 +45,8 @@ const fullTitle = title === site.name ? title : `${title} | ${site.name}`;
         <div>
           <a href="/">小法进阶</a>
           <span aria-hidden="true">/</span>
+          <a href="/topics/">专题</a>
+          <span aria-hidden="true">/</span>
           <a href="/archives/">归档</a>
           <span aria-hidden="true">/</span>
           <a href="/search/">搜索</a>
@@ -143,6 +145,34 @@ const fullTitle = title === site.name ? title : `${title} | ${site.name}`;
   .site-footer p {
     margin: 0.6rem 0;
     max-width: 52rem;
+  }
+
+  @media print {
+    :root {
+      --paper: #fff;
+      --ink: #000;
+      --muted: #333;
+      --rule: #aaa;
+    }
+    .skip-link,
+    .site-footer,
+    nav {
+      display: none !important;
+    }
+    .site-shell {
+      padding: 0;
+      width: 100%;
+    }
+    body {
+      font-size: 11pt;
+      line-height: 1.55;
+    }
+    a {
+      text-decoration: none;
+    }
+    @page {
+      margin: 18mm 16mm;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {

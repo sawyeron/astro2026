@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import IndexLayout from "../../layouts/IndexLayout.astro";
+import { topicLabels, type Topic } from "../../lib/topics";
+
+export async function getStaticPaths() {
+  const articles = await getCollection("blog", ({ data }) => !data.draft);
+  const topics = new Set(articles.flatMap((article) => article.data.topics));
+  return [...topics].map((topic) => ({ params: { topic } }));
+}
+const { topic } = Astro.params as { topic: Topic };
+const articles = (
+  await getCollection(
+    "blog",
+    ({ data }) => !data.draft && data.topics.includes(topic),
+  )
+).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const title = topicLabels[topic];
+---
+
+<IndexLayout
+  eyebrow="CURATED TOPIC"
+  title={title}
+  description={`经人工复核归入“${title}”专题的文章，共 ${articles.length} 篇。`}
+  items={articles.map((article) => ({
+    href: article.data.legacyPath!,
+    title: article.data.title,
+    date: article.data.date,
+    description: article.data.description,
+  }))}
+  emptyMessage="该专题尚无已审核文章。"
+/>
