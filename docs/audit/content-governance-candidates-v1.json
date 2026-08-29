@@ -1520,14 +1520,21 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "legal",
-        "topics": ["tort-traffic", "legal-practice-research"],
-        "timeSensitive": false,
+        "contentKind": "mixed",
+        "topics": [
+          "civil-commercial",
+          "legal-practice-research",
+          "technology-digital-life"
+        ],
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：该文讨论计算机软件著作权指导案例，不属于人身侵权或交通事故；归入民商事、法律研究与技术专题。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/jianguoyun-keepass.md",
