@@ -187,12 +187,15 @@
       "candidate": {
         "contentKind": "technical",
         "topics": ["technology-digital-life", "lawyer-toolbox"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+        "reasons": [
+          "人工复核：论文排版与 LaTeX 工具实践，软件环境和命令可能随版本变化。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-07-25-Vcard与二维码名片.md",
@@ -208,12 +211,15 @@
       "candidate": {
         "contentKind": "technical",
         "topics": ["technology-digital-life", "lawyer-toolbox"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+        "reasons": [
+          "人工复核：依赖 iOS、Android、VCard 与二维码工具能力，平台行为可能变化。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-08-22-Expert.md",
@@ -237,11 +243,11 @@
         "legalDisclaimer": false,
         "confidence": "high",
         "reasons": [
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+          "人工复核：PDF Expert 版本、授权和功能记录具有软件时效性。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-08-24-Mackup备份出错的临时解决办法.md",
@@ -352,12 +358,13 @@
       "candidate": {
         "contentKind": "technical",
         "topics": ["technology-digital-life", "lawyer-toolbox"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+        "reasons": ["人工复核：浏览器扩展、用户脚本及兼容性会随版本变化。"],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-09-13-AppleScript脚本两个半.md",
@@ -536,14 +543,17 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "note",
-        "topics": ["lawyer-toolbox"],
-        "timeSensitive": false,
+        "contentKind": "technical",
+        "topics": ["technology-digital-life", "lawyer-toolbox"],
+        "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "low",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": [
+          "人工复核：数字排版插件与工具生态介绍，兼容性可能随平台变化。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-12-05-省司法厅关于律师服务和基层法律服务收费不再实行政府定价的通知.md",
@@ -973,12 +983,10 @@
         "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": [
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        "reasons": ["人工复核：qpdf 命令行用法与安装方式可能随软件版本变化。"],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2021-02-09-flash的卸载.md",
@@ -1036,12 +1044,15 @@
       "candidate": {
         "contentKind": "technical",
         "topics": ["technology-digital-life", "lawyer-toolbox"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+        "reasons": [
+          "人工复核：公众号编辑器、HTML 和 CSS 支持能力可能随平台更新。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2021-07-28-湖北省分区域最低工资标准2021.md",
@@ -1366,16 +1377,20 @@
       },
       "candidate": {
         "contentKind": "technical",
-        "topics": ["technology-digital-life", "lawyer-toolbox"],
+        "topics": [
+          "technology-digital-life",
+          "lawyer-toolbox",
+          "notes-observations"
+        ],
         "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
         "reasons": [
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+          "人工复核：应用版本、名称、授权和系统自动化能力均可能变化。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/duo-ci-zha-pian-shu-e.md",
@@ -1869,13 +1884,13 @@
       },
       "candidate": {
         "contentKind": "culture",
-        "topics": ["lawyer-toolbox", "notes-observations"],
+        "topics": ["notes-observations"],
         "timeSensitive": false,
         "legalDisclaimer": false,
         "confidence": "medium",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：管理类读书笔记，不属于律师工具或技术工具指南。"]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/xzlfbzw.md",

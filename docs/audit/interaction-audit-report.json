@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-29T09:08:39.224Z",
+  "generatedAt": "2026-08-29T09:14:32.388Z",
   "status": "passed",
   "metrics": {
-    "htmlFiles": 239,
-    "fragmentLinks": 398,
-    "uniqueTargets": 798,
+    "htmlFiles": 240,
+    "fragmentLinks": 399,
+    "uniqueTargets": 799,
     "footnoteReferences": 29,
     "footnoteBacklinks": 29,
     "tables": 4,
