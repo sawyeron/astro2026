@@ -33,13 +33,24 @@ for (const item of report.candidates) {
       "contentKind",
       "topics",
       "timeSensitive",
-      "timeSensitivityKind",
       "legalDisclaimer",
     ])
       if (JSON.stringify(data[field]) !== JSON.stringify(item.candidate[field]))
         failures.push(
           `${item.source}: approved ${field} is not applied to front matter`,
         );
+    if (
+      item.candidate.timeSensitive &&
+      JSON.stringify(data.timeSensitivityKind) !==
+        JSON.stringify(item.candidate.timeSensitivityKind)
+    )
+      failures.push(
+        `${item.source}: approved timeSensitivityKind is not applied to front matter`,
+      );
+    if (!item.candidate.timeSensitive && data.timeSensitivityKind)
+      failures.push(
+        `${item.source}: non-time-sensitive article must not retain timeSensitivityKind`,
+      );
     if (!data.topics?.length)
       failures.push(
         `${item.source}: approved article must have at least one topic`,

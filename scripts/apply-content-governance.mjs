@@ -33,11 +33,14 @@ for (const item of approved) {
     "contentKind",
     "topics",
     "timeSensitive",
-    "timeSensitivityKind",
     "legalDisclaimer",
   ])
     if (candidate[field] === undefined)
       failures.push(`${item.source}: approved candidate missing ${field}`);
+  if (candidate.timeSensitive && candidate.timeSensitivityKind === undefined)
+    failures.push(
+      `${item.source}: approved time-sensitive candidate missing timeSensitivityKind`,
+    );
   if (failures.length) continue;
 
   const nextData = {
@@ -45,9 +48,11 @@ for (const item of approved) {
     topics: candidate.topics,
     contentKind: candidate.contentKind,
     timeSensitive: candidate.timeSensitive,
-    timeSensitivityKind: candidate.timeSensitivityKind,
     legalDisclaimer: candidate.legalDisclaimer,
   };
+  if (candidate.timeSensitivityKind)
+    nextData.timeSensitivityKind = candidate.timeSensitivityKind;
+  else delete nextData.timeSensitivityKind;
   const raw = `---\n${stringifyYaml(nextData, { lineWidth: 0 }).trim()}\n---\n${body}`;
   const rendered = await formatWithPrettier(raw, { parser: "markdown" });
   if (rendered !== original) {

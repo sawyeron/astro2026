@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-29T09:05:00.877Z",
+  "generatedAt": "2026-08-29T09:08:39.224Z",
   "status": "passed",
   "metrics": {
-    "htmlFiles": 238,
-    "fragmentLinks": 397,
-    "uniqueTargets": 797,
+    "htmlFiles": 239,
+    "fragmentLinks": 398,
+    "uniqueTargets": 798,
     "footnoteReferences": 29,
     "footnoteBacklinks": 29,
     "tables": 4,
@@ -12,5 +12,7 @@
     "inlineSvg": 1
   },
   "failures": [],
-  "warnings": []
+  "warnings": [
+    "webfont-yu-zhe-zuo-quan/index.html: code block found without detected horizontal overflow styling"
+  ]
 }

@@ -303,14 +303,16 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "legal",
+        "contentKind": "culture",
         "topics": ["legal-practice-research", "notes-observations"],
         "timeSensitive": false,
-        "legalDisclaimer": true,
+        "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：法律经济学主题读书笔记，保留研究与观察属性，不作为现行规则或法律意见。"
+        ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-09-09-Homebrew离线安装方式变更.md",
@@ -630,14 +632,14 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "legal",
-        "topics": ["legal-practice-research", "notes-observations"],
+        "contentKind": "culture",
+        "topics": ["notes-observations"],
         "timeSensitive": false,
-        "legalDisclaimer": true,
+        "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": ["人工复核：影视观后感与职业观察，不作为法律规则分析。"]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2019-04-30-我在用的安卓APP-201904.md",
@@ -743,13 +745,14 @@
       },
       "candidate": {
         "contentKind": "legal",
-        "topics": ["legal-practice-research"],
-        "timeSensitive": false,
+        "topics": ["civil-commercial", "legal-practice-research"],
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": ["人工复核：疫情期间商事审判临时指导资料，具有明确阶段性。"],
+        "timeSensitivityKind": "temporary-policy"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2020-02-16-Poker键盘自定义备忘.md",
@@ -1220,12 +1223,15 @@
       "candidate": {
         "contentKind": "legal",
         "topics": ["legal-practice-research"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：刑法案例与罪名界分分析，需结合现行法和司法解释。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/bao-li-yu-qu-cai-qiang-jie.md",
@@ -1241,12 +1247,13 @@
       "candidate": {
         "contentKind": "legal",
         "topics": ["legal-practice-research"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": ["人工复核：刑法构成要件分析，需结合现行法和司法解释。"],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/bei-dai-li-ren-sang.md",
@@ -1284,14 +1291,17 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "legal",
-        "topics": ["legal-practice-research"],
-        "timeSensitive": false,
+        "contentKind": "mixed",
+        "topics": ["legal-practice-research", "technology-digital-life"],
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：知识共享、著作权与开放许可交叉内容，兼具法律与技术属性。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/cetrain-issues-iv-for-company-law.md",
@@ -1381,12 +1391,15 @@
       "candidate": {
         "contentKind": "legal",
         "topics": ["legal-practice-research"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：刑法犯罪数额认定分析，需结合现行规范与裁判口径。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/hustlaw13.md",
@@ -1594,13 +1607,13 @@
       },
       "candidate": {
         "contentKind": "legal",
-        "topics": ["legal-practice-research"],
+        "topics": ["legal-practice-research", "notes-observations"],
         "timeSensitive": false,
-        "legalDisclaimer": true,
+        "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": ["人工复核：理论法学读书笔记，主要保存学术观点与阅读记录。"]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/opoo-zhe-teng.md",
@@ -1656,14 +1669,16 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "legal",
-        "topics": ["legal-practice-research"],
+        "contentKind": "culture",
+        "topics": ["legal-practice-research", "notes-observations"],
         "timeSensitive": false,
-        "legalDisclaimer": true,
+        "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：转载的法律经济学与社会议题文章，作为历史思想资料保存。"
+        ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/qxpj.md",
@@ -1725,14 +1740,21 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "legal",
-        "topics": ["legal-practice-research"],
-        "timeSensitive": false,
+        "contentKind": "mixed",
+        "topics": [
+          "civil-commercial",
+          "legal-practice-research",
+          "technology-digital-life"
+        ],
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：计算机软件反向工程与著作权分析，兼具知识产权和技术属性。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/tai-er-gu-shang.md",
@@ -1748,12 +1770,13 @@
       "candidate": {
         "contentKind": "legal",
         "topics": ["legal-practice-research"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": ["人工复核：刑法解释与构成要件分析，需结合现行规范。"],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/webfont-yu-zhe-zuo-quan.md",
@@ -1767,14 +1790,19 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "legal",
-        "topics": ["legal-practice-research"],
-        "timeSensitive": false,
+        "contentKind": "mixed",
+        "topics": [
+          "civil-commercial",
+          "legal-practice-research",
+          "technology-digital-life"
+        ],
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": ["人工复核：网页字体技术与著作权规则交叉分析。"],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/wei-ji-hou-ban-quan.md",
@@ -1788,14 +1816,21 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "legal",
-        "topics": ["legal-practice-research"],
-        "timeSensitive": false,
+        "contentKind": "mixed",
+        "topics": [
+          "civil-commercial",
+          "legal-practice-research",
+          "technology-digital-life"
+        ],
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：网络平台、摄影与著作权争议分析，兼具数字文化与知识产权属性。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/weixianfan.md",
@@ -1811,12 +1846,15 @@
       "candidate": {
         "contentKind": "legal",
         "topics": ["legal-practice-research"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：刑法理论与犯罪形态分析，需结合现行理论和裁判口径。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/work-rules-mindmap.md",
@@ -1853,12 +1891,13 @@
       "candidate": {
         "contentKind": "legal",
         "topics": ["legal-practice-research"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": ["人工复核：行政法制度分析，需结合现行行政诉讼和救济规则。"],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/yu-ming-zhuan-yi.md",
@@ -1916,12 +1955,15 @@
       "candidate": {
         "contentKind": "legal",
         "topics": ["legal-practice-research", "notes-observations"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：著作权法课程记录包含具体法律问题，兼具学习档案属性。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     }
   ]
 }

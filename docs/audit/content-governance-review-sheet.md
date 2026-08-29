@@ -2,7 +2,7 @@
 
 更新时间由生成脚本决定。请以 JSON 清单为权威来源。修改审核状态时，将对应项目的 `reviewStatus` 改为 `approved` 或 `rejected`；如候选不准确，先修订 `candidate` 再批准。
 
-## P1 · 法律且时效敏感（20 篇）
+## P1 · 法律且时效敏感（32 篇）
 
 | 状态     | 日期       | 文章                                                                                                                                                                                  | 类型候选 | 专题候选                                                           | 时效 | 免责 | 置信度 |
 | -------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------ | ---- | ---- | ------ |
@@ -15,38 +15,29 @@
 | approved | 2019-03-14 | [武汉产假是多久?](/wu-han-chan-jia-shi-duo-jiu/)                                                                                                                                      | legal    | labor-social-security、legal-practice-research                     | 是   | 是   | high   |
 | approved | 2019-03-14 | [湖北省分区域最低工资标准(2017)](/hu-bei-sheng-fen-qu-yu-zui-di-gong-zi-biao-zhun/)                                                                                                   | legal    | labor-social-security、legal-practice-research                     | 是   | 是   | high   |
 | approved | 2019-05-02 | [2019年度湖北省道路交通事故损害赔偿标准](/2019-nian-du-hu-bei-sheng-dao-lu-jiao-tong-shi-gu-sun-hai-pei-chang-biao-zhun/)                                                             | legal    | tort-traffic、legal-practice-research                              | 是   | 是   | high   |
+| approved | 2020-02-15 | [湖北高院民二庭《关于审理涉及新型冠状病毒肺炎疫情商事案件若干问题的解答》](/hu-bei-gao-yuan-min-er-ting-tong-zhi/)                                                                    | legal    | civil-commercial、legal-practice-research                          | 是   | 是   | high   |
 | approved | 2020-09-20 | [2020年度湖北省道路交通事故损害赔偿标准](/2020-nian-du-hu-bei-sheng-dao-lu-jiao-tong-shi-gu-sun-hai-pei-chang-biao-zhun/)                                                             | legal    | tort-traffic、legal-practice-research                              | 是   | 是   | high   |
 | approved | 2021-07-28 | [湖北省分区域最低工资标准（2021）](/hu-bei-sheng-fen-qu-yu-zui-di-gong-zi-biao-zhun-2021/)                                                                                            | legal    | labor-social-security、legal-practice-research                     | 是   | 是   | high   |
 | approved | 2021-10-10 | [2021年度湖北省交通事故赔偿标准](/2021-nian-du-hu-bei-sheng-jiao-tong-shi-gu-pei-chang-biao-zhun/)                                                                                    | legal    | tort-traffic、legal-practice-research                              | 是   | 是   | high   |
 | approved | 2021-11-28 | [2021年之「武汉市产假是多久」](/2021-nian-zhi-wu-han-shi-chan-jia-shi-duo-jiu/)                                                                                                       | legal    | labor-social-security、legal-practice-research                     | 是   | 是   | high   |
 | approved | 2024-01-29 | [2021年度湖北省交通事故赔偿标准](/2023-nian-du-hu-bei-sheng-jiao-tong-shi-gu-pei-chang-biao-zhun-de-tong-ji-shu-ju/)                                                                  | legal    | tort-traffic、legal-practice-research                              | 是   | 是   | high   |
+| approved | 2014-08-20 | [一个侵占罪案例的诈骗成分分析](/bao-guan-qin-zhan/)                                                                                                                                   | legal    | legal-practice-research                                            | 是   | 是   | high   |
+| approved | 2014-09-04 | [暴力与取财，在抢劫罪中，仅仅是手段与目的关系吗？](/bao-li-yu-qu-cai-qiang-jie/)                                                                                                      | legal    | legal-practice-research                                            | 是   | 是   | high   |
 | approved | 2014-09-28 | [被代理人丧失民事行为能力不影响代理权的分析](/bei-dai-li-ren-sang/)                                                                                                                   | legal    | civil-commercial、legal-practice-research                          | 是   | 是   | high   |
+| approved | 2016-04-06 | [知识共享协议](/cclisence/)                                                                                                                                                           | mixed    | legal-practice-research、technology-digital-life                   | 是   | 是   | high   |
 | approved | 2017-08-28 | [公司法司法解释四-引文版](/cetrain-issues-iv-for-company-law/)                                                                                                                        | legal    | civil-commercial、legal-practice-research                          | 是   | 是   | high   |
 | approved | 2017-05-03 | [2017 年度湖北省道路交通事故损害赔偿标准](/cs-hubei-2017/)                                                                                                                            | legal    | tort-traffic、legal-practice-research                              | 是   | 是   | high   |
+| approved | 2014-09-03 | [多次诈骗的犯罪数额，这样认定真的好吗？](/duo-ci-zha-pian-shu-e/)                                                                                                                     | legal    | legal-practice-research                                            | 是   | 是   | high   |
 | approved | 2017-02-20 | [评北京精雕诉上海奈凯计算机软件侵权案（第 48 号指导案例）](/jdsnk/)                                                                                                                   | mixed    | civil-commercial、legal-practice-research、technology-digital-life | 是   | 是   | high   |
 | approved | 2014-09-04 | [一个暗藏杀机的劳动法考点](/lao-dong-zhe-wei-yue-jin/)                                                                                                                                | legal    | labor-social-security、legal-practice-research                     | 是   | 是   | high   |
 | approved | 2017-01-14 | [缺席审判时，法院是否有权调整违约金数额](/qxpj/)                                                                                                                                      | legal    | civil-commercial、legal-practice-research                          | 是   | 是   | high   |
-
-## P2 · 法律内容（16 篇）
-
-| 状态    | 日期       | 文章                                                                                                               | 类型候选 | 专题候选                                    | 时效 | 免责 | 置信度 |
-| ------- | ---------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ------------------------------------------- | ---- | ---- | ------ |
-| pending | 2018-09-06 | [【读书笔记】金钱不能买什么](/jin-qian-bu-neng-mai-shi-me/)                                                        | legal    | legal-practice-research、notes-observations | 否   | 是   | high   |
-| pending | 2019-04-18 | [碎碎念之「我们与恶的距离」](/sui-sui-nian-zhi-wo-men-yu-e-de-ju-chi/)                                             | legal    | legal-practice-research、notes-observations | 否   | 是   | high   |
-| pending | 2020-02-15 | [湖北高院民二庭《关于审理涉及新型冠状病毒肺炎疫情商事案件若干问题的解答》](/hu-bei-gao-yuan-min-er-ting-tong-zhi/) | legal    | legal-practice-research                     | 否   | 是   | high   |
-| pending | 2014-08-20 | [一个侵占罪案例的诈骗成分分析](/bao-guan-qin-zhan/)                                                                | legal    | legal-practice-research                     | 否   | 是   | high   |
-| pending | 2014-09-04 | [暴力与取财，在抢劫罪中，仅仅是手段与目的关系吗？](/bao-li-yu-qu-cai-qiang-jie/)                                   | legal    | legal-practice-research                     | 否   | 是   | high   |
-| pending | 2016-04-06 | [知识共享协议](/cclisence/)                                                                                        | legal    | legal-practice-research                     | 否   | 是   | high   |
-| pending | 2014-09-03 | [多次诈骗的犯罪数额，这样认定真的好吗？](/duo-ci-zha-pian-shu-e/)                                                  | legal    | legal-practice-research                     | 否   | 是   | high   |
-| pending | 2016-05-17 | [《理论法学的迷雾》笔记](/llfxdmw/)                                                                                | legal    | legal-practice-research                     | 否   | 是   | high   |
-| pending | 2015-07-03 | [[搬运]看波大爷的同性恋婚姻的经济分析](/posner-homosexual/)                                                        | legal    | legal-practice-research                     | 否   | 是   | high   |
-| pending | 2017-02-24 | [软件反向工程](/software-reverse-engineering/)                                                                     | legal    | legal-practice-research                     | 否   | 是   | high   |
-| pending | 2014-08-23 | [对如何认定故意伤害胎儿中“他人”的思考](/tai-er-gu-shang/)                                                          | legal    | legal-practice-research                     | 否   | 是   | high   |
-| pending | 2017-10-17 | [WebFont 与著作权](/webfont-yu-zhe-zuo-quan/)                                                                      | legal    | legal-practice-research                     | 否   | 是   | high   |
-| pending | 2014-08-08 | [维基百科与摄影师版权之争](/wei-ji-hou-ban-quan/)                                                                  | legal    | legal-practice-research                     | 否   | 是   | high   |
-| pending | 2014-10-16 | [危险犯与行为犯](/weixianfan/)                                                                                     | legal    | legal-practice-research                     | 否   | 是   | high   |
-| pending | 2014-10-25 | [行政立法不作为的简单分析](/xzlfbzw/)                                                                              | legal    | legal-practice-research                     | 否   | 是   | high   |
-| pending | 2015-10-29 | [著作权法课程流水账](/zzq/)                                                                                        | legal    | legal-practice-research、notes-observations | 否   | 是   | high   |
+| approved | 2017-02-24 | [软件反向工程](/software-reverse-engineering/)                                                                                                                                        | mixed    | civil-commercial、legal-practice-research、technology-digital-life | 是   | 是   | high   |
+| approved | 2014-08-23 | [对如何认定故意伤害胎儿中“他人”的思考](/tai-er-gu-shang/)                                                                                                                             | legal    | legal-practice-research                                            | 是   | 是   | high   |
+| approved | 2017-10-17 | [WebFont 与著作权](/webfont-yu-zhe-zuo-quan/)                                                                                                                                         | mixed    | civil-commercial、legal-practice-research、technology-digital-life | 是   | 是   | high   |
+| approved | 2014-08-08 | [维基百科与摄影师版权之争](/wei-ji-hou-ban-quan/)                                                                                                                                     | mixed    | civil-commercial、legal-practice-research、technology-digital-life | 是   | 是   | high   |
+| approved | 2014-10-16 | [危险犯与行为犯](/weixianfan/)                                                                                                                                                        | legal    | legal-practice-research                                            | 是   | 是   | high   |
+| approved | 2014-10-25 | [行政立法不作为的简单分析](/xzlfbzw/)                                                                                                                                                 | legal    | legal-practice-research                                            | 是   | 是   | high   |
+| approved | 2015-10-29 | [著作权法课程流水账](/zzq/)                                                                                                                                                           | legal    | legal-practice-research、notes-observations                        | 是   | 是   | high   |
 
 ## P3 · 技术或数据时效敏感（22 篇）
 
@@ -75,36 +66,40 @@
 | pending  | 2018-01-25 | [从服务协议看 iCloud 迁移](/icloud-terms/)                                                                                                 | technical | technology-digital-life                                     | 是   | 否   | high   |
 | approved | 2017-10-03 | [双拼 VS 全拼](/shuang-pin-vs-quan-pin/)                                                                                                   | technical | technology-digital-life                                     | 是   | 否   | high   |
 
-## P4 · 一般内容（26 篇）
+## P4 · 一般内容（30 篇）
 
-| 状态    | 日期       | 文章                                                                                                          | 类型候选  | 专题候选                                | 时效 | 免责 | 置信度 |
-| ------- | ---------- | ------------------------------------------------------------------------------------------------------------- | --------- | --------------------------------------- | ---- | ---- | ------ |
-| pending | 2016-04-08 | [《从 0 到 1》读书笔记](/021/)                                                                                | culture   | notes-observations                      | 否   | 否   | medium |
-| pending | 2018-04-12 | [谈谈剑桥分析公司的Logo](/jian-qiao-fen-xi/)                                                                  | note      | —                                       | 否   | 否   | low    |
-| pending | 2018-05-05 | [那个可爱的老头子走了](/na-ge-ke-ai-de-lao-tou-zi-zou-liao/)                                                  | note      | —                                       | 否   | 否   | low    |
-| pending | 2018-06-07 | [【0分作文】大雄的金银岛](/da-xiong-de-jin-yin-dao/)                                                          | culture   | notes-observations                      | 否   | 否   | medium |
-| pending | 2018-06-25 | [【流水账】杠精五个半](/gang-jing-wu-ge-ban/)                                                                 | personal  | notes-observations                      | 否   | 否   | medium |
-| pending | 2018-07-01 | [LaTeX 与论文排版二三事](/latex-yu-lun-wen-pai-ban/)                                                          | technical | technology-digital-life、lawyer-toolbox | 否   | 否   | high   |
-| pending | 2018-07-25 | [Vcard与二维码名片](/vcard-yu-er-wei-ma-ming-pian/)                                                           | technical | technology-digital-life、lawyer-toolbox | 否   | 否   | high   |
-| pending | 2018-09-07 | [趁着 Tampermonkey 回归的脚本盘点](/chen-zhao-tampermonkey-hui-gui-de-jiao-ben-pan-dian/)                     | technical | technology-digital-life、lawyer-toolbox | 否   | 否   | high   |
-| pending | 2018-11-17 | [乱弹 20181116](/luan-dan-20181116/)                                                                          | personal  | notes-observations                      | 否   | 否   | medium |
-| pending | 2018-12-03 | [盘古之白](/pan-gu-zhi-bai/)                                                                                  | note      | lawyer-toolbox                          | 否   | 否   | low    |
-| pending | 2019-05-05 | [碎碎念之《何以为家》](/sui-sui-nian-zhi-he-yi-wei-jia/)                                                      | personal  | notes-observations                      | 否   | 否   | medium |
-| pending | 2020-02-02 | [LaTeX下使用 Times New Roman 字体的正确姿势](/latex-times-new-roman/)                                         | technical | technology-digital-life                 | 否   | 否   | high   |
-| pending | 2020-02-16 | [Poker键盘自定义备忘](/poker-jian-pan-zi-ding-yi-bei-wang/)                                                   | technical | technology-digital-life                 | 否   | 否   | high   |
-| pending | 2020-02-17 | [乱弹20200217](/luan-dan-20200217/)                                                                           | personal  | notes-observations                      | 否   | 否   | medium |
-| pending | 2020-05-02 | [为什么你就不喜欢发关于我的朋友圈了呢](/wei-shi-me-ni-jiu-bu-xi-huan-fa-guan-yu-wo-de-peng-you-quan-liao-ni/) | note      | —                                       | 否   | 否   | low    |
-| pending | 2020-05-02 | [说说消费券](/shuo-shuo-xiao-fei-quan/)                                                                       | note      | —                                       | 否   | 否   | low    |
-| pending | 2021-02-09 | [flash的卸载](/flash-de-xie-zai/)                                                                             | technical | technology-digital-life                 | 否   | 否   | high   |
-| pending | 2021-02-19 | [碎碎念之你好李焕英](/sui-sui-nian-zhi-ni-hao-li-huan-ying/)                                                  | personal  | notes-observations                      | 否   | 否   | medium |
-| pending | 2021-02-28 | [伪手写HTML排版公众号文章的几点笔记](/wei-shou-xie-html-pai-ban-gong-zhong-hao-wen-zhang-de-ji-dian-bi-ji/)   | technical | technology-digital-life、lawyer-toolbox | 否   | 否   | high   |
-| pending | 2021-10-09 | [突然就三十了](/tu-ran-jiu-san-shi-liao/)                                                                     | personal  | notes-observations                      | 否   | 否   | medium |
-| pending | 2017-03-23 | [坚果云&KeePass（多图）](/jianguoyun-keepass/)                                                                | technical | technology-digital-life                 | 否   | 否   | high   |
-| pending | 2014-07-23 | [OpooPress折腾后记](/opoo-zhe-teng/)                                                                          | note      | —                                       | 否   | 否   | low    |
-| pending | 2017-10-05 | [别人家的「零零后」？](/others-00s/)                                                                          | culture   | notes-observations                      | 否   | 否   | medium |
-| pending | 2017-08-26 | [【读书笔记】重新定义团队——谷歌如何工作](/work-rules-mindmap/)                                                | culture   | lawyer-toolbox、notes-observations      | 否   | 否   | medium |
-| pending | 2014-09-02 | [域名转移申诉](/yu-ming-zhuan-yi/)                                                                            | note      | —                                       | 否   | 否   | low    |
-| pending | 2015-01-28 | [自家小站再折腾](/zhetengb/)                                                                                  | note      | —                                       | 否   | 否   | low    |
+| 状态     | 日期       | 文章                                                                                                          | 类型候选  | 专题候选                                    | 时效 | 免责 | 置信度 |
+| -------- | ---------- | ------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------- | ---- | ---- | ------ |
+| pending  | 2016-04-08 | [《从 0 到 1》读书笔记](/021/)                                                                                | culture   | notes-observations                          | 否   | 否   | medium |
+| pending  | 2018-04-12 | [谈谈剑桥分析公司的Logo](/jian-qiao-fen-xi/)                                                                  | note      | —                                           | 否   | 否   | low    |
+| pending  | 2018-05-05 | [那个可爱的老头子走了](/na-ge-ke-ai-de-lao-tou-zi-zou-liao/)                                                  | note      | —                                           | 否   | 否   | low    |
+| pending  | 2018-06-07 | [【0分作文】大雄的金银岛](/da-xiong-de-jin-yin-dao/)                                                          | culture   | notes-observations                          | 否   | 否   | medium |
+| pending  | 2018-06-25 | [【流水账】杠精五个半](/gang-jing-wu-ge-ban/)                                                                 | personal  | notes-observations                          | 否   | 否   | medium |
+| pending  | 2018-07-01 | [LaTeX 与论文排版二三事](/latex-yu-lun-wen-pai-ban/)                                                          | technical | technology-digital-life、lawyer-toolbox     | 否   | 否   | high   |
+| pending  | 2018-07-25 | [Vcard与二维码名片](/vcard-yu-er-wei-ma-ming-pian/)                                                           | technical | technology-digital-life、lawyer-toolbox     | 否   | 否   | high   |
+| approved | 2018-09-06 | [【读书笔记】金钱不能买什么](/jin-qian-bu-neng-mai-shi-me/)                                                   | culture   | legal-practice-research、notes-observations | 否   | 否   | high   |
+| pending  | 2018-09-07 | [趁着 Tampermonkey 回归的脚本盘点](/chen-zhao-tampermonkey-hui-gui-de-jiao-ben-pan-dian/)                     | technical | technology-digital-life、lawyer-toolbox     | 否   | 否   | high   |
+| pending  | 2018-11-17 | [乱弹 20181116](/luan-dan-20181116/)                                                                          | personal  | notes-observations                          | 否   | 否   | medium |
+| pending  | 2018-12-03 | [盘古之白](/pan-gu-zhi-bai/)                                                                                  | note      | lawyer-toolbox                              | 否   | 否   | low    |
+| approved | 2019-04-18 | [碎碎念之「我们与恶的距离」](/sui-sui-nian-zhi-wo-men-yu-e-de-ju-chi/)                                        | culture   | notes-observations                          | 否   | 否   | high   |
+| pending  | 2019-05-05 | [碎碎念之《何以为家》](/sui-sui-nian-zhi-he-yi-wei-jia/)                                                      | personal  | notes-observations                          | 否   | 否   | medium |
+| pending  | 2020-02-02 | [LaTeX下使用 Times New Roman 字体的正确姿势](/latex-times-new-roman/)                                         | technical | technology-digital-life                     | 否   | 否   | high   |
+| pending  | 2020-02-16 | [Poker键盘自定义备忘](/poker-jian-pan-zi-ding-yi-bei-wang/)                                                   | technical | technology-digital-life                     | 否   | 否   | high   |
+| pending  | 2020-02-17 | [乱弹20200217](/luan-dan-20200217/)                                                                           | personal  | notes-observations                          | 否   | 否   | medium |
+| pending  | 2020-05-02 | [为什么你就不喜欢发关于我的朋友圈了呢](/wei-shi-me-ni-jiu-bu-xi-huan-fa-guan-yu-wo-de-peng-you-quan-liao-ni/) | note      | —                                           | 否   | 否   | low    |
+| pending  | 2020-05-02 | [说说消费券](/shuo-shuo-xiao-fei-quan/)                                                                       | note      | —                                           | 否   | 否   | low    |
+| pending  | 2021-02-09 | [flash的卸载](/flash-de-xie-zai/)                                                                             | technical | technology-digital-life                     | 否   | 否   | high   |
+| pending  | 2021-02-19 | [碎碎念之你好李焕英](/sui-sui-nian-zhi-ni-hao-li-huan-ying/)                                                  | personal  | notes-observations                          | 否   | 否   | medium |
+| pending  | 2021-02-28 | [伪手写HTML排版公众号文章的几点笔记](/wei-shou-xie-html-pai-ban-gong-zhong-hao-wen-zhang-de-ji-dian-bi-ji/)   | technical | technology-digital-life、lawyer-toolbox     | 否   | 否   | high   |
+| pending  | 2021-10-09 | [突然就三十了](/tu-ran-jiu-san-shi-liao/)                                                                     | personal  | notes-observations                          | 否   | 否   | medium |
+| pending  | 2017-03-23 | [坚果云&KeePass（多图）](/jianguoyun-keepass/)                                                                | technical | technology-digital-life                     | 否   | 否   | high   |
+| approved | 2016-05-17 | [《理论法学的迷雾》笔记](/llfxdmw/)                                                                           | legal     | legal-practice-research、notes-observations | 否   | 否   | high   |
+| pending  | 2014-07-23 | [OpooPress折腾后记](/opoo-zhe-teng/)                                                                          | note      | —                                           | 否   | 否   | low    |
+| pending  | 2017-10-05 | [别人家的「零零后」？](/others-00s/)                                                                          | culture   | notes-observations                          | 否   | 否   | medium |
+| approved | 2015-07-03 | [[搬运]看波大爷的同性恋婚姻的经济分析](/posner-homosexual/)                                                   | culture   | legal-practice-research、notes-observations | 否   | 否   | high   |
+| pending  | 2017-08-26 | [【读书笔记】重新定义团队——谷歌如何工作](/work-rules-mindmap/)                                                | culture   | lawyer-toolbox、notes-observations          | 否   | 否   | medium |
+| pending  | 2014-09-02 | [域名转移申诉](/yu-ming-zhuan-yi/)                                                                            | note      | —                                           | 否   | 否   | low    |
+| pending  | 2015-01-28 | [自家小站再折腾](/zhetengb/)                                                                                  | note      | —                                           | 否   | 否   | low    |
 
 ## 安全应用流程
 
