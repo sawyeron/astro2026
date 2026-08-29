@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+    groups:
+      astro-toolchain:
+        patterns:
+          - astro
+          - "@astrojs/*"
+      quality-tooling:
+        patterns:
+          - eslint
+          - "eslint-*"
+          - prettier
+          - "prettier-*"
+          - playwright
+          - "@axe-core/*"
