@@ -37,15 +37,15 @@ timeSensitivityKind: legal-rule
 
 **第一条**   公司股东、董事、监事等请求确认股东会或者股东大会、董事会决议无效或者不成立的，人民法院**应当**依法予以受理。
 
-**第二条**   依据公司法第二十二条第二款<sup>[1](#dfref-footnote-1)</sup>请求撤销股东会或者股东大会、董事会决议的原告，**应当**在起诉时具有公司股东资格。
+**第二条**   依据公司法第二十二条第二款<sup id="ref-footnote-1"><a href="#dfref-footnote-1" aria-label="查看脚注 1">1</a></sup>请求撤销股东会或者股东大会、董事会决议的原告，**应当**在起诉时具有公司股东资格。
 
 **第三条**   原告请求确认股东会或者股东大会、董事会决议不成立、无效或者撤销决议的案件，**应当**列公司为被告。对决议涉及的其他利害关系人，**可以**依法列为第三人。
 一审法庭辩论终结前,其他有原告资格的人以相同的诉讼请求申请参加前款规定诉讼的，**可以**列为共同原告。
 
-**第四条**   股东请求撤销股东会或者股东大会、董事会决议，符合公司法第二十二条第二款<sup>[2](#dfref-footnote-2)</sup>规定的，人民法院应当予以支持,但会议召集程序或者表决方式仅有轻微瑕疵,且对决议未产生实质影响的，人民法院不予支持。
+**第四条**   股东请求撤销股东会或者股东大会、董事会决议，符合公司法第二十二条第二款<sup id="ref-footnote-2"><a href="#dfref-footnote-2" aria-label="查看脚注 2">2</a></sup>规定的，人民法院应当予以支持,但会议召集程序或者表决方式仅有轻微瑕疵,且对决议未产生实质影响的，人民法院不予支持。
 
 **第五条**   股东会或者股东大会、董事会决议存在下列情形之一，当事人主张决议不成立的，人民法院应当予以支持：
-（一）公司未召开会议的，但依据公司法第三十七条第二款<sup>[3](#dfref-footnote-3)</sup>或者公司章程规定可以不召开股东会或者股东大会而直接作出决定，并由全体股东在决定文件上签名、盖章的除外；
+（一）公司未召开会议的，但依据公司法第三十七条第二款<sup id="ref-footnote-3"><a href="#dfref-footnote-3" aria-label="查看脚注 3">3</a></sup>或者公司章程规定可以不召开股东会或者股东大会而直接作出决定，并由全体股东在决定文件上签名、盖章的除外；
 （二）会议未对决议事项进行表决的；
 （三）出席会议的人数或者股东所持表决权不符合公司法或者公司章程规定的；
 （四）会议的表决结果未达到公司法或者公司章程规定的通过比例的；
@@ -55,16 +55,16 @@ timeSensitivityKind: legal-rule
 
 ## 股东知情权
 
-**第七条**    股东依据公司法第三十三条<sup>[4](#dfref-footnote-4)</sup>、第九十七条<sup>[5](#dfref-footnote-5)</sup>或者公司章程的规定，起诉请求查阅或者复制公司特定文件材料的，人民法院应当依法予以受理。
+**第七条**    股东依据公司法第三十三条<sup id="ref-footnote-4"><a href="#dfref-footnote-4" aria-label="查看脚注 4">4</a></sup>、第九十七条<sup id="ref-footnote-5"><a href="#dfref-footnote-5" aria-label="查看脚注 5">5</a></sup>或者公司章程的规定，起诉请求查阅或者复制公司特定文件材料的，人民法院应当依法予以受理。
 公司有证据证明前款规定的原告在起诉时不具有公司股东资格的，人民法院应当驳回起诉，但原告有初步证据证明在持股期间其合法权益受到损害，请求依法查阅或者复制其持股期间的公司特定文件材料的除外。
 
-**第八条**   有限责任公司有证据证明股东存在下列情形之一的，人民法院应当认定股东有公司法第三十三条<sup>[6](#dfref-footnote-6)</sup>第二款规定的“不正当目的”：
+**第八条**   有限责任公司有证据证明股东存在下列情形之一的，人民法院应当认定股东有公司法第三十三条<sup id="ref-footnote-6"><a href="#dfref-footnote-6" aria-label="查看脚注 6">6</a></sup>第二款规定的“不正当目的”：
 （一）股东自营或者为他人经营与公司主营业务有实质性竞争关系业务的，但公司章程另有规定或者全体股东另有约定的除外；
 （二）股东为了向他人通报有关信息查阅公司会计账簿，可能损害公司合法利益的；
 （三）股东在向公司提出查阅请求之日前的三年内，曾通过查阅公司会计账簿，向他人通报有关信息损害公司合法利益的；
 （四）股东有不正当目的的其他情形。
 
-**第九条**   公司章程、股东之间的协议等实质性剥夺股东依据公司法第三十三条<sup>[7](#dfref-footnote-7)</sup>、第九十七条<sup>[8](#dfref-footnote-8)</sup>规定查阅或者复制公司文件材料的权利，公司以此为由拒绝股东查阅或者复制的，人民法院不予支持。
+**第九条**   公司章程、股东之间的协议等实质性剥夺股东依据公司法第三十三条<sup id="ref-footnote-7"><a href="#dfref-footnote-7" aria-label="查看脚注 7">7</a></sup>、第九十七条<sup id="ref-footnote-8"><a href="#dfref-footnote-8" aria-label="查看脚注 8">8</a></sup>规定查阅或者复制公司文件材料的权利，公司以此为由拒绝股东查阅或者复制的，人民法院不予支持。
 
 **第十条**    人民法院审理股东请求查阅或者复制公司特定文件材料的案件，对原告诉讼请求予以支持的，应当在判决中明确查阅或者复制公司特定文件材料的时间、地点和特定文件材料的名录。
 股东依据人民法院生效判决查阅公司文件材料的，在该股东在场的情况下，可以由会计师、律师等依法或者依据执业行为规范负有保密义务的中介机构执业人员辅助进行。
@@ -72,7 +72,7 @@ timeSensitivityKind: legal-rule
 **第十一条**    股东行使知情权后泄露公司商业秘密导致公司合法利益受到损害，公司请求该股东赔偿相关损失的，人民法院应当予以支持。
 根据本规定第十条辅助股东查阅公司文件材料的会计师、律师等泄露公司商业秘密导致公司合法利益受到损害，公司请求其赔偿相关损失的，人民法院应当予以支持。
 
-**第十二条**   公司董事、高级管理人员等未依法履行职责，导致公司未依法制作或者保存公司法第三十三条<sup>[9](#dfref-footnote-9)</sup>、第九十七条<sup>[10](#dfref-footnote-10)</sup>规定的公司文件材料，给股东造成损失，股东依法请求负有相应责任的公司董事、高级管理人员承担民事赔偿责任的，人民法院应当予以支持。
+**第十二条**   公司董事、高级管理人员等未依法履行职责，导致公司未依法制作或者保存公司法第三十三条<sup id="ref-footnote-9"><a href="#dfref-footnote-9" aria-label="查看脚注 9">9</a></sup>、第九十七条<sup id="ref-footnote-10"><a href="#dfref-footnote-10" aria-label="查看脚注 10">10</a></sup>规定的公司文件材料，给股东造成损失，股东依法请求负有相应责任的公司董事、高级管理人员承担民事赔偿责任的，人民法院应当予以支持。
 
 ## 利润分配权
 
@@ -85,13 +85,13 @@ timeSensitivityKind: legal-rule
 
 ## 优先购买权
 
-**第十六条**    有限责任公司的自然人股东因继承发生变化时，其他股东主张依据公司法第七十一条第三款<sup>[11](#dfref-footnote-11)</sup>规定行使优先购买权的，人民法院不予支持，但公司章程另有规定或者全体股东另有约定的除外。
+**第十六条**    有限责任公司的自然人股东因继承发生变化时，其他股东主张依据公司法第七十一条第三款<sup id="ref-footnote-11"><a href="#dfref-footnote-11" aria-label="查看脚注 11">11</a></sup>规定行使优先购买权的，人民法院不予支持，但公司章程另有规定或者全体股东另有约定的除外。
 
 **第十七条**    有限责任公司的股东向股东以外的人转让股权，应就其股权转让事项以书面或者其他能够确认收悉的合理方式通知其他股东征求同意。其他股东半数以上不同意转让，不同意的股东不购买的，人民法院应当认定视为同意转让。
 经股东同意转让的股权，其他股东主张转让股东应当向其以书面或者其他能够确认收悉的合理方式通知转让股权的同等条件的，人民法院应当予以支持。
 经股东同意转让的股权，在同等条件下，转让股东以外的其他股东主张优先购买的，人民法院应当予以支持，但转让股东依据本规定第二十条放弃转让的除外。
 
-**第十八条**   人民法院在判断是否符合公司法第七十一条第三款<sup>[12](#dfref-footnote-12)</sup>及本规定所称的“同等条件”时，应当考虑转让股权的数量、价格、支付方式及期限等因素。
+**第十八条**   人民法院在判断是否符合公司法第七十一条第三款<sup id="ref-footnote-12"><a href="#dfref-footnote-12" aria-label="查看脚注 12">12</a></sup>及本规定所称的“同等条件”时，应当考虑转让股权的数量、价格、支付方式及期限等因素。
 
 **第十九条**   有限责任公司的股东主张优先购买转让股权的，应当在收到通知后，在公司章程规定的行使期间内提出购买请求。公司章程没有规定行使期间或者规定不明确的，以通知确定的期间为准，通知确定的期间短于三十日或者未明确行使期间的，行使期间为三十日。
 
@@ -101,20 +101,20 @@ timeSensitivityKind: legal-rule
 前款规定的其他股东仅提出确认股权转让合同及股权变动效力等请求，未同时主张按照同等条件购买转让股权的，人民法院不予支持，但其他股东非因自身原因导致无法行使优先购买权,请求损害赔偿的除外。
 股东以外的股权受让人，因股东行使优先购买权而不能实现合同目的的，可以依法请求转让股东承担相应民事责任。
 
-**第二十二条**   通过拍卖向股东以外的人转让有限责任公司股权的，适用公司法第七十一条第二款<sup>[13](#dfref-footnote-13)</sup>、第三款<sup>[14](#dfref-footnote-14)</sup>或者第七十二条<sup>[15](#dfref-footnote-15)</sup>规定的“书面通知”“通知”“同等条件”时，根据相关法律、司法解释确定。
-在依法设立的产权交易场所转让有限责任公司国有股权的，适用公司法第七十一条第二款<sup>[16](#dfref-footnote-16)</sup>、第三款<sup>[17](#dfref-footnote-17)</sup>或者第七十二条<sup>[18](#dfref-footnote-18)</sup>规定的“书面通知”“通知”“同等条件”时，可以参照产权交易场所的交易规则。
+**第二十二条**   通过拍卖向股东以外的人转让有限责任公司股权的，适用公司法第七十一条第二款<sup id="ref-footnote-13"><a href="#dfref-footnote-13" aria-label="查看脚注 13">13</a></sup>、第三款<sup id="ref-footnote-14"><a href="#dfref-footnote-14" aria-label="查看脚注 14">14</a></sup>或者第七十二条<sup id="ref-footnote-15"><a href="#dfref-footnote-15" aria-label="查看脚注 15">15</a></sup>规定的“书面通知”“通知”“同等条件”时，根据相关法律、司法解释确定。
+在依法设立的产权交易场所转让有限责任公司国有股权的，适用公司法第七十一条第二款<sup id="ref-footnote-16"><a href="#dfref-footnote-16" aria-label="查看脚注 16">16</a></sup>、第三款<sup id="ref-footnote-17"><a href="#dfref-footnote-17" aria-label="查看脚注 17">17</a></sup>或者第七十二条<sup id="ref-footnote-18"><a href="#dfref-footnote-18" aria-label="查看脚注 18">18</a></sup>规定的“书面通知”“通知”“同等条件”时，可以参照产权交易场所的交易规则。
 
 ## 股东代表诉讼
 
-**第二十三条**    监事会或者不设监事会的有限责任公司的监事依据公司法第一百五十一条第一款<sup>[19](#dfref-footnote-19)</sup>规定对董事、高级管理人员提起诉讼的，应当列公司为原告，依法由监事会主席或者不设监事会的有限责任公司的监事代表公司进行诉讼。
-董事会或者不设董事会的有限责任公司的执行董事依据公司法第一百五十一条第一款<sup>[20](#dfref-footnote-20)</sup>规定对监事提起诉讼的，或者依据公司法第一百五十一条第三款<sup>[21](#dfref-footnote-21)</sup>规定对他人提起诉讼的，应当列公司为原告，依法由董事长或者执行董事代表公司进行诉讼。
+**第二十三条**    监事会或者不设监事会的有限责任公司的监事依据公司法第一百五十一条第一款<sup id="ref-footnote-19"><a href="#dfref-footnote-19" aria-label="查看脚注 19">19</a></sup>规定对董事、高级管理人员提起诉讼的，应当列公司为原告，依法由监事会主席或者不设监事会的有限责任公司的监事代表公司进行诉讼。
+董事会或者不设董事会的有限责任公司的执行董事依据公司法第一百五十一条第一款<sup id="ref-footnote-20"><a href="#dfref-footnote-20" aria-label="查看脚注 20">20</a></sup>规定对监事提起诉讼的，或者依据公司法第一百五十一条第三款<sup id="ref-footnote-21"><a href="#dfref-footnote-21" aria-label="查看脚注 21">21</a></sup>规定对他人提起诉讼的，应当列公司为原告，依法由董事长或者执行董事代表公司进行诉讼。
 
-**第二十四条**    符合公司法第一百五十一条第一款<sup>[22](#dfref-footnote-22)</sup>规定条件的股东，依据公司法第一百五十一条第二款<sup>[23](#dfref-footnote-23)</sup>、第三款<sup>[24](#dfref-footnote-24)</sup>规定，直接对董事、监事、高级管理人员或者他人提起诉讼的，应当列公司为第三人参加诉讼。
-一审法庭辩论终结前，符合公司法第一百五十一条第一款<sup>[25](#dfref-footnote-25)</sup>规定条件的其他股东，以相同的诉讼请求申请参加诉讼的，应当列为共同原告。
+**第二十四条**    符合公司法第一百五十一条第一款<sup id="ref-footnote-22"><a href="#dfref-footnote-22" aria-label="查看脚注 22">22</a></sup>规定条件的股东，依据公司法第一百五十一条第二款<sup id="ref-footnote-23"><a href="#dfref-footnote-23" aria-label="查看脚注 23">23</a></sup>、第三款<sup id="ref-footnote-24"><a href="#dfref-footnote-24" aria-label="查看脚注 24">24</a></sup>规定，直接对董事、监事、高级管理人员或者他人提起诉讼的，应当列公司为第三人参加诉讼。
+一审法庭辩论终结前，符合公司法第一百五十一条第一款<sup id="ref-footnote-25"><a href="#dfref-footnote-25" aria-label="查看脚注 25">25</a></sup>规定条件的其他股东，以相同的诉讼请求申请参加诉讼的，应当列为共同原告。
 
-**第二十五条**    股东依据公司法第一百五十一条第二款<sup>[26](#dfref-footnote-26)</sup>、第三款<sup>[27](#dfref-footnote-27)</sup>规定直接提起诉讼的案件，胜诉利益归属于公司。股东请求被告直接向其承担民事责任的，人民法院不予支持。
+**第二十五条**    股东依据公司法第一百五十一条第二款<sup id="ref-footnote-26"><a href="#dfref-footnote-26" aria-label="查看脚注 26">26</a></sup>、第三款<sup id="ref-footnote-27"><a href="#dfref-footnote-27" aria-label="查看脚注 27">27</a></sup>规定直接提起诉讼的案件，胜诉利益归属于公司。股东请求被告直接向其承担民事责任的，人民法院不予支持。
 
-**第二十六条**    股东依据公司法第一百五十一条第二款<sup>[28](#dfref-footnote-28)</sup>、第三款<sup>[29](#dfref-footnote-29)</sup>规定直接提起诉讼的案件，其诉讼请求部分或者全部得到人民法院支持的，公司应当承担股东因参加诉讼支付的合理费用。
+**第二十六条**    股东依据公司法第一百五十一条第二款<sup id="ref-footnote-28"><a href="#dfref-footnote-28" aria-label="查看脚注 28">28</a></sup>、第三款<sup id="ref-footnote-29"><a href="#dfref-footnote-29" aria-label="查看脚注 29">29</a></sup>规定直接提起诉讼的案件，其诉讼请求部分或者全部得到人民法院支持的，公司应当承担股东因参加诉讼支付的合理费用。
 
 **第二十七条**    本规定自2017年9月1日起施行。
 
@@ -126,33 +126,33 @@ timeSensitivityKind: legal-rule
 
 ---
 
-<div class="footnote-line"><span class="md-fn-count">1</span> 公司法第二十二条第二款 股东会或者股东大会、董事会的会议召集程序、表决方式违反法律、行政法规或者公司章程，或者决议内容违反公司章程的，股东可以自决议作出之日起六十日内，请求人民法院撤销。[↩](#ref-footnote-1 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">2</span> 公司法第二十二条第二款 股东会或者股东大会、董事会的会议召集程序、表决方式违反法律、行政法规或者公司章程，或者决议内容违反公司章程的，股东可以自决议作出之日起六十日内，请求人民法院撤销。[↩](#ref-footnote-2 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">3</span> 公司法第三十七条第二款 对前款所列事项股东以书面形式一致表示同意的，可以不召开股东会会议，直接作出决定，并由全体股东在决定文件上签名、盖章。[↩](#ref-footnote-3 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">4</span> 公司法第三十三条 股东有权查阅、复制公司章程、股东会会议记录、董事会会议决议、监事会会议决议和财务会计报告。股东可以要求查阅公司会计账簿。股东要求查阅公司会计账簿的，应当向公司提出书面请求，说明目的。公司有合理根据认为股东查阅会计账簿有不正当目的，可 能损害公司合法利益的，可以拒绝提供查阅，并应当自股东提出书面请求之日起十五日内书面答复股东并说明理由。公司拒绝提供查阅的，股东可以请求人民法院要 求公司提供查阅。[↩](#ref-footnote-4 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">5</span> 公司法第九十七条 股东有权查阅公司章程、股东名册、公司债券存根、股东大会会议记录、董事会会议决议、监事会会议决议、财务会计报告，对公司的经营提出建议或者质询。[↩](#ref-footnote-5 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">6</span> 公司法第三十三条 股东有权查阅、复制公司章程、股东会会议记录、董事会会议决议、监事会会议决议和财务会计报告。股东可以要求查阅公司会计账簿。股东要求查阅公司会计账簿的，应当向公司提出书面请求，说明目的。公司有合理根据认为股东查阅会计账簿有不正当目的，可 能损害公司合法利益的，可以拒绝提供查阅，并应当自股东提出书面请求之日起十五日内书面答复股东并说明理由。公司拒绝提供查阅的，股东可以请求人民法院要 求公司提供查阅。[↩](#ref-footnote-6 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">7</span> 公司法第三十三条 股东有权查阅、复制公司章程、股东会会议记录、董事会会议决议、监事会会议决议和财务会计报告。股东可以要求查阅公司会计账簿。股东要求查阅公司会计账簿的，应当向公司提出书面请求，说明目的。公司有合理根据认为股东查阅会计账簿有不正当目的，可 能损害公司合法利益的，可以拒绝提供查阅，并应当自股东提出书面请求之日起十五日内书面答复股东并说明理由。公司拒绝提供查阅的，股东可以请求人民法院要 求公司提供查阅。[↩](#ref-footnote-7 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">8</span> 公司法第九十七条 股东有权查阅公司章程、股东名册、公司债券存根、股东大会会议记录、董事会会议决议、监事会会议决议、财务会计报告，对公司的经营提出建议或者质询。[↩](#ref-footnote-8 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">9</span> 公司法第三十三条 股东有权查阅、复制公司章程、股东会会议记录、董事会会议决议、监事会会议决议和财务会计报告。股东可以要求查阅公司会计账簿。股东要求查阅公司会计账簿的，应当向公司提出书面请求，说明目的。公司有合理根据认为股东查阅会计账簿有不正当目的，可 能损害公司合法利益的，可以拒绝提供查阅，并应当自股东提出书面请求之日起十五日内书面答复股东并说明理由。公司拒绝提供查阅的，股东可以请求人民法院要 求公司提供查阅。[↩](#ref-footnote-9 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">10</span> 公司法第九十七条 股东有权查阅公司章程、股东名册、公司债券存根、股东大会会议记录、董事会会议决议、监事会会议决议、财务会计报告，对公司的经营提出建议或者质询。[↩](#ref-footnote-10 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">11</span> 公司法第七十一条第三款 经股东同意转让的股权，在同等条件下，其他股东有优先购买权。两个以上股东主张行使优先购买权的，协商确定各自的购买比例；协商不成的，按照转让时各自的出资比例行使优先购买权。[↩](#ref-footnote-11 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">12</span> 公司法第七十一条第三款 经股东同意转让的股权，在同等条件下，其他股东有优先购买权。两个以上股东主张行使优先购买权的，协商确定各自的购买比例；协商不成的，按照转让时各自的出资比例行使优先购买权。[↩](#ref-footnote-12 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">13</span> 公司法第七十一条第二款 股东向股东以外的人转让股权，应当经其他股东过半数同意。股东应就其股权转让事项书面通知其他股东征求同意，其他股东自接到书面通知之日起满三十日未答复的，视为同意转让。其他股东半数以上不同意转让的，不同意的股东应当购买该转让的股权；不购买的，视为同意转让。[↩](#ref-footnote-13 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">14</span> 公司法第七十一条第三款 经股东同意转让的股权，在同等条件下，其他股东有优先购买权。两个以上股东主张行使优先购买权的，协商确定各自的购买比例；协商不成的，按照转让时各自的出资比例行使优先购买权。[↩](#ref-footnote-14 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">15</span> 公司法第七十二条 人民法院依照法律规定的强制执行程序转让股东的股权时，应当通知公司及全体股东，其他股东在同等条件下有优先购买权。其他股东自人民法院通知之日起满二十日不行使优先购买权的，视为放弃优先购买权。[↩](#ref-footnote-15 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">16</span> 公司法第七十一条第二款 股东向股东以外的人转让股权，应当经其他股东过半数同意。股东应就其股权转让事项书面通知其他股东征求同意，其他股东自接到书面通知之日起满三十日未答复的，视为同意转让。其他股东半数以上不同意转让的，不同意的股东应当购买该转让的股权；不购买的，视为同意转让。[↩](#ref-footnote-16 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">17</span> 公司法第七十一条第三款 经股东同意转让的股权，在同等条件下，其他股东有优先购买权。两个以上股东主张行使优先购买权的，协商确定各自的购买比例；协商不成的，按照转让时各自的出资比例行使优先购买权。[↩](#ref-footnote-17 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">18</span> 公司法第七十二条 人民法院依照法律规定的强制执行程序转让股东的股权时，应当通知公司及全体股东，其他股东在同等条件下有优先购买权。其他股东自人民法院通知之日起满二十日不行使优先购买权的，视为放弃优先购买权。[↩](#ref-footnote-18 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">19</span> 公司法第一百五十一条第一款 董事、高级管理人员有本法第一百五十条规定的情形的，有限责任公司的股东、股份有限公司连续一百八十日以上单独或者合计持有公司百分之 一以上股份的股东，可以书面请求监事会或者不设监事会的有限责任公司的监事向人民法院提起诉讼；监事有本法第一百五十条规定的情形的，前述股东可以书面请 求董事会或者不设董事会的有限责任公司的执行董事向人民法院提起诉讼。[↩](#ref-footnote-19 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">20</span> 公司法第一百五十一条第一款 董事、高级管理人员有本法第一百五十条规定的情形的，有限责任公司的股东、股份有限公司连续一百八十日以上单独或者合计持有公司百分之 一以上股份的股东，可以书面请求监事会或者不设监事会的有限责任公司的监事向人民法院提起诉讼；监事有本法第一百五十条规定的情形的，前述股东可以书面请 求董事会或者不设董事会的有限责任公司的执行董事向人民法院提起诉讼。[↩](#ref-footnote-20 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">21</span> 公司法第一百五十一条第三款 他人侵犯公司合法权益，给公司造成损失的，本条第一款规定的股东可以依照前两款的规定向人民法院提起诉讼。[↩](#ref-footnote-21 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">22</span> 公司法第一百五十一条第一款 董事、高级管理人员有本法第一百五十条规定的情形的，有限责任公司的股东、股份有限公司连续一百八十日以上单独或者合计持有公司百分之 一以上股份的股东，可以书面请求监事会或者不设监事会的有限责任公司的监事向人民法院提起诉讼；监事有本法第一百五十条规定的情形的，前述股东可以书面请 求董事会或者不设董事会的有限责任公司的执行董事向人民法院提起诉讼。[↩](#ref-footnote-22 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">23</span> 公司法第一百五十一条第二款 监事会、不设监事会的有限责任公司的监事，或者董事会、执行董事 收到前款规定的股东书面请求后拒绝提起诉讼，或者自收到请求之日起三十日内未提起诉讼，或者情况紧急、不立即提起诉讼将会使公司利益受到难以弥补的损害 的，前款规定的股东有权为了公司的利益以自己的名义直接向人民法院提起诉讼。[↩](#ref-footnote-23 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">24</span> 公司法第一百五十一条第三款 他人侵犯公司合法权益，给公司造成损失的，本条第一款规定的股东可以依照前两款的规定向人民法院提起诉讼。[↩](#ref-footnote-24 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">25</span> 公司法第一百五十一条第一款 董事、高级管理人员有本法第一百五十条规定的情形的，有限责任公司的股东、股份有限公司连续一百八十日以上单独或者合计持有公司百分之 一以上股份的股东，可以书面请求监事会或者不设监事会的有限责任公司的监事向人民法院提起诉讼；监事有本法第一百五十条规定的情形的，前述股东可以书面请 求董事会或者不设董事会的有限责任公司的执行董事向人民法院提起诉讼。[↩](#ref-footnote-25 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">26</span> 公司法第一百五十一条第二款 监事会、不设监事会的有限责任公司的监事，或者董事会、执行董事 收到前款规定的股东书面请求后拒绝提起诉讼，或者自收到请求之日起三十日内未提起诉讼，或者情况紧急、不立即提起诉讼将会使公司利益受到难以弥补的损害 的，前款规定的股东有权为了公司的利益以自己的名义直接向人民法院提起诉讼。[↩](#ref-footnote-26 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">27</span> 公司法第一百五十一条第三款 他人侵犯公司合法权益，给公司造成损失的，本条第一款规定的股东可以依照前两款的规定向人民法院提起诉讼。[↩](#ref-footnote-27 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">28</span> 公司法第一百五十一条第二款 监事会、不设监事会的有限责任公司的监事，或者董事会、执行董事 收到前款规定的股东书面请求后拒绝提起诉讼，或者自收到请求之日起三十日内未提起诉讼，或者情况紧急、不立即提起诉讼将会使公司利益受到难以弥补的损害 的，前款规定的股东有权为了公司的利益以自己的名义直接向人民法院提起诉讼。[↩](#ref-footnote-28 "back to document")</div>
-<div class="footnote-line"><span class="md-fn-count">29</span> 公司法第一百五十一条第三款 他人侵犯公司合法权益，给公司造成损失的，本条第一款规定的股东可以依照前两款的规定向人民法院提起诉讼。[↩](#ref-footnote-29 "back to document")</div>
+<div class="footnote-line" id="dfref-footnote-1"><span class="md-fn-count">1</span> 公司法第二十二条第二款 股东会或者股东大会、董事会的会议召集程序、表决方式违反法律、行政法规或者公司章程，或者决议内容违反公司章程的，股东可以自决议作出之日起六十日内，请求人民法院撤销。<a class="footnote-backref" href="#ref-footnote-1" aria-label="返回正文脚注 1">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-2"><span class="md-fn-count">2</span> 公司法第二十二条第二款 股东会或者股东大会、董事会的会议召集程序、表决方式违反法律、行政法规或者公司章程，或者决议内容违反公司章程的，股东可以自决议作出之日起六十日内，请求人民法院撤销。<a class="footnote-backref" href="#ref-footnote-2" aria-label="返回正文脚注 2">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-3"><span class="md-fn-count">3</span> 公司法第三十七条第二款 对前款所列事项股东以书面形式一致表示同意的，可以不召开股东会会议，直接作出决定，并由全体股东在决定文件上签名、盖章。<a class="footnote-backref" href="#ref-footnote-3" aria-label="返回正文脚注 3">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-4"><span class="md-fn-count">4</span> 公司法第三十三条 股东有权查阅、复制公司章程、股东会会议记录、董事会会议决议、监事会会议决议和财务会计报告。股东可以要求查阅公司会计账簿。股东要求查阅公司会计账簿的，应当向公司提出书面请求，说明目的。公司有合理根据认为股东查阅会计账簿有不正当目的，可 能损害公司合法利益的，可以拒绝提供查阅，并应当自股东提出书面请求之日起十五日内书面答复股东并说明理由。公司拒绝提供查阅的，股东可以请求人民法院要 求公司提供查阅。<a class="footnote-backref" href="#ref-footnote-4" aria-label="返回正文脚注 4">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-5"><span class="md-fn-count">5</span> 公司法第九十七条 股东有权查阅公司章程、股东名册、公司债券存根、股东大会会议记录、董事会会议决议、监事会会议决议、财务会计报告，对公司的经营提出建议或者质询。<a class="footnote-backref" href="#ref-footnote-5" aria-label="返回正文脚注 5">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-6"><span class="md-fn-count">6</span> 公司法第三十三条 股东有权查阅、复制公司章程、股东会会议记录、董事会会议决议、监事会会议决议和财务会计报告。股东可以要求查阅公司会计账簿。股东要求查阅公司会计账簿的，应当向公司提出书面请求，说明目的。公司有合理根据认为股东查阅会计账簿有不正当目的，可 能损害公司合法利益的，可以拒绝提供查阅，并应当自股东提出书面请求之日起十五日内书面答复股东并说明理由。公司拒绝提供查阅的，股东可以请求人民法院要 求公司提供查阅。<a class="footnote-backref" href="#ref-footnote-6" aria-label="返回正文脚注 6">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-7"><span class="md-fn-count">7</span> 公司法第三十三条 股东有权查阅、复制公司章程、股东会会议记录、董事会会议决议、监事会会议决议和财务会计报告。股东可以要求查阅公司会计账簿。股东要求查阅公司会计账簿的，应当向公司提出书面请求，说明目的。公司有合理根据认为股东查阅会计账簿有不正当目的，可 能损害公司合法利益的，可以拒绝提供查阅，并应当自股东提出书面请求之日起十五日内书面答复股东并说明理由。公司拒绝提供查阅的，股东可以请求人民法院要 求公司提供查阅。<a class="footnote-backref" href="#ref-footnote-7" aria-label="返回正文脚注 7">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-8"><span class="md-fn-count">8</span> 公司法第九十七条 股东有权查阅公司章程、股东名册、公司债券存根、股东大会会议记录、董事会会议决议、监事会会议决议、财务会计报告，对公司的经营提出建议或者质询。<a class="footnote-backref" href="#ref-footnote-8" aria-label="返回正文脚注 8">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-9"><span class="md-fn-count">9</span> 公司法第三十三条 股东有权查阅、复制公司章程、股东会会议记录、董事会会议决议、监事会会议决议和财务会计报告。股东可以要求查阅公司会计账簿。股东要求查阅公司会计账簿的，应当向公司提出书面请求，说明目的。公司有合理根据认为股东查阅会计账簿有不正当目的，可 能损害公司合法利益的，可以拒绝提供查阅，并应当自股东提出书面请求之日起十五日内书面答复股东并说明理由。公司拒绝提供查阅的，股东可以请求人民法院要 求公司提供查阅。<a class="footnote-backref" href="#ref-footnote-9" aria-label="返回正文脚注 9">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-10"><span class="md-fn-count">10</span> 公司法第九十七条 股东有权查阅公司章程、股东名册、公司债券存根、股东大会会议记录、董事会会议决议、监事会会议决议、财务会计报告，对公司的经营提出建议或者质询。<a class="footnote-backref" href="#ref-footnote-10" aria-label="返回正文脚注 10">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-11"><span class="md-fn-count">11</span> 公司法第七十一条第三款 经股东同意转让的股权，在同等条件下，其他股东有优先购买权。两个以上股东主张行使优先购买权的，协商确定各自的购买比例；协商不成的，按照转让时各自的出资比例行使优先购买权。<a class="footnote-backref" href="#ref-footnote-11" aria-label="返回正文脚注 11">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-12"><span class="md-fn-count">12</span> 公司法第七十一条第三款 经股东同意转让的股权，在同等条件下，其他股东有优先购买权。两个以上股东主张行使优先购买权的，协商确定各自的购买比例；协商不成的，按照转让时各自的出资比例行使优先购买权。<a class="footnote-backref" href="#ref-footnote-12" aria-label="返回正文脚注 12">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-13"><span class="md-fn-count">13</span> 公司法第七十一条第二款 股东向股东以外的人转让股权，应当经其他股东过半数同意。股东应就其股权转让事项书面通知其他股东征求同意，其他股东自接到书面通知之日起满三十日未答复的，视为同意转让。其他股东半数以上不同意转让的，不同意的股东应当购买该转让的股权；不购买的，视为同意转让。<a class="footnote-backref" href="#ref-footnote-13" aria-label="返回正文脚注 13">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-14"><span class="md-fn-count">14</span> 公司法第七十一条第三款 经股东同意转让的股权，在同等条件下，其他股东有优先购买权。两个以上股东主张行使优先购买权的，协商确定各自的购买比例；协商不成的，按照转让时各自的出资比例行使优先购买权。<a class="footnote-backref" href="#ref-footnote-14" aria-label="返回正文脚注 14">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-15"><span class="md-fn-count">15</span> 公司法第七十二条 人民法院依照法律规定的强制执行程序转让股东的股权时，应当通知公司及全体股东，其他股东在同等条件下有优先购买权。其他股东自人民法院通知之日起满二十日不行使优先购买权的，视为放弃优先购买权。<a class="footnote-backref" href="#ref-footnote-15" aria-label="返回正文脚注 15">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-16"><span class="md-fn-count">16</span> 公司法第七十一条第二款 股东向股东以外的人转让股权，应当经其他股东过半数同意。股东应就其股权转让事项书面通知其他股东征求同意，其他股东自接到书面通知之日起满三十日未答复的，视为同意转让。其他股东半数以上不同意转让的，不同意的股东应当购买该转让的股权；不购买的，视为同意转让。<a class="footnote-backref" href="#ref-footnote-16" aria-label="返回正文脚注 16">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-17"><span class="md-fn-count">17</span> 公司法第七十一条第三款 经股东同意转让的股权，在同等条件下，其他股东有优先购买权。两个以上股东主张行使优先购买权的，协商确定各自的购买比例；协商不成的，按照转让时各自的出资比例行使优先购买权。<a class="footnote-backref" href="#ref-footnote-17" aria-label="返回正文脚注 17">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-18"><span class="md-fn-count">18</span> 公司法第七十二条 人民法院依照法律规定的强制执行程序转让股东的股权时，应当通知公司及全体股东，其他股东在同等条件下有优先购买权。其他股东自人民法院通知之日起满二十日不行使优先购买权的，视为放弃优先购买权。<a class="footnote-backref" href="#ref-footnote-18" aria-label="返回正文脚注 18">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-19"><span class="md-fn-count">19</span> 公司法第一百五十一条第一款 董事、高级管理人员有本法第一百五十条规定的情形的，有限责任公司的股东、股份有限公司连续一百八十日以上单独或者合计持有公司百分之 一以上股份的股东，可以书面请求监事会或者不设监事会的有限责任公司的监事向人民法院提起诉讼；监事有本法第一百五十条规定的情形的，前述股东可以书面请 求董事会或者不设董事会的有限责任公司的执行董事向人民法院提起诉讼。<a class="footnote-backref" href="#ref-footnote-19" aria-label="返回正文脚注 19">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-20"><span class="md-fn-count">20</span> 公司法第一百五十一条第一款 董事、高级管理人员有本法第一百五十条规定的情形的，有限责任公司的股东、股份有限公司连续一百八十日以上单独或者合计持有公司百分之 一以上股份的股东，可以书面请求监事会或者不设监事会的有限责任公司的监事向人民法院提起诉讼；监事有本法第一百五十条规定的情形的，前述股东可以书面请 求董事会或者不设董事会的有限责任公司的执行董事向人民法院提起诉讼。<a class="footnote-backref" href="#ref-footnote-20" aria-label="返回正文脚注 20">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-21"><span class="md-fn-count">21</span> 公司法第一百五十一条第三款 他人侵犯公司合法权益，给公司造成损失的，本条第一款规定的股东可以依照前两款的规定向人民法院提起诉讼。<a class="footnote-backref" href="#ref-footnote-21" aria-label="返回正文脚注 21">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-22"><span class="md-fn-count">22</span> 公司法第一百五十一条第一款 董事、高级管理人员有本法第一百五十条规定的情形的，有限责任公司的股东、股份有限公司连续一百八十日以上单独或者合计持有公司百分之 一以上股份的股东，可以书面请求监事会或者不设监事会的有限责任公司的监事向人民法院提起诉讼；监事有本法第一百五十条规定的情形的，前述股东可以书面请 求董事会或者不设董事会的有限责任公司的执行董事向人民法院提起诉讼。<a class="footnote-backref" href="#ref-footnote-22" aria-label="返回正文脚注 22">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-23"><span class="md-fn-count">23</span> 公司法第一百五十一条第二款 监事会、不设监事会的有限责任公司的监事，或者董事会、执行董事 收到前款规定的股东书面请求后拒绝提起诉讼，或者自收到请求之日起三十日内未提起诉讼，或者情况紧急、不立即提起诉讼将会使公司利益受到难以弥补的损害 的，前款规定的股东有权为了公司的利益以自己的名义直接向人民法院提起诉讼。<a class="footnote-backref" href="#ref-footnote-23" aria-label="返回正文脚注 23">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-24"><span class="md-fn-count">24</span> 公司法第一百五十一条第三款 他人侵犯公司合法权益，给公司造成损失的，本条第一款规定的股东可以依照前两款的规定向人民法院提起诉讼。<a class="footnote-backref" href="#ref-footnote-24" aria-label="返回正文脚注 24">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-25"><span class="md-fn-count">25</span> 公司法第一百五十一条第一款 董事、高级管理人员有本法第一百五十条规定的情形的，有限责任公司的股东、股份有限公司连续一百八十日以上单独或者合计持有公司百分之 一以上股份的股东，可以书面请求监事会或者不设监事会的有限责任公司的监事向人民法院提起诉讼；监事有本法第一百五十条规定的情形的，前述股东可以书面请 求董事会或者不设董事会的有限责任公司的执行董事向人民法院提起诉讼。<a class="footnote-backref" href="#ref-footnote-25" aria-label="返回正文脚注 25">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-26"><span class="md-fn-count">26</span> 公司法第一百五十一条第二款 监事会、不设监事会的有限责任公司的监事，或者董事会、执行董事 收到前款规定的股东书面请求后拒绝提起诉讼，或者自收到请求之日起三十日内未提起诉讼，或者情况紧急、不立即提起诉讼将会使公司利益受到难以弥补的损害 的，前款规定的股东有权为了公司的利益以自己的名义直接向人民法院提起诉讼。<a class="footnote-backref" href="#ref-footnote-26" aria-label="返回正文脚注 26">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-27"><span class="md-fn-count">27</span> 公司法第一百五十一条第三款 他人侵犯公司合法权益，给公司造成损失的，本条第一款规定的股东可以依照前两款的规定向人民法院提起诉讼。<a class="footnote-backref" href="#ref-footnote-27" aria-label="返回正文脚注 27">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-28"><span class="md-fn-count">28</span> 公司法第一百五十一条第二款 监事会、不设监事会的有限责任公司的监事，或者董事会、执行董事 收到前款规定的股东书面请求后拒绝提起诉讼，或者自收到请求之日起三十日内未提起诉讼，或者情况紧急、不立即提起诉讼将会使公司利益受到难以弥补的损害 的，前款规定的股东有权为了公司的利益以自己的名义直接向人民法院提起诉讼。<a class="footnote-backref" href="#ref-footnote-28" aria-label="返回正文脚注 28">↩</a></div>
+<div class="footnote-line" id="dfref-footnote-29"><span class="md-fn-count">29</span> 公司法第一百五十一条第三款 他人侵犯公司合法权益，给公司造成损失的，本条第一款规定的股东可以依照前两款的规定向人民法院提起诉讼。<a class="footnote-backref" href="#ref-footnote-29" aria-label="返回正文脚注 29">↩</a></div>
 </div>

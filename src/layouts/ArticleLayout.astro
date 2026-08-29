@@ -266,10 +266,44 @@ const timeSensitivityMessages = {
     margin-left: 0;
     padding-left: 1.2rem;
   }
-  .article-body :global(.footnotes) {
+  .article-body :global(.footnotes),
+  .article-body :global(.footnotes-area) {
     border-top: 1px solid var(--rule);
     font-size: 0.9rem;
     margin-top: 4rem;
+  }
+  .article-body :global(.footnote-line) {
+    border-bottom: 1px solid var(--rule);
+    padding: 0.8rem 0;
+    scroll-margin-top: 1.5rem;
+  }
+  .article-body :global(.md-fn-count) {
+    color: var(--accent);
+    display: inline-block;
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-weight: 700;
+    min-width: 2rem;
+  }
+  .article-body :global(sup[id]) {
+    scroll-margin-top: 1.5rem;
+  }
+  .article-body :global(sup a),
+  .article-body :global(.footnote-backref) {
+    color: var(--accent);
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .article-body :global(:target) {
+    animation: footnote-highlight 1.6s ease-out;
+  }
+  @keyframes footnote-highlight {
+    from {
+      background: #ead7b5;
+    }
+    to {
+      background: transparent;
+    }
   }
   .disclaimer {
     border-left-color: var(--rule);

@@ -49,11 +49,37 @@ for (const snapshot of manifest.snapshots) {
     !/<pre\b[^>]*>[\s\S]*?<code\b/i.test(article)
   )
     failures.push(`${snapshot.output}: fenced code block did not render`);
-  if (
-    snapshot.expectations.hasFootnotes &&
-    !/(class="footnotes"|data-footnotes)/i.test(article)
-  )
-    failures.push(`${snapshot.output}: footnotes did not render`);
+  if (snapshot.expectations.hasFootnotes) {
+    if (
+      !/(class="footnotes"|data-footnotes|class="footnotes-area")/i.test(
+        article,
+      )
+    )
+      failures.push(`${snapshot.output}: footnotes did not render`);
+    const noteTargets = [...article.matchAll(/id="dfref-footnote-(\d+)"/g)].map(
+      (match) => match[1],
+    );
+    const referenceTargets = [
+      ...article.matchAll(/id="ref-footnote-(\d+)"/g),
+    ].map((match) => match[1]);
+    for (const target of noteTargets)
+      if (!article.includes(`href="#dfref-footnote-${target}"`))
+        failures.push(
+          `${snapshot.output}: footnote ${target} has no matching body reference`,
+        );
+    for (const target of referenceTargets)
+      if (!article.includes(`href="#ref-footnote-${target}"`))
+        failures.push(
+          `${snapshot.output}: body reference ${target} has no footnote back-link`,
+        );
+    if (
+      snapshot.source.includes("cetrain") &&
+      (noteTargets.length !== 29 || referenceTargets.length !== 29)
+    )
+      failures.push(
+        `${snapshot.output}: expected 29 bidirectional legacy footnotes`,
+      );
+  }
   if (snapshot.expectations.hasInlineSvg && !/<svg\b/i.test(article))
     failures.push(`${snapshot.output}: inline SVG did not render`);
   for (const marker of snapshot.expectations.rawHtmlMarkers ?? [])
