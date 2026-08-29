@@ -1,0 +1,16 @@
+{
+  "generatedAt": "2026-08-29T08:58:52.536Z",
+  "status": "passed",
+  "metrics": {
+    "htmlFiles": 238,
+    "fragmentLinks": 397,
+    "uniqueTargets": 797,
+    "footnoteReferences": 29,
+    "footnoteBacklinks": 29,
+    "tables": 4,
+    "codeBlocks": 30,
+    "inlineSvg": 1
+  },
+  "failures": [],
+  "warnings": []
+}
