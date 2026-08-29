@@ -36,9 +36,9 @@
         "timeSensitive": false,
         "legalDisclaimer": false,
         "confidence": "medium",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：创业与商业类读书笔记，作为个人阅读档案保存。"]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-04-12-剑桥分析.md",
@@ -52,14 +52,17 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "note",
-        "topics": [],
-        "timeSensitive": false,
+        "contentKind": "culture",
+        "topics": ["technology-digital-life", "notes-observations"],
+        "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "low",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": [
+          "人工复核：围绕剑桥分析事件、品牌视觉与数据分析的历史观察。"
+        ],
+        "timeSensitivityKind": "historical-material"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-04-13-冷冻胚胎的法律地位.md",
@@ -98,13 +101,13 @@
       },
       "candidate": {
         "contentKind": "note",
-        "topics": [],
+        "topics": ["notes-observations"],
         "timeSensitive": false,
         "legalDisclaimer": false,
         "confidence": "low",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：私人纪念文字，保留为个人档案。"]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-06-07-大雄的金银岛.md",
@@ -123,9 +126,9 @@
         "timeSensitive": false,
         "legalDisclaimer": false,
         "confidence": "medium",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：电影评论与个人观感。"]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-06-25-杠精五个半.md",
@@ -139,14 +142,14 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "personal",
+        "contentKind": "note",
         "topics": ["notes-observations"],
         "timeSensitive": false,
         "legalDisclaimer": false,
         "confidence": "medium",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：校园、师友与毕业记忆，属于个人档案。"]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-06-30-2018年度湖北省道路交通事故损害赔偿标准.md",
@@ -518,14 +521,14 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "personal",
+        "contentKind": "note",
         "topics": ["notes-observations"],
         "timeSensitive": false,
         "legalDisclaimer": false,
         "confidence": "medium",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：社会与法学片段式随笔，保留其写作时观点。"]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-12-05-盘古之白.md",
@@ -708,14 +711,14 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "personal",
+        "contentKind": "culture",
         "topics": ["notes-observations"],
         "timeSensitive": false,
         "legalDisclaimer": false,
         "confidence": "medium",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：电影、儿童权利与社会问题的观后感。"]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2020-02-02-latex-times-new-roman.md",
@@ -798,14 +801,17 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "personal",
+        "contentKind": "note",
         "topics": ["notes-observations"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "medium",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": [
+          "人工复核：武汉封城期间的个人生活记录，作为疫情历史材料保存。"
+        ],
+        "timeSensitivityKind": "historical-material"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2020-02-19-MoneyWiz中新建贷款帐户付款计划闪烁的处理.md",
@@ -841,14 +847,17 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "note",
-        "topics": [],
+        "contentKind": "legal",
+        "topics": ["labor-social-security", "legal-practice-research"],
         "timeSensitive": true,
-        "legalDisclaimer": false,
+        "legalDisclaimer": true,
         "confidence": "low",
-        "reasons": ["包含年度、标准、通知、软件版本或现行规则线索"]
+        "reasons": [
+          "人工复核：疫情期间四地工资与生活费临时标准汇总，具有明确地域和阶段性。"
+        ],
+        "timeSensitivityKind": "temporary-policy"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2020-03-06-oh-my-zsh升级失败的解决方法.md",
@@ -887,13 +896,13 @@
       },
       "candidate": {
         "contentKind": "note",
-        "topics": [],
+        "topics": ["notes-observations"],
         "timeSensitive": false,
         "legalDisclaimer": false,
         "confidence": "low",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：亲密关系、社交媒体与心理机制的个人观察。"]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2020-05-02-说说消费券.md",
@@ -908,13 +917,14 @@
       },
       "candidate": {
         "contentKind": "note",
-        "topics": [],
-        "timeSensitive": false,
+        "topics": ["notes-observations"],
+        "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "low",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：围绕疫情时期消费券政策的经济与社会观察。"],
+        "timeSensitivityKind": "temporary-policy"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2020-06-14-Node14报错.md",
@@ -1021,14 +1031,14 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "personal",
+        "contentKind": "culture",
         "topics": ["notes-observations"],
         "timeSensitive": false,
         "legalDisclaimer": false,
         "confidence": "medium",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：电影评论与个人观感。"]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2021-02-28-伪手写HTML排版公众号文章的几点笔记.md",
@@ -1113,14 +1123,14 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "personal",
+        "contentKind": "note",
         "topics": ["notes-observations"],
         "timeSensitive": false,
         "legalDisclaimer": false,
         "confidence": "medium",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：个人年龄、职业与生活阶段记录。"]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2021-10-10-2021年度湖北省交通事故赔偿标准.md",
@@ -1209,14 +1219,17 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "note",
-        "topics": [],
+        "contentKind": "technical",
+        "topics": ["technology-digital-life", "notes-observations"],
         "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "low",
-        "reasons": ["包含年度、标准、通知、软件版本或现行规则线索"]
+        "reasons": [
+          "人工复核：黑苹果安装与旧博客环境迁移依赖特定硬件和软件版本。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/bao-guan-qin-zhan.md",
@@ -1643,14 +1656,15 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "note",
-        "topics": [],
-        "timeSensitive": false,
+        "contentKind": "technical",
+        "topics": ["technology-digital-life", "notes-observations"],
+        "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "low",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：旧静态博客工具 OpooPress 的配置与使用记录。"],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/others-00s.md",
@@ -1669,9 +1683,9 @@
         "timeSensitive": false,
         "legalDisclaimer": false,
         "confidence": "medium",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：成长、教育与纪录片观后感。"]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/posner-homosexual.md",
@@ -1927,14 +1941,15 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "note",
-        "topics": [],
-        "timeSensitive": false,
+        "contentKind": "technical",
+        "topics": ["technology-digital-life", "notes-observations"],
+        "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "low",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：域名注册商转移纠纷与申诉过程的历史记录。"],
+        "timeSensitivityKind": "historical-material"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/zhetengb.md",
@@ -1948,14 +1963,15 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "note",
-        "topics": [],
-        "timeSensitive": false,
+        "contentKind": "technical",
+        "topics": ["technology-digital-life", "notes-observations"],
+        "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "low",
-        "reasons": ["未发现高强度法律或技术线索，暂归一般记录"]
+        "reasons": ["人工复核：旧 VPS、Typecho 与网站部署环境的折腾记录。"],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/zzq.md",
