@@ -66,6 +66,8 @@ const analyticsEnabled = import.meta.env.PROD && Boolean(cloudflareBeaconToken);
           <span aria-hidden="true">/</span>
           <a href="/about/">关于</a>
           <span aria-hidden="true">/</span>
+          <a href="/movies/">观影</a>
+          <span aria-hidden="true">/</span>
           <a href="/rss.xml">RSS</a>
         </div>
         <p>
@@ -88,9 +90,14 @@ const analyticsEnabled = import.meta.env.PROD && Boolean(cloudflareBeaconToken);
     --muted: #607075;
     --rule: #c8c6bc;
     --accent: #a23d2b;
-    font-family: "Noto Serif CJK SC", "Songti SC", "STSong", serif;
-    background: var(--paper);
+    background:
+      linear-gradient(rgba(27, 37, 41, 0.018) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(27, 37, 41, 0.014) 1px, transparent 1px),
+      var(--paper);
+    background-size: 3rem 3rem;
     color: var(--ink);
+    font-family:
+      "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
   }
 
   * {
@@ -105,6 +112,12 @@ const analyticsEnabled = import.meta.env.PROD && Boolean(cloudflareBeaconToken);
     margin: 0;
     min-width: 320px;
     line-height: 1.7;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--paper);
   }
 
   .site-shell {
@@ -115,8 +128,12 @@ const analyticsEnabled = import.meta.env.PROD && Boolean(cloudflareBeaconToken);
 
   a {
     color: inherit;
+    text-decoration-color: color-mix(in srgb, currentColor 55%, transparent);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.18em;
+    transition:
+      color 140ms ease,
+      text-decoration-color 140ms ease;
   }
   a:hover {
     color: var(--accent);

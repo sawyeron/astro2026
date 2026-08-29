@@ -21,6 +21,7 @@ async function check(route, expected = 200, contains) {
 }
 await check("/", 200, "小法进阶");
 await check("/topics/", 200, "专题");
+await check("/movies/", 200, "个人观影记录");
 await check("/search/", 200, "pagefind-ui.js");
 await check("/cetrain-issues-iv-for-company-law/", 200, "dfref-footnote-29");
 await check("/rss.xml", 200, "<rss");

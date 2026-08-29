@@ -80,6 +80,7 @@ if ((await page.evaluate(() => document.activeElement?.id)) !== "main-content")
   failures.push("/: skip link did not move focus to main content");
 
 await visit("/topics/", "topics");
+await visit("/movies/", "movies");
 await visit("/archives/", "archives");
 await visit("/cetrain-issues-iv-for-company-law/", "footnotes");
 await page.locator('a[href="#dfref-footnote-1"]').first().click();
@@ -116,6 +117,7 @@ const mobilePage = await mobile.newPage();
 for (const [route, name] of [
   ["/", "home"],
   ["/topics/technology-digital-life/", "technology-topic"],
+  ["/movies/", "movies"],
   ["/webfont-yu-zhe-zuo-quan/", "complex-article"],
 ]) {
   await mobilePage.goto(`${baseURL}${route}`, { waitUntil: "networkidle" });
@@ -145,8 +147,8 @@ const report = {
   generatedAt: new Date().toISOString(),
   baseURL,
   status: failures.length ? "failed" : "passed",
-  pagesAudited: 8,
-  screenshots: 9,
+  pagesAudited: 9,
+  screenshots: 11,
   unexpectedThirdParties: [...unexpectedThirdParties],
   consoleErrors: [...new Set(consoleErrors)],
   accessibility,
