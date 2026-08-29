@@ -165,7 +165,8 @@
         "reasons": [
           "旧分类或标题/标签包含明确法律主题",
           "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        ],
+        "timeSensitivityKind": "annual-data"
       },
       "reviewStatus": "approved"
     },
@@ -251,16 +252,15 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "mixed",
-        "topics": ["legal-practice-research", "technology-digital-life"],
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
         "timeSensitive": true,
-        "legalDisclaimer": true,
+        "legalDisclaimer": false,
         "confidence": "high",
         "reasons": [
-          "旧分类或标题/标签包含明确法律主题",
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+          "人工复核：技术文章受软件、系统或输入方式版本变化影响，不构成法律内容。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
       "reviewStatus": "approved"
     },
@@ -390,16 +390,15 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "mixed",
-        "topics": ["legal-practice-research", "technology-digital-life"],
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
         "timeSensitive": true,
-        "legalDisclaimer": true,
+        "legalDisclaimer": false,
         "confidence": "high",
         "reasons": [
-          "旧分类或标题/标签包含明确法律主题",
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+          "人工复核：技术文章受软件、系统或输入方式版本变化影响，不构成法律内容。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
       "reviewStatus": "approved"
     },
@@ -556,7 +555,8 @@
         "reasons": [
           "旧分类或标题/标签包含明确法律主题",
           "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
       "reviewStatus": "approved"
     },
@@ -580,7 +580,8 @@
         "reasons": [
           "旧分类或标题/标签包含明确法律主题",
           "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        ],
+        "timeSensitivityKind": "annual-data"
       },
       "reviewStatus": "approved"
     },
@@ -604,7 +605,8 @@
         "reasons": [
           "旧分类或标题/标签包含明确法律主题",
           "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        ],
+        "timeSensitivityKind": "annual-data"
       },
       "reviewStatus": "approved"
     },
@@ -673,7 +675,8 @@
         "reasons": [
           "旧分类或标题/标签包含明确法律主题",
           "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        ],
+        "timeSensitivityKind": "annual-data"
       },
       "reviewStatus": "approved"
     },
@@ -839,16 +842,15 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "mixed",
-        "topics": ["legal-practice-research", "technology-digital-life"],
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
         "timeSensitive": true,
-        "legalDisclaimer": true,
+        "legalDisclaimer": false,
         "confidence": "high",
         "reasons": [
-          "旧分类或标题/标签包含明确法律主题",
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+          "人工复核：技术文章受软件、系统或输入方式版本变化影响，不构成法律内容。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
       "reviewStatus": "approved"
     },
@@ -938,7 +940,8 @@
         "reasons": [
           "旧分类或标题/标签包含明确法律主题",
           "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        ],
+        "timeSensitivityKind": "annual-data"
       },
       "reviewStatus": "approved"
     },
@@ -1049,7 +1052,8 @@
         "reasons": [
           "旧分类或标题/标签包含明确法律主题",
           "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        ],
+        "timeSensitivityKind": "annual-data"
       },
       "reviewStatus": "approved"
     },
@@ -1118,7 +1122,8 @@
         "reasons": [
           "旧分类或标题/标签包含明确法律主题",
           "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        ],
+        "timeSensitivityKind": "annual-data"
       },
       "reviewStatus": "approved"
     },
@@ -1142,7 +1147,8 @@
         "reasons": [
           "旧分类或标题/标签包含明确法律主题",
           "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        ],
+        "timeSensitivityKind": "annual-data"
       },
       "reviewStatus": "approved"
     },
@@ -1166,7 +1172,8 @@
         "reasons": [
           "旧分类或标题/标签包含明确法律主题",
           "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        ],
+        "timeSensitivityKind": "annual-data"
       },
       "reviewStatus": "approved"
     },
@@ -1295,7 +1302,8 @@
         "reasons": [
           "旧分类或标题/标签包含明确法律主题",
           "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
       "reviewStatus": "approved"
     },
@@ -1319,7 +1327,8 @@
         "reasons": [
           "旧分类或标题/标签包含明确法律主题",
           "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        ],
+        "timeSensitivityKind": "annual-data"
       },
       "reviewStatus": "approved"
     },
@@ -1383,12 +1392,12 @@
         "contentKind": "legal",
         "topics": ["legal-practice-research"],
         "timeSensitive": true,
-        "legalDisclaimer": true,
+        "legalDisclaimer": false,
         "confidence": "high",
         "reasons": [
-          "旧分类或标题/标签包含明确法律主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+          "人工复核：特定年份法学院考研历史资料，不代表当前招生政策或考试范围。"
+        ],
+        "timeSensitivityKind": "historical-material"
       },
       "reviewStatus": "approved"
     },
@@ -1407,12 +1416,12 @@
         "contentKind": "legal",
         "topics": ["legal-practice-research"],
         "timeSensitive": true,
-        "legalDisclaimer": true,
+        "legalDisclaimer": false,
         "confidence": "high",
         "reasons": [
-          "旧分类或标题/标签包含明确法律主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+          "人工复核：特定年份法学院考研历史资料，不代表当前招生政策或考试范围。"
+        ],
+        "timeSensitivityKind": "historical-material"
       },
       "reviewStatus": "approved"
     },
@@ -1431,12 +1440,12 @@
         "contentKind": "legal",
         "topics": ["legal-practice-research"],
         "timeSensitive": true,
-        "legalDisclaimer": true,
+        "legalDisclaimer": false,
         "confidence": "high",
         "reasons": [
-          "旧分类或标题/标签包含明确法律主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+          "人工复核：特定年份法学院考研历史资料，不代表当前招生政策或考试范围。"
+        ],
+        "timeSensitivityKind": "historical-material"
       },
       "reviewStatus": "approved"
     },
@@ -1455,12 +1464,12 @@
         "contentKind": "legal",
         "topics": ["legal-practice-research"],
         "timeSensitive": true,
-        "legalDisclaimer": true,
+        "legalDisclaimer": false,
         "confidence": "high",
         "reasons": [
-          "旧分类或标题/标签包含明确法律主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+          "人工复核：特定年份法学院考研历史资料，不代表当前招生政策或考试范围。"
+        ],
+        "timeSensitivityKind": "historical-material"
       },
       "reviewStatus": "approved"
     },
@@ -1672,16 +1681,15 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "mixed",
-        "topics": ["legal-practice-research", "technology-digital-life"],
+        "contentKind": "technical",
+        "topics": ["technology-digital-life"],
         "timeSensitive": true,
-        "legalDisclaimer": true,
+        "legalDisclaimer": false,
         "confidence": "high",
         "reasons": [
-          "旧分类或标题/标签包含明确法律主题",
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+          "人工复核：技术文章受软件、系统或输入方式版本变化影响，不构成法律内容。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
       "reviewStatus": "approved"
     },

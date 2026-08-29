@@ -46,6 +46,16 @@ const blog = defineCollection({
       .enum(["legal", "technical", "note", "culture", "personal", "mixed"])
       .optional(),
     timeSensitive: z.boolean().default(false),
+    timeSensitivityKind: z
+      .enum([
+        "annual-data",
+        "legal-rule",
+        "temporary-policy",
+        "software-version",
+        "historical-material",
+        "general",
+      ])
+      .optional(),
     legalDisclaimer: z.boolean().default(false),
     legacy: legacyMetadata,
   }),

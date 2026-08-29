@@ -33,18 +33,42 @@ for (const item of report.candidates) {
       "contentKind",
       "topics",
       "timeSensitive",
+      "timeSensitivityKind",
       "legalDisclaimer",
     ])
       if (JSON.stringify(data[field]) !== JSON.stringify(item.candidate[field]))
         failures.push(
           `${item.source}: approved ${field} is not applied to front matter`,
         );
+    if (!data.topics?.length)
+      failures.push(
+        `${item.source}: approved article must have at least one topic`,
+      );
+    if (data.timeSensitive && !data.timeSensitivityKind)
+      failures.push(
+        `${item.source}: time-sensitive article needs timeSensitivityKind`,
+      );
+    if (data.contentKind === "technical" && data.legalDisclaimer)
+      failures.push(
+        `${item.source}: technical content must not enable legalDisclaimer`,
+      );
     if (
-      (data.contentKind === "legal" || data.contentKind === "mixed") &&
-      !data.legalDisclaimer
+      data.timeSensitivityKind === "software-version" &&
+      !["technical", "mixed"].includes(data.contentKind)
     )
       failures.push(
-        `${item.source}: legal or mixed content must enable legalDisclaimer`,
+        `${item.source}: software-version requires technical or mixed content`,
+      );
+    if (data.timeSensitivityKind === "annual-data" && !data.timeSensitive)
+      failures.push(`${item.source}: annual-data must be time-sensitive`);
+    if (data.timeSensitivityKind === "legal-rule" && !data.legalDisclaimer)
+      failures.push(`${item.source}: legal-rule must enable legalDisclaimer`);
+    if (
+      data.timeSensitivityKind === "historical-material" &&
+      data.legalDisclaimer
+    )
+      failures.push(
+        `${item.source}: historical material should not enable legalDisclaimer`,
       );
   }
 }

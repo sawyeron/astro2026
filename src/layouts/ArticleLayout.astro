@@ -11,6 +11,13 @@ interface Props {
   contentKind?:
     "legal" | "technical" | "note" | "culture" | "personal" | "mixed";
   timeSensitive?: boolean;
+  timeSensitivityKind?:
+    | "annual-data"
+    | "legal-rule"
+    | "temporary-policy"
+    | "software-version"
+    | "historical-material"
+    | "general";
   legalDisclaimer?: boolean;
   previousArticle?: { title: string; href: string };
   nextArticle?: { title: string; href: string };
@@ -24,6 +31,7 @@ const {
   tags = [],
   contentKind,
   timeSensitive = false,
+  timeSensitivityKind = "general",
   legalDisclaimer = false,
   previousArticle,
   nextArticle,
@@ -34,6 +42,19 @@ const formatter = new Intl.DateTimeFormat("zh-CN", {
   month: "long",
   day: "numeric",
 });
+const timeSensitivityMessages = {
+  "annual-data":
+    "本文记录特定年度的统计数据或适用标准，仅适用于相应期间。处理现时事项时，请查询最新年度数据和适用口径。",
+  "legal-rule":
+    "本文基于写作时有效的法律、司法解释或政策文件，相关规则可能已经修改、废止或被新规定替代。",
+  "temporary-policy":
+    "本文记录特定时期的临时政策或应急规则，不宜直接用于判断当前事项，请核验现行规定。",
+  "software-version":
+    "本文基于写作时的软件、系统或服务版本，界面、命令和操作方式可能已经发生变化。",
+  "historical-material":
+    "本文保存的是特定年份的历史资料，不代表当前考试范围、招生政策或培养要求。",
+  general: "本文涉及可能随时间变化的信息，请结合现行资料核验。",
+};
 ---
 
 <BaseLayout title={title} description={description}>
@@ -71,8 +92,12 @@ const formatter = new Intl.DateTimeFormat("zh-CN", {
 
     {
       timeSensitive && (
-        <aside class="notice" aria-label="时效提示">
-          本文涉及可能随时间变化的规则、数据或软件环境，请结合现行资料核验。
+        <aside
+          class={`notice notice-${timeSensitivityKind}`}
+          aria-label="时效提示"
+        >
+          <strong>时效提示</strong>
+          <span>{timeSensitivityMessages[timeSensitivityKind]}</span>
         </aside>
       )
     }
@@ -162,6 +187,23 @@ const formatter = new Intl.DateTimeFormat("zh-CN", {
     background: #eeebe2;
     margin: 2rem 0;
     padding: 1rem 1.2rem;
+  }
+  .notice strong {
+    display: block;
+    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+  }
+  .notice span {
+    display: block;
+  }
+  .notice-software-version {
+    border-left-color: #52727c;
+  }
+  .notice-historical-material {
+    border-left-color: #83724f;
   }
   .article-body :global(h2) {
     border-bottom: 1px solid var(--rule);

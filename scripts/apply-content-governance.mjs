@@ -33,6 +33,7 @@ for (const item of approved) {
     "contentKind",
     "topics",
     "timeSensitive",
+    "timeSensitivityKind",
     "legalDisclaimer",
   ])
     if (candidate[field] === undefined)
@@ -44,6 +45,7 @@ for (const item of approved) {
     topics: candidate.topics,
     contentKind: candidate.contentKind,
     timeSensitive: candidate.timeSensitive,
+    timeSensitivityKind: candidate.timeSensitivityKind,
     legalDisclaimer: candidate.legalDisclaimer,
   };
   const raw = `---\n${stringifyYaml(nextData, { lineWidth: 0 }).trim()}\n---\n${body}`;
