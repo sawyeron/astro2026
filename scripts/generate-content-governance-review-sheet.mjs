@@ -33,10 +33,14 @@ const labels = {
 let markdown = `# 内容治理人工复核工作表\n\n更新时间由生成脚本决定。请以 JSON 清单为权威来源。修改审核状态时，将对应项目的 \`reviewStatus\` 改为 \`approved\` 或 \`rejected\`；如候选不准确，先修订 \`candidate\` 再批准。\n\n`;
 for (const [key, items] of grouped) {
   markdown += `## ${labels[key]}（${items.length} 篇）\n\n`;
-  markdown += `| 状态 | 日期 | 文章 | 类型候选 | 专题候选 | 时效 | 免责 | 置信度 |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n`;
+  markdown += `| 状态 | 日期 | 文章 | 类型 | 专题 | 时效 | 时效类型 | 免责 | 置信度 | 人工复核理由 |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n`;
   for (const item of items) {
     const c = item.candidate;
-    markdown += `| ${item.reviewStatus} | ${String(item.date).slice(0, 10)} | [${String(item.title).replaceAll("|", "\\|")}](${item.legacyPath}) | ${c.contentKind} | ${c.topics.join("、") || "—"} | ${c.timeSensitive ? "是" : "否"} | ${c.legalDisclaimer ? "是" : "否"} | ${c.confidence} |\n`;
+    const reasons = (c.reasons ?? [])
+      .join("；")
+      .replaceAll("|", "\\|")
+      .replaceAll("\n", " ");
+    markdown += `| ${item.reviewStatus} | ${String(item.date).slice(0, 10)} | [${String(item.title).replaceAll("|", "\\|")}](${item.legacyPath}) | ${c.contentKind} | ${c.topics.join("、") || "—"} | ${c.timeSensitive ? "是" : "否"} | ${c.timeSensitivityKind || "—"} | ${c.legalDisclaimer ? "是" : "否"} | ${c.confidence} | ${reasons || "—"} |\n`;
   }
   markdown += "\n";
 }

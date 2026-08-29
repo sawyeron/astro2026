@@ -133,17 +133,19 @@ for (const [file, document] of documents) {
     for (const match of article.matchAll(pattern.regex))
       failures.push(`${relative}: ${pattern.label}: ${match[0].slice(0, 100)}`);
   }
-  if (
-    /<table\b/i.test(article) &&
-    !/\.article-body[^}]*table[^}]*overflow-x:\s*auto/is.test(document.html)
-  )
+  const hasScrollableTableStyle =
+    /\.article-body\s+(?::global\()?table\)?\s*\{[^}]*overflow-x:\s*auto/is.test(
+      document.html,
+    );
+  const hasScrollableCodeStyle =
+    /\.article-body\s+(?::global\()?pre\)?\s*\{[^}]*overflow-x:\s*auto/is.test(
+      document.html,
+    );
+  if (/<table\b/i.test(article) && !hasScrollableTableStyle)
     warnings.push(
       `${relative}: table found without detected horizontal overflow styling`,
     );
-  if (
-    /<pre\b/i.test(article) &&
-    !/\.article-body[^}]*pre[^}]*overflow-x:\s*auto/is.test(document.html)
-  )
+  if (/<pre\b/i.test(article) && !hasScrollableCodeStyle)
     warnings.push(
       `${relative}: code block found without detected horizontal overflow styling`,
     );
