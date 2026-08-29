@@ -1,20 +1,331 @@
 ---
 import { getCollection } from "astro:content";
-import IndexLayout from "../../layouts/IndexLayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const articles = (await getCollection("blog", ({ data }) => !data.draft)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
+const years = new Map<number, typeof articles>();
+for (const article of articles) {
+  const year = article.data.date.getFullYear();
+  if (!years.has(year)) years.set(year, []);
+  years.get(year)?.push(article);
+}
+const yearEntries = [...years];
+const firstYear = yearEntries.at(-1)?.[0];
+const lastYear = yearEntries[0]?.[0];
+const activeYears = yearEntries.filter(([, entries]) => entries.length);
+const peakYear = [...activeYears].sort((a, b) => b[1].length - a[1].length)[0];
+const formatter = new Intl.DateTimeFormat("zh-CN", {
+  month: "2-digit",
+  day: "2-digit",
+  timeZone: "Asia/Shanghai",
+});
 ---
 
-<IndexLayout
-  eyebrow="CHRONOLOGICAL ARCHIVE"
-  title="文章归档"
-  description={`按时间整理的全部 ${articles.length} 篇公开文章。历史归档路径继续保留并汇入此索引。`}
-  items={articles.map((article) => ({
-    href: article.data.legacyPath ?? "/",
-    title: article.data.title,
-    date: article.data.date,
-    description: article.data.description,
-  }))}
-/>
+<BaseLayout title="文章归档" description="按年份整理的全部公开文章。">
+  <header class="archive-header">
+    <a class="back" href="/">← 小法进阶</a>
+    <div class="heading-grid">
+      <div>
+        <p class="eyebrow">COMPLETE WRITING REGISTER</p>
+        <h1>文章<br />归档</h1>
+      </div>
+      <div class="archive-intro">
+        <p>
+          保留写作发生时的次序。从法律札记到技术备忘，从公共规则到私人观察，这里是不经过专题筛选的完整记录。
+        </p>
+        <dl aria-label="归档概况">
+          <div><dt>{articles.length}</dt><dd>公开文章</dd></div>
+          <div><dt>{yearEntries.length}</dt><dd>写作年份</dd></div>
+          <div><dt>{firstYear}—{lastYear}</dt><dd>时间跨度</dd></div>
+          <div>
+            <dt>{peakYear?.[0]}</dt><dd>
+              高峰年份 · {peakYear?.[1].length} 篇
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </header>
+
+  <nav class="year-directory" aria-label="归档年份跳转">
+    <p>YEAR DIRECTORY</p>
+    <ol>
+      {
+        yearEntries.map(([year, yearArticles]) => (
+          <li>
+            <a href={`#year-${year}`}>
+              <>
+                <span>{year}</span>
+                <strong>{yearArticles.length}</strong>
+              </>
+            </a>
+          </li>
+        ))
+      }
+    </ol>
+  </nav>
+
+  <div class="archive-ledger">
+    {
+      yearEntries.map(([year, yearArticles], yearIndex) => (
+        <section aria-labelledby={`year-${year}`}>
+          <header class="year-heading">
+            <p>{String(yearIndex + 1).padStart(2, "0")} / YEAR</p>
+            <h2 id={`year-${year}`}>{year}</h2>
+            <span>{yearArticles.length} 篇文章</span>
+          </header>
+          <ol class="article-list">
+            {yearArticles.map((article, index) => (
+              <li>
+                <div class="date-mark">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <time datetime={article.data.date.toISOString()}>
+                    {formatter.format(article.data.date)}
+                  </time>
+                </div>
+                <div>
+                  <h3>
+                    <a href={article.data.legacyPath}>{article.data.title}</a>
+                  </h3>
+                  {article.data.description && (
+                    <p>{article.data.description}</p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))
+    }
+  </div>
+
+  <aside class="archive-footnote">
+    <span>END / {articles.length}</span>
+    <p>更倾向按主题阅读？七组人工复核的路径已经整理在专题页。</p>
+    <a href="/topics/">浏览精选专题 →</a>
+  </aside>
+</BaseLayout>
+
+<style>
+  .archive-header,
+  .year-directory,
+  .archive-ledger,
+  .archive-footnote {
+    max-width: 66rem;
+  }
+  .archive-header {
+    border-top: var(--border-heading);
+    padding-top: var(--space-3);
+  }
+  .back,
+  .eyebrow,
+  .year-directory,
+  .year-heading p,
+  .year-heading span,
+  .date-mark,
+  .archive-footnote span {
+    font-family: var(--font-mono);
+  }
+  .back {
+    color: var(--muted);
+    font-size: var(--font-size-sm);
+  }
+  .heading-grid {
+    align-items: end;
+    display: grid;
+    gap: clamp(2rem, 8vw, 7rem);
+    grid-template-columns: minmax(18rem, 0.9fr) minmax(20rem, 1.1fr);
+    margin-top: clamp(4rem, 10vw, 8rem);
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: var(--font-size-xs);
+    letter-spacing: var(--tracking-label);
+    margin: 0 0 1rem;
+  }
+  h1 {
+    font-size: clamp(4rem, 12vw, 8.5rem);
+    font-weight: 600;
+    letter-spacing: -0.09em;
+    line-height: 0.75;
+    margin: 0;
+  }
+  .archive-intro > p {
+    color: var(--color-ink-soft);
+    font-size: var(--font-size-lede);
+    line-height: 1.65;
+    margin: 0 0 2rem;
+  }
+  dl {
+    border-top: var(--border-hairline);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+  }
+  dl div {
+    border-bottom: var(--border-hairline);
+    padding: 0.8rem 0.8rem 0.8rem 0;
+  }
+  dl div:nth-child(odd) {
+    border-right: var(--border-hairline);
+  }
+  dl div:nth-child(even) {
+    padding-left: 0.8rem;
+  }
+  dt {
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    font-weight: 700;
+    line-height: 1;
+  }
+  dd {
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    margin: 0.55rem 0 0;
+  }
+  .year-directory {
+    border-bottom: var(--border-hairline);
+    border-top: var(--border-hairline);
+    margin-top: clamp(4rem, 10vw, 8rem);
+    padding: 0.8rem 0;
+  }
+  .year-directory > p {
+    color: var(--accent);
+    font-size: 0.66rem;
+    letter-spacing: var(--tracking-label);
+    margin: 0 0 0.65rem;
+  }
+  .year-directory ol {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  }
+  .year-directory li {
+    border-left: var(--border-hairline);
+  }
+  .year-directory a {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.35rem 0.6rem;
+    text-decoration: none;
+  }
+  .year-directory strong {
+    color: var(--accent);
+    font-size: 0.65rem;
+  }
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .archive-ledger section {
+    display: grid;
+    gap: clamp(1.5rem, 5vw, 4rem);
+    grid-template-columns: clamp(6rem, 14vw, 10rem) minmax(0, 1fr);
+    padding-top: clamp(4rem, 10vw, 8rem);
+  }
+  .year-heading {
+    align-self: start;
+    position: sticky;
+    top: 1rem;
+  }
+  .year-heading p {
+    color: var(--accent);
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    margin: 0 0 0.5rem;
+  }
+  .year-heading h2 {
+    font-size: clamp(3rem, 7vw, 5rem);
+    letter-spacing: -0.07em;
+    line-height: 0.85;
+    margin: 0;
+    scroll-margin-top: 1rem;
+  }
+  .year-heading span {
+    color: var(--muted);
+    font-size: 0.66rem;
+  }
+  .article-list > li {
+    border-top: var(--border-hairline);
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 4.25rem minmax(0, 1fr);
+    padding: 1.15rem 0 1.45rem;
+  }
+  .date-mark {
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    font-size: 0.66rem;
+    gap: 0.3rem;
+    padding-top: 0.25rem;
+  }
+  .date-mark span {
+    color: var(--accent);
+  }
+  h3 {
+    font-size: clamp(1.12rem, 2.3vw, 1.5rem);
+    line-height: 1.35;
+    margin: 0;
+  }
+  h3 a {
+    text-decoration-thickness: 1px;
+  }
+  .article-list p {
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin: 0.5rem 0 0;
+    max-width: 42rem;
+  }
+  .archive-footnote {
+    align-items: center;
+    border-top: var(--border-heading);
+    display: grid;
+    gap: 1rem 2rem;
+    grid-template-columns: 8rem 1fr auto;
+    margin-top: var(--space-8);
+    padding-top: var(--space-3);
+  }
+  .archive-footnote span {
+    color: var(--accent);
+    font-size: 0.66rem;
+  }
+  .archive-footnote p {
+    color: var(--muted);
+    margin: 0;
+  }
+  @media (max-width: 48rem) {
+    .heading-grid {
+      grid-template-columns: 1fr;
+    }
+    .archive-footnote {
+      align-items: start;
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 38rem) {
+    .archive-ledger section {
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+    .year-heading {
+      align-items: baseline;
+      background: var(--paper);
+      border-bottom: 2px solid var(--ink);
+      display: flex;
+      justify-content: space-between;
+      padding: 0.6rem 0;
+      z-index: 1;
+    }
+    .year-heading p {
+      display: none;
+    }
+    .article-list > li {
+      gap: 0.8rem;
+      grid-template-columns: 3.2rem minmax(0, 1fr);
+    }
+  }
+</style>

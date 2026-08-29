@@ -58,6 +58,7 @@
     "/mackup-bei-fen-chu-cuo-de-lin-shi-jie-jue-ban-fa/",
     "/macos-geng-xin-hou-homebrew-bao-cuo-chu-li-fang-an/",
     "/moneywiz-zhong-xin-jian-dai-kuan-zhang-hu-fu-kuan-ji-hua-shan-shuo-de-chu-li/",
+    "/movies/",
     "/na-ge-ke-ai-de-lao-tou-zi-zou-liao/",
     "/node14-bao-cuo/",
     "/oh-my-zsh-sheng-ji-shi-bai-de-jie-jue-fang-fa/",
@@ -592,11 +593,6 @@
     {
       "source": "/google3756ddc34336b7b9.html/",
       "destination": "/google3756ddc34336b7b9.html",
-      "permanent": true
-    },
-    {
-      "source": "/movies/",
-      "destination": "/timeline/",
       "permanent": true
     },
     {

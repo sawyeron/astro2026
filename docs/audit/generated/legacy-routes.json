@@ -1,0 +1,3092 @@
+[
+  {
+    "route": "/",
+    "publicFile": "public/index.html",
+    "canonical": null,
+    "title": "小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/"
+  },
+  {
+    "route": "/021/",
+    "publicFile": "public/021/index.html",
+    "canonical": null,
+    "title": "《从 0 到 1》读书笔记 | 小法进阶",
+    "publishedDate": "2016-04-08",
+    "description": "\n要点\n创新不是从 1 到 n，而是从 0 到 1；\n全球化并不是进步；\n竞争扼杀创新；\n“产品会说话”是谎言；\n失败者才去竞争，创业者应当选择垄断；\n创业开局十分重要，“频繁试错”是错误的；\n没有科技公司可以仅靠品牌吃饭；\n初创公司要打造",
+    "ogUrl": "",
+    "fallbackRoute": "/021/"
+  },
+  {
+    "route": "/2018-nian-du-hu-bei-sheng-dao-lu-jiao-tong-shi-gu-sun-hai-pei-chang-biao-zhun/",
+    "publicFile": "public/2018-nian-du-hu-bei-sheng-dao-lu-jiao-tong-shi-gu-sun-hai-pei-chang-biao-zhun/index.html",
+    "canonical": null,
+    "title": "2018年度湖北省道路交通事故损害赔偿标准 | 小法进阶",
+    "publishedDate": "2018-06-30",
+    "description": "\n原始来源：【联合发文】关于发布2018年度《湖北省道路交通事故损害赔偿标准》的通知\n\n",
+    "ogUrl": "",
+    "fallbackRoute": "/2018-nian-du-hu-bei-sheng-dao-lu-jiao-tong-shi-gu-sun-hai-pei-chang-biao-zhun/"
+  },
+  {
+    "route": "/2019-nian-du-hu-bei-sheng-dao-lu-jiao-tong-shi-gu-sun-hai-pei-chang-biao-zhun/",
+    "publicFile": "public/2019-nian-du-hu-bei-sheng-dao-lu-jiao-tong-shi-gu-sun-hai-pei-chang-biao-zhun/index.html",
+    "canonical": null,
+    "title": "2019年度湖北省道路交通事故损害赔偿标准 | 小法进阶",
+    "publishedDate": "2019-05-02",
+    "description": "来源：关于发布《2019年度湖北省道路交通事故损害赔偿标准》的通知\n\n\n",
+    "ogUrl": "",
+    "fallbackRoute": "/2019-nian-du-hu-bei-sheng-dao-lu-jiao-tong-shi-gu-sun-hai-pei-chang-biao-zhun/"
+  },
+  {
+    "route": "/2020-nian-du-hu-bei-sheng-dao-lu-jiao-tong-shi-gu-sun-hai-pei-chang-biao-zhun/",
+    "publicFile": "public/2020-nian-du-hu-bei-sheng-dao-lu-jiao-tong-shi-gu-sun-hai-pei-chang-biao-zhun/index.html",
+    "canonical": null,
+    "title": "2020年度湖北省道路交通事故损害赔偿标准 | 小法进阶",
+    "publishedDate": "2020-09-20",
+    "description": "2020年度湖北省道路交通事故损害赔偿标准\n\n",
+    "ogUrl": "",
+    "fallbackRoute": "/2020-nian-du-hu-bei-sheng-dao-lu-jiao-tong-shi-gu-sun-hai-pei-chang-biao-zhun/"
+  },
+  {
+    "route": "/2021-nian-du-hu-bei-sheng-jiao-tong-shi-gu-pei-chang-biao-zhun/",
+    "publicFile": "public/2021-nian-du-hu-bei-sheng-jiao-tong-shi-gu-pei-chang-biao-zhun/index.html",
+    "canonical": null,
+    "title": "2021年度湖北省交通事故赔偿标准 | 小法进阶",
+    "publishedDate": "2021-10-10",
+    "description": "\n原始来源：2021年度湖北省交通事故赔偿额标准的基础统计数据是多少？-湖北省统计局\n",
+    "ogUrl": "",
+    "fallbackRoute": "/2021-nian-du-hu-bei-sheng-jiao-tong-shi-gu-pei-chang-biao-zhun/"
+  },
+  {
+    "route": "/2021-nian-zhi-wu-han-shi-chan-jia-shi-duo-jiu/",
+    "publicFile": "public/2021-nian-zhi-wu-han-shi-chan-jia-shi-duo-jiu/index.html",
+    "canonical": null,
+    "title": "2021年之「武汉市产假是多久」 | 小法进阶",
+    "publishedDate": "2021-11-28",
+    "description": "2021新规根据《湖北日报》公布的最新公告，湖北省第十三届人民代表大会常务委员会对《湖北省人口与计划生育条例》第三十一条关于湖北省内关于产假时间的规定进行了修改，修改后的相应内容为：\n\n符合法律法规规定生育的妇女，除享受国家规定的产假外，增",
+    "ogUrl": "",
+    "fallbackRoute": "/2021-nian-zhi-wu-han-shi-chan-jia-shi-duo-jiu/"
+  },
+  {
+    "route": "/2023-nian-du-hu-bei-sheng-jiao-tong-shi-gu-pei-chang-biao-zhun-de-tong-ji-shu-ju/",
+    "publicFile": "public/2023-nian-du-hu-bei-sheng-jiao-tong-shi-gu-pei-chang-biao-zhun-de-tong-ji-shu-ju/index.html",
+    "canonical": null,
+    "title": "2021年度湖北省交通事故赔偿标准 | 小法进阶",
+    "publishedDate": "2024-01-29",
+    "description": "\n原始来源：2021年度湖北省交通事故赔偿额标准的基础统计数据是多少？-湖北省统计局\n",
+    "ogUrl": "",
+    "fallbackRoute": "/2023-nian-du-hu-bei-sheng-jiao-tong-shi-gu-pei-chang-biao-zhun-de-tong-ji-shu-ju/"
+  },
+  {
+    "route": "/about/",
+    "publicFile": "public/about/index.html",
+    "canonical": null,
+    "title": "关于 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/about/"
+  },
+  {
+    "route": "/applescript-jiao-ben-liang-ge-ban/",
+    "publicFile": "public/applescript-jiao-ben-liang-ge-ban/index.html",
+    "canonical": null,
+    "title": "AppleScript 脚本两个半 | 小法进阶",
+    "publishedDate": "2018-09-13",
+    "description": "AppleScript 与我的需求AppleScript 是苹果开发的一种脚本语言，语法结构和自然语言类似，主要用来控制和运行 macOS 中应用程序。在 macOS 升级与发展的同时，也逐渐兼容 JavaScript 进行操作，实现与 A",
+    "ogUrl": "",
+    "fallbackRoute": "/applescript-jiao-ben-liang-ge-ban/"
+  },
+  {
+    "route": "/archives/",
+    "publicFile": "public/archives/index.html",
+    "canonical": null,
+    "title": "归档 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/"
+  },
+  {
+    "route": "/archives/2014/",
+    "publicFile": "public/archives/2014/index.html",
+    "canonical": null,
+    "title": "归档: 2014 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2014/"
+  },
+  {
+    "route": "/archives/2014/07/",
+    "publicFile": "public/archives/2014/07/index.html",
+    "canonical": null,
+    "title": "归档: 2014/7 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2014/07/"
+  },
+  {
+    "route": "/archives/2014/08/",
+    "publicFile": "public/archives/2014/08/index.html",
+    "canonical": null,
+    "title": "归档: 2014/8 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2014/08/"
+  },
+  {
+    "route": "/archives/2014/09/",
+    "publicFile": "public/archives/2014/09/index.html",
+    "canonical": null,
+    "title": "归档: 2014/9 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2014/09/"
+  },
+  {
+    "route": "/archives/2014/10/",
+    "publicFile": "public/archives/2014/10/index.html",
+    "canonical": null,
+    "title": "归档: 2014/10 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2014/10/"
+  },
+  {
+    "route": "/archives/2014/page/2/",
+    "publicFile": "public/archives/2014/page/2/index.html",
+    "canonical": null,
+    "title": "归档: 2014 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2014/page/2/"
+  },
+  {
+    "route": "/archives/2015/",
+    "publicFile": "public/archives/2015/index.html",
+    "canonical": null,
+    "title": "归档: 2015 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2015/"
+  },
+  {
+    "route": "/archives/2015/01/",
+    "publicFile": "public/archives/2015/01/index.html",
+    "canonical": null,
+    "title": "归档: 2015/1 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2015/01/"
+  },
+  {
+    "route": "/archives/2015/07/",
+    "publicFile": "public/archives/2015/07/index.html",
+    "canonical": null,
+    "title": "归档: 2015/7 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2015/07/"
+  },
+  {
+    "route": "/archives/2015/10/",
+    "publicFile": "public/archives/2015/10/index.html",
+    "canonical": null,
+    "title": "归档: 2015/10 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2015/10/"
+  },
+  {
+    "route": "/archives/2015/12/",
+    "publicFile": "public/archives/2015/12/index.html",
+    "canonical": null,
+    "title": "归档: 2015/12 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2015/12/"
+  },
+  {
+    "route": "/archives/2016/",
+    "publicFile": "public/archives/2016/index.html",
+    "canonical": null,
+    "title": "归档: 2016 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2016/"
+  },
+  {
+    "route": "/archives/2016/04/",
+    "publicFile": "public/archives/2016/04/index.html",
+    "canonical": null,
+    "title": "归档: 2016/4 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2016/04/"
+  },
+  {
+    "route": "/archives/2016/05/",
+    "publicFile": "public/archives/2016/05/index.html",
+    "canonical": null,
+    "title": "归档: 2016/5 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2016/05/"
+  },
+  {
+    "route": "/archives/2017/",
+    "publicFile": "public/archives/2017/index.html",
+    "canonical": null,
+    "title": "归档: 2017 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2017/"
+  },
+  {
+    "route": "/archives/2017/01/",
+    "publicFile": "public/archives/2017/01/index.html",
+    "canonical": null,
+    "title": "归档: 2017/1 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2017/01/"
+  },
+  {
+    "route": "/archives/2017/02/",
+    "publicFile": "public/archives/2017/02/index.html",
+    "canonical": null,
+    "title": "归档: 2017/2 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2017/02/"
+  },
+  {
+    "route": "/archives/2017/03/",
+    "publicFile": "public/archives/2017/03/index.html",
+    "canonical": null,
+    "title": "归档: 2017/3 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2017/03/"
+  },
+  {
+    "route": "/archives/2017/05/",
+    "publicFile": "public/archives/2017/05/index.html",
+    "canonical": null,
+    "title": "归档: 2017/5 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2017/05/"
+  },
+  {
+    "route": "/archives/2017/07/",
+    "publicFile": "public/archives/2017/07/index.html",
+    "canonical": null,
+    "title": "归档: 2017/7 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2017/07/"
+  },
+  {
+    "route": "/archives/2017/08/",
+    "publicFile": "public/archives/2017/08/index.html",
+    "canonical": null,
+    "title": "归档: 2017/8 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2017/08/"
+  },
+  {
+    "route": "/archives/2017/10/",
+    "publicFile": "public/archives/2017/10/index.html",
+    "canonical": null,
+    "title": "归档: 2017/10 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2017/10/"
+  },
+  {
+    "route": "/archives/2017/page/2/",
+    "publicFile": "public/archives/2017/page/2/index.html",
+    "canonical": null,
+    "title": "归档: 2017 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2017/page/2/"
+  },
+  {
+    "route": "/archives/2018/",
+    "publicFile": "public/archives/2018/index.html",
+    "canonical": null,
+    "title": "归档: 2018 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2018/"
+  },
+  {
+    "route": "/archives/2018/01/",
+    "publicFile": "public/archives/2018/01/index.html",
+    "canonical": null,
+    "title": "归档: 2018/1 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2018/01/"
+  },
+  {
+    "route": "/archives/2018/04/",
+    "publicFile": "public/archives/2018/04/index.html",
+    "canonical": null,
+    "title": "归档: 2018/4 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2018/04/"
+  },
+  {
+    "route": "/archives/2018/05/",
+    "publicFile": "public/archives/2018/05/index.html",
+    "canonical": null,
+    "title": "归档: 2018/5 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2018/05/"
+  },
+  {
+    "route": "/archives/2018/06/",
+    "publicFile": "public/archives/2018/06/index.html",
+    "canonical": null,
+    "title": "归档: 2018/6 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2018/06/"
+  },
+  {
+    "route": "/archives/2018/07/",
+    "publicFile": "public/archives/2018/07/index.html",
+    "canonical": null,
+    "title": "归档: 2018/7 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2018/07/"
+  },
+  {
+    "route": "/archives/2018/08/",
+    "publicFile": "public/archives/2018/08/index.html",
+    "canonical": null,
+    "title": "归档: 2018/8 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2018/08/"
+  },
+  {
+    "route": "/archives/2018/09/",
+    "publicFile": "public/archives/2018/09/index.html",
+    "canonical": null,
+    "title": "归档: 2018/9 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2018/09/"
+  },
+  {
+    "route": "/archives/2018/10/",
+    "publicFile": "public/archives/2018/10/index.html",
+    "canonical": null,
+    "title": "归档: 2018/10 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2018/10/"
+  },
+  {
+    "route": "/archives/2018/11/",
+    "publicFile": "public/archives/2018/11/index.html",
+    "canonical": null,
+    "title": "归档: 2018/11 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2018/11/"
+  },
+  {
+    "route": "/archives/2018/12/",
+    "publicFile": "public/archives/2018/12/index.html",
+    "canonical": null,
+    "title": "归档: 2018/12 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2018/12/"
+  },
+  {
+    "route": "/archives/2018/page/2/",
+    "publicFile": "public/archives/2018/page/2/index.html",
+    "canonical": null,
+    "title": "归档: 2018 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2018/page/2/"
+  },
+  {
+    "route": "/archives/2018/page/3/",
+    "publicFile": "public/archives/2018/page/3/index.html",
+    "canonical": null,
+    "title": "归档: 2018 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2018/page/3/"
+  },
+  {
+    "route": "/archives/2019/",
+    "publicFile": "public/archives/2019/index.html",
+    "canonical": null,
+    "title": "归档: 2019 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2019/"
+  },
+  {
+    "route": "/archives/2019/03/",
+    "publicFile": "public/archives/2019/03/index.html",
+    "canonical": null,
+    "title": "归档: 2019/3 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2019/03/"
+  },
+  {
+    "route": "/archives/2019/04/",
+    "publicFile": "public/archives/2019/04/index.html",
+    "canonical": null,
+    "title": "归档: 2019/4 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2019/04/"
+  },
+  {
+    "route": "/archives/2019/05/",
+    "publicFile": "public/archives/2019/05/index.html",
+    "canonical": null,
+    "title": "归档: 2019/5 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2019/05/"
+  },
+  {
+    "route": "/archives/2020/",
+    "publicFile": "public/archives/2020/index.html",
+    "canonical": null,
+    "title": "归档: 2020 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2020/"
+  },
+  {
+    "route": "/archives/2020/02/",
+    "publicFile": "public/archives/2020/02/index.html",
+    "canonical": null,
+    "title": "归档: 2020/2 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2020/02/"
+  },
+  {
+    "route": "/archives/2020/03/",
+    "publicFile": "public/archives/2020/03/index.html",
+    "canonical": null,
+    "title": "归档: 2020/3 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2020/03/"
+  },
+  {
+    "route": "/archives/2020/05/",
+    "publicFile": "public/archives/2020/05/index.html",
+    "canonical": null,
+    "title": "归档: 2020/5 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2020/05/"
+  },
+  {
+    "route": "/archives/2020/06/",
+    "publicFile": "public/archives/2020/06/index.html",
+    "canonical": null,
+    "title": "归档: 2020/6 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2020/06/"
+  },
+  {
+    "route": "/archives/2020/09/",
+    "publicFile": "public/archives/2020/09/index.html",
+    "canonical": null,
+    "title": "归档: 2020/9 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2020/09/"
+  },
+  {
+    "route": "/archives/2020/10/",
+    "publicFile": "public/archives/2020/10/index.html",
+    "canonical": null,
+    "title": "归档: 2020/10 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2020/10/"
+  },
+  {
+    "route": "/archives/2020/page/2/",
+    "publicFile": "public/archives/2020/page/2/index.html",
+    "canonical": null,
+    "title": "归档: 2020 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2020/page/2/"
+  },
+  {
+    "route": "/archives/2021/",
+    "publicFile": "public/archives/2021/index.html",
+    "canonical": null,
+    "title": "归档: 2021 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2021/"
+  },
+  {
+    "route": "/archives/2021/02/",
+    "publicFile": "public/archives/2021/02/index.html",
+    "canonical": null,
+    "title": "归档: 2021/2 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2021/02/"
+  },
+  {
+    "route": "/archives/2021/07/",
+    "publicFile": "public/archives/2021/07/index.html",
+    "canonical": null,
+    "title": "归档: 2021/7 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2021/07/"
+  },
+  {
+    "route": "/archives/2021/10/",
+    "publicFile": "public/archives/2021/10/index.html",
+    "canonical": null,
+    "title": "归档: 2021/10 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2021/10/"
+  },
+  {
+    "route": "/archives/2021/11/",
+    "publicFile": "public/archives/2021/11/index.html",
+    "canonical": null,
+    "title": "归档: 2021/11 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2021/11/"
+  },
+  {
+    "route": "/archives/2024/",
+    "publicFile": "public/archives/2024/index.html",
+    "canonical": null,
+    "title": "归档: 2024 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2024/"
+  },
+  {
+    "route": "/archives/2024/01/",
+    "publicFile": "public/archives/2024/01/index.html",
+    "canonical": null,
+    "title": "归档: 2024/1 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/2024/01/"
+  },
+  {
+    "route": "/archives/page/2/",
+    "publicFile": "public/archives/page/2/index.html",
+    "canonical": null,
+    "title": "归档 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/page/2/"
+  },
+  {
+    "route": "/archives/page/3/",
+    "publicFile": "public/archives/page/3/index.html",
+    "canonical": null,
+    "title": "归档 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/page/3/"
+  },
+  {
+    "route": "/archives/page/4/",
+    "publicFile": "public/archives/page/4/index.html",
+    "canonical": null,
+    "title": "归档 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/page/4/"
+  },
+  {
+    "route": "/archives/page/5/",
+    "publicFile": "public/archives/page/5/index.html",
+    "canonical": null,
+    "title": "归档 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/page/5/"
+  },
+  {
+    "route": "/archives/page/6/",
+    "publicFile": "public/archives/page/6/index.html",
+    "canonical": null,
+    "title": "归档 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/page/6/"
+  },
+  {
+    "route": "/archives/page/7/",
+    "publicFile": "public/archives/page/7/index.html",
+    "canonical": null,
+    "title": "归档 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/page/7/"
+  },
+  {
+    "route": "/archives/page/8/",
+    "publicFile": "public/archives/page/8/index.html",
+    "canonical": null,
+    "title": "归档 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/page/8/"
+  },
+  {
+    "route": "/archives/page/9/",
+    "publicFile": "public/archives/page/9/index.html",
+    "canonical": null,
+    "title": "归档 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/archives/page/9/"
+  },
+  {
+    "route": "/ban-dao-mac/",
+    "publicFile": "public/ban-dao-mac/index.html",
+    "canonical": null,
+    "title": "［折腾记］安装黑苹果，外加迁移本地环境 | 小法进阶",
+    "publishedDate": "2014-07-28",
+    "description": "不折腾就会死去年开始折腾博客，看到各种博客程序，都想去试一试。试的过程中，看到说明文档里都有一句，“要是在命令行里，这个就很容易实现了”，脑子就开始各种抽风——我是不是也装一个 Linux 或者 Mac。Linux 的安装不难，但是用起来难",
+    "ogUrl": "",
+    "fallbackRoute": "/ban-dao-mac/"
+  },
+  {
+    "route": "/bao-guan-qin-zhan/",
+    "publicFile": "public/bao-guan-qin-zhan/index.html",
+    "canonical": null,
+    "title": "一个侵占罪案例的诈骗成分分析 | 小法进阶",
+    "publishedDate": "2014-08-20",
+    "description": "抢劫，抢夺，盗窃，侵占，诈骗，故意损毁财物……这么多行为都是对于侵犯财产型犯罪中典型行为的归纳，伴随而来的是各行为的界定、内涵与外延问题。虽然根据日本刑法天才山口厚的“公式”，各行为之间的界限理论上来说还是比较清晰的，可是具体到一些案例中，",
+    "ogUrl": "",
+    "fallbackRoute": "/bao-guan-qin-zhan/"
+  },
+  {
+    "route": "/bao-li-yu-qu-cai-qiang-jie/",
+    "publicFile": "public/bao-li-yu-qu-cai-qiang-jie/index.html",
+    "canonical": null,
+    "title": "暴力与取财，在抢劫罪中，仅仅是手段与目的关系吗？ | 小法进阶",
+    "publishedDate": "2014-09-04",
+    "description": "最近写司考真题，发现刑法出题人对于侵犯财产型犯罪情有独钟，想来全民都是很关心钱的问题，我也不例外啦。\n抢劫罪，要求行为人主观上以非法占有为目的，客观上对人实施暴力、胁迫或者其他方法，强取公私财物的行为。可以看出，抢劫罪既要了钱，还可能会要命",
+    "ogUrl": "",
+    "fallbackRoute": "/bao-li-yu-qu-cai-qiang-jie/"
+  },
+  {
+    "route": "/bei-dai-li-ren-sang/",
+    "publicFile": "public/bei-dai-li-ren-sang/index.html",
+    "canonical": null,
+    "title": "被代理人丧失民事行为能力不影响代理权的分析 | 小法进阶",
+    "publishedDate": "2014-09-28",
+    "description": "代理权的消灭事由，是根据不同类型代理进行区分的。简单来看主要是三个方面：事、权、人。其中人，一般都是一方死亡，代理人丧失民事行为能力等等。并且其中被代理人死亡，还并不是当然的终止代理权。当然，我今天要谈的是被代理人丧失民事行为能力的情况下，",
+    "ogUrl": "",
+    "fallbackRoute": "/bei-dai-li-ren-sang/"
+  },
+  {
+    "route": "/books/",
+    "publicFile": "public/books/index.html",
+    "canonical": null,
+    "title": "读书 | 小法进阶",
+    "publishedDate": "2025-10-07",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/books/"
+  },
+  {
+    "route": "/categories/",
+    "publicFile": "public/categories/index.html",
+    "canonical": null,
+    "title": "分类 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/categories/"
+  },
+  {
+    "route": "/categories/法学/",
+    "publicFile": "public/categories/法学/index.html",
+    "canonical": null,
+    "title": "分类: 法学 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/categories/法学/"
+  },
+  {
+    "route": "/categories/法学/page/2/",
+    "publicFile": "public/categories/法学/page/2/index.html",
+    "canonical": null,
+    "title": "分类: 法学 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/categories/法学/page/2/"
+  },
+  {
+    "route": "/categories/法学/page/3/",
+    "publicFile": "public/categories/法学/page/3/index.html",
+    "canonical": null,
+    "title": "分类: 法学 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/categories/法学/page/3/"
+  },
+  {
+    "route": "/categories/精彩分享/",
+    "publicFile": "public/categories/精彩分享/index.html",
+    "canonical": null,
+    "title": "分类: 精彩分享 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/categories/精彩分享/"
+  },
+  {
+    "route": "/categories/精彩分享/page/2/",
+    "publicFile": "public/categories/精彩分享/page/2/index.html",
+    "canonical": null,
+    "title": "分类: 精彩分享 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/categories/精彩分享/page/2/"
+  },
+  {
+    "route": "/categories/Blog/",
+    "publicFile": "public/categories/Blog/index.html",
+    "canonical": null,
+    "title": "分类: Blog | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/categories/Blog/"
+  },
+  {
+    "route": "/categories/Blog/page/2/",
+    "publicFile": "public/categories/Blog/page/2/index.html",
+    "canonical": null,
+    "title": "分类: Blog | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/categories/Blog/page/2/"
+  },
+  {
+    "route": "/categories/Blog/page/3/",
+    "publicFile": "public/categories/Blog/page/3/index.html",
+    "canonical": null,
+    "title": "分类: Blog | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/categories/Blog/page/3/"
+  },
+  {
+    "route": "/categories/Blog/page/4/",
+    "publicFile": "public/categories/Blog/page/4/index.html",
+    "canonical": null,
+    "title": "分类: Blog | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/categories/Blog/page/4/"
+  },
+  {
+    "route": "/categories/Blog/page/5/",
+    "publicFile": "public/categories/Blog/page/5/index.html",
+    "canonical": null,
+    "title": "分类: Blog | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/categories/Blog/page/5/"
+  },
+  {
+    "route": "/cclisence/",
+    "publicFile": "public/cclisence",
+    "canonical": null,
+    "title": "知识共享协议 | 小法进阶",
+    "publishedDate": "2016-04-06",
+    "description": "\n1. 开源运动与知识共享协议1.1 自由软件运动\n二十世纪六十年代，IBM 等公司所开发的软件都是自由分发的。那个时候的商业模式都是以硬件为中心，软件只是被看作使硬件工作的东西。他们提供软件的同时也提供源代码，软件可以被修改并因此得到改进",
+    "ogUrl": "",
+    "fallbackRoute": "/cclisence"
+  },
+  {
+    "route": "/cetrain-issues-iv-for-company-law/",
+    "publicFile": "public/cetrain-issues-iv-for-company-law/index.html",
+    "canonical": null,
+    "title": "公司法司法解释四-引文版 | 小法进阶",
+    "publishedDate": "2017-08-28",
+    "description": "\n（2016年12月5日最高人民法院审判委员会第1702次会议通过，自2017年9月1日起施行）法释〔2017〕16号\n为正确适用《中华人民共和国公司法》，结合人民法院审判实践，现就公司决议效力、股东知情权、利润分配权、优先购买权和股东代表",
+    "ogUrl": "",
+    "fallbackRoute": "/cetrain-issues-iv-for-company-law/"
+  },
+  {
+    "route": "/chen-zhao-tampermonkey-hui-gui-de-jiao-ben-pan-dian/",
+    "publicFile": "public/chen-zhao-tampermonkey-hui-gui-de-jiao-ben-pan-dian/index.html",
+    "canonical": null,
+    "title": "趁着 Tampermonkey 回归的脚本盘点 | 小法进阶",
+    "publishedDate": "2018-09-07",
+    "description": "\n使用场景与需求有些东西，用了就回不去了。比如 uBlock Origin 、Telegram、Gmail 和「油猴」。同样，也因为他们过于强大，也会因为某些因素而无法使用。今天趁着 Tmapermonkey 回归 Safari 扩展中心，",
+    "ogUrl": "",
+    "fallbackRoute": "/chen-zhao-tampermonkey-hui-gui-de-jiao-ben-pan-dian/"
+  },
+  {
+    "route": "/cs-hubei-2017/",
+    "publicFile": "public/cs-hubei-2017/index.html",
+    "canonical": null,
+    "title": "2017 年度湖北省道路交通事故损害赔偿标准 | 小法进阶",
+    "publishedDate": "2017-05-03",
+    "description": "[联合发文] 关于发布 2017 年度《湖北省道路交通事故损害赔偿标准》的通知\n各市、州、县公安局，人民法院、统计局、国家调查队：\n为保障《中华人民共和国道路交通安全法》的实施，根据最高人民法院《关于审理人身损害赔偿案件适用法律若干问题的解",
+    "ogUrl": "",
+    "fallbackRoute": "/cs-hubei-2017/"
+  },
+  {
+    "route": "/da-xiong-de-jin-yin-dao/",
+    "publicFile": "public/da-xiong-de-jin-yin-dao/index.html",
+    "canonical": null,
+    "title": "【0分作文】大雄的金银岛 | 小法进阶",
+    "publishedDate": "2018-06-07",
+    "description": "在《哆啦A梦：大雄的金银岛》上映首日、儿童节那天，就约同学去看了。电影院里大概有一般得是家长带着小朋友来看的，旁边有个小朋友不时的蹦出几句奶里奶气的台词，真•（现实版）又想骗我生个女儿。\n满分的配乐与情怀，负分的国语翻译和配音在《大雄的金银",
+    "ogUrl": "",
+    "fallbackRoute": "/da-xiong-de-jin-yin-dao/"
+  },
+  {
+    "route": "/di-san-ci-qian-ding-lao-dong-he-tong-yu-er-bei-gong-zi/",
+    "publicFile": "public/di-san-ci-qian-ding-lao-dong-he-tong-yu-er-bei-gong-zi/index.html",
+    "canonical": null,
+    "title": "第三次签订劳动合同与二倍工资 | 小法进阶",
+    "publishedDate": "2018-11-16",
+    "description": "基本法条《中华人民共和国劳动合同法》\n\n第十四条  无固定期限劳动合同，是指用人单位与劳动者约定无确定终止时间的劳动合同。用人单位与劳动者协商一致，可以订立无固定期限劳动合同。有下列情形之一，劳动者提出或者同意续订、订立劳动合同的，除劳动者",
+    "ogUrl": "",
+    "fallbackRoute": "/di-san-ci-qian-ding-lao-dong-he-tong-yu-er-bei-gong-zi/"
+  },
+  {
+    "route": "/due-pin-workflow/",
+    "publicFile": "public/due-pin-workflow/index.html",
+    "canonical": null,
+    "title": "我常用的三款效率APP | 小法进阶",
+    "publishedDate": "2017-07-18",
+    "description": "\n通过本文简单介绍自己常用的三款 APP: Due 2、Pin 和 Workflow，其中也夹杂着一些自己对于日常操作、任务处理的理解。在转向 iOS 之前一直认为 Android 更开放，具有更多可玩性和定制化的东西，比如 Xposed ",
+    "ogUrl": "",
+    "fallbackRoute": "/due-pin-workflow/"
+  },
+  {
+    "route": "/duo-ci-zha-pian-shu-e/",
+    "publicFile": "public/duo-ci-zha-pian-shu-e/index.html",
+    "canonical": null,
+    "title": "多次诈骗的犯罪数额，这样认定真的好吗？ | 小法进阶",
+    "publishedDate": "2014-09-03",
+    "description": "犯罪数额在侵犯财产型犯罪中，一般作为入罪条件，如盗窃罪、诈骗罪、敲诈勒索罪等，或者是法定刑升格条件来对待，如抢夺数额巨大，处3年以上10年以下。由此，在认定犯罪数额问题上，往往秉着遵循客观实际原则，来计算行为人犯罪数额。\n一、数额认定的一般",
+    "ogUrl": "",
+    "fallbackRoute": "/duo-ci-zha-pian-shu-e/"
+  },
+  {
+    "route": "/expert/",
+    "publicFile": "public/expert/index.html",
+    "canonical": null,
+    "title": "流水账之 PDF Expert | 小法进阶",
+    "publishedDate": "2018-08-22",
+    "description": "我的 PDF 软件入手 PDF Expert，有两个背景，一是某渠道商与坚果云联合推出 捆绑活动，PDF Expert Mac 端当前版本永久授权+坚果云一年专业版，打包价 209 元，而坚果云也是属于自己常用的应用之一；另一个背景就是自己",
+    "ogUrl": "",
+    "fallbackRoute": "/expert/"
+  },
+  {
+    "route": "/flash-de-xie-zai/",
+    "publicFile": "public/flash-de-xie-zai/index.html",
+    "canonical": null,
+    "title": "flash的卸载 | 小法进阶",
+    "publishedDate": "2021-02-09",
+    "description": "起因Chrome 和 Firefox 全面禁用 Adobe Flash，导致单位的办公系统无法使用上传功能。在网管人员的「建议」之下，安装了因国内某公司提供服务的「特供版」Flash，确实可用。出于心理洁癖，不信赖国产厂商，所以想卸载这个 ",
+    "ogUrl": "",
+    "fallbackRoute": "/flash-de-xie-zai/"
+  },
+  {
+    "route": "/gang-jing-wu-ge-ban/",
+    "publicFile": "public/gang-jing-wu-ge-ban/index.html",
+    "canonical": null,
+    "title": "【流水账】杠精五个半 | 小法进阶",
+    "publishedDate": "2018-06-25",
+    "description": "\n我怕我没有机会跟你说一声再见因为也许就再也见不到你明天我要离开熟悉的地方和你要分离我眼泪就掉下去\n\n「杠精五个半」、「5✿1♂」是我们 2015 级法理学微信群的群名。\n法理学六位导师，所以每届的法学硕士只有六个人。而我们这一届，五个女生",
+    "ogUrl": "",
+    "fallbackRoute": "/gang-jing-wu-ge-ban/"
+  },
+  {
+    "route": "/google3756ddc34336b7b9.html/",
+    "publicFile": "public/google3756ddc34336b7b9.html",
+    "canonical": null,
+    "title": "小法进阶",
+    "publishedDate": "2022-08-06",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/google3756ddc34336b7b9.html"
+  },
+  {
+    "route": "/homebrew-chi-xian-an-zhuang-fang-shi-bian-geng/",
+    "publicFile": "public/homebrew-chi-xian-an-zhuang-fang-shi-bian-geng/index.html",
+    "canonical": null,
+    "title": "Homebrew 离线安装方式变更 | 小法进阶",
+    "publishedDate": "2018-09-09",
+    "description": "在我此前多篇博文中均提及了 Homebrew，官方自定义为「macOS 缺失的软件包的管理器」, 作为一个开源项目，同样可以在 Github 上找到它的 项目文档。\n\n\n前言calibre 作为最强的电子书管理/编辑/查看软件（没有之一），",
+    "ogUrl": "",
+    "fallbackRoute": "/homebrew-chi-xian-an-zhuang-fang-shi-bian-geng/"
+  },
+  {
+    "route": "/hu-bei-gao-yuan-min-er-ting-tong-zhi/",
+    "publicFile": "public/hu-bei-gao-yuan-min-er-ting-tong-zhi/index.html",
+    "canonical": null,
+    "title": "湖北高院民二庭《关于审理涉及新型冠状病毒肺炎疫情商事案件若干问题的解答》 | 小法进阶",
+    "publishedDate": "2020-02-15",
+    "description": "关于审理涉及新型冠状病毒肺炎疫情商事案件若干问题的解答\n为依法审理涉及新型冠状病毒肺炎疫情商事案件，统一裁判标准，提高办案质量，更好服务保障全省经济高质量发展，依照《中华人民共和国民法总则》《中华人民共和国合同法》及其他法律法规，结合对涉及",
+    "ogUrl": "",
+    "fallbackRoute": "/hu-bei-gao-yuan-min-er-ting-tong-zhi/"
+  },
+  {
+    "route": "/hu-bei-sheng-fen-qu-yu-zui-di-gong-zi-biao-zhun-2021/",
+    "publicFile": "public/hu-bei-sheng-fen-qu-yu-zui-di-gong-zi-biao-zhun-2021/index.html",
+    "canonical": null,
+    "title": "湖北省分区域最低工资标准（2021） | 小法进阶",
+    "publishedDate": "2021-07-28",
+    "description": "​省人民政府办公厅关于调整全省最低工资标准的通知\n各市、州、县人民政府，省政府各部门：\n为贯彻落实党中央、国务院决策部署和省委、省政府工作要求，努力实现居民收入增长和经济增长基本同步，让广大人民群众共享改革发展成果，更好保障劳动者个人及其家",
+    "ogUrl": "",
+    "fallbackRoute": "/hu-bei-sheng-fen-qu-yu-zui-di-gong-zi-biao-zhun-2021/"
+  },
+  {
+    "route": "/hu-bei-sheng-fen-qu-yu-zui-di-gong-zi-biao-zhun/",
+    "publicFile": "public/hu-bei-sheng-fen-qu-yu-zui-di-gong-zi-biao-zhun/index.html",
+    "canonical": null,
+    "title": "湖北省分区域最低工资标准(2017) | 小法进阶",
+    "publishedDate": "2019-03-14",
+    "description": "武汉市人社局关于调整全市最低工资标准的通知（武人社发〔2017〕72号）江岸区、江汉区、硚口区、汉阳区、武昌区、洪山区、青山区、东西湖区、汉南区、东湖新技术开发区、武汉经济技术开发区、东湖生态旅游风景区、武汉化学工业区、武汉临空港经济技术开",
+    "ogUrl": "",
+    "fallbackRoute": "/hu-bei-sheng-fen-qu-yu-zui-di-gong-zi-biao-zhun/"
+  },
+  {
+    "route": "/hustlaw13/",
+    "publicFile": "public/hustlaw13/index.html",
+    "canonical": null,
+    "title": "2013年华中科技大学法学院考研真题 | 小法进阶",
+    "publishedDate": "2015-01-11",
+    "description": "公法简答题（15*4）\n简述违宪审查的几种模式\n简述我国刑法中数罪并罚的几种情形\n行政法的信赖利益保护原则\n抢劫罪的加重情节\n\n论述题（30*3，统考生答1、2、3，单考生答1、2、4）\n基本人权的保障与界限\n我国行政诉讼法受案范围的修改\n",
+    "ogUrl": "",
+    "fallbackRoute": "/hustlaw13/"
+  },
+  {
+    "route": "/hustlaw14/",
+    "publicFile": "public/hustlaw14/index.html",
+    "canonical": null,
+    "title": "2014年华中科技大学法学院考研真题 | 小法进阶",
+    "publishedDate": "2015-01-11",
+    "description": "公法简答题\n宪法解释和宪法修改的关系\n行政处罚中一事不再罚原则\n金融诈骗罪\n简述刑法中的主刑\n\n论述题\n如何完善全国人民代表大会的监督权\n如何扩大行政诉讼的受案范围\n论刑法中危害行为与危害结果之间的因果关系\n\n私法简答题\n建设用地使用权的特",
+    "ogUrl": "",
+    "fallbackRoute": "/hustlaw14/"
+  },
+  {
+    "route": "/hustlaw15/",
+    "publicFile": "public/hustlaw15/index.html",
+    "canonical": null,
+    "title": "2015年华中科技大学法学院考研真题 | 小法进阶",
+    "publishedDate": "2015-01-13",
+    "description": "公法简答题(15*4)\n我国宪法规定人格尊严不受侵犯\n法律法规授权组织含义及范围\n罪刑法定有原则含义及具体内容\n数罪并罚原则及具体适用\n\n论述题(30*3)\n依法治国的关键是依宪治国\n关于抽象行政行为审查规定的分析及提出行政复议制度完善的建",
+    "ogUrl": "",
+    "fallbackRoute": "/hustlaw15/"
+  },
+  {
+    "route": "/hustlaw16/",
+    "publicFile": "public/hustlaw16/index.html",
+    "canonical": null,
+    "title": "2016年华中科技大学法学院考研真题 | 小法进阶",
+    "publishedDate": "2015-12-29",
+    "description": "公法简答题(15*4)\n宪法规范的特征\n行政诉讼一审撤销判决的适用\n自首的分类\n刑法危害行为的含义、特征及表现形式\n\n论述题(30*3)\n宪法实施及保障\n行政法控诉权的理论学说\n刑法修正案九贪污罪规定评析\n\n私法简答题(15*4)\n占有的效",
+    "ogUrl": "",
+    "fallbackRoute": "/hustlaw16/"
+  },
+  {
+    "route": "/icloud-terms/",
+    "publicFile": "public/icloud-terms",
+    "canonical": null,
+    "title": "从服务协议看 iCloud 迁移 | 小法进阶",
+    "publishedDate": "2018-01-25",
+    "description": "iCloud 数据迁移事件2018年1月9日，苹果官网发布新的 iCloud（中国）：常见问题，正式落实了此前与云上贵州大数据产业发展有限公司达成的合作。即，从2018 年 2 月 28 日起，中国内地客户的 iCloud 账户将转由「云上",
+    "ogUrl": "",
+    "fallbackRoute": "/icloud-terms"
+  },
+  {
+    "route": "/iphone-xryu-xiao-xing-da-xie-zi-mu/",
+    "publicFile": "public/iphone-xryu-xiao-xing-da-xie-zi-mu/index.html",
+    "canonical": null,
+    "title": "iPhone Xʀ 与小型大写字母 | 小法进阶",
+    "publishedDate": "2018-09-16",
+    "description": "\b北京时间 2018 年 9 月 13 日凌晨，苹果公司（Apple Inc.）在今年秋季发布会上发布了 iPhone Xꜱ、iPhone Xꜱ Max、iPhone Xʀ 和 Apple Watch Series 4 四个硬件设备。自己并",
+    "ogUrl": "",
+    "fallbackRoute": "/iphone-xryu-xiao-xing-da-xie-zi-mu/"
+  },
+  {
+    "route": "/jdsnk/",
+    "publicFile": "public/jdsnk/index.html",
+    "canonical": null,
+    "title": "评北京精雕诉上海奈凯计算机软件侵权案（第 48 号指导案例） | 小法进阶",
+    "publishedDate": "2017-02-20",
+    "description": "一、案情介绍北京精雕科技有限公司（下称“精雕公司”）自主开发了精雕 CNC 雕刻系统，该系统由 JDPaint 软件、精雕数控系统、机械本体三大部分组成。JDPaint 软件通过加工编程计算机运行生成 Eng 格式的数据文件，再由运行于数控",
+    "ogUrl": "",
+    "fallbackRoute": "/jdsnk/"
+  },
+  {
+    "route": "/jian-qiao-fen-xi/",
+    "publicFile": "public/jian-qiao-fen-xi/index.html",
+    "canonical": null,
+    "title": "谈谈剑桥分析公司的Logo | 小法进阶",
+    "publishedDate": "2018-04-12",
+    "description": "就在昨天，Facebook家的小扎在美国国会接受了差不多10个小时的“蹂躏”。但引起我注意的是这一事件的另一主角——剑桥分析公司（Cambrideg Analytica）。它的logo和分析方法让我觉得很有趣。\n\n\nLogo 与名画看到剑桥",
+    "ogUrl": "",
+    "fallbackRoute": "/jian-qiao-fen-xi/"
+  },
+  {
+    "route": "/jianguoyun-keepass/",
+    "publicFile": "public/jianguoyun-keepass/index.html",
+    "canonical": null,
+    "title": "坚果云&KeePass（多图） | 小法进阶",
+    "publishedDate": "2017-03-23",
+    "description": "一、为什么是坚果云（一）缘起2016 年 5 月参加实习，文档资料需要在两台电脑之间同步，供我选择的有，移动硬盘、U 盘、网盘三种解决方案。\n\n\n\n项目\n移动硬盘\nU 盘\n网盘\n\n\n\n成本\n￥30\n￥40\n￥0~200\n\n\n便携性\n★☆☆\n",
+    "ogUrl": "",
+    "fallbackRoute": "/jianguoyun-keepass/"
+  },
+  {
+    "route": "/jin-qian-bu-neng-mai-shi-me/",
+    "publicFile": "public/jin-qian-bu-neng-mai-shi-me/index.html",
+    "canonical": null,
+    "title": "【读书笔记】金钱不能买什么 | 小法进阶",
+    "publishedDate": "2018-09-06",
+    "description": "\n编辑推荐\n市场的角色和范围是现代政治所缺失的一场重大辩论。我们想要一个市场经济，还是市场社会？市场在公共生活和个人伦理扮演什么角色？我们怎样决定什么东西可以买卖，什么东西由非市场的价值掌握？哪里是金钱的法则行不通的地方？\n在《金钱不能买什",
+    "ogUrl": "",
+    "fallbackRoute": "/jin-qian-bu-neng-mai-shi-me/"
+  },
+  {
+    "route": "/lao-dong-zhe-wei-yue-jin/",
+    "publicFile": "public/lao-dong-zhe-wei-yue-jin/index.html",
+    "canonical": null,
+    "title": "一个暗藏杀机的劳动法考点 | 小法进阶",
+    "publishedDate": "2014-09-04",
+    "description": "一、司考原题\n下列哪些说法违反劳动法的规定（  ）A. 我国公民未满 16 周岁，用人单位一律不得招用B. 双方当事人不可以约定周六加班C. 劳动合同期限约定为 2 年的，试用期应在半年以上D. 双方当事人可就全部合同条款做出违约金约定\n\n",
+    "ogUrl": "",
+    "fallbackRoute": "/lao-dong-zhe-wei-yue-jin/"
+  },
+  {
+    "route": "/latex-times-new-roman/",
+    "publicFile": "public/latex-times-new-roman/index.html",
+    "canonical": null,
+    "title": "LaTeX下使用 Times New Roman 字体的正确姿势 | 小法进阶",
+    "publishedDate": "2020-02-02",
+    "description": "原文链接：LaTeX技巧885：LaTeX下使用Times New Roman字体的正确姿势\n使用 fontspec系列宏包fontspec 系列宏包是为 XeLaTeX 和 LuaLaTeX 设计的。借由它，用户可以直接选取系统中的字体。",
+    "ogUrl": "",
+    "fallbackRoute": "/latex-times-new-roman/"
+  },
+  {
+    "route": "/latex-yu-lun-wen-pai-ban/",
+    "publicFile": "public/latex-yu-lun-wen-pai-ban/index.html",
+    "canonical": null,
+    "title": "LaTeX 与论文排版二三事 | 小法进阶",
+    "publishedDate": "2018-07-01",
+    "description": "我为什么会用 LaTeX公式与绘图如果是在 Word 中输入一个简单公式，应该是没什么问题的，但不方便引用和修改。如果让我用绘图的方式呈现这个公式，我在 Word 中就不知道怎么操作了。因为简单的 y = x^2^ 我都没法用 Word 画",
+    "ogUrl": "",
+    "fallbackRoute": "/latex-yu-lun-wen-pai-ban/"
+  },
+  {
+    "route": "/leng-dong-pei-tai-de-fa-lu-di-wei/",
+    "publicFile": "public/leng-dong-pei-tai-de-fa-lu-di-wei/index.html",
+    "canonical": null,
+    "title": "冷冻胚胎案的后续？ | 小法进阶",
+    "publishedDate": "2018-04-13",
+    "description": "研一的时候，有幸能和同学在一次知产与科技法系教师例会上，与法学院几位老师就「国内冷冻胚胎第一案」进行讨论。当时，我们几个学生对冷冻胚胎法律地位、二审法院是否存在超越当事人上诉请求，进行裁判的问题进行思考，也向几位老师请教相关问题。几个老师在",
+    "ogUrl": "",
+    "fallbackRoute": "/leng-dong-pei-tai-de-fa-lu-di-wei/"
+  },
+  {
+    "route": "/llfxdmw/",
+    "publicFile": "public/llfxdmw/index.html",
+    "canonical": null,
+    "title": "《理论法学的迷雾》笔记 | 小法进阶",
+    "publishedDate": "2016-05-17",
+    "description": "\n一、法理学（一）权利话语作者讨论权利话语是从邱兴华案出发，大概案情是邱兴华连续杀了十人，在逃期间又杀一人，伤两人。一审判死刑，二审维持原判，并在宣判当天执行死刑。这起案件引发轩然大波的原因在于其中的精神病抗辩以及精神病司法鉴定程序相关的争",
+    "ogUrl": "",
+    "fallbackRoute": "/llfxdmw/"
+  },
+  {
+    "route": "/luan-dan-20181116/",
+    "publicFile": "public/luan-dan-20181116/index.html",
+    "canonical": null,
+    "title": "乱弹 20181116 | 小法进阶",
+    "publishedDate": "2018-11-17",
+    "description": "\n法理学不行，也成不了部门法的大家。真正的大师都是法理学学者。——梁木生老师\n\n\n\n每天都有无数的新闻爆炸式地呈现在面前，每个人的精力都是有限的，往往会被一小部分的新闻所吸引，又对大多数信息略过。慢慢的大脑似乎就被毒害了——迅速查看大量信息",
+    "ogUrl": "",
+    "fallbackRoute": "/luan-dan-20181116/"
+  },
+  {
+    "route": "/luan-dan-20200217/",
+    "publicFile": "public/luan-dan-20200217/index.html",
+    "canonical": null,
+    "title": "乱弹20200217 | 小法进阶",
+    "publishedDate": "2020-02-17",
+    "description": "在武汉因为「新冠病毒肺炎」（NCP）采取关闭离汉通道的这些天里，非常庆幸自己双十一和双 12 的时候囤了不少的日用品，也庆幸小伙伴中间给我送了一次补给，让我在被封城的这段时间里没有被饿死。&#x1f603; 故写了本篇博文，侧面记录一下这段",
+    "ogUrl": "",
+    "fallbackRoute": "/luan-dan-20200217/"
+  },
+  {
+    "route": "/mackup-bei-fen-chu-cuo-de-lin-shi-jie-jue-ban-fa/",
+    "publicFile": "public/mackup-bei-fen-chu-cuo-de-lin-shi-jie-jue-ban-fa/index.html",
+    "canonical": null,
+    "title": "Mackup 备份出错的临时解决办法 | 小法进阶",
+    "publishedDate": "2018-08-24",
+    "description": "环境与前提\n系统：macOS 10.13.6 (17G65)\nPython2.7 和 3.7 并存\n通过 Homebrew 安装的 Mackup（ver 0.8.18)\n\n\n\n报错内容在终端中输入 mackup backup 后，报错如下\n",
+    "ogUrl": "",
+    "fallbackRoute": "/mackup-bei-fen-chu-cuo-de-lin-shi-jie-jue-ban-fa/"
+  },
+  {
+    "route": "/macos-geng-xin-hou-homebrew-bao-cuo-chu-li-fang-an/",
+    "publicFile": "public/macos-geng-xin-hou-homebrew-bao-cuo-chu-li-fang-an/index.html",
+    "canonical": null,
+    "title": "macOS 更新后 Homebrew 报错处理方案 | 小法进阶",
+    "publishedDate": "2018-10-20",
+    "description": "报错内容在升级为 macOS Mojave 后发现 Homebrew 无法使用，具体报错信息如下：\nxcrun: error: invalid active developer path (/Library/Developer/Comman",
+    "ogUrl": "",
+    "fallbackRoute": "/macos-geng-xin-hou-homebrew-bao-cuo-chu-li-fang-an/"
+  },
+  {
+    "route": "/moneywiz-zhong-xin-jian-dai-kuan-zhang-hu-fu-kuan-ji-hua-shan-shuo-de-chu-li/",
+    "publicFile": "public/moneywiz-zhong-xin-jian-dai-kuan-zhang-hu-fu-kuan-ji-hua-shan-shuo-de-chu-li/index.html",
+    "canonical": null,
+    "title": "MoneyWiz中新建贷款帐户付款计划闪烁的处理 | 小法进阶",
+    "publishedDate": "2020-02-19",
+    "description": "环境与版本\n系统：macOS Catalina 10.15.3 (19D76)\nMoneyWiz 3.7.2(build 923)\n\n问题与报错在尝试新建贷款帐户时，「付款计划」按钮一直闪烁，无法完成贷款帐户创建步骤。\n\n最开始尝试了将还款",
+    "ogUrl": "",
+    "fallbackRoute": "/moneywiz-zhong-xin-jian-dai-kuan-zhang-hu-fu-kuan-ji-hua-shan-shuo-de-chu-li/"
+  },
+  {
+    "route": "/movies/",
+    "publicFile": "public/movies/index.html",
+    "canonical": null,
+    "title": "观影单 | 小法进阶",
+    "publishedDate": "2025-10-07",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/movies/"
+  },
+  {
+    "route": "/na-ge-ke-ai-de-lao-tou-zi-zou-liao/",
+    "publicFile": "public/na-ge-ke-ai-de-lao-tou-zi-zou-liao/index.html",
+    "canonical": null,
+    "title": "那个可爱的老头子走了 | 小法进阶",
+    "publishedDate": "2018-05-05",
+    "description": "梁木生老师走了\n\n\n老愤青我们会笑梁老师是“老愤青”，是的，他也是这么称呼自己。平时的梁老师很安静，完全看不出来他是那种在课堂上大喊大叫、拍桌子的人。大喊大叫，因为他提及一些社会丑恶现象时候的痛心疾首，恨不得把那些做了脏事丑事的人拎到跟前大",
+    "ogUrl": "",
+    "fallbackRoute": "/na-ge-ke-ai-de-lao-tou-zi-zou-liao/"
+  },
+  {
+    "route": "/node14-bao-cuo/",
+    "publicFile": "public/node14-bao-cuo/index.html",
+    "canonical": null,
+    "title": "Node14报错 | 小法进阶",
+    "publishedDate": "2020-06-14",
+    "description": "环境与版本\n系统：macOS Catalina 10.15.5\nNode: v14.0.0\nHexo\nhexo: 4.2.1\nhexo-cli: 3.1.0\nos: Darwin 19.5.0 darwin x64\nnode: 12.18.",
+    "ogUrl": "",
+    "fallbackRoute": "/node14-bao-cuo/"
+  },
+  {
+    "route": "/oh-my-zsh-sheng-ji-shi-bai-de-jie-jue-fang-fa/",
+    "publicFile": "public/oh-my-zsh-sheng-ji-shi-bai-de-jie-jue-fang-fa/index.html",
+    "canonical": null,
+    "title": "oh-my-zsh升级失败的解决方法 | 小法进阶",
+    "publishedDate": "2020-03-06",
+    "description": "系统重装之后，仍然从 Homebrew 安装了 zsh 与 oh-my-zsh 加强 macOS 上 终端 的功能。今天打开终端之后提示 oh-my-zsh 可以升级，输入 y 之后却提示失败了。\n问题与报错错误提示如下：\n[Oh My Z",
+    "ogUrl": "",
+    "fallbackRoute": "/oh-my-zsh-sheng-ji-shi-bai-de-jie-jue-fang-fa/"
+  },
+  {
+    "route": "/opoo-zhe-teng/",
+    "publicFile": "public/opoo-zhe-teng/index.html",
+    "canonical": null,
+    "title": "OpooPress折腾后记 | 小法进阶",
+    "publishedDate": "2014-07-23",
+    "description": "首先，我在法学子庄’s Blog里面写过自己第一天折腾Opoo时候遇到的一些问题。因为Opoo是一个比较小范围的项目，除了Opoo博客外，也没有什么地方可以查询资料。不过，我进了开发者（Alex Lin）组建的群，在他的热心帮助下解决了我之",
+    "ogUrl": "",
+    "fallbackRoute": "/opoo-zhe-teng/"
+  },
+  {
+    "route": "/others-00s/",
+    "publicFile": "public/others-00s/index.html",
+    "canonical": null,
+    "title": "别人家的「零零后」？ | 小法进阶",
+    "publishedDate": "2017-10-05",
+    "description": "\n这是一群千禧年后出生的孩子，十年前，被父母送入同一所幼儿园，时光流逝，孩子们长大了，如今，正迈入青春期的他们将如何突破青春的困惑，选择未来的生活。片中每一个孩子的成长历程都是不可复制的生命故事。十年过去，时间改变了他们的外貌，赋予了他们独",
+    "ogUrl": "",
+    "fallbackRoute": "/others-00s/"
+  },
+  {
+    "route": "/page/2/",
+    "publicFile": "public/page/2/index.html",
+    "canonical": null,
+    "title": "小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/page/2/"
+  },
+  {
+    "route": "/page/3/",
+    "publicFile": "public/page/3/index.html",
+    "canonical": null,
+    "title": "小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/page/3/"
+  },
+  {
+    "route": "/page/4/",
+    "publicFile": "public/page/4/index.html",
+    "canonical": null,
+    "title": "小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/page/4/"
+  },
+  {
+    "route": "/page/5/",
+    "publicFile": "public/page/5/index.html",
+    "canonical": null,
+    "title": "小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/page/5/"
+  },
+  {
+    "route": "/page/6/",
+    "publicFile": "public/page/6/index.html",
+    "canonical": null,
+    "title": "小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/page/6/"
+  },
+  {
+    "route": "/page/7/",
+    "publicFile": "public/page/7/index.html",
+    "canonical": null,
+    "title": "小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/page/7/"
+  },
+  {
+    "route": "/pan-gu-zhi-bai/",
+    "publicFile": "public/pan-gu-zhi-bai/index.html",
+    "canonical": null,
+    "title": "盘古之白 | 小法进阶",
+    "publishedDate": "2018-12-03",
+    "description": "「一群」有趣的插件，用了就有点离不开了。简单说就是在数字或字母与汉字之间添加一个半角空格。这并非是什么规范，只是一个使用习惯，或者「强迫症」。\n\b\b\b\n\n\n如果你跟我一樣，每次看到網頁上的中文字和英文、數字、符號擠在一塊，就會坐立難安，忍不",
+    "ogUrl": "",
+    "fallbackRoute": "/pan-gu-zhi-bai/"
+  },
+  {
+    "route": "/PGP/",
+    "publicFile": "public/PGP/index.html",
+    "canonical": null,
+    "title": "PGP | 小法进阶",
+    "publishedDate": "2018-01-11",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/PGP/"
+  },
+  {
+    "route": "/poker-jian-pan-zi-ding-yi-bei-wang/",
+    "publicFile": "public/poker-jian-pan-zi-ding-yi-bei-wang/index.html",
+    "canonical": null,
+    "title": "Poker键盘自定义备忘 | 小法进阶",
+    "publishedDate": "2020-02-16",
+    "description": "系统设置系统偏好设置 → 键盘 → 修饰键 → 选择键盘 Poker  \n\nCaps Lock → Option (ALT)\nControl → Control\nOption → Command (WIN)\nCommand → Option",
+    "ogUrl": "",
+    "fallbackRoute": "/poker-jian-pan-zi-ding-yi-bei-wang/"
+  },
+  {
+    "route": "/posner-homosexual/",
+    "publicFile": "public/posner-homosexual/index.html",
+    "canonical": null,
+    "title": "[搬运]看波大爷的同性恋婚姻的经济分析 | 小法进阶",
+    "publishedDate": "2015-07-03",
+    "description": "作者：Richard Posner\n译者：高杉峻\n\n1989年，丹麦开始允许同性恋伴侣组成“Registered Partnerships”（注册合伙）关系，在注册合伙的名义下，同性恋伴侣可享有已婚人士的多数法律权利；斯堪的纳维亚地区的其他",
+    "ogUrl": "",
+    "fallbackRoute": "/posner-homosexual/"
+  },
+  {
+    "route": "/qpdf-shi-yong-bi-ji/",
+    "publicFile": "public/qpdf-shi-yong-bi-ji/index.html",
+    "canonical": null,
+    "title": "qpdf使用笔记 | 小法进阶",
+    "publishedDate": "2020-10-02",
+    "description": "Homebrew的安装$ brew install qpdf\n用法合并\n将A.pdf和B.pdf合并C.pdf，A在前，B在后：\n qpdf  B.pdf --pages A.pdf . -- C.pdf\n\n将A.pdf、B.pdf、C.p",
+    "ogUrl": "",
+    "fallbackRoute": "/qpdf-shi-yong-bi-ji/"
+  },
+  {
+    "route": "/qxpj/",
+    "publicFile": "public/qxpj/index.html",
+    "canonical": null,
+    "title": "缺席审判时，法院是否有权调整违约金数额 | 小法进阶",
+    "publishedDate": "2017-01-14",
+    "description": "\n一、案情介绍2015 年 5 月 9 日，深圳甲公司与武汉乙酒店签订酒店消费服务合同，约定由乙酒店为甲公司于 2015 年 6 月 10 日举办的产品发布会活动提供酒店客房及宴会等服务，支付方式为 2015 年 5 月 9 日支付 50,",
+    "ogUrl": "",
+    "fallbackRoute": "/qxpj/"
+  },
+  {
+    "route": "/sheng-si-fa-ting-guan-yu-lu-shi-fu-wu-he-ji-ceng-fa-lu-fu-wu-shou-fei-bu-zai-shi-xing-zheng-fu-ding-jie-de-tong-zhi/",
+    "publicFile": "public/sheng-si-fa-ting-guan-yu-lu-shi-fu-wu-he-ji-ceng-fa-lu-fu-wu-shou-fei-bu-zai-shi-xing-zheng-fu-ding-jie-de-tong-zhi/index.html",
+    "canonical": null,
+    "title": "省司法厅关于律师服务和基层法律服务收费不再实行政府定价的通知 | 小法进阶",
+    "publishedDate": "2018-12-05",
+    "description": "2018 年 12 月 5 日，湖北省司法厅下发《省司法厅关于律师服务和基层法律服务收费不再实行政府定价的通知》\n\n\n\nReference\n省物价局关于印发《湖北省定价目录》的通知（鄂价法规〔2018〕46 号）\n省物价局省司法厅关于公布公",
+    "ogUrl": "",
+    "fallbackRoute": "/sheng-si-fa-ting-guan-yu-lu-shi-fu-wu-he-ji-ceng-fa-lu-fu-wu-shou-fei-bu-zai-shi-xing-zheng-fu-ding-jie-de-tong-zhi/"
+  },
+  {
+    "route": "/shuang-pin-vs-quan-pin/",
+    "publicFile": "public/shuang-pin-vs-quan-pin/index.html",
+    "canonical": null,
+    "title": "双拼 VS 全拼 | 小法进阶",
+    "publishedDate": "2017-10-03",
+    "description": "\niOS 11 发布之后，不少人说苹果越来越安卓化的。其实回望安卓阵营，安卓又何尝不是越来越苹果化了呢。而最终他们服从的，也正是不断由他们驯化的用户习惯。\n\n早期 iOS 中拼音输入法一直坚持的是全键盘，用户需要越狱、安装插件来实现九宫格输",
+    "ogUrl": "",
+    "fallbackRoute": "/shuang-pin-vs-quan-pin/"
+  },
+  {
+    "route": "/shuo-shuo-xiao-fei-quan/",
+    "publicFile": "public/shuo-shuo-xiao-fei-quan/index.html",
+    "canonical": null,
+    "title": "说说消费券 | 小法进阶",
+    "publishedDate": "2020-05-02",
+    "description": "谁有资格领消费券任何一个「消费者」都有资格可以领取。\n首先，消费券是拉动经济增长、恢复经济活力的组合政策之一，它本身所「歧视」的对象，是不进行消费的人。因为他们不是这项政策的指向者与「受益者」。任何一个愿意消费的人、有意向消费的人，都应该有",
+    "ogUrl": "",
+    "fallbackRoute": "/shuo-shuo-xiao-fei-quan/"
+  },
+  {
+    "route": "/si-di-guan-yu-xin-guan-fei-yan-yi-qing-qi-jian-sheng-huo-fei-fa-fang-biao-zhun-de-shu-li/",
+    "publicFile": "public/si-di-guan-yu-xin-guan-fei-yan-yi-qing-qi-jian-sheng-huo-fei-fa-fang-biao-zhun-de-shu-li/index.html",
+    "canonical": null,
+    "title": "四地关于新冠肺炎疫情期间生活费发放标准的梳理 | 小法进阶",
+    "publishedDate": "2020-02-25",
+    "description": "汇总表\n",
+    "ogUrl": "",
+    "fallbackRoute": "/si-di-guan-yu-xin-guan-fei-yan-yi-qing-qi-jian-sheng-huo-fei-fa-fang-biao-zhun-de-shu-li/"
+  },
+  {
+    "route": "/software-reverse-engineering/",
+    "publicFile": "public/software-reverse-engineering/index.html",
+    "canonical": null,
+    "title": "软件反向工程 | 小法进阶",
+    "publishedDate": "2017-02-24",
+    "description": "\n一、 计算机软件版权保护与反向工程\n一般而言，软件反向工程通常是指对他人软件的可执行程序进行逆向的解剖、分析，从软件的目标代码入手，通过反汇编等编译方式尽量还原源代码，推导得出他人软件产品的功能、组织结构、处理流程、算法、界面等设计要素。",
+    "ogUrl": "",
+    "fallbackRoute": "/software-reverse-engineering/"
+  },
+  {
+    "route": "/sui-sui-nian-zhi-he-yi-wei-jia/",
+    "publicFile": "public/sui-sui-nian-zhi-he-yi-wei-jia/index.html",
+    "canonical": null,
+    "title": "碎碎念之《何以为家》 | 小法进阶",
+    "publishedDate": "2019-05-05",
+    "description": "\n五一假期看了《何以为家》，虽然因为在摆弄复联水杯上的钢铁侠而错过了全剧中的“杀人”场景，但是整个故事还是很饱满、直击灵魂的。观影中看到小主人公的种种遭遇而难受、压抑，止不住地在那里叹气，也不停地庆幸自己没有陷入这样的境遇之中。\n全球化在看",
+    "ogUrl": "",
+    "fallbackRoute": "/sui-sui-nian-zhi-he-yi-wei-jia/"
+  },
+  {
+    "route": "/sui-sui-nian-zhi-ni-hao-li-huan-ying/",
+    "publicFile": "public/sui-sui-nian-zhi-ni-hao-li-huan-ying/index.html",
+    "canonical": null,
+    "title": "碎碎念之你好李焕英 | 小法进阶",
+    "publishedDate": "2021-02-19",
+    "description": "说在前面的话一定要放低要求，这只是商业电影。至于我们期待（购买）的，不管是包袱，还是情怀，是特效，还是剧情，都是殊途同归。毕竟它是春节票房的重要成员，能拿下这样档期的位置，都有值得肯定的东西。\n几句碎碎念说着东北话的湖北人不论是媒体宣传还是",
+    "ogUrl": "",
+    "fallbackRoute": "/sui-sui-nian-zhi-ni-hao-li-huan-ying/"
+  },
+  {
+    "route": "/sui-sui-nian-zhi-wo-men-yu-e-de-ju-chi/",
+    "publicFile": "public/sui-sui-nian-zhi-wo-men-yu-e-de-ju-chi/index.html",
+    "canonical": null,
+    "title": "碎碎念之「我们与恶的距离」 | 小法进阶",
+    "publishedDate": "2019-04-18",
+    "description": "这是一部开播9.3的华语良心剧，截至我看完打分时，豆瓣评分是9.4。作为一名「还在练习搓火球」的小法师，对于其中的律师职业很想碎碎念一下。\n\n\n\n法律人的理想与现实剧中男主之一的王赦是一名「法扶律师」，与大陆的「法律援助律师」有点相似。与他",
+    "ogUrl": "",
+    "fallbackRoute": "/sui-sui-nian-zhi-wo-men-yu-e-de-ju-chi/"
+  },
+  {
+    "route": "/tags/",
+    "publicFile": "public/tags/index.html",
+    "canonical": null,
+    "title": "标签 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/"
+  },
+  {
+    "route": "/tags/2017/",
+    "publicFile": "public/tags/2017/index.html",
+    "canonical": null,
+    "title": "标签: 2017 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/2017/"
+  },
+  {
+    "route": "/tags/搬瓦工/",
+    "publicFile": "public/tags/搬瓦工/index.html",
+    "canonical": null,
+    "title": "标签: 搬瓦工 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/搬瓦工/"
+  },
+  {
+    "route": "/tags/插件/",
+    "publicFile": "public/tags/插件/index.html",
+    "canonical": null,
+    "title": "标签: 插件 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/插件/"
+  },
+  {
+    "route": "/tags/产假/",
+    "publicFile": "public/tags/产假/index.html",
+    "canonical": null,
+    "title": "标签: 产假 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/产假/"
+  },
+  {
+    "route": "/tags/成本收益/",
+    "publicFile": "public/tags/成本收益/index.html",
+    "canonical": null,
+    "title": "标签: 成本收益 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/成本收益/"
+  },
+  {
+    "route": "/tags/成长/",
+    "publicFile": "public/tags/成长/index.html",
+    "canonical": null,
+    "title": "标签: 成长 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/成长/"
+  },
+  {
+    "route": "/tags/代理权/",
+    "publicFile": "public/tags/代理权/index.html",
+    "canonical": null,
+    "title": "标签: 代理权 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/代理权/"
+  },
+  {
+    "route": "/tags/待履行合同解除权/",
+    "publicFile": "public/tags/待履行合同解除权/index.html",
+    "canonical": null,
+    "title": "标签: 待履行合同解除权 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/待履行合同解除权/"
+  },
+  {
+    "route": "/tags/抵销权/",
+    "publicFile": "public/tags/抵销权/index.html",
+    "canonical": null,
+    "title": "标签: 抵销权 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/抵销权/"
+  },
+  {
+    "route": "/tags/电影/",
+    "publicFile": "public/tags/电影/index.html",
+    "canonical": null,
+    "title": "标签: 电影 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/电影/"
+  },
+  {
+    "route": "/tags/读书笔记/",
+    "publicFile": "public/tags/读书笔记/index.html",
+    "canonical": null,
+    "title": "标签: 读书笔记 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/读书笔记/"
+  },
+  {
+    "route": "/tags/断舍离/",
+    "publicFile": "public/tags/断舍离/index.html",
+    "canonical": null,
+    "title": "标签: 断舍离 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/断舍离/"
+  },
+  {
+    "route": "/tags/儿童权利/",
+    "publicFile": "public/tags/儿童权利/index.html",
+    "canonical": null,
+    "title": "标签: 儿童权利 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/儿童权利/"
+  },
+  {
+    "route": "/tags/二倍工资/",
+    "publicFile": "public/tags/二倍工资/index.html",
+    "canonical": null,
+    "title": "标签: 二倍工资 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/二倍工资/"
+  },
+  {
+    "route": "/tags/二维码/",
+    "publicFile": "public/tags/二维码/index.html",
+    "canonical": null,
+    "title": "标签: 二维码 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/二维码/"
+  },
+  {
+    "route": "/tags/发行权/",
+    "publicFile": "public/tags/发行权/index.html",
+    "canonical": null,
+    "title": "标签: 发行权 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/发行权/"
+  },
+  {
+    "route": "/tags/法定许可/",
+    "publicFile": "public/tags/法定许可/index.html",
+    "canonical": null,
+    "title": "标签: 法定许可 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/法定许可/"
+  },
+  {
+    "route": "/tags/法律/",
+    "publicFile": "public/tags/法律/index.html",
+    "canonical": null,
+    "title": "标签: 法律 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/法律/"
+  },
+  {
+    "route": "/tags/法律法规/",
+    "publicFile": "public/tags/法律法规/index.html",
+    "canonical": null,
+    "title": "标签: 法律法规 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/法律法规/"
+  },
+  {
+    "route": "/tags/法律经济学/",
+    "publicFile": "public/tags/法律经济学/index.html",
+    "canonical": null,
+    "title": "标签: 法律经济学 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/法律经济学/"
+  },
+  {
+    "route": "/tags/法律援助/",
+    "publicFile": "public/tags/法律援助/index.html",
+    "canonical": null,
+    "title": "标签: 法律援助 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/法律援助/"
+  },
+  {
+    "route": "/tags/法学/",
+    "publicFile": "public/tags/法学/index.html",
+    "canonical": null,
+    "title": "标签: 法学 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/法学/"
+  },
+  {
+    "route": "/tags/反向工程/",
+    "publicFile": "public/tags/反向工程/index.html",
+    "canonical": null,
+    "title": "标签: 反向工程 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/反向工程/"
+  },
+  {
+    "route": "/tags/工资/",
+    "publicFile": "public/tags/工资/index.html",
+    "canonical": null,
+    "title": "标签: 工资 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/工资/"
+  },
+  {
+    "route": "/tags/公司法/",
+    "publicFile": "public/tags/公司法/index.html",
+    "canonical": null,
+    "title": "标签: 公司法 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/公司法/"
+  },
+  {
+    "route": "/tags/公众号/",
+    "publicFile": "public/tags/公众号/index.html",
+    "canonical": null,
+    "title": "标签: 公众号 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/公众号/"
+  },
+  {
+    "route": "/tags/共同财产/",
+    "publicFile": "public/tags/共同财产/index.html",
+    "canonical": null,
+    "title": "标签: 共同财产 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/共同财产/"
+  },
+  {
+    "route": "/tags/故意伤害罪/",
+    "publicFile": "public/tags/故意伤害罪/index.html",
+    "canonical": null,
+    "title": "标签: 故意伤害罪 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/故意伤害罪/"
+  },
+  {
+    "route": "/tags/观后感/",
+    "publicFile": "public/tags/观后感/index.html",
+    "canonical": null,
+    "title": "标签: 观后感 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/观后感/"
+  },
+  {
+    "route": "/tags/观念交付/",
+    "publicFile": "public/tags/观念交付/index.html",
+    "canonical": null,
+    "title": "标签: 观念交付 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/观念交付/"
+  },
+  {
+    "route": "/tags/汉字/",
+    "publicFile": "public/tags/汉字/index.html",
+    "canonical": null,
+    "title": "标签: 汉字 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/汉字/"
+  },
+  {
+    "route": "/tags/合理使用/",
+    "publicFile": "public/tags/合理使用/index.html",
+    "canonical": null,
+    "title": "标签: 合理使用 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/合理使用/"
+  },
+  {
+    "route": "/tags/合同法/",
+    "publicFile": "public/tags/合同法/index.html",
+    "canonical": null,
+    "title": "标签: 合同法 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/合同法/"
+  },
+  {
+    "route": "/tags/合同附随义务/",
+    "publicFile": "public/tags/合同附随义务/index.html",
+    "canonical": null,
+    "title": "标签: 合同附随义务 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/合同附随义务/"
+  },
+  {
+    "route": "/tags/合同主要义务/",
+    "publicFile": "public/tags/合同主要义务/index.html",
+    "canonical": null,
+    "title": "标签: 合同主要义务 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/合同主要义务/"
+  },
+  {
+    "route": "/tags/湖北省/",
+    "publicFile": "public/tags/湖北省/index.html",
+    "canonical": null,
+    "title": "标签: 湖北省 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/湖北省/"
+  },
+  {
+    "route": "/tags/华中科技大学/",
+    "publicFile": "public/tags/华中科技大学/index.html",
+    "canonical": null,
+    "title": "标签: 华中科技大学 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/华中科技大学/"
+  },
+  {
+    "route": "/tags/华中科技大学法学院/",
+    "publicFile": "public/tags/华中科技大学法学院/index.html",
+    "canonical": null,
+    "title": "标签: 华中科技大学法学院 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/华中科技大学法学院/"
+  },
+  {
+    "route": "/tags/机械键盘/",
+    "publicFile": "public/tags/机械键盘/index.html",
+    "canonical": null,
+    "title": "标签: 机械键盘 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/机械键盘/"
+  },
+  {
+    "route": "/tags/计算机软件/",
+    "publicFile": "public/tags/计算机软件/index.html",
+    "canonical": null,
+    "title": "标签: 计算机软件 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/计算机软件/"
+  },
+  {
+    "route": "/tags/技术措施/",
+    "publicFile": "public/tags/技术措施/index.html",
+    "canonical": null,
+    "title": "标签: 技术措施 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/技术措施/"
+  },
+  {
+    "route": "/tags/坚果云/",
+    "publicFile": "public/tags/坚果云/index.html",
+    "canonical": null,
+    "title": "标签: 坚果云 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/坚果云/"
+  },
+  {
+    "route": "/tags/交通事故/",
+    "publicFile": "public/tags/交通事故/index.html",
+    "canonical": null,
+    "title": "标签: 交通事故 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/交通事故/"
+  },
+  {
+    "route": "/tags/教育/",
+    "publicFile": "public/tags/教育/index.html",
+    "canonical": null,
+    "title": "标签: 教育 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/教育/"
+  },
+  {
+    "route": "/tags/结果犯/",
+    "publicFile": "public/tags/结果犯/index.html",
+    "canonical": null,
+    "title": "标签: 结果犯 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/结果犯/"
+  },
+  {
+    "route": "/tags/经济学/",
+    "publicFile": "public/tags/经济学/index.html",
+    "canonical": null,
+    "title": "标签: 经济学 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/经济学/"
+  },
+  {
+    "route": "/tags/考研真题/",
+    "publicFile": "public/tags/考研真题/index.html",
+    "canonical": null,
+    "title": "标签: 考研真题 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/考研真题/"
+  },
+  {
+    "route": "/tags/劳动法/",
+    "publicFile": "public/tags/劳动法/index.html",
+    "canonical": null,
+    "title": "标签: 劳动法 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/劳动法/"
+  },
+  {
+    "route": "/tags/劳动关系/",
+    "publicFile": "public/tags/劳动关系/index.html",
+    "canonical": null,
+    "title": "标签: 劳动关系 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/劳动关系/"
+  },
+  {
+    "route": "/tags/劳动合同法/",
+    "publicFile": "public/tags/劳动合同法/index.html",
+    "canonical": null,
+    "title": "标签: 劳动合同法 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/劳动合同法/"
+  },
+  {
+    "route": "/tags/律师收费/",
+    "publicFile": "public/tags/律师收费/index.html",
+    "canonical": null,
+    "title": "标签: 律师收费 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/律师收费/"
+  },
+  {
+    "route": "/tags/乱弹/",
+    "publicFile": "public/tags/乱弹/index.html",
+    "canonical": null,
+    "title": "标签: 乱弹 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/乱弹/"
+  },
+  {
+    "route": "/tags/论文/",
+    "publicFile": "public/tags/论文/index.html",
+    "canonical": null,
+    "title": "标签: 论文 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/论文/"
+  },
+  {
+    "route": "/tags/密码管理/",
+    "publicFile": "public/tags/密码管理/index.html",
+    "canonical": null,
+    "title": "标签: 密码管理 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/密码管理/"
+  },
+  {
+    "route": "/tags/民法/",
+    "publicFile": "public/tags/民法/index.html",
+    "canonical": null,
+    "title": "标签: 民法 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/民法/"
+  },
+  {
+    "route": "/tags/民事行为能力/",
+    "publicFile": "public/tags/民事行为能力/index.html",
+    "canonical": null,
+    "title": "标签: 民事行为能力 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/民事行为能力/"
+  },
+  {
+    "route": "/tags/男女平等/",
+    "publicFile": "public/tags/男女平等/index.html",
+    "canonical": null,
+    "title": "标签: 男女平等 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/男女平等/"
+  },
+  {
+    "route": "/tags/排版/",
+    "publicFile": "public/tags/排版/index.html",
+    "canonical": null,
+    "title": "标签: 排版 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/排版/"
+  },
+  {
+    "route": "/tags/赔偿标准/",
+    "publicFile": "public/tags/赔偿标准/index.html",
+    "canonical": null,
+    "title": "标签: 赔偿标准 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/赔偿标准/"
+  },
+  {
+    "route": "/tags/破产法/",
+    "publicFile": "public/tags/破产法/index.html",
+    "canonical": null,
+    "title": "标签: 破产法 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/破产法/"
+  },
+  {
+    "route": "/tags/破产管理人/",
+    "publicFile": "public/tags/破产管理人/index.html",
+    "canonical": null,
+    "title": "标签: 破产管理人 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/破产管理人/"
+  },
+  {
+    "route": "/tags/抢劫罪/",
+    "publicFile": "public/tags/抢劫罪/index.html",
+    "canonical": null,
+    "title": "标签: 抢劫罪 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/抢劫罪/"
+  },
+  {
+    "route": "/tags/侵占罪/",
+    "publicFile": "public/tags/侵占罪/index.html",
+    "canonical": null,
+    "title": "标签: 侵占罪 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/侵占罪/"
+  },
+  {
+    "route": "/tags/缺席判决/",
+    "publicFile": "public/tags/缺席判决/index.html",
+    "canonical": null,
+    "title": "标签: 缺席判决 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/缺席判决/"
+  },
+  {
+    "route": "/tags/人身损害赔偿/",
+    "publicFile": "public/tags/人身损害赔偿/index.html",
+    "canonical": null,
+    "title": "标签: 人身损害赔偿 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/人身损害赔偿/"
+  },
+  {
+    "route": "/tags/认知科学/",
+    "publicFile": "public/tags/认知科学/index.html",
+    "canonical": null,
+    "title": "标签: 认知科学 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/认知科学/"
+  },
+  {
+    "route": "/tags/社会问题/",
+    "publicFile": "public/tags/社会问题/index.html",
+    "canonical": null,
+    "title": "标签: 社会问题 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/社会问题/"
+  },
+  {
+    "route": "/tags/社会责任/",
+    "publicFile": "public/tags/社会责任/index.html",
+    "canonical": null,
+    "title": "标签: 社会责任 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/社会责任/"
+  },
+  {
+    "route": "/tags/神经科学/",
+    "publicFile": "public/tags/神经科学/index.html",
+    "canonical": null,
+    "title": "标签: 神经科学 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/神经科学/"
+  },
+  {
+    "route": "/tags/实害犯/",
+    "publicFile": "public/tags/实害犯/index.html",
+    "canonical": null,
+    "title": "标签: 实害犯 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/实害犯/"
+  },
+  {
+    "route": "/tags/释明权/",
+    "publicFile": "public/tags/释明权/index.html",
+    "canonical": null,
+    "title": "标签: 释明权 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/释明权/"
+  },
+  {
+    "route": "/tags/输入法/",
+    "publicFile": "public/tags/输入法/index.html",
+    "canonical": null,
+    "title": "标签: 输入法 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/输入法/"
+  },
+  {
+    "route": "/tags/熟人社会/",
+    "publicFile": "public/tags/熟人社会/index.html",
+    "canonical": null,
+    "title": "标签: 熟人社会 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/熟人社会/"
+  },
+  {
+    "route": "/tags/司法鉴定/",
+    "publicFile": "public/tags/司法鉴定/index.html",
+    "canonical": null,
+    "title": "标签: 司法鉴定 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/司法鉴定/"
+  },
+  {
+    "route": "/tags/司法解释/",
+    "publicFile": "public/tags/司法解释/index.html",
+    "canonical": null,
+    "title": "标签: 司法解释 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/司法解释/"
+  },
+  {
+    "route": "/tags/思维导图/",
+    "publicFile": "public/tags/思维导图/index.html",
+    "canonical": null,
+    "title": "标签: 思维导图 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/思维导图/"
+  },
+  {
+    "route": "/tags/思想表达二分法/",
+    "publicFile": "public/tags/思想表达二分法/index.html",
+    "canonical": null,
+    "title": "标签: 思想表达二分法 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/思想表达二分法/"
+  },
+  {
+    "route": "/tags/碎碎念/",
+    "publicFile": "public/tags/碎碎念/index.html",
+    "canonical": null,
+    "title": "标签: 碎碎念 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/碎碎念/"
+  },
+  {
+    "route": "/tags/危险犯/",
+    "publicFile": "public/tags/危险犯/index.html",
+    "canonical": null,
+    "title": "标签: 危险犯 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/危险犯/"
+  },
+  {
+    "route": "/tags/违约金/",
+    "publicFile": "public/tags/违约金/index.html",
+    "canonical": null,
+    "title": "标签: 违约金 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/违约金/"
+  },
+  {
+    "route": "/tags/违约责任/",
+    "publicFile": "public/tags/违约责任/index.html",
+    "canonical": null,
+    "title": "标签: 违约责任 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/违约责任/"
+  },
+  {
+    "route": "/tags/无固定期限劳动合同/",
+    "publicFile": "public/tags/无固定期限劳动合同/index.html",
+    "canonical": null,
+    "title": "标签: 无固定期限劳动合同 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/无固定期限劳动合同/"
+  },
+  {
+    "route": "/tags/武汉市/",
+    "publicFile": "public/tags/武汉市/index.html",
+    "canonical": null,
+    "title": "标签: 武汉市 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/武汉市/"
+  },
+  {
+    "route": "/tags/物权法/",
+    "publicFile": "public/tags/物权法/index.html",
+    "canonical": null,
+    "title": "标签: 物权法 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/物权法/"
+  },
+  {
+    "route": "/tags/消费者/",
+    "publicFile": "public/tags/消费者/index.html",
+    "canonical": null,
+    "title": "标签: 消费者 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/消费者/"
+  },
+  {
+    "route": "/tags/效率工具/",
+    "publicFile": "public/tags/效率工具/index.html",
+    "canonical": null,
+    "title": "标签: 效率工具 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/效率工具/"
+  },
+  {
+    "route": "/tags/刑法/",
+    "publicFile": "public/tags/刑法/index.html",
+    "canonical": null,
+    "title": "标签: 刑法 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/刑法/"
+  },
+  {
+    "route": "/tags/行为犯/",
+    "publicFile": "public/tags/行为犯/index.html",
+    "canonical": null,
+    "title": "标签: 行为犯 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/行为犯/"
+  },
+  {
+    "route": "/tags/行政不作为/",
+    "publicFile": "public/tags/行政不作为/index.html",
+    "canonical": null,
+    "title": "标签: 行政不作为 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/行政不作为/"
+  },
+  {
+    "route": "/tags/行政法/",
+    "publicFile": "public/tags/行政法/index.html",
+    "canonical": null,
+    "title": "标签: 行政法 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/行政法/"
+  },
+  {
+    "route": "/tags/行政救济/",
+    "publicFile": "public/tags/行政救济/index.html",
+    "canonical": null,
+    "title": "标签: 行政救济 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/行政救济/"
+  },
+  {
+    "route": "/tags/隐私/",
+    "publicFile": "public/tags/隐私/index.html",
+    "canonical": null,
+    "title": "标签: 隐私 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/隐私/"
+  },
+  {
+    "route": "/tags/用工之日/",
+    "publicFile": "public/tags/用工之日/index.html",
+    "canonical": null,
+    "title": "标签: 用工之日 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/用工之日/"
+  },
+  {
+    "route": "/tags/优先受偿权/",
+    "publicFile": "public/tags/优先受偿权/index.html",
+    "canonical": null,
+    "title": "标签: 优先受偿权 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/优先受偿权/"
+  },
+  {
+    "route": "/tags/域名/",
+    "publicFile": "public/tags/域名/index.html",
+    "canonical": null,
+    "title": "标签: 域名 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/域名/"
+  },
+  {
+    "route": "/tags/云盘/",
+    "publicFile": "public/tags/云盘/index.html",
+    "canonical": null,
+    "title": "标签: 云盘 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/云盘/"
+  },
+  {
+    "route": "/tags/诈骗罪/",
+    "publicFile": "public/tags/诈骗罪/index.html",
+    "canonical": null,
+    "title": "标签: 诈骗罪 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/诈骗罪/"
+  },
+  {
+    "route": "/tags/知乎/",
+    "publicFile": "public/tags/知乎/index.html",
+    "canonical": null,
+    "title": "标签: 知乎 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/知乎/"
+  },
+  {
+    "route": "/tags/知识产权/",
+    "publicFile": "public/tags/知识产权/index.html",
+    "canonical": null,
+    "title": "标签: 知识产权 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/知识产权/"
+  },
+  {
+    "route": "/tags/知识产权法/",
+    "publicFile": "public/tags/知识产权法/index.html",
+    "canonical": null,
+    "title": "标签: 知识产权法 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/知识产权法/"
+  },
+  {
+    "route": "/tags/著作权/",
+    "publicFile": "public/tags/著作权/index.html",
+    "canonical": null,
+    "title": "标签: 著作权 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/著作权/"
+  },
+  {
+    "route": "/tags/著作权法/",
+    "publicFile": "public/tags/著作权法/index.html",
+    "canonical": null,
+    "title": "标签: 著作权法 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/著作权法/"
+  },
+  {
+    "route": "/tags/装饰装修补偿/",
+    "publicFile": "public/tags/装饰装修补偿/index.html",
+    "canonical": null,
+    "title": "标签: 装饰装修补偿 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/装饰装修补偿/"
+  },
+  {
+    "route": "/tags/字体/",
+    "publicFile": "public/tags/字体/index.html",
+    "canonical": null,
+    "title": "标签: 字体 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/字体/"
+  },
+  {
+    "route": "/tags/最低工资/",
+    "publicFile": "public/tags/最低工资/index.html",
+    "canonical": null,
+    "title": "标签: 最低工资 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/最低工资/"
+  },
+  {
+    "route": "/tags/最高院/",
+    "publicFile": "public/tags/最高院/index.html",
+    "canonical": null,
+    "title": "标签: 最高院 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/最高院/"
+  },
+  {
+    "route": "/tags/作品/",
+    "publicFile": "public/tags/作品/index.html",
+    "canonical": null,
+    "title": "标签: 作品 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/作品/"
+  },
+  {
+    "route": "/tags/APP/",
+    "publicFile": "public/tags/APP/index.html",
+    "canonical": null,
+    "title": "标签: APP | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/APP/"
+  },
+  {
+    "route": "/tags/Apple/",
+    "publicFile": "public/tags/Apple/index.html",
+    "canonical": null,
+    "title": "标签: Apple | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/Apple/"
+  },
+  {
+    "route": "/tags/AppleScript/",
+    "publicFile": "public/tags/AppleScript/index.html",
+    "canonical": null,
+    "title": "标签: AppleScript | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/AppleScript/"
+  },
+  {
+    "route": "/tags/cc协议/",
+    "publicFile": "public/tags/cc协议/index.html",
+    "canonical": null,
+    "title": "标签: cc协议 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/cc协议/"
+  },
+  {
+    "route": "/tags/Due/",
+    "publicFile": "public/tags/Due/index.html",
+    "canonical": null,
+    "title": "标签: Due | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/Due/"
+  },
+  {
+    "route": "/tags/Hexo/",
+    "publicFile": "public/tags/Hexo/index.html",
+    "canonical": null,
+    "title": "标签: Hexo | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/Hexo/"
+  },
+  {
+    "route": "/tags/Homebrew/",
+    "publicFile": "public/tags/Homebrew/index.html",
+    "canonical": null,
+    "title": "标签: Homebrew | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/Homebrew/"
+  },
+  {
+    "route": "/tags/HTML/",
+    "publicFile": "public/tags/HTML/index.html",
+    "canonical": null,
+    "title": "标签: HTML | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/HTML/"
+  },
+  {
+    "route": "/tags/HUST/",
+    "publicFile": "public/tags/HUST/index.html",
+    "canonical": null,
+    "title": "标签: HUST | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/HUST/"
+  },
+  {
+    "route": "/tags/iCloud/",
+    "publicFile": "public/tags/iCloud/index.html",
+    "canonical": null,
+    "title": "标签: iCloud | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/iCloud/"
+  },
+  {
+    "route": "/tags/index-1.html/",
+    "publicFile": "public/tags/index-1.html",
+    "canonical": null,
+    "title": "标签 | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/index-1.html"
+  },
+  {
+    "route": "/tags/iOS/",
+    "publicFile": "public/tags/iOS/index.html",
+    "canonical": null,
+    "title": "标签: iOS | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/iOS/"
+  },
+  {
+    "route": "/tags/KeePass/",
+    "publicFile": "public/tags/KeePass/index.html",
+    "canonical": null,
+    "title": "标签: KeePass | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/KeePass/"
+  },
+  {
+    "route": "/tags/LaTeX/",
+    "publicFile": "public/tags/LaTeX/index.html",
+    "canonical": null,
+    "title": "标签: LaTeX | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/LaTeX/"
+  },
+  {
+    "route": "/tags/logo/",
+    "publicFile": "public/tags/logo/index.html",
+    "canonical": null,
+    "title": "标签: logo | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/logo/"
+  },
+  {
+    "route": "/tags/macOS/",
+    "publicFile": "public/tags/macOS/index.html",
+    "canonical": null,
+    "title": "标签: macOS | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/macOS/"
+  },
+  {
+    "route": "/tags/macOS/page/2/",
+    "publicFile": "public/tags/macOS/page/2/index.html",
+    "canonical": null,
+    "title": "标签: macOS | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/macOS/page/2/"
+  },
+  {
+    "route": "/tags/Namesilo/",
+    "publicFile": "public/tags/Namesilo/index.html",
+    "canonical": null,
+    "title": "标签: Namesilo | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/Namesilo/"
+  },
+  {
+    "route": "/tags/OpooPress/",
+    "publicFile": "public/tags/OpooPress/index.html",
+    "canonical": null,
+    "title": "标签: OpooPress | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/OpooPress/"
+  },
+  {
+    "route": "/tags/PDF/",
+    "publicFile": "public/tags/PDF/index.html",
+    "canonical": null,
+    "title": "标签: PDF | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/PDF/"
+  },
+  {
+    "route": "/tags/Posner/",
+    "publicFile": "public/tags/Posner/index.html",
+    "canonical": null,
+    "title": "标签: Posner | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/Posner/"
+  },
+  {
+    "route": "/tags/Python/",
+    "publicFile": "public/tags/Python/index.html",
+    "canonical": null,
+    "title": "标签: Python | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/Python/"
+  },
+  {
+    "route": "/tags/Rime/",
+    "publicFile": "public/tags/Rime/index.html",
+    "canonical": null,
+    "title": "标签: Rime | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/Rime/"
+  },
+  {
+    "route": "/tags/Tampermonkey/",
+    "publicFile": "public/tags/Tampermonkey/index.html",
+    "canonical": null,
+    "title": "标签: Tampermonkey | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/Tampermonkey/"
+  },
+  {
+    "route": "/tags/ToolMan/",
+    "publicFile": "public/tags/ToolMan/index.html",
+    "canonical": null,
+    "title": "标签: ToolMan | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/ToolMan/"
+  },
+  {
+    "route": "/tags/Typecho/",
+    "publicFile": "public/tags/Typecho/index.html",
+    "canonical": null,
+    "title": "标签: Typecho | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/Typecho/"
+  },
+  {
+    "route": "/tags/vpsmate/",
+    "publicFile": "public/tags/vpsmate/index.html",
+    "canonical": null,
+    "title": "标签: vpsmate | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/vpsmate/"
+  },
+  {
+    "route": "/tags/Workflow/",
+    "publicFile": "public/tags/Workflow/index.html",
+    "canonical": null,
+    "title": "标签: Workflow | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/Workflow/"
+  },
+  {
+    "route": "/tags/zsh/",
+    "publicFile": "public/tags/zsh/index.html",
+    "canonical": null,
+    "title": "标签: zsh | 小法进阶",
+    "publishedDate": "",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/tags/zsh/"
+  },
+  {
+    "route": "/tai-er-gu-shang/",
+    "publicFile": "public/tai-er-gu-shang/index.html",
+    "canonical": null,
+    "title": "对如何认定故意伤害胎儿中“他人”的思考 | 小法进阶",
+    "publishedDate": "2014-08-23",
+    "description": "自然犯与法定犯，相对而言，二者的界限还是比较清晰的，因为自然犯所规定的犯罪一般都是一些明显违反伦理道德的传统性犯罪，可较容易的为一般人所认识。故意杀人罪和故意伤害罪，就是其中的典型。虽说，作为自然犯，法益侵害程度的变易性较小，可是随着时代变",
+    "ogUrl": "",
+    "fallbackRoute": "/tai-er-gu-shang/"
+  },
+  {
+    "route": "/timeline/",
+    "publicFile": "public/timeline/index.html",
+    "canonical": null,
+    "title": "timeline | 小法进阶",
+    "publishedDate": "2022-08-06",
+    "description": "与法律相关或兴趣所在",
+    "ogUrl": "",
+    "fallbackRoute": "/timeline/"
+  },
+  {
+    "route": "/tu-ran-jiu-san-shi-liao/",
+    "publicFile": "public/tu-ran-jiu-san-shi-liao/index.html",
+    "canonical": null,
+    "title": "突然就三十了 | 小法进阶",
+    "publishedDate": "2021-10-09",
+    "description": "警报警报：本文只是一篇小学生流水帐+无病呻吟\n\n是的，发出这个博文的今天，是我三十岁的生日。嗯，我已经三十岁了，突然就三十岁了。\n01 焦虑和审视「时间是有加速度的」\n时间过得越来越快，快到现在回望2019年，还以为是去年，但其实已经是前年",
+    "ogUrl": "",
+    "fallbackRoute": "/tu-ran-jiu-san-shi-liao/"
+  },
+  {
+    "route": "/vcard-yu-er-wei-ma-ming-pian/",
+    "publicFile": "public/vcard-yu-er-wei-ma-ming-pian/index.html",
+    "canonical": null,
+    "title": "Vcard与二维码名片 | 小法进阶",
+    "publishedDate": "2018-07-25",
+    "description": "缘起在iOS11更新之后，自带「相机」应用支持直接识别二维码，根据「URL Schemes」调用相应的功能或APP，甚至是自定义在Workflow的动作。同时，iOS和Andriod均兼容Vcard 3.0格式的联系人文件。因此，将联系信息",
+    "ogUrl": "",
+    "fallbackRoute": "/vcard-yu-er-wei-ma-ming-pian/"
+  },
+  {
+    "route": "/webfont-yu-zhe-zuo-quan/",
+    "publicFile": "public/webfont-yu-zhe-zuo-quan/index.html",
+    "canonical": null,
+    "title": "WebFont 与著作权 | 小法进阶",
+    "publishedDate": "2017-10-17",
+    "description": "使用 Word 的朋友，都会一招，修改字体字号。比如，将大标题修改为黑体，将正文标题增大字号、加粗。同样，在网页中也需要对某些内容的字体字号做修改。掌管网页呈现效果的文件，一般以“.css”结尾，统称为“层叠样式表”[1]。其中，字体的调用",
+    "ogUrl": "",
+    "fallbackRoute": "/webfont-yu-zhe-zuo-quan/"
+  },
+  {
+    "route": "/wei-ji-hou-ban-quan/",
+    "publicFile": "public/wei-ji-hou-ban-quan/index.html",
+    "canonical": null,
+    "title": "维基百科与摄影师版权之争 | 小法进阶",
+    "publishedDate": "2014-08-08",
+    "description": "«来源：中新网\n据美国《赫芬顿邮报》近日报道称，争版权本来是一件非常无聊的事情。但最近维基百科和英国野生动物摄影师大卫·斯莱特之间的版权之争显得就非常有意思了。\n报道指出，2011年大卫·斯莱特旅行至印度尼西亚，拍摄黑冠猕猴的照片。当他架设",
+    "ogUrl": "",
+    "fallbackRoute": "/wei-ji-hou-ban-quan/"
+  },
+  {
+    "route": "/wei-shi-me-ni-jiu-bu-xi-huan-fa-guan-yu-wo-de-peng-you-quan-liao-ni/",
+    "publicFile": "public/wei-shi-me-ni-jiu-bu-xi-huan-fa-guan-yu-wo-de-peng-you-quan-liao-ni/index.html",
+    "canonical": null,
+    "title": "为什么你就不喜欢发关于我的朋友圈了呢 | 小法进阶",
+    "publishedDate": "2020-05-02",
+    "description": "写在前面的话\n这是一个关于我的同学小L和她男朋友之间吵架所引发出来的故事。\n开篇点题、声明立场：我也不喜欢发太多关于生活的朋友圈，其次，即便是发朋友圈，自己也会做特别分组可见。\n这不是个例\b不发朋友圈、不在朋友圈「秀」自己女朋友、男朋友，似",
+    "ogUrl": "",
+    "fallbackRoute": "/wei-shi-me-ni-jiu-bu-xi-huan-fa-guan-yu-wo-de-peng-you-quan-liao-ni/"
+  },
+  {
+    "route": "/wei-shou-xie-html-pai-ban-gong-zhong-hao-wen-zhang-de-ji-dian-bi-ji/",
+    "publicFile": "public/wei-shou-xie-html-pai-ban-gong-zhong-hao-wen-zhang-de-ji-dian-bi-ji/index.html",
+    "canonical": null,
+    "title": "伪手写HTML排版公众号文章的几点笔记 | 小法进阶",
+    "publishedDate": "2021-02-28",
+    "description": "继使用 Markdown + MarkHere 之后，最近又转向用「在线编辑器+手动微调 HTML」方式，进行公众号文章的排版，整理了这篇笔记。\n图片作为背景在HTML里面使用一张图片，从语义角度讲，应当是使用img标签。但是，有些图片，它",
+    "ogUrl": "",
+    "fallbackRoute": "/wei-shou-xie-html-pai-ban-gong-zhong-hao-wen-zhang-de-ji-dian-bi-ji/"
+  },
+  {
+    "route": "/weixianfan/",
+    "publicFile": "public/weixianfan/index.html",
+    "canonical": null,
+    "title": "危险犯与行为犯 | 小法进阶",
+    "publishedDate": "2014-10-16",
+    "description": "危险犯的概念危险犯的定义是依据犯罪行为所造成的结果来看的，与实害犯相对，以对法益发生侵害的危险作为处罚依据的犯罪的是危险犯。但是这个定义好像也是有点点问题的，这个后面我会分析的。\n首先，它是从犯罪行为所造成的结果来区分的。对于危险状态属于结",
+    "ogUrl": "",
+    "fallbackRoute": "/weixianfan/"
+  },
+  {
+    "route": "/wo-de-macos-he-ios-she-zhi/",
+    "publicFile": "public/wo-de-macos-he-ios-she-zhi/index.html",
+    "canonical": null,
+    "title": "【流水账】我的 macOS 和 iOS 设置 | 小法进阶",
+    "publishedDate": "2018-09-03",
+    "description": "最后更新于 2018 年 8 月 31 日\n\n这篇文章的主要是参考 The Sweet Setup 旗下的 SWEET SETUP INTERVIEW 系列以及 利器社群计划，对照我自己的实际情况进行的分享。同时，也是对自己的软件与设置做一",
+    "ogUrl": "",
+    "fallbackRoute": "/wo-de-macos-he-ios-she-zhi/"
+  },
+  {
+    "route": "/wo-zai-yong-de-an-zhuo-app-201904/",
+    "publicFile": "public/wo-zai-yong-de-an-zhuo-app-201904/index.html",
+    "canonical": null,
+    "title": "我在用的安卓APP-201904 | 小法进阶",
+    "publishedDate": "2019-04-30",
+    "description": "因为换手机了，码文记录一二。\n配置情况\n手机：Oneplus 6T（8G+128G）\n系统：OxygenOS 9.0.12\n购入时间：2019年3月\n\nAPP选用的原则\nGoogle Play版本优先。迫于国产应用权限问题，能从 Googl",
+    "ogUrl": "",
+    "fallbackRoute": "/wo-zai-yong-de-an-zhuo-app-201904/"
+  },
+  {
+    "route": "/work-rules-mindmap/",
+    "publicFile": "public/work-rules-mindmap/index.html",
+    "canonical": null,
+    "title": "【读书笔记】重新定义团队——谷歌如何工作 | 小法进阶",
+    "publishedDate": "2017-08-26",
+    "description": " \n作者其人【美】拉斯洛•博克（Laszlo Bock）波莫纳学院国际关系学学士、耶鲁大学工商管理学硕士，谷歌首席人才官，每年处理200万份以上的应聘简历，负责为谷歌招募、培养并留住优秀谷歌人。当拉斯洛辞去麦肯锡的咨询工作，转而去做人力资源",
+    "ogUrl": "",
+    "fallbackRoute": "/work-rules-mindmap/"
+  },
+  {
+    "route": "/wu-han-chan-jia-shi-duo-jiu/",
+    "publicFile": "public/wu-han-chan-jia-shi-duo-jiu/index.html",
+    "canonical": null,
+    "title": "武汉产假是多久? | 小法进阶",
+    "publishedDate": "2019-03-14",
+    "description": "前几天有一位朋友咨询武汉市产假问题，在做了一个简单的搜索后，现在笔记一下。\n\n\n\n现行法律规定情况国家层面\n劳动法\n第六十二条 女职工生育享受不少于九十天的产假。\n\n\n人口与计划生育法(2015年12月27日修订，2016年1月1日生效)\n",
+    "ogUrl": "",
+    "fallbackRoute": "/wu-han-chan-jia-shi-duo-jiu/"
+  },
+  {
+    "route": "/xzlfbzw/",
+    "publicFile": "public/xzlfbzw/index.html",
+    "canonical": null,
+    "title": "行政立法不作为的简单分析 | 小法进阶",
+    "publishedDate": "2014-10-25",
+    "description": "讨论这个问题，主要是因为自己在看姜明安教授的行政法与行政诉讼法教材中，对于这个问题有简单分析，自己当时有点点迷糊，花了十几分钟才理清楚。我先把教材的原话引用一下：\n\n特定相对人请求行政机关履行行政立法的职责，无论作为还是不作为，都是一个具体",
+    "ogUrl": "",
+    "fallbackRoute": "/xzlfbzw/"
+  },
+  {
+    "route": "/yi-yu-fu-quan-bu-fang-zu-de-wei-dao-qi-fang-wu-zu-ren-he-tong-bu-ying-jie-chu/",
+    "publicFile": "public/yi-yu-fu-quan-bu-fang-zu-de-wei-dao-qi-fang-wu-zu-ren-he-tong-bu-ying-jie-chu/index.html",
+    "canonical": null,
+    "title": "破产管理人能否解除已预付全部房租的未到期房屋租赁合同 | 小法进阶",
+    "publishedDate": "2018-10-26",
+    "description": "缘起在国庆节后第一个周末，被安排到光谷参加了中国行为法学会组织的破产法培训。本文讨论的内容，系基于培训课程中《破产实务中常见争议问题及述评》的的第三个案例。围绕破产程序中房屋租赁合同可否解除及相关款项定性问题。\n\n\n基本案例与观点案例 1:",
+    "ogUrl": "",
+    "fallbackRoute": "/yi-yu-fu-quan-bu-fang-zu-de-wei-dao-qi-fang-wu-zu-ren-he-tong-bu-ying-jie-chu/"
+  },
+  {
+    "route": "/yin-xing-neng-fou-jiu-po-chan-zhai-wu-ren-de-cun-kuan-xing-shi-di-xiao-quan/",
+    "publicFile": "public/yin-xing-neng-fou-jiu-po-chan-zhai-wu-ren-de-cun-kuan-xing-shi-di-xiao-quan/index.html",
+    "canonical": null,
+    "title": "银行能否就破产债务人的存款行使抵销权 | 小法进阶",
+    "publishedDate": "2018-10-31",
+    "description": "基本案情案例的案号为（2016）浙民终 523 号，简要而言，银行对破产债务人在该银行存款账户进行扣划行为，是否属于行使抵销权的行为。\n根据《中华人民共和国企业破产法》第四十条之规定，债权人在破产申请受理前对债务人负有债务的，可以向管理人主",
+    "ogUrl": "",
+    "fallbackRoute": "/yin-xing-neng-fou-jiu-po-chan-zhai-wu-ren-de-cun-kuan-xing-shi-di-xiao-quan/"
+  },
+  {
+    "route": "/yong-lai-chu-li-biao-qian-de-liang-ge-as-jiao-ben/",
+    "publicFile": "public/yong-lai-chu-li-biao-qian-de-liang-ge-as-jiao-ben/index.html",
+    "canonical": null,
+    "title": "用来处理标签的两个as脚本 | 小法进阶",
+    "publishedDate": "2021-07-29",
+    "description": "环境与前提系统：macOS 11.4命令行工具：Tag （项目地址：https://github.com/jdberry/tag）macOS上可以通过HomeBrew来安装：brew install tag\n添加标签choose from ",
+    "ogUrl": "",
+    "fallbackRoute": "/yong-lai-chu-li-biao-qian-de-liang-ge-as-jiao-ben/"
+  },
+  {
+    "route": "/yu-ming-zhuan-yi/",
+    "publicFile": "public/yu-ming-zhuan-yi/index.html",
+    "canonical": null,
+    "title": "域名转移申诉 | 小法进阶",
+    "publishedDate": "2014-09-02",
+    "description": "从13年4月左右开始接触WordPress，就一去不复返了，折腾域名、主机、主题、插件……，用了一段时间免费域名和免费主机，不外乎tk,ga,cf和三蛋空间，用的比较久的是tk和Binhoster，但是经常遇到无法解析，或者服务器宕机的情况",
+    "ogUrl": "",
+    "fallbackRoute": "/yu-ming-zhuan-yi/"
+  },
+  {
+    "route": "/zhetengb/",
+    "publicFile": "public/zhetengb/index.html",
+    "canonical": null,
+    "title": "自家小站再折腾 | 小法进阶",
+    "publishedDate": "2015-01-28",
+    "description": "眼馋Bandwagon Host(又叫搬瓦工)已经不是一天两天了，不仅仅是折腾病的“作恶”，而且也是希望可以自己掌握网站主机和自己部署ShadowSocks(ss)，独立ip也是棒棒的。当然，对我来说，最重要的是实(pián)惠(yì)划(",
+    "ogUrl": "",
+    "fallbackRoute": "/zhetengb/"
+  },
+  {
+    "route": "/zzq/",
+    "publicFile": "public/zzq/index.html",
+    "canonical": null,
+    "title": "著作权法课程流水账 | 小法进阶",
+    "publishedDate": "2015-10-29",
+    "description": "一篇关于研一上学期韦之老师著作权法课的流水账。\n连续发问上韦之老师的课，既轻松享受，又“战战兢兢”。比如，隔一周就要做一次随堂测试，但结课不用绞尽脑汁去凑一篇结课论文；又如，上课不拘泥于著作权法的一亩三分地，但排山倒海式的提问，让你忙于接招",
+    "ogUrl": "",
+    "fallbackRoute": "/zzq/"
+  }
+]

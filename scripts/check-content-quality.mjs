@@ -57,17 +57,18 @@ const blockingKinds = new Set([
   "null-taxonomy",
 ]);
 const failures = findings.filter((item) => blockingKinds.has(item.kind));
+const reportPath = path.join(root, "docs/audit/content-quality-report.json");
+const previousReport = await readFile(reportPath, "utf8")
+  .then(JSON.parse)
+  .catch(() => null);
 const report = {
-  generatedAt: new Date().toISOString(),
+  generatedAt: previousReport?.generatedAt ?? new Date().toISOString(),
   files: files.length,
   counts,
   failures,
   findings,
 };
-await writeFile(
-  path.join(root, "docs/audit/content-quality-report.json"),
-  `${JSON.stringify(report, null, 2)}\n`,
-);
+await writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 if (failures.length) {
   console.error(
     `Content quality audit failed with ${failures.length} blocking finding(s):`,

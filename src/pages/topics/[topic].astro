@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import IndexLayout from "../../layouts/IndexLayout.astro";
-import { topicLabels, type Topic } from "../../lib/topics";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { topicDescriptions, topicLabels, type Topic } from "../../lib/topics";
 
 export async function getStaticPaths() {
   const articles = await getCollection("blog", ({ data }) => !data.draft);
@@ -16,17 +16,374 @@ const articles = (
   )
 ).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 const title = topicLabels[topic];
+const description = topicDescriptions[topic];
+const years = new Map<number, typeof articles>();
+for (const article of articles) {
+  const year = article.data.date.getFullYear();
+  if (!years.has(year)) years.set(year, []);
+  years.get(year)?.push(article);
+}
+const yearEntries = [...years];
+const firstYear = yearEntries.at(-1)?.[0];
+const lastYear = yearEntries[0]?.[0];
+const relatedTopics = (Object.keys(topicLabels) as Topic[]).filter(
+  (candidate) => candidate !== topic,
+);
+const formatter = new Intl.DateTimeFormat("zh-CN", {
+  month: "2-digit",
+  day: "2-digit",
+  timeZone: "Asia/Shanghai",
+});
 ---
 
-<IndexLayout
-  eyebrow="CURATED TOPIC"
-  title={title}
-  description={`经人工复核归入“${title}”专题的文章，共 ${articles.length} 篇。`}
-  items={articles.map((article) => ({
-    href: article.data.legacyPath!,
-    title: article.data.title,
-    date: article.data.date,
-    description: article.data.description,
-  }))}
-  emptyMessage="该专题尚无已审核文章。"
-/>
+<BaseLayout title={title} description={description}>
+  <header class="topic-header">
+    <nav aria-label="面包屑">
+      <a href="/">小法进阶</a><span aria-hidden="true">/</span><a
+        href="/topics/">专题</a
+      ><span aria-hidden="true">/</span><span>当前专题</span>
+    </nav>
+    <div class="heading-grid">
+      <div>
+        <p class="eyebrow">CURATED TOPIC · VERIFIED READING PATH</p>
+        <h1>{title}</h1>
+      </div>
+      <div class="topic-intro">
+        <p>{description}</p>
+        <dl aria-label="专题统计">
+          <div><dt>{articles.length}</dt><dd>篇文章</dd></div>
+          <div><dt>{yearEntries.length}</dt><dd>个写作年份</dd></div>
+          <div>
+            <dt>
+              {firstYear === lastYear ? firstYear : `${firstYear}—${lastYear}`}
+            </dt>
+            <dd>时间跨度</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </header>
+
+  <nav class="year-index" aria-label="按年份跳转">
+    <span>YEARS</span>
+    {
+      yearEntries.map(([year, yearArticles]) => (
+        <a href={`#year-${year}`}>
+          {year}
+          <sup>{yearArticles.length}</sup>
+        </a>
+      ))
+    }
+  </nav>
+
+  <div class="topic-archive">
+    {
+      yearEntries.map(([year, yearArticles]) => (
+        <section aria-labelledby={`year-${year}`}>
+          <header class="year-heading">
+            <h2 id={`year-${year}`}>{year}</h2>
+            <p>{yearArticles.length} 篇</p>
+          </header>
+          <ol>
+            {yearArticles.map((article, index) => (
+              <li>
+                <div class="article-index">
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <time datetime={article.data.date.toISOString()}>
+                    {formatter.format(article.data.date)}
+                  </time>
+                </div>
+                <div class="article-copy">
+                  <h3>
+                    <a href={article.data.legacyPath}>{article.data.title}</a>
+                  </h3>
+                  {article.data.description && (
+                    <p>{article.data.description}</p>
+                  )}
+                  <div class="article-meta">
+                    {article.data.contentKind && (
+                      <span>{article.data.contentKind}</span>
+                    )}
+                    {article.data.timeSensitive && <span>时效内容</span>}
+                    {article.data.legalDisclaimer && <span>法律提示</span>}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))
+    }
+  </div>
+
+  <aside class="topic-switcher">
+    <div>
+      <p class="eyebrow">CONTINUE EXPLORING</p>
+      <h2>继续阅读其他专题</h2>
+    </div>
+    <div class="related-topics">
+      {
+        relatedTopics.map((candidate) => (
+          <a href={`/topics/${candidate}/`}>{topicLabels[candidate]}</a>
+        ))
+      }
+    </div>
+  </aside>
+</BaseLayout>
+
+<style>
+  .topic-header,
+  .year-index,
+  .topic-archive,
+  .topic-switcher {
+    max-width: 66rem;
+  }
+  .topic-header {
+    border-top: var(--border-heading);
+    padding-top: var(--space-3);
+  }
+  nav,
+  .eyebrow,
+  dt,
+  dd,
+  .year-heading p,
+  .article-index,
+  .article-meta {
+    font-family: var(--font-mono);
+  }
+  .topic-header > nav {
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--font-size-sm);
+    gap: 0.45rem;
+  }
+  .heading-grid {
+    align-items: end;
+    display: grid;
+    gap: clamp(2rem, 8vw, 7rem);
+    grid-template-columns: minmax(18rem, 1.15fr) minmax(18rem, 0.85fr);
+    margin-top: clamp(4rem, 10vw, 8rem);
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: var(--font-size-xs);
+    letter-spacing: var(--tracking-label);
+    margin: 0 0 0.9rem;
+  }
+  h1 {
+    font-size: clamp(3.2rem, 9vw, 7.5rem);
+    font-weight: 600;
+    letter-spacing: -0.075em;
+    line-height: 0.91;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .topic-intro > p {
+    color: var(--color-ink-soft);
+    font-size: var(--font-size-lede);
+    line-height: 1.6;
+    margin: 0 0 2rem;
+  }
+  dl {
+    border-top: var(--border-hairline);
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1.4fr;
+    margin: 0;
+  }
+  dl div {
+    border-right: var(--border-hairline);
+    padding: 0.8rem 0.7rem 0 0;
+  }
+  dl div + div {
+    padding-left: 0.7rem;
+  }
+  dl div:last-child {
+    border: 0;
+  }
+  dt {
+    font-size: clamp(1.2rem, 2.8vw, 1.75rem);
+    font-weight: 700;
+    line-height: 1;
+  }
+  dd {
+    color: var(--muted);
+    font-size: 0.64rem;
+    margin: 0.5rem 0 0;
+  }
+  .year-index {
+    align-items: center;
+    border-bottom: var(--border-hairline);
+    border-top: var(--border-hairline);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: clamp(4rem, 10vw, 8rem);
+  }
+  .year-index > span {
+    color: var(--accent);
+    font-size: 0.66rem;
+    letter-spacing: var(--tracking-label);
+    padding: 0.8rem 1.2rem 0.8rem 0;
+  }
+  .year-index a {
+    border-left: var(--border-hairline);
+    font-size: 0.78rem;
+    padding: 0.65rem 1rem;
+    text-decoration: none;
+  }
+  .year-index sup {
+    color: var(--accent);
+    font-size: 0.55rem;
+    margin-left: 0.25rem;
+  }
+  .topic-archive section {
+    display: grid;
+    gap: clamp(1.5rem, 5vw, 4rem);
+    grid-template-columns: clamp(5.5rem, 12vw, 9rem) minmax(0, 1fr);
+    padding-top: clamp(4rem, 9vw, 7rem);
+  }
+  .year-heading {
+    align-self: start;
+    position: sticky;
+    top: 1rem;
+  }
+  .year-heading h2 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    letter-spacing: -0.07em;
+    line-height: 0.85;
+    margin: 0;
+    scroll-margin-top: 1rem;
+  }
+  .year-heading p {
+    color: var(--muted);
+    font-size: 0.68rem;
+    margin: 0.65rem 0 0;
+  }
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    border-top: var(--border-hairline);
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 4.2rem minmax(0, 1fr);
+    padding: 1.25rem 0 1.6rem;
+  }
+  .article-index {
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    font-size: 0.66rem;
+    gap: 0.35rem;
+    padding-top: 0.2rem;
+  }
+  .article-index > span {
+    color: var(--accent);
+  }
+  h3 {
+    font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+    line-height: 1.35;
+    margin: 0;
+  }
+  h3 a {
+    text-decoration-thickness: 1px;
+  }
+  .article-copy > p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0.55rem 0 0;
+    max-width: 42rem;
+  }
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.8rem;
+  }
+  .article-meta span {
+    border: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.58rem;
+    padding: 0.12rem 0.38rem;
+    text-transform: uppercase;
+  }
+  .topic-switcher {
+    border-top: var(--border-heading);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(13rem, 0.7fr) 1.3fr;
+    margin-top: var(--space-8);
+    padding-top: var(--space-3);
+  }
+  .topic-switcher h2 {
+    font-size: clamp(1.75rem, 4vw, 2.8rem);
+    letter-spacing: -0.045em;
+    line-height: 1.1;
+    margin: 0;
+  }
+  .related-topics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .related-topics a {
+    border-bottom: var(--border-hairline);
+    padding: 0.8rem;
+  }
+  .related-topics a:nth-child(odd) {
+    border-right: var(--border-hairline);
+  }
+  @media (max-width: 48rem) {
+    .heading-grid,
+    .topic-switcher {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 38rem) {
+    .topic-archive section {
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+    .year-heading {
+      align-items: baseline;
+      background: var(--paper);
+      border-bottom: 2px solid var(--ink);
+      display: flex;
+      justify-content: space-between;
+      padding: 0.6rem 0;
+      z-index: 1;
+    }
+    .year-heading p {
+      margin: 0;
+    }
+    li {
+      gap: 0.8rem;
+      grid-template-columns: 3.2rem minmax(0, 1fr);
+    }
+    .related-topics {
+      grid-template-columns: 1fr;
+    }
+    .related-topics a:nth-child(odd) {
+      border-right: 0;
+    }
+  }
+  @media (max-width: 30rem) {
+    dl {
+      grid-template-columns: 1fr;
+    }
+    dl div,
+    dl div + div {
+      border-bottom: var(--border-hairline);
+      border-right: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.7rem 0;
+    }
+    dd {
+      margin: 0;
+    }
+  }
+</style>

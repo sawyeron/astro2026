@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readdir, stat, writeFile } from "node:fs/promises";
+import { readFile, readdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 
@@ -30,7 +30,6 @@ async function walk(directory) {
 const files = await walk(dist);
 const records = await Promise.all(
   files.map(async (file) => ({
-    file,
     relative: path.relative(dist, file),
     bytes: (await stat(file)).size,
   })),
@@ -82,18 +81,19 @@ for (const image of images.filter((item) => item.bytes > 1_000_000))
     `${image.relative}: large historical image (${image.bytes} bytes)`,
   );
 
+const reportPath = path.join(root, "docs/audit/performance-budget-report.json");
+const previousReport = await readFile(reportPath, "utf8")
+  .then(JSON.parse)
+  .catch(() => null);
 const report = {
-  generatedAt: new Date().toISOString(),
+  generatedAt: previousReport?.generatedAt ?? new Date().toISOString(),
   status: failures.length ? "failed" : "passed",
   limits,
   metrics,
   failures,
   warnings,
 };
-await writeFile(
-  path.join(root, "docs/audit/performance-budget-report.json"),
-  `${JSON.stringify(report, null, 2)}\n`,
-);
+await writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 if (failures.length) {
   console.error(`Performance budget failed with ${failures.length} error(s):`);
   for (const failure of failures) console.error(`- ${failure}`);

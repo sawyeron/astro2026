@@ -43,6 +43,7 @@
     "check:browser": "node scripts/check-browser.mjs",
     "check:performance": "node scripts/check-performance-budget.mjs",
     "check:content-quality": "node scripts/check-content-quality.mjs",
+    "investigate:resources": "node scripts/investigate-content-resources.mjs",
     "check:remote": "node scripts/check-remote.mjs",
     "new:post": "node scripts/new-post.mjs",
     "import:movies": "node scripts/import-legacy-movies.mjs"

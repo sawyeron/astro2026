@@ -55,7 +55,7 @@ async function exists(file) {
 }
 
 if (process.argv.includes("--check-dist")) {
-  const staticRoutes = ["/archives/", "/categories/", "/tags/"];
+  const staticRoutes = ["/archives/", "/categories/", "/tags/", "/movies/"];
   for (const route of staticRoutes) {
     const target = path.join(projectRoot, "dist", route, "index.html");
     if (!(await exists(target)))

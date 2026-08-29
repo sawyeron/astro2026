@@ -117,22 +117,31 @@ if (seenPaths.size !== approvedPaths.size)
   );
 
 const requiredCompatibilityFiles = [
-  "google3756ddc34336b7b9.html",
-  "keybase.txt",
-  "CNAME",
+  {
+    name: "google3756ddc34336b7b9.html",
+    sha256: "f7ed8bf2e292a6cdbac62bc98292a6baf14f3b7d7140005c56aaa287c6e7aadd",
+  },
+  {
+    name: "keybase.txt",
+    sha256: "fb4dc999ec6679efc7f4e27f0869ddd867c7fc61cebd335c02cc54f3857539c5",
+  },
+  {
+    name: "CNAME",
+    sha256: "b1ff7f1097c99c2e7fccf577eaddc4257244e7926fc2fb1af84b3b2079a8e8df",
+  },
 ];
-for (const name of requiredCompatibilityFiles) {
+for (const { name, sha256 } of requiredCompatibilityFiles) {
   const target = path.join(projectRoot, "public", name);
   if (!(await exists(target))) {
     failures.push(`public/${name}: required compatibility file missing`);
     continue;
   }
-  const sourceBytes = await readFile(
-    path.join("/Users/otis/Documents/hexoblog/blog/source", name),
-  );
   const targetBytes = await readFile(target);
-  if (!sourceBytes.equals(targetBytes))
-    failures.push(`public/${name}: differs from legacy source`);
+  const actualHash = createHash("sha256").update(targetBytes).digest("hex");
+  if (actualHash !== sha256)
+    failures.push(
+      `public/${name}: compatibility checksum changed (${actualHash} !== ${sha256})`,
+    );
 }
 if (
   !(await exists(

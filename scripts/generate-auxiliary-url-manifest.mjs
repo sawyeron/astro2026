@@ -40,6 +40,7 @@ const rendered = new Set([
   "/about/",
   "/PGP/",
   "/timeline/",
+  "/movies/",
   "/archives/",
   "/categories/",
   "/tags/",
@@ -62,7 +63,6 @@ for (const { route } of legacyRoutes) {
   } else if (route === "/tags/index-1.html/" || route === "/tags/index-1.html")
     destination = "/tags/";
   else if (route === "/books/") destination = "/archives/";
-  else if (route === "/movies/") destination = "/timeline/";
   else if (route === "/google3756ddc34336b7b9.html/")
     destination = "/google3756ddc34336b7b9.html";
   if (destination && destination !== route) redirects.set(route, destination);

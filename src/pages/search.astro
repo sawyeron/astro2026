@@ -1,30 +1,82 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const articles = await getCollection("blog", ({ data }) => !data.draft);
+const years = articles.map((article) => article.data.date.getFullYear());
 ---
 
 <BaseLayout
-  title="搜索 | 小法进阶"
-  description="在小法进阶的公开文章中全文搜索。"
+  title="搜索"
+  description="在小法进阶的全部公开文章中进行浏览器本地全文搜索。"
 >
-  <header>
+  <header class="search-header">
     <a class="home" href="/">← 小法进阶</a>
-    <p class="eyebrow">LOCAL FULL-TEXT INDEX</p>
-    <h1>搜索</h1>
-    <p>
-      搜索索引在构建时生成，查询在浏览器本地完成，不会将关键词发送给第三方搜索服务。
-    </p>
+    <div class="heading-grid">
+      <div>
+        <p class="eyebrow">LOCAL FULL-TEXT INDEX</p>
+        <h1>搜索</h1>
+      </div>
+      <div class="search-note">
+        <p>
+          在 {articles.length} 篇公开文章中检索标题与正文，覆盖 {
+            Math.min(...years)
+          }—{Math.max(...years)} 年的写作记录。
+        </p>
+        <ul>
+          <li><span>01</span> 查询只在当前浏览器执行</li>
+          <li><span>02</span> 关键词不会发送给第三方</li>
+          <li><span>03</span> 可检索历史文章的完整正文</li>
+        </ul>
+      </div>
+    </div>
   </header>
-  <main id="search" aria-live="polite"></main>
+
+  <section class="search-workbench" aria-labelledby="search-heading">
+    <div class="search-label">
+      <p>QUERY / 本地索引</p>
+      <h2 id="search-heading">输入关键词</h2>
+      <p class="hint">可尝试：公司法、劳动合同、macOS、交通事故</p>
+    </div>
+    <div class="search-panel">
+      <div id="search" aria-live="polite">
+        <p class="loading">正在载入本地搜索索引……</p>
+      </div>
+      <noscript>
+        <p class="fallback">
+          全文搜索需要 JavaScript 才能在浏览器本地运行。你仍可通过<a
+            href="/archives/">文章归档</a
+          >或<a href="/topics/">专题</a>浏览全部内容。
+        </p>
+      </noscript>
+    </div>
+  </section>
+
+  <aside class="browse-routes">
+    <p>不确定关键词？</p>
+    <a href="/topics/">按专题浏览 →</a>
+    <a href="/archives/">按年份浏览 →</a>
+  </aside>
 </BaseLayout>
 
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
 <script is:inline src="/pagefind/pagefind-ui.js"></script>
 <script is:inline>
   window.addEventListener("DOMContentLoaded", () => {
+    const target = document.querySelector("#search");
+    if (!target || typeof PagefindUI === "undefined") {
+      if (target) {
+        target.innerHTML =
+          '<p class="fallback">搜索索引未能载入。请稍后重试，或前往<a href="/archives/">文章归档</a>浏览。</p>';
+      }
+      return;
+    }
+    target.innerHTML = "";
     new PagefindUI({
       element: "#search",
       showSubResults: true,
       showImages: false,
+      resetStyles: false,
       translations: {
         placeholder: "搜索文章标题与正文…",
         clear_search: "清除",
@@ -43,44 +95,226 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 </script>
 
 <style>
-  header,
-  main {
-    max-width: 52rem;
+  .search-header,
+  .search-workbench,
+  .browse-routes {
+    max-width: 66rem;
   }
-  header {
-    border-top: 4px solid var(--ink);
-    padding-top: 1rem;
-  }
-  .home,
-  .eyebrow {
-    font-family: ui-monospace, monospace;
+  .search-header {
+    border-top: var(--border-heading);
+    padding-top: var(--space-3);
   }
   .home,
-  header > p:last-child {
+  .eyebrow,
+  .search-note li,
+  .search-label > p:first-child,
+  .browse-routes {
+    font-family: var(--font-mono);
+  }
+  .home {
     color: var(--muted);
+    font-size: var(--font-size-sm);
+  }
+  .heading-grid {
+    align-items: end;
+    display: grid;
+    gap: clamp(2rem, 8vw, 7rem);
+    grid-template-columns: minmax(18rem, 1fr) minmax(20rem, 0.9fr);
+    margin-top: clamp(4rem, 10vw, 8rem);
   }
   .eyebrow {
     color: var(--accent);
-    font-size: 0.74rem;
-    letter-spacing: 0.14em;
-    margin: 3rem 0 0.8rem;
+    font-size: var(--font-size-xs);
+    letter-spacing: var(--tracking-label);
+    margin: 0 0 0.8rem;
   }
   h1 {
-    font-size: clamp(3rem, 10vw, 7rem);
-    letter-spacing: -0.08em;
-    line-height: 0.9;
+    font-size: clamp(5rem, 15vw, 10rem);
+    font-weight: 600;
+    letter-spacing: -0.1em;
+    line-height: 0.72;
     margin: 0;
   }
-  main {
-    margin-top: 4rem;
+  .search-note > p {
+    color: var(--color-ink-soft);
+    font-size: var(--font-size-lede);
+    line-height: 1.65;
+    margin: 0 0 1.5rem;
+  }
+  .search-note ul {
+    border-top: var(--border-hairline);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .search-note li {
+    border-bottom: var(--border-hairline);
+    color: var(--muted);
+    font-size: 0.68rem;
+    padding: 0.45rem 0;
+  }
+  .search-note li span {
+    color: var(--accent);
+    display: inline-block;
+    width: 2.4rem;
+  }
+  .search-workbench {
+    border-top: var(--border-heading);
+    display: grid;
+    gap: clamp(2rem, 6vw, 5rem);
+    grid-template-columns: minmax(10rem, 0.45fr) minmax(0, 1.55fr);
+    margin-top: clamp(5rem, 12vw, 9rem);
+    padding-top: var(--space-3);
+  }
+  .search-label > p:first-child {
+    color: var(--accent);
+    font-size: 0.66rem;
+    letter-spacing: var(--tracking-label);
+    margin: 0 0 1rem;
+  }
+  h2 {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    letter-spacing: -0.05em;
+    line-height: 1;
+    margin: 0;
+  }
+  .hint {
+    color: var(--muted);
+    font-size: 0.78rem;
+    line-height: 1.55;
+    margin: 1rem 0 0;
+  }
+  .search-panel {
+    min-width: 0;
+  }
+  #search {
     --pagefind-ui-scale: 1;
     --pagefind-ui-primary: var(--accent);
     --pagefind-ui-text: var(--ink);
-    --pagefind-ui-background: var(--paper);
+    --pagefind-ui-background: var(--color-paper-raised);
     --pagefind-ui-border: var(--rule);
-    --pagefind-ui-tag: #ebe6da;
+    --pagefind-ui-tag: var(--color-paper-deep);
     --pagefind-ui-border-width: 1px;
     --pagefind-ui-border-radius: 0;
-    --pagefind-ui-font: inherit;
+    --pagefind-ui-font: var(--font-serif);
+  }
+  .loading,
+  .fallback {
+    background: var(--color-paper-deep);
+    border-left: 4px solid var(--accent);
+    color: var(--muted);
+    margin: 0;
+    padding: 1rem 1.25rem;
+  }
+  .browse-routes {
+    border-bottom: var(--border-hairline);
+    border-top: var(--border-hairline);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.5rem;
+    margin-top: var(--space-7);
+    padding: 0.8rem 0;
+  }
+  .browse-routes p {
+    color: var(--muted);
+    font-size: 0.68rem;
+    margin: 0 auto 0 0;
+  }
+  .browse-routes a {
+    font-size: 0.72rem;
+  }
+  :global(.pagefind-ui__form) {
+    position: relative;
+  }
+  :global(.pagefind-ui__search-input) {
+    background: var(--color-paper-raised) !important;
+    border: 0 !important;
+    border-bottom: 2px solid var(--ink) !important;
+    box-shadow: none !important;
+    color: var(--ink) !important;
+    font-family: var(--font-serif) !important;
+    font-size: clamp(1.25rem, 3vw, 2rem) !important;
+    height: auto !important;
+    padding: 0.85rem 3rem 0.85rem 2.75rem !important;
+  }
+  :global(.pagefind-ui__search-input:focus) {
+    border-bottom-color: var(--accent) !important;
+    outline: 0 !important;
+  }
+  :global(.pagefind-ui__search-clear) {
+    background: transparent !important;
+    color: var(--muted) !important;
+    font-family: var(--font-mono) !important;
+    font-size: 0.65rem !important;
+  }
+  :global(.pagefind-ui__drawer) {
+    margin-top: 2rem !important;
+  }
+  :global(.pagefind-ui__message) {
+    border-bottom: var(--border-hairline);
+    color: var(--muted) !important;
+    font-family: var(--font-mono) !important;
+    font-size: 0.68rem !important;
+    padding: 0 0 0.7rem !important;
+  }
+  :global(.pagefind-ui__result) {
+    border-top: 0 !important;
+    border-bottom: var(--border-hairline) !important;
+    padding: 1.4rem 0 1.7rem !important;
+  }
+  :global(.pagefind-ui__result-title) {
+    font-size: clamp(1.15rem, 2.4vw, 1.55rem) !important;
+    line-height: 1.35 !important;
+  }
+  :global(.pagefind-ui__result-link) {
+    color: var(--ink) !important;
+    text-decoration-thickness: 1px !important;
+  }
+  :global(.pagefind-ui__result-excerpt) {
+    color: var(--muted) !important;
+    font-size: 0.88rem !important;
+    line-height: 1.65 !important;
+  }
+  :global(mark) {
+    background: var(--color-accent-wash);
+    color: var(--ink);
+  }
+  :global(.pagefind-ui__button) {
+    background: var(--ink) !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    color: var(--paper) !important;
+    font-family: var(--font-mono) !important;
+    font-size: 0.7rem !important;
+  }
+  @media (max-width: 48rem) {
+    .heading-grid,
+    .search-workbench {
+      grid-template-columns: 1fr;
+    }
+    .search-label {
+      display: grid;
+      gap: 0.5rem 1rem;
+      grid-template-columns: 1fr 1fr;
+    }
+    .search-label > p:first-child {
+      grid-column: 1 / -1;
+    }
+    .hint {
+      margin: 0;
+    }
+  }
+  @media (max-width: 32rem) {
+    .search-label {
+      grid-template-columns: 1fr;
+    }
+    .browse-routes {
+      align-items: start;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .browse-routes p {
+      margin-bottom: 0.4rem;
+    }
   }
 </style>

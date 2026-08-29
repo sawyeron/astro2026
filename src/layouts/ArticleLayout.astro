@@ -1,5 +1,12 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import { topicLabels, type Topic } from "../lib/topics";
+
+interface ArticleReference {
+  title: string;
+  href: string;
+  date: Date;
+}
 
 interface Props {
   title: string;
@@ -8,6 +15,7 @@ interface Props {
   updated?: Date;
   categories?: string[];
   tags?: string[];
+  topics?: Topic[];
   contentKind?:
     "legal" | "technical" | "note" | "culture" | "personal" | "mixed";
   timeSensitive?: boolean;
@@ -19,8 +27,9 @@ interface Props {
     | "historical-material"
     | "general";
   legalDisclaimer?: boolean;
-  previousArticle?: { title: string; href: string };
-  nextArticle?: { title: string; href: string };
+  readingMinutes?: number;
+  previousArticle?: ArticleReference;
+  nextArticle?: ArticleReference;
 }
 const {
   title,
@@ -29,10 +38,12 @@ const {
   updated,
   categories = [],
   tags = [],
+  topics = [],
   contentKind,
   timeSensitive = false,
   timeSensitivityKind = "general",
   legalDisclaimer = false,
+  readingMinutes,
   previousArticle,
   nextArticle,
 } = Astro.props;
@@ -42,6 +53,20 @@ const formatter = new Intl.DateTimeFormat("zh-CN", {
   month: "long",
   day: "numeric",
 });
+const compactFormatter = new Intl.DateTimeFormat("zh-CN", {
+  timeZone: "Asia/Shanghai",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+const contentKindLabels = {
+  legal: "法律",
+  technical: "技术",
+  note: "札记",
+  culture: "文化",
+  personal: "个人",
+  mixed: "综合",
+};
 const timeSensitivityMessages = {
   "annual-data":
     "本文记录特定年度的统计数据或适用标准，仅适用于相应期间。处理现时事项时，请查询最新年度数据和适用口径。",
@@ -60,32 +85,87 @@ const timeSensitivityMessages = {
 <BaseLayout title={title} description={description}>
   <article class="article">
     <header class="article-header">
-      <a class="home-link" href="/">小法进阶</a>
-      {contentKind && <p class="content-kind">{contentKind}</p>}
-      <h1>{title}</h1>
-      {
-        date && (
-          <p class="article-meta">
-            发布于{" "}
-            <time datetime={date.toISOString()}>{formatter.format(date)}</time>
-            {updated && <> · 更新于 {formatter.format(updated)}</>}
+      <nav class="breadcrumbs" aria-label="面包屑">
+        <a href="/">小法进阶</a><span aria-hidden="true">/</span><a
+          href="/archives/">文章归档</a
+        ><span aria-hidden="true">/</span><span>正文</span>
+      </nav>
+
+      <div class="header-grid">
+        <div class="headline">
+          <p class="article-label">
+            ARTICLE
+            {contentKind && <> / {contentKindLabels[contentKind]}</>}
           </p>
-        )
-      }
+          <h1>{title}</h1>
+          {description && <p class="dek">{description}</p>}
+        </div>
+
+        <dl class="article-facts" aria-label="文章信息">
+          {
+            date && (
+              <div>
+                <dt>发布</dt>
+                <dd>
+                  <time datetime={date.toISOString()}>
+                    {formatter.format(date)}
+                  </time>
+                </dd>
+              </div>
+            )
+          }
+          {
+            updated && (
+              <div>
+                <dt>更新</dt>
+                <dd>
+                  <time datetime={updated.toISOString()}>
+                    {formatter.format(updated)}
+                  </time>
+                </dd>
+              </div>
+            )
+          }
+          {
+            readingMinutes && (
+              <div>
+                <dt>阅读</dt>
+                <dd>约 {readingMinutes} 分钟</dd>
+              </div>
+            )
+          }
+          {
+            topics.length > 0 && (
+              <div>
+                <dt>专题</dt>
+                <dd class="fact-links">
+                  {topics.map((topic) => (
+                    <a href={`/topics/${topic}/`}>{topicLabels[topic]}</a>
+                  ))}
+                </dd>
+              </div>
+            )
+          }
+        </dl>
+      </div>
+
       {
         (categories.length > 0 || tags.length > 0) && (
-          <p class="taxonomy">
-            {categories.map((category) => (
-              <a href={`/categories/${encodeURIComponent(category)}/`}>
-                {category === "null" ? "未分类" : category}
-              </a>
-            ))}
-            {tags.map((tag) => (
-              <a href={`/tags/${encodeURIComponent(tag)}/`}>
-                #{tag === "null" ? "未分类" : tag}
-              </a>
-            ))}
-          </p>
+          <div class="taxonomy" aria-label="文章分类和标签">
+            <span>INDEX</span>
+            <div>
+              {categories.map((category) => (
+                <a href={`/categories/${encodeURIComponent(category)}/`}>
+                  {category === "null" ? "未分类" : category}
+                </a>
+              ))}
+              {tags.map((tag) => (
+                <a href={`/tags/${encodeURIComponent(tag)}/`}>
+                  #{tag === "null" ? "未分类" : tag}
+                </a>
+              ))}
+            </div>
+          </div>
         )
       }
     </header>
@@ -96,108 +176,225 @@ const timeSensitivityMessages = {
           class={`notice notice-${timeSensitivityKind}`}
           aria-label="时效提示"
         >
-          <strong>时效提示</strong>
-          <span>{timeSensitivityMessages[timeSensitivityKind]}</span>
+          <div>
+            <span aria-hidden="true">!</span>
+            <strong>时效提示</strong>
+          </div>
+          <p>{timeSensitivityMessages[timeSensitivityKind]}</p>
         </aside>
       )
     }
 
-    <div class="article-body"><slot /></div>
+    <div class="reading-column">
+      <div class="article-body"><slot /></div>
 
-    {
-      legalDisclaimer && (
-        <aside class="disclaimer" aria-label="法律免责声明">
-          本文仅为个人知识记录与一般信息，不构成针对具体事项的法律意见。
-        </aside>
-      )
-    }
+      {
+        legalDisclaimer && (
+          <aside class="disclaimer" aria-label="法律免责声明">
+            <strong>法律信息说明</strong>
+            <p>
+              本文仅为个人知识记录与一般信息，不构成针对具体事项的法律意见。
+            </p>
+          </aside>
+        )
+      }
+    </div>
 
-    <nav class="article-navigation" aria-label="文章导航">
-      <div>
-        {
-          previousArticle && (
-            <>
-              <span>上一篇</span>
-              <a href={previousArticle.href}>{previousArticle.title}</a>
-            </>
-          )
-        }
+    <footer class="article-footer">
+      <a class="back-to-top" href="#main-content">↑ 返回页首</a>
+
+      <nav class="article-navigation" aria-label="文章导航">
+        <div class:list={["article-neighbor", { empty: !previousArticle }]}>
+          {
+            previousArticle ? (
+              <>
+                <p>
+                  <span aria-hidden="true">←</span> 上一篇 · 较早
+                </p>
+                <a href={previousArticle.href}>{previousArticle.title}</a>
+                <time datetime={previousArticle.date.toISOString()}>
+                  {compactFormatter.format(previousArticle.date)}
+                </time>
+              </>
+            ) : (
+              <p>已经是最早一篇</p>
+            )
+          }
+        </div>
+        <div class:list={["article-neighbor", { empty: !nextArticle }]}>
+          {
+            nextArticle ? (
+              <>
+                <p>
+                  下一篇 · 较新 <span aria-hidden="true">→</span>
+                </p>
+                <a href={nextArticle.href}>{nextArticle.title}</a>
+                <time datetime={nextArticle.date.toISOString()}>
+                  {compactFormatter.format(nextArticle.date)}
+                </time>
+              </>
+            ) : (
+              <p>已经是最新一篇</p>
+            )
+          }
+        </div>
+      </nav>
+
+      <div class="return-routes">
+        <span>CONTINUE</span>
+        <a href="/topics/">浏览专题</a>
+        <a href="/archives/">查看全部文章</a>
+        <a href="/search/">全文搜索</a>
       </div>
-      <div>
-        {
-          nextArticle && (
-            <>
-              <span>下一篇</span>
-              <a href={nextArticle.href}>{nextArticle.title}</a>
-            </>
-          )
-        }
-      </div>
-    </nav>
+    </footer>
   </article>
 </BaseLayout>
 
 <style>
   .article {
-    max-width: var(--measure-reading);
     margin: 0 auto;
+    max-width: 66rem;
   }
   .article-header {
     border-top: var(--border-heading);
-    margin-bottom: var(--space-6);
+    margin-bottom: clamp(3rem, 8vw, 6rem);
     padding-top: var(--space-3);
   }
-  .home-link,
-  .content-kind {
-    color: var(--accent);
+  .breadcrumbs,
+  .article-label,
+  .article-facts,
+  .taxonomy,
+  .notice,
+  .article-navigation,
+  .back-to-top,
+  .return-routes {
     font-family: var(--font-mono);
-    font-size: 0.78rem;
-    letter-spacing: 0.08em;
-    text-decoration: none;
   }
-  .content-kind {
+  .breadcrumbs {
     color: var(--muted);
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
-    margin: 2.5rem 0 0;
-    text-transform: uppercase;
-  }
-  h1 {
-    font-size: clamp(2.3rem, 7vw, 4.8rem);
-    letter-spacing: -0.055em;
-    line-height: 1.05;
-    margin: 1rem 0;
-  }
-  .article-meta,
-  .taxonomy {
-    color: var(--muted);
-    font-size: 0.9rem;
-  }
-  .taxonomy {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.35rem 0.8rem;
+    font-size: var(--font-size-sm);
+    gap: 0.45rem;
+  }
+  .header-grid {
+    align-items: end;
+    display: grid;
+    gap: clamp(2rem, 7vw, 6rem);
+    grid-template-columns: minmax(0, 1.5fr) minmax(12rem, 0.5fr);
+    margin-top: clamp(3rem, 8vw, 6rem);
+  }
+  .article-label {
+    color: var(--accent);
+    font-size: var(--font-size-xs);
+    letter-spacing: var(--tracking-label);
+    margin: 0 0 0.9rem;
+  }
+  h1 {
+    font-size: clamp(2.65rem, 7.5vw, 5.5rem);
+    font-weight: 650;
+    letter-spacing: -0.065em;
+    line-height: 1.02;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .dek {
+    color: var(--color-ink-soft);
+    font-size: var(--font-size-lede);
+    line-height: 1.6;
+    margin: 1.5rem 0 0;
+    max-width: 44rem;
+  }
+  .article-facts {
+    border-top: var(--border-hairline);
+    margin: 0;
+  }
+  .article-facts > div {
+    border-bottom: var(--border-hairline);
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: 3.2rem 1fr;
+    padding: 0.65rem 0;
+  }
+  .article-facts dt,
+  .article-facts dd {
+    font-size: 0.66rem;
+    margin: 0;
+  }
+  .article-facts dt {
+    color: var(--accent);
+    letter-spacing: 0.08em;
+  }
+  .article-facts dd {
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .fact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .taxonomy {
+    align-items: start;
+    border-bottom: var(--border-hairline);
+    border-top: var(--border-hairline);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 4rem 1fr;
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+    padding: 0.7rem 0;
+  }
+  .taxonomy > span {
+    color: var(--accent);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+  }
+  .taxonomy > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
   }
   .taxonomy a {
+    color: var(--muted);
+    font-size: 0.68rem;
     text-decoration: none;
   }
-  .notice,
-  .disclaimer {
-    border-left: 3px solid var(--accent);
+  .notice {
     background: var(--color-paper-deep);
-    margin: 2rem 0;
+    border-left: 4px solid var(--accent);
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 8rem 1fr;
+    margin: 0 auto clamp(3rem, 7vw, 5rem);
+    max-width: var(--measure-reading);
     padding: 1rem 1.2rem;
   }
-  .notice strong {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    margin-bottom: 0.25rem;
-    text-transform: uppercase;
+  .notice > div {
+    align-items: center;
+    display: flex;
+    gap: 0.6rem;
   }
-  .notice span {
-    display: block;
+  .notice > div > span {
+    align-items: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    color: var(--accent);
+    display: flex;
+    font-size: 0.65rem;
+    height: 1.4rem;
+    justify-content: center;
+    width: 1.4rem;
+  }
+  .notice strong {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+  }
+  .notice p {
+    color: var(--color-ink-soft);
+    font-family: var(--font-serif);
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin: 0;
   }
   .notice-software-version {
     border-left-color: #52727c;
@@ -205,31 +402,91 @@ const timeSensitivityMessages = {
   .notice-historical-material {
     border-left-color: #83724f;
   }
+  .reading-column {
+    margin: 0 auto;
+    max-width: var(--measure-reading);
+  }
+  .article-body {
+    font-size: var(--font-size-body);
+    overflow-wrap: break-word;
+  }
+  .article-body > :global(:first-child) {
+    margin-top: 0;
+  }
+  .article-body :global(p),
+  .article-body :global(li) {
+    hanging-punctuation: first allow-end last;
+  }
+  .article-body :global(p) {
+    margin: 1.2em 0;
+  }
   .article-body :global(h2) {
-    border-bottom: 1px solid var(--rule);
-    font-size: 1.65rem;
-    margin-top: 3rem;
-    padding-bottom: 0.35rem;
+    border-top: 2px solid var(--ink);
+    font-size: clamp(1.55rem, 3.5vw, 2.15rem);
+    letter-spacing: -0.035em;
+    line-height: 1.25;
+    margin: 4rem 0 1.2rem;
+    padding-top: 0.65rem;
+    scroll-margin-top: 1.5rem;
   }
   .article-body :global(h3) {
-    margin-top: 2.2rem;
+    font-size: 1.3rem;
+    line-height: 1.35;
+    margin: 2.8rem 0 0.8rem;
+    scroll-margin-top: 1.5rem;
+  }
+  .article-body :global(h4) {
+    color: var(--color-ink-soft);
+    font-size: 1.05rem;
+    margin: 2rem 0 0.6rem;
+  }
+  .article-body :global(ul),
+  .article-body :global(ol) {
+    padding-left: 1.4rem;
+  }
+  .article-body :global(li) {
+    margin: 0.45rem 0;
+    padding-left: 0.25rem;
+  }
+  .article-body :global(li::marker) {
+    color: var(--accent);
+  }
+  .article-body :global(hr) {
+    border: 0;
+    border-top: var(--border-hairline);
+    margin: 3.5rem auto;
+    width: 40%;
   }
   .article-body :global(img),
   .article-body :global(svg) {
     display: block;
     height: auto;
+    margin: 2.5rem auto;
     max-width: 100%;
-    margin: 2rem auto;
+  }
+  .article-body :global(figure) {
+    margin: 2.5rem 0;
+  }
+  .article-body :global(figure img) {
+    margin-bottom: 0.6rem;
+  }
+  .article-body :global(figcaption) {
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-align: center;
   }
   .article-body :global(pre) {
     background: var(--color-code);
-    border-radius: 2px;
+    border-left: 3px solid var(--accent);
+    border-radius: 0;
     color: var(--color-code-ink);
     font-family: var(--font-mono);
-    font-size: 0.86rem;
+    font-size: 0.84rem;
     line-height: 1.65;
+    margin: 2rem 0;
     overflow-x: auto;
-    padding: 1rem 1.15rem;
+    padding: 1.1rem 1.2rem;
   }
   .article-body :global(:not(pre) > code) {
     background: var(--color-paper-deep);
@@ -241,17 +498,18 @@ const timeSensitivityMessages = {
   }
   .article-body :global(table) {
     border-collapse: collapse;
-    display: block;
-    font-size: 0.92rem;
-    margin: 2rem 0;
+    font-size: 0.88rem;
+    margin: 2.5rem 0;
+    width: 100%;
+  }
+  .article-body :global(.table-scroll) {
     max-width: 100%;
     overflow-x: auto;
-    white-space: nowrap;
   }
   .article-body :global(th),
   .article-body :global(td) {
     border: 1px solid var(--rule);
-    padding: 0.55rem 0.7rem;
+    padding: 0.6rem 0.75rem;
     text-align: left;
   }
   .article-body :global(th) {
@@ -261,16 +519,36 @@ const timeSensitivityMessages = {
     overflow-wrap: anywhere;
   }
   .article-body :global(blockquote) {
-    border-left: 2px solid var(--rule);
-    color: var(--muted);
-    margin-left: 0;
-    padding-left: 1.2rem;
+    border-bottom: var(--border-hairline);
+    border-left: 3px solid var(--accent);
+    border-top: var(--border-hairline);
+    color: var(--color-ink-soft);
+    font-size: 1.04em;
+    margin: 2rem 0;
+    padding: 0.7rem 0 0.7rem 1.25rem;
+  }
+  .article-body :global(blockquote > :first-child) {
+    margin-top: 0;
+  }
+  .article-body :global(blockquote > :last-child) {
+    margin-bottom: 0;
+  }
+  .article-body :global(details) {
+    border-bottom: var(--border-hairline);
+    border-top: var(--border-hairline);
+    margin: 2rem 0;
+    padding: 0.8rem 0;
+  }
+  .article-body :global(summary) {
+    cursor: pointer;
+    font-weight: 700;
   }
   .article-body :global(.footnotes),
   .article-body :global(.footnotes-area) {
-    border-top: 1px solid var(--rule);
-    font-size: 0.9rem;
-    margin-top: 4rem;
+    border-top: 2px solid var(--ink);
+    font-size: 0.88rem;
+    margin-top: 5rem;
+    padding-top: 0.5rem;
   }
   .article-body :global(.footnote-line) {
     border-bottom: 1px solid var(--rule);
@@ -306,39 +584,148 @@ const timeSensitivityMessages = {
     }
   }
   .disclaimer {
-    border-left-color: var(--rule);
+    border-bottom: var(--border-hairline);
+    border-top: var(--border-hairline);
     color: var(--muted);
-    font-size: 0.9rem;
-    margin-top: 4rem;
-  }
-  .article-navigation {
-    border-top: 1px solid var(--rule);
     display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    grid-template-columns: 8rem 1fr;
     margin-top: 4rem;
-    padding-top: 1.4rem;
+    padding: 1rem 0;
   }
-  .article-navigation div:last-child {
-    text-align: right;
+  .disclaimer strong {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
   }
-  .article-navigation span {
+  .disclaimer p {
+    font-size: 0.86rem;
+    margin: 0;
+  }
+  .article-footer {
+    margin-top: clamp(5rem, 12vw, 9rem);
+  }
+  .back-to-top {
     color: var(--muted);
     display: block;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.35rem;
+    font-size: 0.66rem;
+    margin: 0 0 0.7rem auto;
+    text-align: right;
+    width: fit-content;
   }
-  .article-navigation a {
-    font-weight: 650;
+  .article-navigation {
+    border-bottom: var(--border-hairline);
+    border-top: var(--border-heading);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .article-neighbor {
+    display: flex;
+    flex-direction: column;
+    min-height: 10rem;
+    padding: 1rem 1.5rem 1.2rem 0;
+  }
+  .article-neighbor + .article-neighbor {
+    border-left: var(--border-hairline);
+    padding-left: 1.5rem;
+    padding-right: 0;
+    text-align: right;
+  }
+  .article-neighbor p {
+    color: var(--accent);
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+    margin: 0 0 1.4rem;
+  }
+  .article-neighbor > a {
+    font-family: var(--font-serif);
+    font-size: clamp(1.05rem, 2.3vw, 1.4rem);
+    font-weight: 700;
+    line-height: 1.35;
+  }
+  .article-neighbor time {
+    color: var(--muted);
+    font-size: 0.62rem;
+    margin-top: auto;
+    padding-top: 1.2rem;
+  }
+  .article-neighbor.empty {
+    color: var(--muted);
+    justify-content: center;
+  }
+  .article-neighbor.empty p {
+    color: var(--muted);
+    margin: 0;
+  }
+  .return-routes {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.4rem;
+    padding: 0.8rem 0;
+  }
+  .return-routes span {
+    color: var(--accent);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    margin-right: auto;
+  }
+  .return-routes a {
+    font-size: 0.68rem;
+  }
+  @media (max-width: 48rem) {
+    .header-grid {
+      align-items: start;
+      grid-template-columns: 1fr;
+    }
+    .article-facts {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .article-facts > div:nth-child(odd) {
+      border-right: var(--border-hairline);
+      padding-right: 1rem;
+    }
+    .article-facts > div:nth-child(even) {
+      padding-left: 1rem;
+    }
   }
   @media (max-width: 38rem) {
+    .notice,
+    .disclaimer {
+      grid-template-columns: 1fr;
+    }
     .article-navigation {
       grid-template-columns: 1fr;
     }
-    .article-navigation div:last-child {
+    .article-neighbor {
+      min-height: 8rem;
+      padding: 1rem 0;
+    }
+    .article-neighbor + .article-neighbor {
+      border-left: 0;
+      border-top: var(--border-hairline);
+      padding: 1rem 0;
       text-align: left;
+    }
+    .return-routes {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    .return-routes span {
+      margin-bottom: 0.3rem;
+    }
+  }
+  @media (max-width: 30rem) {
+    .article-facts {
+      grid-template-columns: 1fr;
+    }
+    .article-facts > div:nth-child(odd),
+    .article-facts > div:nth-child(even) {
+      border-right: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 </style>

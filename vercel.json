@@ -398,11 +398,6 @@
       "permanent": true
     },
     {
-      "source": "/movies/",
-      "destination": "/timeline/",
-      "permanent": true
-    },
-    {
       "source": "/page/2/",
       "destination": "/archives/",
       "permanent": true

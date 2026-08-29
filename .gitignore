@@ -40,7 +40,8 @@ pnpm-debug.log*
 
 # Browser audit evidence (screenshots and JSON) is reproducible locally
 # and intentionally excluded from Git to avoid binary churn.
-docs/audit/generated/
+docs/audit/generated/*
+!docs/audit/generated/legacy-routes.json
 
 # Playwright browser downloads
 .playwright/
@@ -52,4 +53,5 @@ docs/audit/generated/
 
 agent*
 AGENT*
+!agent.md
 

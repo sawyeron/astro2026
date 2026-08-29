@@ -157,17 +157,18 @@ if (metrics.footnoteReferences !== metrics.footnoteBacklinks)
     `footnote direction count mismatch: ${metrics.footnoteReferences} references, ${metrics.footnoteBacklinks} backlinks`,
   );
 
+const reportPath = path.join(root, "docs/audit/interaction-audit-report.json");
+const previousReport = await readFile(reportPath, "utf8")
+  .then(JSON.parse)
+  .catch(() => null);
 const report = {
-  generatedAt: new Date().toISOString(),
+  generatedAt: previousReport?.generatedAt ?? new Date().toISOString(),
   status: failures.length ? "failed" : "passed",
   metrics,
   failures,
   warnings,
 };
-await writeFile(
-  path.join(root, "docs/audit/interaction-audit-report.json"),
-  `${JSON.stringify(report, null, 2)}\n`,
-);
+await writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`);
 
 if (failures.length) {
   console.error(`Interaction audit failed with ${failures.length} error(s):`);

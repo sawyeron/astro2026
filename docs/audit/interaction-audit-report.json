@@ -3,8 +3,8 @@
   "status": "passed",
   "metrics": {
     "htmlFiles": 241,
-    "fragmentLinks": 405,
-    "uniqueTargets": 808,
+    "fragmentLinks": 549,
+    "uniqueTargets": 869,
     "footnoteReferences": 29,
     "footnoteBacklinks": 29,
     "tables": 4,

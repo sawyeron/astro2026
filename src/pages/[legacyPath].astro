@@ -18,10 +18,18 @@ export async function getStaticPaths() {
       props: {
         article,
         previousArticle: previous
-          ? { title: previous.data.title, href: previous.data.legacyPath! }
+          ? {
+              title: previous.data.title,
+              href: previous.data.legacyPath!,
+              date: previous.data.date,
+            }
           : undefined,
         nextArticle: next
-          ? { title: next.data.title, href: next.data.legacyPath! }
+          ? {
+              title: next.data.title,
+              href: next.data.legacyPath!,
+              date: next.data.date,
+            }
           : undefined,
       },
     };
@@ -30,6 +38,17 @@ export async function getStaticPaths() {
 
 const { article, previousArticle, nextArticle } = Astro.props;
 const { Content } = await render(article);
+const readableText = article.body
+  .replace(/```[\s\S]*?```/g, " ")
+  .replace(/<[^>]+>|[#>*_`(){}|-]/g, " ")
+  .replaceAll("[", " ")
+  .replaceAll("]", " ");
+const cjkCharacters = (readableText.match(/[\u3400-\u9fff]/g) ?? []).length;
+const latinWords = (readableText.match(/[A-Za-z0-9]+/g) ?? []).length;
+const readingMinutes = Math.max(
+  1,
+  Math.ceil((cjkCharacters + latinWords * 2) / 450),
+);
 ---
 
 <ArticleLayout
@@ -39,10 +58,12 @@ const { Content } = await render(article);
   updated={article.data.updated}
   categories={article.data.categories}
   tags={article.data.tags}
+  topics={article.data.topics}
   contentKind={article.data.contentKind}
   timeSensitive={article.data.timeSensitive}
   timeSensitivityKind={article.data.timeSensitivityKind}
   legalDisclaimer={article.data.legalDisclaimer}
+  readingMinutes={readingMinutes}
   previousArticle={previousArticle}
   nextArticle={nextArticle}
 >
