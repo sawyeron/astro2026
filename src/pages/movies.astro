@@ -12,6 +12,11 @@ for (const movie of watched) {
   years.set(year, (years.get(year) ?? 0) + 1);
 }
 const yearSummary = [...years].sort((a, b) => b[0].localeCompare(a[0]));
+const notedCount = watched.filter((movie) => movie.comment?.trim()).length;
+const peakYear = [...yearSummary].sort((a, b) => b[1] - a[1])[0];
+const dateRange = watched.length
+  ? `${watched.at(-1)?.seenDate?.slice(0, 4) ?? "—"}—${watched[0]?.seenDate?.slice(0, 4) ?? "—"}`
+  : "—";
 ---
 
 <BaseLayout title="观影" description="个人观影记录的历史静态快照。">
@@ -29,7 +34,8 @@ const yearSummary = [...years].sort((a, b) => b[0].localeCompare(a[0]));
       <dl>
         <div><dt>{watched.length}</dt><dd>已看</dd></div>
         <div><dt>{watchlist.length}</dt><dd>想看</dd></div>
-        <div><dt>{yearSummary.length}</dt><dd>记录年份</dd></div>
+        <div><dt>{dateRange}</dt><dd>记录跨度</dd></div>
+        <div><dt>{notedCount}</dt><dd>留有备注</dd></div>
       </dl>
     </div>
   </header>
@@ -48,18 +54,25 @@ const yearSummary = [...years].sort((a, b) => b[0].localeCompare(a[0]));
         <p>01 / YEARS</p>
         <h2 id="year-heading">观看刻度</h2>
       </div>
-      <ol>
+      <ol aria-label="按年份跳转">
         {
           yearSummary.map(([year, count]) => (
             <li>
-              <>
+              <a href={`#year-${year}`}>
                 <span>{year}</span>
                 <strong>{count}</strong>
-              </>
+              </a>
             </li>
           ))
         }
       </ol>
+      {
+        peakYear && (
+          <p class="year-summary">
+            高峰年份 {peakYear[0]} · {peakYear[1]} 部
+          </p>
+        )
+      }
     </section>
 
     <section aria-labelledby="watched-heading">
@@ -70,7 +83,15 @@ const yearSummary = [...years].sort((a, b) => b[0].localeCompare(a[0]));
       <ol class="film-list">
         {
           watched.map((movie, index) => (
-            <li>
+            <li
+              id={
+                index === 0 ||
+                movie.seenDate?.slice(0, 4) !==
+                  watched[index - 1]?.seenDate?.slice(0, 4)
+                  ? `year-${movie.seenDate?.slice(0, 4) || "unknown"}`
+                  : undefined
+              }
+            >
               <span class="number">{String(index + 1).padStart(3, "0")}</span>
               <div class="film-mark" aria-hidden="true">
                 {movie.title.slice(0, 1)}
@@ -187,7 +208,7 @@ const yearSummary = [...years].sort((a, b) => b[0].localeCompare(a[0]));
   }
   dl {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin: 0;
   }
   dl div {
@@ -258,9 +279,21 @@ const yearSummary = [...years].sort((a, b) => b[0].localeCompare(a[0]));
   }
   .year-strip li {
     border-left: 1px solid #474944;
+  }
+  .year-strip a {
     display: flex;
     justify-content: space-between;
     padding: 0.7rem;
+    text-decoration: none;
+  }
+  .year-strip a:hover {
+    background: #272a27;
+  }
+  .year-summary {
+    color: #85877f;
+    font-size: 0.72rem;
+    margin: 1rem 0 0;
+    text-align: right;
   }
   .year-strip strong {
     color: #ed624a;
@@ -272,6 +305,10 @@ const yearSummary = [...years].sort((a, b) => b[0].localeCompare(a[0]));
     gap: 1rem;
     grid-template-columns: 3rem 3.5rem minmax(0, 1fr) 7rem;
     padding: 1rem 0 1.3rem;
+    scroll-margin-top: 1rem;
+  }
+  .film-list li[id] {
+    border-top-color: #ed624a;
   }
   .number,
   time {

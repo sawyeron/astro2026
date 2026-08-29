@@ -3,15 +3,40 @@ node_modules/
 dist/
 .astro/
 .vercel/
+coverage/
+.eslintcache
+*.tsbuildinfo
+
+# A global ignore file on this machine contains `lib/`. Keep the project's
+# source library explicitly visible so fresh clones and CI receive it.
+!src/lib/
+!src/lib/**
 
 # Local environment / credentials
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
 
 # OS and editor files
 .DS_Store
+.idea/
 .vscode/
+*.swp
+*.swo
+*~
+
+# Logs and package-manager diagnostics
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Browser audit evidence (screenshots and JSON) is reproducible locally
 # and intentionally excluded from Git to avoid binary churn.
@@ -24,3 +49,7 @@ docs/audit/generated/
 .agent/
 
 .gitignore
+
+agent*
+AGENT*
+

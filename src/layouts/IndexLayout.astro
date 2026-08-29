@@ -64,16 +64,16 @@ const {
 <style>
   .index-header,
   .index-body {
-    max-width: 52rem;
+    max-width: var(--measure-index);
   }
   .index-header {
-    border-top: 4px solid var(--ink);
-    padding-top: 1rem;
+    border-top: var(--border-heading);
+    padding-top: var(--space-3);
   }
   .back,
   .eyebrow,
   time {
-    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-family: var(--font-mono);
   }
   .back {
     color: var(--muted);
@@ -81,12 +81,12 @@ const {
   }
   .eyebrow {
     color: var(--accent);
-    font-size: 0.74rem;
-    letter-spacing: 0.14em;
+    font-size: var(--font-size-xs);
+    letter-spacing: var(--tracking-label);
     margin: 3rem 0 0.8rem;
   }
   h1 {
-    font-size: clamp(2.8rem, 9vw, 6rem);
+    font-size: var(--font-size-title);
     letter-spacing: -0.065em;
     line-height: 0.95;
     margin: 0;
@@ -94,7 +94,7 @@ const {
   .description {
     color: var(--muted);
     font-size: 1.08rem;
-    margin: 1.5rem 0 4.5rem;
+    margin: var(--space-4) 0 var(--space-7);
     max-width: 40rem;
   }
   ol {

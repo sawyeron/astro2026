@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T10:10:59.866Z",
+  "generatedAt": "2026-08-29T12:28:32.360Z",
   "status": "passed",
   "limits": {
     "totalAstroBytes": 350000,
@@ -9,12 +9,12 @@
     "totalFirstPartyJavaScriptBytes": 20000
   },
   "metrics": {
-    "totalBuildBytes": 21784035,
-    "totalAstroBytes": 15346,
+    "totalBuildBytes": 22342095,
+    "totalAstroBytes": 15671,
     "largestAstroAsset": {
-      "file": "/Users/otis/Documents/sawyeron/astro2026/dist/_astro/movies.CZIk6sPd.css",
-      "relative": "_astro/movies.CZIk6sPd.css",
-      "bytes": 5970
+      "file": "/Users/otis/Documents/sawyeron/astro2026/dist/_astro/movies.CuLdl7D7.css",
+      "relative": "_astro/movies.CuLdl7D7.css",
+      "bytes": 6363
     },
     "totalJavaScriptBytes": 441271,
     "totalFirstPartyJavaScriptBytes": 0,

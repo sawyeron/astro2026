@@ -139,18 +139,18 @@ const timeSensitivityMessages = {
 
 <style>
   .article {
-    max-width: 48rem;
+    max-width: var(--measure-reading);
     margin: 0 auto;
   }
   .article-header {
-    border-top: 4px solid var(--ink);
-    margin-bottom: 3rem;
-    padding-top: 1rem;
+    border-top: var(--border-heading);
+    margin-bottom: var(--space-6);
+    padding-top: var(--space-3);
   }
   .home-link,
   .content-kind {
     color: var(--accent);
-    font-family: ui-monospace, monospace;
+    font-family: var(--font-mono);
     font-size: 0.78rem;
     letter-spacing: 0.08em;
     text-decoration: none;
@@ -184,13 +184,13 @@ const timeSensitivityMessages = {
   .notice,
   .disclaimer {
     border-left: 3px solid var(--accent);
-    background: #eeebe2;
+    background: var(--color-paper-deep);
     margin: 2rem 0;
     padding: 1rem 1.2rem;
   }
   .notice strong {
     display: block;
-    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-family: var(--font-mono);
     font-size: 0.7rem;
     letter-spacing: 0.12em;
     margin-bottom: 0.25rem;
@@ -222,20 +222,20 @@ const timeSensitivityMessages = {
     margin: 2rem auto;
   }
   .article-body :global(pre) {
-    background: #20282b;
+    background: var(--color-code);
     border-radius: 2px;
-    color: #f4f0e6;
-    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    color: var(--color-code-ink);
+    font-family: var(--font-mono);
     font-size: 0.86rem;
     line-height: 1.65;
     overflow-x: auto;
     padding: 1rem 1.15rem;
   }
   .article-body :global(:not(pre) > code) {
-    background: #ebe7dc;
-    border: 1px solid #d7d1c4;
+    background: var(--color-paper-deep);
+    border: 1px solid var(--color-rule);
     border-radius: 2px;
-    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-family: var(--font-mono);
     font-size: 0.88em;
     padding: 0.08em 0.3em;
   }
@@ -255,7 +255,7 @@ const timeSensitivityMessages = {
     text-align: left;
   }
   .article-body :global(th) {
-    background: #ebe7dc;
+    background: var(--color-paper-deep);
   }
   .article-body :global(a) {
     overflow-wrap: anywhere;
@@ -280,7 +280,7 @@ const timeSensitivityMessages = {
   .article-body :global(.md-fn-count) {
     color: var(--accent);
     display: inline-block;
-    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-family: var(--font-mono);
     font-weight: 700;
     min-width: 2rem;
   }
@@ -290,7 +290,7 @@ const timeSensitivityMessages = {
   .article-body :global(sup a),
   .article-body :global(.footnote-backref) {
     color: var(--accent);
-    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-family: var(--font-mono);
     font-weight: 700;
     text-decoration: none;
   }
@@ -325,7 +325,7 @@ const timeSensitivityMessages = {
   .article-navigation span {
     color: var(--muted);
     display: block;
-    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-family: var(--font-mono);
     font-size: 0.7rem;
     letter-spacing: 0.08em;
     margin-bottom: 0.35rem;
