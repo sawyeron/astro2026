@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T09:37:02.716Z",
+  "generatedAt": "2026-08-29T09:37:51.537Z",
   "status": "passed",
   "metrics": {
     "htmlFiles": 240,
@@ -12,7 +12,5 @@
     "inlineSvg": 1
   },
   "failures": [],
-  "warnings": [
-    "webfont-yu-zhe-zuo-quan/index.html: code block found without detected horizontal overflow styling"
-  ]
+  "warnings": []
 }

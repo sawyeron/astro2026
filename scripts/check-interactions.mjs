@@ -140,7 +140,8 @@ for (const [file, document] of documents) {
   const hasScrollableCodeStyle =
     /\.article-body\s+(?::global\()?pre\)?\s*\{[^}]*overflow-x:\s*auto/is.test(
       document.html,
-    );
+    ) ||
+    /<pre\b[^>]*style=(['"])[^'"]*overflow-x:\s*auto[^'"]*\1/i.test(article);
   if (/<table\b/i.test(article) && !hasScrollableTableStyle)
     warnings.push(
       `${relative}: table found without detected horizontal overflow styling`,
