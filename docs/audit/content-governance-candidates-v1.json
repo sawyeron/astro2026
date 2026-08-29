@@ -75,12 +75,15 @@
       "candidate": {
         "contentKind": "legal",
         "topics": ["civil-commercial", "legal-practice-research"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：民商事规则或案例分析，涉及写作时法律规则，需结合现行法核验。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-05-05-那个可爱的老头子走了.md",
@@ -440,12 +443,15 @@
       "candidate": {
         "contentKind": "legal",
         "topics": ["civil-commercial", "legal-practice-research"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：民商事规则或案例分析，涉及写作时法律规则，需结合现行法核验。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-10-31-银行能否就破产债务人的存款行使抵销权.md",
@@ -461,12 +467,15 @@
       "candidate": {
         "contentKind": "legal",
         "topics": ["civil-commercial", "legal-practice-research"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：民商事规则或案例分析，涉及写作时法律规则，需结合现行法核验。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-11-16-第三次签订劳动合同与二倍工资.md",
@@ -481,17 +490,16 @@
       },
       "candidate": {
         "contentKind": "legal",
-        "topics": [
-          "labor-social-security",
-          "civil-commercial",
-          "legal-practice-research"
-        ],
-        "timeSensitive": false,
+        "topics": ["labor-social-security", "legal-practice-research"],
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：劳动法规则分析，移除误归的民商事专题，并提示现行规则核验。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-11-17-乱弹20181116.md",
@@ -1254,12 +1262,15 @@
       "candidate": {
         "contentKind": "legal",
         "topics": ["civil-commercial", "legal-practice-research"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：民商事规则或案例分析，涉及写作时法律规则，需结合现行法核验。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/cc.md",
@@ -1552,17 +1563,16 @@
       },
       "candidate": {
         "contentKind": "legal",
-        "topics": [
-          "labor-social-security",
-          "civil-commercial",
-          "legal-practice-research"
-        ],
-        "timeSensitive": false,
+        "topics": ["labor-social-security", "legal-practice-research"],
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：劳动法规则分析，移除误归的民商事专题，并提示现行规则核验。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/llfxdmw.md",
@@ -1662,12 +1672,15 @@
       "candidate": {
         "contentKind": "legal",
         "topics": ["civil-commercial", "legal-practice-research"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": true,
         "confidence": "high",
-        "reasons": ["旧分类或标题/标签包含明确法律主题"]
+        "reasons": [
+          "人工复核：民商事规则或案例分析，涉及写作时法律规则，需结合现行法核验。"
+        ],
+        "timeSensitivityKind": "legal-rule"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/shuang-pin-vs-quan-pin.md",
