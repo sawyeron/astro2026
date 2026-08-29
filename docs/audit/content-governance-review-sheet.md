@@ -2,7 +2,7 @@
 
 更新时间由生成脚本决定。请以 JSON 清单为权威来源。修改审核状态时，将对应项目的 `reviewStatus` 改为 `approved` 或 `rejected`；如候选不准确，先修订 `candidate` 再批准。
 
-## P1 · 法律且时效敏感（32 篇）
+## P1 · 法律且时效敏感（33 篇）
 
 | 状态     | 日期       | 文章                                                                                                                                                                                  | 类型候选 | 专题候选                                                           | 时效 | 免责 | 置信度 |
 | -------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------ | ---- | ---- | ------ |
@@ -28,6 +28,7 @@
 | approved | 2017-08-28 | [公司法司法解释四-引文版](/cetrain-issues-iv-for-company-law/)                                                                                                                        | legal    | civil-commercial、legal-practice-research                          | 是   | 是   | high   |
 | approved | 2017-05-03 | [2017 年度湖北省道路交通事故损害赔偿标准](/cs-hubei-2017/)                                                                                                                            | legal    | tort-traffic、legal-practice-research                              | 是   | 是   | high   |
 | approved | 2014-09-03 | [多次诈骗的犯罪数额，这样认定真的好吗？](/duo-ci-zha-pian-shu-e/)                                                                                                                     | legal    | legal-practice-research                                            | 是   | 是   | high   |
+| approved | 2018-01-25 | [从服务协议看 iCloud 迁移](/icloud-terms/)                                                                                                                                            | mixed    | legal-practice-research、technology-digital-life                   | 是   | 是   | high   |
 | approved | 2017-02-20 | [评北京精雕诉上海奈凯计算机软件侵权案（第 48 号指导案例）](/jdsnk/)                                                                                                                   | mixed    | civil-commercial、legal-practice-research、technology-digital-life | 是   | 是   | high   |
 | approved | 2014-09-04 | [一个暗藏杀机的劳动法考点](/lao-dong-zhe-wei-yue-jin/)                                                                                                                                | legal    | labor-social-security、legal-practice-research                     | 是   | 是   | high   |
 | approved | 2017-01-14 | [缺席审判时，法院是否有权调整违约金数额](/qxpj/)                                                                                                                                      | legal    | civil-commercial、legal-practice-research                          | 是   | 是   | high   |
@@ -39,7 +40,7 @@
 | approved | 2014-10-25 | [行政立法不作为的简单分析](/xzlfbzw/)                                                                                                                                                 | legal    | legal-practice-research                                            | 是   | 是   | high   |
 | approved | 2015-10-29 | [著作权法课程流水账](/zzq/)                                                                                                                                                           | legal    | legal-practice-research、notes-observations                        | 是   | 是   | high   |
 
-## P3 · 技术或数据时效敏感（27 篇）
+## P3 · 技术或数据时效敏感（29 篇）
 
 | 状态     | 日期       | 文章                                                                                                                                       | 类型候选  | 专题候选                                                    | 时效 | 免责 | 置信度 |
 | -------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ----------------------------------------------------------- | ---- | ---- | ------ |
@@ -47,31 +48,33 @@
 | approved | 2018-07-25 | [Vcard与二维码名片](/vcard-yu-er-wei-ma-ming-pian/)                                                                                        | technical | technology-digital-life、lawyer-toolbox                     | 是   | 否   | high   |
 | approved | 2018-08-22 | [流水账之 PDF Expert](/expert/)                                                                                                            | technical | technology-digital-life、lawyer-toolbox、notes-observations | 是   | 否   | high   |
 | approved | 2018-08-24 | [Mackup 备份出错的临时解决办法](/mackup-bei-fen-chu-cuo-de-lin-shi-jie-jue-ban-fa/)                                                        | technical | technology-digital-life                                     | 是   | 否   | high   |
-| pending  | 2018-09-03 | [【流水账】我的 macOS 和 iOS 设置](/wo-de-macos-he-ios-she-zhi/)                                                                           | technical | technology-digital-life、notes-observations                 | 是   | 否   | high   |
-| pending  | 2018-09-09 | [Homebrew 离线安装方式变更](/homebrew-chi-xian-an-zhuang-fang-shi-bian-geng/)                                                              | technical | technology-digital-life                                     | 是   | 否   | high   |
+| approved | 2018-09-03 | [【流水账】我的 macOS 和 iOS 设置](/wo-de-macos-he-ios-she-zhi/)                                                                           | technical | technology-digital-life、notes-observations                 | 是   | 否   | high   |
+| approved | 2018-09-09 | [Homebrew 离线安装方式变更](/homebrew-chi-xian-an-zhuang-fang-shi-bian-geng/)                                                              | technical | technology-digital-life                                     | 是   | 否   | high   |
 | approved | 2018-09-07 | [趁着 Tampermonkey 回归的脚本盘点](/chen-zhao-tampermonkey-hui-gui-de-jiao-ben-pan-dian/)                                                  | technical | technology-digital-life、lawyer-toolbox                     | 是   | 否   | high   |
-| pending  | 2018-09-13 | [AppleScript 脚本两个半](/applescript-jiao-ben-liang-ge-ban/)                                                                              | technical | technology-digital-life                                     | 是   | 否   | high   |
+| approved | 2018-09-13 | [AppleScript 脚本两个半](/applescript-jiao-ben-liang-ge-ban/)                                                                              | technical | technology-digital-life                                     | 是   | 否   | high   |
 | approved | 2018-09-16 | [iPhone Xʀ 与小型大写字母](/iphone-xryu-xiao-xing-da-xie-zi-mu/)                                                                           | technical | technology-digital-life                                     | 是   | 否   | high   |
-| pending  | 2018-10-20 | [macOS 更新后 Homebrew 报错处理方案](/macos-geng-xin-hou-homebrew-bao-cuo-chu-li-fang-an/)                                                 | technical | technology-digital-life                                     | 是   | 否   | high   |
+| approved | 2018-10-20 | [macOS 更新后 Homebrew 报错处理方案](/macos-geng-xin-hou-homebrew-bao-cuo-chu-li-fang-an/)                                                 | technical | technology-digital-life                                     | 是   | 否   | high   |
 | approved | 2018-12-03 | [盘古之白](/pan-gu-zhi-bai/)                                                                                                               | technical | technology-digital-life、lawyer-toolbox                     | 是   | 否   | low    |
-| pending  | 2019-04-30 | [我在用的安卓APP-201904](/wo-zai-yong-de-an-zhuo-app-201904/)                                                                              | technical | technology-digital-life                                     | 是   | 否   | high   |
-| pending  | 2020-02-19 | [MoneyWiz中新建贷款帐户付款计划闪烁的处理](/moneywiz-zhong-xin-jian-dai-kuan-zhang-hu-fu-kuan-ji-hua-shan-shuo-de-chu-li/)                 | technical | technology-digital-life                                     | 是   | 否   | high   |
+| approved | 2019-04-30 | [我在用的安卓APP-201904](/wo-zai-yong-de-an-zhuo-app-201904/)                                                                              | technical | technology-digital-life、notes-observations                 | 是   | 否   | high   |
+| approved | 2020-02-02 | [LaTeX下使用 Times New Roman 字体的正确姿势](/latex-times-new-roman/)                                                                      | technical | technology-digital-life、lawyer-toolbox                     | 是   | 否   | high   |
+| approved | 2020-02-19 | [MoneyWiz中新建贷款帐户付款计划闪烁的处理](/moneywiz-zhong-xin-jian-dai-kuan-zhang-hu-fu-kuan-ji-hua-shan-shuo-de-chu-li/)                 | technical | technology-digital-life                                     | 是   | 否   | high   |
 | pending  | 2020-02-25 | [四地关于新冠肺炎疫情期间生活费发放标准的梳理](/si-di-guan-yu-xin-guan-fei-yan-yi-qing-qi-jian-sheng-huo-fei-fa-fang-biao-zhun-de-shu-li/) | note      | —                                                           | 是   | 否   | low    |
 | approved | 2020-03-06 | [oh-my-zsh升级失败的解决方法](/oh-my-zsh-sheng-ji-shi-bai-de-jie-jue-fang-fa/)                                                             | technical | technology-digital-life                                     | 是   | 否   | high   |
-| pending  | 2020-06-14 | [Node14报错](/node14-bao-cuo/)                                                                                                             | technical | technology-digital-life                                     | 是   | 否   | high   |
+| approved | 2020-06-14 | [Node14报错](/node14-bao-cuo/)                                                                                                             | technical | technology-digital-life                                     | 是   | 否   | high   |
 | approved | 2020-10-02 | [qpdf使用笔记](/qpdf-shi-yong-bi-ji/)                                                                                                      | technical | technology-digital-life、lawyer-toolbox                     | 是   | 否   | high   |
+| approved | 2021-02-09 | [flash的卸载](/flash-de-xie-zai/)                                                                                                          | technical | technology-digital-life                                     | 是   | 否   | high   |
 | approved | 2021-02-28 | [伪手写HTML排版公众号文章的几点笔记](/wei-shou-xie-html-pai-ban-gong-zhong-hao-wen-zhang-de-ji-dian-bi-ji/)                                | technical | technology-digital-life、lawyer-toolbox                     | 是   | 否   | high   |
-| pending  | 2021-07-29 | [用来处理标签的两个as脚本](/yong-lai-chu-li-biao-qian-de-liang-ge-as-jiao-ben/)                                                            | technical | technology-digital-life                                     | 是   | 否   | high   |
+| approved | 2021-07-29 | [用来处理标签的两个as脚本](/yong-lai-chu-li-biao-qian-de-liang-ge-as-jiao-ben/)                                                            | technical | technology-digital-life                                     | 是   | 否   | high   |
 | pending  | 2014-07-28 | [［折腾记］安装黑苹果，外加迁移本地环境](/ban-dao-mac/)                                                                                    | note      | —                                                           | 是   | 否   | low    |
 | approved | 2017-07-18 | [我常用的三款效率APP](/due-pin-workflow/)                                                                                                  | technical | technology-digital-life、lawyer-toolbox、notes-observations | 是   | 否   | high   |
 | approved | 2015-01-11 | [2013年华中科技大学法学院考研真题](/hustlaw13/)                                                                                            | legal     | legal-practice-research                                     | 是   | 否   | high   |
 | approved | 2015-01-11 | [2014年华中科技大学法学院考研真题](/hustlaw14/)                                                                                            | legal     | legal-practice-research                                     | 是   | 否   | high   |
 | approved | 2015-01-13 | [2015年华中科技大学法学院考研真题](/hustlaw15/)                                                                                            | legal     | legal-practice-research                                     | 是   | 否   | high   |
 | approved | 2015-12-29 | [2016年华中科技大学法学院考研真题](/hustlaw16/)                                                                                            | legal     | legal-practice-research                                     | 是   | 否   | high   |
-| pending  | 2018-01-25 | [从服务协议看 iCloud 迁移](/icloud-terms/)                                                                                                 | technical | technology-digital-life                                     | 是   | 否   | high   |
+| approved | 2017-03-23 | [坚果云&KeePass（多图）](/jianguoyun-keepass/)                                                                                             | technical | technology-digital-life、lawyer-toolbox                     | 是   | 否   | high   |
 | approved | 2017-10-03 | [双拼 VS 全拼](/shuang-pin-vs-quan-pin/)                                                                                                   | technical | technology-digital-life                                     | 是   | 否   | high   |
 
-## P4 · 一般内容（25 篇）
+## P4 · 一般内容（22 篇）
 
 | 状态     | 日期       | 文章                                                                                                          | 类型候选  | 专题候选                                    | 时效 | 免责 | 置信度 |
 | -------- | ---------- | ------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------- | ---- | ---- | ------ |
@@ -84,15 +87,12 @@
 | pending  | 2018-11-17 | [乱弹 20181116](/luan-dan-20181116/)                                                                          | personal  | notes-observations                          | 否   | 否   | medium |
 | approved | 2019-04-18 | [碎碎念之「我们与恶的距离」](/sui-sui-nian-zhi-wo-men-yu-e-de-ju-chi/)                                        | culture   | notes-observations                          | 否   | 否   | high   |
 | pending  | 2019-05-05 | [碎碎念之《何以为家》](/sui-sui-nian-zhi-he-yi-wei-jia/)                                                      | personal  | notes-observations                          | 否   | 否   | medium |
-| pending  | 2020-02-02 | [LaTeX下使用 Times New Roman 字体的正确姿势](/latex-times-new-roman/)                                         | technical | technology-digital-life                     | 否   | 否   | high   |
-| pending  | 2020-02-16 | [Poker键盘自定义备忘](/poker-jian-pan-zi-ding-yi-bei-wang/)                                                   | technical | technology-digital-life                     | 否   | 否   | high   |
+| approved | 2020-02-16 | [Poker键盘自定义备忘](/poker-jian-pan-zi-ding-yi-bei-wang/)                                                   | technical | technology-digital-life、notes-observations | 否   | 否   | high   |
 | pending  | 2020-02-17 | [乱弹20200217](/luan-dan-20200217/)                                                                           | personal  | notes-observations                          | 否   | 否   | medium |
 | pending  | 2020-05-02 | [为什么你就不喜欢发关于我的朋友圈了呢](/wei-shi-me-ni-jiu-bu-xi-huan-fa-guan-yu-wo-de-peng-you-quan-liao-ni/) | note      | —                                           | 否   | 否   | low    |
 | pending  | 2020-05-02 | [说说消费券](/shuo-shuo-xiao-fei-quan/)                                                                       | note      | —                                           | 否   | 否   | low    |
-| pending  | 2021-02-09 | [flash的卸载](/flash-de-xie-zai/)                                                                             | technical | technology-digital-life                     | 否   | 否   | high   |
 | pending  | 2021-02-19 | [碎碎念之你好李焕英](/sui-sui-nian-zhi-ni-hao-li-huan-ying/)                                                  | personal  | notes-observations                          | 否   | 否   | medium |
 | pending  | 2021-10-09 | [突然就三十了](/tu-ran-jiu-san-shi-liao/)                                                                     | personal  | notes-observations                          | 否   | 否   | medium |
-| pending  | 2017-03-23 | [坚果云&KeePass（多图）](/jianguoyun-keepass/)                                                                | technical | technology-digital-life                     | 否   | 否   | high   |
 | approved | 2016-05-17 | [《理论法学的迷雾》笔记](/llfxdmw/)                                                                           | legal     | legal-practice-research、notes-observations | 否   | 否   | high   |
 | pending  | 2014-07-23 | [OpooPress折腾后记](/opoo-zhe-teng/)                                                                          | note      | —                                           | 否   | 否   | low    |
 | pending  | 2017-10-05 | [别人家的「零零后」？](/others-00s/)                                                                          | culture   | notes-observations                          | 否   | 否   | medium |

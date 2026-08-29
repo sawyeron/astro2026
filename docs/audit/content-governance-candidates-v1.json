@@ -291,11 +291,11 @@
         "legalDisclaimer": false,
         "confidence": "high",
         "reasons": [
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+          "人工复核：个人系统配置与应用清单依赖 macOS、iOS 和软件版本。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-09-06-金钱不能买什么.md",
@@ -337,12 +337,10 @@
         "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": [
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        "reasons": ["人工复核：Homebrew 安装机制和仓库结构会随版本变化。"],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-09-09-趁着Tampermonkey回归的脚本盘点.md",
@@ -384,11 +382,11 @@
         "legalDisclaimer": false,
         "confidence": "high",
         "reasons": [
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+          "人工复核：AppleScript、macOS 应用接口与自动化权限可能变化。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-09-16-iPhone-Xʀ与小型大写字母.md",
@@ -431,12 +429,10 @@
         "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": [
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        "reasons": ["人工复核：针对特定 macOS 与 Homebrew 版本的故障处理。"],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-10-26-已预付全部房租的未到期房屋租赁合同不应解除.md",
@@ -664,16 +660,16 @@
       },
       "candidate": {
         "contentKind": "technical",
-        "topics": ["technology-digital-life"],
+        "topics": ["technology-digital-life", "notes-observations"],
         "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
         "reasons": [
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+          "人工复核：带明确日期的 Android 应用清单，应用状态和功能会变化。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2019-05-02-2019年度湖北省道路交通事故损害赔偿标准.md",
@@ -734,13 +730,16 @@
       },
       "candidate": {
         "contentKind": "technical",
-        "topics": ["technology-digital-life"],
-        "timeSensitive": false,
+        "topics": ["technology-digital-life", "lawyer-toolbox"],
+        "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+        "reasons": [
+          "人工复核：LaTeX 引擎、字体包与系统字体配置可能随版本变化。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2020-02-15-湖北高院民二庭通知.md",
@@ -777,13 +776,15 @@
       },
       "candidate": {
         "contentKind": "technical",
-        "topics": ["technology-digital-life"],
+        "topics": ["technology-digital-life", "notes-observations"],
         "timeSensitive": false,
         "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+        "reasons": [
+          "人工复核：特定硬件键位设置备忘，作为个人设备档案保存，不作通用软件指南。"
+        ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2020-02-17-乱弹20200217.md",
@@ -823,12 +824,10 @@
         "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": [
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        "reasons": ["人工复核：针对 MoneyWiz 特定版本界面问题的临时处理。"],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2020-02-25-四地关于新冠肺炎疫情期间生活费发放标准的梳理.md",
@@ -934,12 +933,10 @@
         "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": [
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        "reasons": ["人工复核：针对已过时 Node.js 14 环境的错误处理记录。"],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2020-09-20-2020年度湖北省道路交通事故损害赔偿标准.md",
@@ -1002,12 +999,15 @@
       "candidate": {
         "contentKind": "technical",
         "topics": ["technology-digital-life"],
-        "timeSensitive": false,
+        "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+        "reasons": [
+          "人工复核：Flash 已停止支持，卸载方式依赖当时系统与软件环境。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2021-02-19-碎碎念之你好李焕英.md",
@@ -1096,12 +1096,10 @@
         "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": [
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+        "reasons": ["人工复核：AppleScript 与目标应用标签接口可能随版本变化。"],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2021-10-09-突然就三十了.md",
@@ -1524,17 +1522,17 @@
         "legalDisclaimer": false
       },
       "candidate": {
-        "contentKind": "technical",
-        "topics": ["technology-digital-life"],
+        "contentKind": "mixed",
+        "topics": ["legal-practice-research", "technology-digital-life"],
         "timeSensitive": true,
-        "legalDisclaimer": false,
+        "legalDisclaimer": true,
         "confidence": "high",
         "reasons": [
-          "标题/标签包含软件、系统或效率工具主题",
-          "包含年度、标准、通知、软件版本或现行规则线索"
-        ]
+          "人工复核：围绕当时 iCloud 服务迁移协议的法律与技术观察，具有明确阶段性。"
+        ],
+        "timeSensitivityKind": "temporary-policy"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/jdsnk.md",
@@ -1577,13 +1575,16 @@
       },
       "candidate": {
         "contentKind": "technical",
-        "topics": ["technology-digital-life"],
-        "timeSensitive": false,
+        "topics": ["technology-digital-life", "lawyer-toolbox"],
+        "timeSensitive": true,
         "legalDisclaimer": false,
         "confidence": "high",
-        "reasons": ["标题/标签包含软件、系统或效率工具主题"]
+        "reasons": [
+          "人工复核：云同步、密码管理软件和移动端配置方式可能随版本变化。"
+        ],
+        "timeSensitivityKind": "software-version"
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/lao-dong-zhe-wei-yue-jin.md",
