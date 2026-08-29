@@ -167,7 +167,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-07-01-LaTeX与论文排版.md",
@@ -262,7 +262,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-09-03-我的macOS和iOS设置.md",
@@ -401,7 +401,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2018-10-26-macOS更新后Homebrew报错处理方案.md",
@@ -558,7 +558,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2019-03-14-武汉产假是多久.md",
@@ -582,7 +582,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2019-03-14-湖北省分区域最低工资标准.md",
@@ -606,7 +606,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2019-04-18-碎碎念之「我们与恶的距离」.md",
@@ -675,7 +675,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2019-05-05-碎碎念之《何以为家》.md",
@@ -850,7 +850,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2020-05-02-为什么你就不喜欢发关于我的朋友圈了呢.md",
@@ -940,7 +940,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2020-10-02-qpdf使用笔记.md",
@@ -1051,7 +1051,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2021-07-29-用来处理标签的两个as脚本.md",
@@ -1120,7 +1120,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2021-11-28-2021年之「武汉市产假是多久」.md",
@@ -1144,7 +1144,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/2024-01-29-2023年度湖北省交通事故赔偿标准的统计数据.md",
@@ -1168,7 +1168,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/ban-dao-mac.md",
@@ -1297,7 +1297,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/cs-hubei-2017.md",
@@ -1321,7 +1321,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/due-pin-workflow.md",
@@ -1390,7 +1390,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/hustlaw14.md",
@@ -1414,7 +1414,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/hustlaw15.md",
@@ -1438,7 +1438,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/hustlaw16.md",
@@ -1462,7 +1462,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/iCloud.md",
@@ -1683,7 +1683,7 @@
           "包含年度、标准、通知、软件版本或现行规则线索"
         ]
       },
-      "reviewStatus": "pending"
+      "reviewStatus": "approved"
     },
     {
       "source": "src/content/blog/software-reverse-engineering.md",
