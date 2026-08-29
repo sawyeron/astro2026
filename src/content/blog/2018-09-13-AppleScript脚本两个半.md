@@ -44,7 +44,7 @@ AppleScript 是苹果开发的一种脚本语言，语法结构和自然语言�
 
 ## Hexo 写作与管理
 
-```AppleScript
+```applescript
 set SourceFolder to "/Users/ouyang/Dropbox/gblog/source"
 
 if application "Visual Studio Code" is running then
@@ -63,7 +63,7 @@ end if
 
 - **目前方案** MBP 未安装 Flash 插件，为避免风扇狂转和电脑发热，就选择在 Google Chrome 中看视频和电影。所以，需要从 Safari 切换到 Google Chrome 的时候，就可以使用该插件。
 
-```AppleScript
+```applescript
 tell application "Safari"
     set myURL to URL of current tab of front window
 end tell
@@ -82,7 +82,7 @@ end tell
 
 - **备用方案** (Source Page: [prenagha](https://gist.github.com/prenagha/3153606))
 
-```AppleScript
+```applescript
 --
 -- open currently open URL in Safari in Chrome
 --
@@ -126,7 +126,7 @@ end appIsRunning
 
 **适用场景** 主要用于剪藏公众号文章。使用 Google Chrome 访问微信公众号文章时，所加载图片的格式均为 WebP，而印象笔记（Evernote）并不支持该格式，就会出现通过 Google Chrome 访问和剪藏到印象笔记的文章，图片内容无法加载。同时，从搜狗微信搜索中获取的公众号文章的网址为临时链接，一天后会自动失效，有时需要花不少时间去找原文章。因此，在剪藏公众号文章或者使用搜狗微信搜索时，我都会先切换到 Safari 再进行剪藏操作（Safari 加载公众号文章的图片均为 JPG 格式）。
 
-```AppleScript
+```applescript
 ---
 --- open currently active Chrome tab with Safari
 ---

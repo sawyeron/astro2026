@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-08-29T09:56:40.751Z",
+  "status": "passed",
+  "limits": {
+    "totalAstroBytes": 350000,
+    "largestAstroBytes": 180000,
+    "largestImageBytes": 6500000,
+    "totalJavaScriptBytes": 500000,
+    "totalFirstPartyJavaScriptBytes": 20000
+  },
+  "metrics": {
+    "totalBuildBytes": 21323122,
+    "totalAstroBytes": 9376,
+    "largestAstroAsset": {
+      "file": "/Users/otis/Documents/sawyeron/astro2026/dist/_astro/_legacyPath_.2G3YGNLa.css",
+      "relative": "_astro/_legacyPath_.2G3YGNLa.css",
+      "bytes": 4689
+    },
+    "totalJavaScriptBytes": 441271,
+    "totalFirstPartyJavaScriptBytes": 0,
+    "largestImage": {
+      "file": "/Users/otis/Documents/sawyeron/astro2026/dist/images/2018/adam.jpg",
+      "relative": "images/2018/adam.jpg",
+      "bytes": 6186162
+    },
+    "imageCount": 71
+  },
+  "failures": [],
+  "warnings": [
+    "images/2017/resend-1.png: large historical image (1177852 bytes)",
+    "images/2017/resend-2.png: large historical image (1385901 bytes)",
+    "images/2017/resend-3.png: large historical image (1872762 bytes)",
+    "images/2017/resend-4.png: large historical image (1307821 bytes)",
+    "images/2017/resend-5.png: large historical image (1162843 bytes)",
+    "images/2018/adam.jpg: large historical image (6186162 bytes)"
+  ]
+}

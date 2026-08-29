@@ -1,0 +1,215 @@
+{
+  "generatedAt": "2026-08-29T09:56:22.692Z",
+  "files": 84,
+  "counts": {
+    "http-link": 41
+  },
+  "failures": [],
+  "findings": [
+    {
+      "file": "src/content/blog/2018-04-13-冷冻胚胎的法律地位.md",
+      "kind": "http-link",
+      "sample": "http://k.sina.com.cn/article_5507903695_1484bf0cf019006e6t.html"
+    },
+    {
+      "file": "src/content/blog/2018-06-07-大雄的金银岛.md",
+      "kind": "http-link",
+      "sample": "http://music.163.com/#/song?id=541499254"
+    },
+    {
+      "file": "src/content/blog/2018-06-07-大雄的金银岛.md",
+      "kind": "http-link",
+      "sample": "http://music.163.com/#/song?id=541480237"
+    },
+    {
+      "file": "src/content/blog/2018-06-30-2018年度湖北省道路交通事故损害赔偿标准.md",
+      "kind": "http-link",
+      "sample": "http://gat.hubei.gov.cn/gk/zcfg/stwj/277193.htm"
+    },
+    {
+      "file": "src/content/blog/2018-07-25-Vcard与二维码名片.md",
+      "kind": "http-link",
+      "sample": "http://www.gb688.cn/bzgk/gb/newGbInfo?hcno=CA759A0DC00BF44159CAF4D7670CA5B2"
+    },
+    {
+      "file": "src/content/blog/2018-07-25-Vcard与二维码名片.md",
+      "kind": "http-link",
+      "sample": "http://www.shlawyers.cn"
+    },
+    {
+      "file": "src/content/blog/2018-09-03-我的macOS和iOS设置.md",
+      "kind": "http-link",
+      "sample": "http://liqi.io/community/"
+    },
+    {
+      "file": "src/content/blog/2018-09-09-趁着Tampermonkey回归的脚本盘点.md",
+      "kind": "http-link",
+      "sample": "http://item.jd.com/*******.html?jd_pop=*******&abt=*`的链接时，会自动净化"
+    },
+    {
+      "file": "src/content/blog/2018-09-09-趁着Tampermonkey回归的脚本盘点.md",
+      "kind": "http-link",
+      "sample": "http://item.jd.com/*******.html`。"
+    },
+    {
+      "file": "src/content/blog/2018-12-05-省司法厅关于律师服务和基层法律服务收费不再实行政府定价的通知.md",
+      "kind": "http-link",
+      "sample": "http://info.hbpic.gov.cn/hbpic/index.do?flag=trs&form=VIEW02&id=8291"
+    },
+    {
+      "file": "src/content/blog/2018-12-05-省司法厅关于律师服务和基层法律服务收费不再实行政府定价的通知.md",
+      "kind": "http-link",
+      "sample": "http://info.hbpic.gov.cn/hbpic/index.do?flag=trs&form=view02&id=7820"
+    },
+    {
+      "file": "src/content/blog/2019-05-02-2019年度湖北省道路交通事故损害赔偿标准.md",
+      "kind": "http-link",
+      "sample": "http://gat.hubei.gov.cn/gk/zcfg/stwj/302750.htm"
+    },
+    {
+      "file": "src/content/blog/2020-02-17-乱弹20200217.md",
+      "kind": "http-link",
+      "sample": "http://views.ce.cn/view/ent/201312/25/t20131225_1994093.shtml"
+    },
+    {
+      "file": "src/content/blog/2021-02-28-伪手写HTML排版公众号文章的几点笔记.md",
+      "kind": "http-link",
+      "sample": "http://www.w3.org/2000/svg\">"
+    },
+    {
+      "file": "src/content/blog/2021-10-10-2021年度湖北省交通事故赔偿标准.md",
+      "kind": "http-link",
+      "sample": "http://tjj.hubei.gov.cn/hdjl/cjwt/202109/t20210908_3744577.shtml"
+    },
+    {
+      "file": "src/content/blog/2021-11-28-2021年之「武汉市产假是多久」.md",
+      "kind": "http-link",
+      "sample": "http://tjj.hubei.gov.cn/hdjl/cjwt/202109/t20210908_3744577.shtml"
+    },
+    {
+      "file": "src/content/blog/cc.md",
+      "kind": "http-link",
+      "sample": "http://www.gratisography.com/"
+    },
+    {
+      "file": "src/content/blog/cc.md",
+      "kind": "http-link",
+      "sample": "http://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "file": "src/content/blog/cc.md",
+      "kind": "http-link",
+      "sample": "http://www.lofter.com/CreativeCommons"
+    },
+    {
+      "file": "src/content/blog/cc.md",
+      "kind": "http-link",
+      "sample": "http://people.ubuntu.com/~happyaron/udc-cn/lucid-html/ch01s02.html"
+    },
+    {
+      "file": "src/content/blog/cc.md",
+      "kind": "http-link",
+      "sample": "http://www.gnu.org/philosophy/open-source-misses-the-point.zh-cn.html"
+    },
+    {
+      "file": "src/content/blog/cc.md",
+      "kind": "http-link",
+      "sample": "http://www.gratisography.com/terms.html"
+    },
+    {
+      "file": "src/content/blog/cs-hubei-2017.md",
+      "kind": "http-link",
+      "sample": "http://www.hbgat.gov.cn/gk/zcfg/stwj/231681.htm"
+    },
+    {
+      "file": "src/content/blog/cs-hubei-2017.md",
+      "kind": "http-link",
+      "sample": "http://www.hbgat.gov.cn/gk/zcfg/stwj/231681.htm"
+    },
+    {
+      "file": "src/content/blog/due-pin-workflow.md",
+      "kind": "http-link",
+      "sample": "http://alphalawyer.cn"
+    },
+    {
+      "file": "src/content/blog/due-pin-workflow.md",
+      "kind": "http-link",
+      "sample": "http://workflow.sspai.com"
+    },
+    {
+      "file": "src/content/blog/due-pin-workflow.md",
+      "kind": "http-link",
+      "sample": "http://www.ifanr.com/app/734408"
+    },
+    {
+      "file": "src/content/blog/due-pin-workflow.md",
+      "kind": "http-link",
+      "sample": "http://ioszen.com/pin#pin-的起源"
+    },
+    {
+      "file": "src/content/blog/jianguoyun-keepass.md",
+      "kind": "http-link",
+      "sample": "http://help.jianguoyun.com/?p=82"
+    },
+    {
+      "file": "src/content/blog/jianguoyun-keepass.md",
+      "kind": "http-link",
+      "sample": "http://www.iplaysoft.com/lastpass.html"
+    },
+    {
+      "file": "src/content/blog/jianguoyun-keepass.md",
+      "kind": "http-link",
+      "sample": "http://www.freebuf.com/news/70081.html"
+    },
+    {
+      "file": "src/content/blog/jianguoyun-keepass.md",
+      "kind": "http-link",
+      "sample": "http://keepass.info/"
+    },
+    {
+      "file": "src/content/blog/opoo-zhe-teng.md",
+      "kind": "http-link",
+      "sample": "http://oyblog.qiniudn.com/images/git-shell.png"
+    },
+    {
+      "file": "src/content/blog/opoo-zhe-teng.md",
+      "kind": "http-link",
+      "sample": "http://oyblog.qiniudn.com/images/op-build.png"
+    },
+    {
+      "file": "src/content/blog/qxpj.md",
+      "kind": "http-link",
+      "sample": "http://www.npc.gov.cn/npc/xinwen/fztd/sfjs/2009-07/14/content_1510405.htm"
+    },
+    {
+      "file": "src/content/blog/shuang-pin-vs-quan-pin.md",
+      "kind": "http-link",
+      "sample": "http://rime.im"
+    },
+    {
+      "file": "src/content/blog/software-reverse-engineering.md",
+      "kind": "http-link",
+      "sample": "http://digital-law-online.info/cases/24PQ2D1561.htm"
+    },
+    {
+      "file": "src/content/blog/webfont-yu-zhe-zuo-quan.md",
+      "kind": "http-link",
+      "sample": "http://www.w3school.com.cn/cssref/pr_font_font-family.asp"
+    },
+    {
+      "file": "src/content/blog/wei-ji-hou-ban-quan.md",
+      "kind": "http-link",
+      "sample": "http://www.zhihu.com/people/BLGSeven"
+    },
+    {
+      "file": "src/content/blog/yu-ming-zhuan-yi.md",
+      "kind": "http-link",
+      "sample": "http://www.idcspy.com/go/reports.internic.net/cgi/registrars/problem-report.cgi](http://www.idcspy.com/go/reports.internic.net/cgi/registrars/problem-report.cgi"
+    },
+    {
+      "file": "src/content/blog/zhetengb.md",
+      "kind": "http-link",
+      "sample": "http://teddysun.com/342.html"
+    }
+  ]
+}

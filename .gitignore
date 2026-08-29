@@ -13,11 +13,12 @@ dist/
 .DS_Store
 .vscode/
 
-# Generated audit evidence is reproducible from scripts/audit-legacy.mjs
+# Browser audit evidence (screenshots and JSON) is reproducible locally
+# and intentionally excluded from Git to avoid binary churn.
 docs/audit/generated/
 
-# Image processing cache
-.cache/
+# Playwright browser downloads
+.playwright/
 
 .pi/
 .agent/

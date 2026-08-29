@@ -88,6 +88,10 @@ if (report.candidates.length !== 84)
   failures.push(
     `expected 84 governance candidates, found ${report.candidates.length}`,
   );
+if (counts.pending !== 0 || counts.rejected !== 0 || counts.approved !== 84)
+  failures.push(
+    `initial governance baseline requires 84 approved, 0 pending, 0 rejected; found ${counts.approved}/${counts.pending}/${counts.rejected}`,
+  );
 if (failures.length) {
   console.error(
     `Content governance validation failed with ${failures.length} error(s):`,

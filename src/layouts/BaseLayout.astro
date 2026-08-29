@@ -53,7 +53,7 @@ const analyticsEnabled = import.meta.env.PROD && Boolean(cloudflareBeaconToken);
   <body>
     <div class="site-shell">
       <a class="skip-link" href="#main-content">跳至主要内容</a>
-      <main id="main-content" data-pagefind-body><slot /></main>
+      <main id="main-content" tabindex="-1" data-pagefind-body><slot /></main>
       <footer class="site-footer">
         <div>
           <a href="/">小法进阶</a>

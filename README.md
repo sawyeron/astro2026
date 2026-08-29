@@ -23,6 +23,45 @@ npm run verify
 
 [`docs/audit/asset-recovery-register.json`](docs/audit/asset-recovery-register.json) tracks every legacy image reference that was already missing from both the Hexo source tree and generated site. Authorized recoveries from `sawyeron/Pics` are committed under `public/images/` at their historical public paths with pinned source commits and SHA-256 values. `npm run check:assets` validates the register and recovered files. Unresolved entries must be recovered, replaced with authorized media, or given an explicit accessible placeholder before production cutover.
 
+## Writing and governance workflow
+
+Create a private draft with:
+
+```bash
+npm run new:post -- "文章标题"
+```
+
+Drafts are stored in `src/content/drafts/`, committed to Git, and never routed, indexed, placed in feeds, or included in the sitemap. Before publication, move the file into `src/content/blog/`, add a unique public path and the governed fields (`contentKind`, `topics`, `timeSensitive`, optional `timeSensitivityKind`, and `legalDisclaimer`), then update and approve the governance register. `npm run check:governance` requires the migration baseline of 84 historical articles to remain fully approved.
+
+The review sheet at [`docs/audit/content-governance-review-sheet.md`](docs/audit/content-governance-review-sheet.md) displays the current type, topics, time-sensitivity kind, disclaimer decision, and manual review reason. Governance tooling changes Front Matter only and must not rewrite historical article bodies.
+
+## Quality and browser acceptance
+
+The normal deterministic gate is:
+
+```bash
+npm run verify
+```
+
+It includes content, route, feed, search, HTML interaction, performance-budget, and governance checks. Browser evidence is a separate local acceptance step because it requires Chromium:
+
+```bash
+npm run build:site
+npm run start -- --host 0.0.0.0
+# in another shell
+npm run check:browser
+```
+
+Browser screenshots and its JSON report are reproducible evidence under `docs/audit/generated/browser/` and are intentionally ignored by Git. The audit checks keyboard skip navigation, Pagefind queries, footnote round-trips, 404 behavior, mobile horizontal overflow, serious axe violations, console errors, and unexpected third-party requests.
+
+For a deployed Preview or production origin:
+
+```bash
+npm run check:remote -- https://example-preview.vercel.app
+```
+
+See [`docs/production-cutover-runbook.md`](docs/production-cutover-runbook.md) for Preview acceptance, DNS cutover, and rollback.
+
 ## Deployment baseline
 
 - [`.github/workflows/verify.yml`](.github/workflows/verify.yml) uses `.nvmrc` and runs `npm ci` followed by `npm run verify` on pull requests and `main`.
