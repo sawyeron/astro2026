@@ -1,0 +1,65 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  if (!import.meta.env.DEV) return [];
+  const drafts = await getCollection("drafts");
+  return [
+    { params: { draft: undefined }, props: { entry: null, drafts } },
+    ...drafts.map((entry) => ({
+      params: { draft: entry.slug },
+      props: { entry, drafts },
+    })),
+  ];
+}
+const { entry, drafts } = Astro.props;
+const rendered = entry ? await render(entry) : null;
+const Content = rendered?.Content;
+---
+
+<BaseLayout title={entry ? `草稿预览：${entry.data.title}` : "本地草稿"}>
+  <Fragment slot="head">
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+  </Fragment>
+  <section class="draft-preview">
+    <p class="notice">仅开发环境 · 尚未发布 · 不要在公开网络运行此服务器</p>
+    <h1>{entry?.data.title ?? "本地草稿"}</h1>
+    {
+      Content ? (
+        <>
+          <p>
+            <a href="/draft-preview/">返回草稿列表</a>
+          </p>
+          <article class="prose">
+            <Content />
+          </article>
+        </>
+      ) : (
+        <ul>
+          {drafts.map((draft) => (
+            <li>
+              <a href={`/draft-preview/${draft.slug}/`}>{draft.data.title}</a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </section>
+</BaseLayout>
+
+<style>
+  .draft-preview {
+    max-width: 48rem;
+    margin: 3rem auto;
+    padding: 0 1.25rem;
+  }
+  .notice {
+    color: #9e3428;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1rem;
+  }
+  li {
+    margin-block: 0.75rem;
+  }
+</style>

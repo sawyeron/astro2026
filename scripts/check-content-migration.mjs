@@ -54,7 +54,7 @@ const seenPaths = new Set();
 
 for (const [kind, root] of Object.entries(collectionRoots)) {
   const files = await markdownFiles(root);
-  if (files.length !== expected[kind])
+  if (files.length < expected[kind])
     failures.push(
       `${kind}: expected ${expected[kind]} Markdown files, found ${files.length}`,
     );
@@ -70,7 +70,10 @@ for (const [kind, root] of Object.entries(collectionRoots)) {
       continue;
     }
     const { data, body } = document;
-    if (!text.includes(generatedHeader))
+    if (
+      (data.legacyPath || kind === "pages") &&
+      !text.includes(generatedHeader)
+    )
       failures.push(`${relative}: missing generated-file marker`);
     if (/<!--\s*more\s*-->/i.test(body))
       failures.push(`${relative}: contains a Hexo more marker`);
@@ -95,7 +98,15 @@ for (const [kind, root] of Object.entries(collectionRoots)) {
         );
     }
 
-    if (kind === "blog") {
+    if (kind === "blog" && !data.legacyPath) {
+      if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(data.slug ?? ""))
+        failures.push(`${relative}: new post needs a stable slug`);
+      if (!data.description || data.draft !== false)
+        failures.push(
+          `${relative}: published post needs description and draft=false`,
+        );
+    }
+    if (kind === "blog" && data.legacyPath) {
       if (!data.description)
         failures.push(`${relative}: description is required`);
       if (data.draft !== false)

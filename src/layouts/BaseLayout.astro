@@ -74,6 +74,7 @@ const today = new Intl.DateTimeFormat("zh-CN", {
     />
     <link rel="canonical" href={canonical} />
     <title>{fullTitle}</title>
+    <slot name="head" />
     {
       analyticsEnabled && (
         <script

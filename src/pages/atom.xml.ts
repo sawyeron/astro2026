@@ -1,3 +1,4 @@
+import { articlePath } from "../lib/article-path";
 import { getCollection } from "astro:content";
 import { site } from "../config/site";
 
@@ -20,7 +21,7 @@ export async function GET() {
       .sort((a, b) => b.valueOf() - a.valueOf())[0] ?? new Date(0);
   const entries = articles
     .map((article) => {
-      const url = new URL(article.data.legacyPath ?? "/", site.origin).href;
+      const url = new URL(articlePath(article), site.origin).href;
       const articleUpdated = article.data.updated ?? article.data.date;
       return `  <entry>
     <title>${escapeXml(article.data.title)}</title>

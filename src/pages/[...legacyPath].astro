@@ -1,4 +1,5 @@
 ---
+import { articlePath } from "../lib/article-path";
 import { getCollection, render } from "astro:content";
 import ArticleLayout from "../layouts/ArticleLayout.astro";
 
@@ -11,23 +12,21 @@ export async function getStaticPaths() {
     const next = articles[index + 1];
     return {
       params: {
-        legacyPath: article.data.legacyPath
-          ?.replace(/^\//, "")
-          .replace(/\/$/, ""),
+        legacyPath: articlePath(article).replace(/^\//, "").replace(/\/$/, ""),
       },
       props: {
         article,
         previousArticle: previous
           ? {
               title: previous.data.title,
-              href: previous.data.legacyPath!,
+              href: articlePath(previous),
               date: previous.data.date,
             }
           : undefined,
         nextArticle: next
           ? {
               title: next.data.title,
-              href: next.data.legacyPath!,
+              href: articlePath(next),
               date: next.data.date,
             }
           : undefined,

@@ -1,4 +1,5 @@
 ---
+import { articlePath } from "../../../lib/article-path";
 import { getCollection } from "astro:content";
 import IndexLayout from "../../../layouts/IndexLayout.astro";
 import { displayTaxonomyValue } from "../../../lib/taxonomy";
@@ -21,7 +22,7 @@ const title = displayTaxonomyValue(tag);
   title={title}
   description={`标记为“${title}”的 ${articles.length} 篇历史文章。`}
   items={articles.map((article) => ({
-    href: article.data.legacyPath ?? "/",
+    href: articlePath(article),
     title: article.data.title,
     date: article.data.date,
     description: article.data.description,

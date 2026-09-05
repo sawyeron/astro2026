@@ -1,3 +1,4 @@
+import { articlePath } from "../lib/article-path";
 import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 import { site } from "../config/site";
@@ -16,7 +17,7 @@ export async function GET(context: { site?: URL }) {
       title: article.data.title,
       description: article.data.description,
       pubDate: article.data.date,
-      link: article.data.legacyPath ?? "/",
+      link: articlePath(article),
       categories: [...article.data.categories, ...article.data.tags],
     })),
   });
