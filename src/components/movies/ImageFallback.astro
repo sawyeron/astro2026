@@ -1,0 +1,54 @@
+<!-- Local-only failure handling: never retries against a different provider. -->
+<script>
+  const markFailed = (image: HTMLImageElement) => {
+    if (image.classList.contains("ambient")) {
+      image.style.display = "none";
+      return;
+    }
+    if (image.dataset.failed === "true") return;
+    image.dataset.failed = "true";
+    const placeholder = document.createElement("span");
+    placeholder.className = "failed-poster";
+    placeholder.textContent = "海报暂时无法加载";
+    placeholder.setAttribute("role", "img");
+    placeholder.setAttribute("aria-label", `${image.alt}，暂时无法加载`);
+    image.hidden = true;
+    image.style.setProperty("display", "none", "important");
+    image.parentElement?.append(placeholder);
+  };
+  document
+    .querySelectorAll<HTMLImageElement>(".media-card img, .hero-slide img")
+    .forEach((image) => {
+      image.addEventListener("error", () => markFailed(image), { once: true });
+      if (
+        image.getAttribute("src") &&
+        image.complete &&
+        image.naturalWidth === 0
+      )
+        markFailed(image);
+    });
+</script>
+<style is:global>
+  body[data-theme="cinema"] img[data-failed="true"] {
+    display: none;
+  }
+  .failed-poster {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 10rem;
+    padding: 1rem;
+    text-align: center;
+    color: #c4c4ce;
+    background: #26262e;
+    border-radius: 12px;
+    font: 0.8rem/1.6 var(--font-sans);
+  }
+  .hero-art .failed-poster {
+    width: min(100%, 18rem);
+    aspect-ratio: 2 / 3;
+    height: auto;
+  }
+</style>

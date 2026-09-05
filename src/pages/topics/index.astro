@@ -1,4 +1,5 @@
 ---
+import { articlePath } from "../../lib/article-path";
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { topicDescriptions, topicLabels, type Topic } from "../../lib/topics";
@@ -85,7 +86,7 @@ const years = articles.map((article) => article.data.date.getFullYear());
               {latest && (
                 <p class="latest">
                   <span>最近收录</span>
-                  <a href={latest.data.legacyPath}>{latest.data.title}</a>
+                  <a href={articlePath(latest)}>{latest.data.title}</a>
                 </p>
               )}
             </div>

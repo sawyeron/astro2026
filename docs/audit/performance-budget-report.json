@@ -9,19 +9,19 @@
     "totalFirstPartyJavaScriptBytes": 20000
   },
   "metrics": {
-    "totalBuildBytes": 22688324,
-    "totalAstroBytes": 44681,
+    "totalAstroBytes": 68723,
     "largestAstroAsset": {
-      "relative": "_astro/_legacyPath_.CnvILnrz.css",
-      "bytes": 11201
+      "relative": "_astro/movies.05cd1z4s.css",
+      "bytes": 13749
     },
-    "totalJavaScriptBytes": 441271,
-    "totalFirstPartyJavaScriptBytes": 0,
+    "inlineJavaScriptBytes": 4736,
+    "totalJavaScriptBytes": 446007,
+    "totalFirstPartyJavaScriptBytes": 4736,
     "largestImage": {
       "relative": "images/2018/adam.jpg",
       "bytes": 6186162
     },
-    "imageCount": 71
+    "imageCount": 548
   },
   "failures": [],
   "warnings": [

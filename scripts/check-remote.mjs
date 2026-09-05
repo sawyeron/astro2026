@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* global fetch */
 import process from "node:process";
 
 const origin = (process.argv[2] ?? "").replace(/\/$/, "");
@@ -21,7 +20,7 @@ async function check(route, expected = 200, contains) {
 }
 await check("/", 200, "小法进阶");
 await check("/topics/", 200, "专题");
-await check("/movies/", 200, "个人观影记录");
+await check("/movies/", 200, "私人观影记录");
 await check("/search/", 200, "pagefind-ui.js");
 await check("/cetrain-issues-iv-for-company-law/", 200, "dfref-footnote-29");
 await check("/rss.xml", 200, "<rss");
@@ -38,6 +37,9 @@ if (
     ?.includes("/archives/?year=2014")
 )
   failures.push("/archives/2014/: permanent redirect destination mismatch");
+const legacyTimeline = await check("/timeline/", 308);
+if (!legacyTimeline.response.headers.get("location")?.includes("/archives/"))
+  failures.push("/timeline/: permanent redirect destination mismatch");
 const home = await fetch(`${origin}/`);
 for (const header of [
   "x-content-type-options",

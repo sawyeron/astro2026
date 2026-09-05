@@ -39,7 +39,6 @@ const rendered = new Set([
   "/",
   "/about/",
   "/PGP/",
-  "/timeline/",
   "/movies/",
   "/archives/",
   "/categories/",
@@ -50,6 +49,10 @@ const rendered = new Set([
 ]);
 
 for (const { route } of legacyRoutes) {
+  if (route === "/timeline/") {
+    redirects.set(route, "/archives/");
+    continue;
+  }
   if (rendered.has(route)) continue;
   let destination;
   if (/^\/page\/\d+\/$/.test(route)) destination = "/archives/";

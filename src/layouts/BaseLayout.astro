@@ -2,12 +2,29 @@
 import "../styles/global.css";
 import { site } from "../config/site";
 
-const { title = site.name, description = "法律、技术与个人知识档案。" } =
-  Astro.props;
+type Props = {
+  title?: string;
+  description?: string;
+  theme?: "editorial" | "cinema";
+};
+
+const {
+  title = site.name,
+  description = "法律、技术与个人知识档案。",
+  theme = "editorial",
+} = Astro.props as Props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const fullTitle = title === site.name ? title : `${title} | ${site.name}`;
 const cloudflareBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN?.trim();
 const analyticsEnabled = import.meta.env.PROD && Boolean(cloudflareBeaconToken);
+const themeColor = theme === "cinema" ? "#141416" : "#f3f0e8";
+const colorScheme = theme === "cinema" ? "dark" : "light";
+const today = new Intl.DateTimeFormat("zh-CN", {
+  timeZone: site.timeZone,
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+}).format(new Date());
 ---
 
 <!doctype html>
@@ -16,8 +33,8 @@ const analyticsEnabled = import.meta.env.PROD && Boolean(cloudflareBeaconToken);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="color-scheme" content="light" />
-    <meta name="theme-color" content="#f7f5ef" />
+    <meta name="color-scheme" content={colorScheme} />
+    <meta name="theme-color" content={themeColor} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_CN" />
     <meta property="og:site_name" content={site.name} />
@@ -25,7 +42,24 @@ const analyticsEnabled = import.meta.env.PROD && Boolean(cloudflareBeaconToken);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta name="twitter:card" content="summary" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="/favicon-32x32.png?v=20260830-seal"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/favicon-16x16.png?v=20260830-seal"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="shortcut icon" href="/favicon.ico?v=20260830-seal" />
+    <link
+      rel="apple-touch-icon"
+      href="/apple-touch-icon.png?v=20260830-seal"
+      sizes="180x180"
+    />
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -40,6 +74,7 @@ const analyticsEnabled = import.meta.env.PROD && Boolean(cloudflareBeaconToken);
     />
     <link rel="canonical" href={canonical} />
     <title>{fullTitle}</title>
+    <slot name="head" />
     {
       analyticsEnabled && (
         <script
@@ -51,33 +86,69 @@ const analyticsEnabled = import.meta.env.PROD && Boolean(cloudflareBeaconToken);
       )
     }
   </head>
-  <body>
+  <body data-theme={theme}>
     <div class="site-shell">
       <a class="skip-link" href="#main-content">跳至主要内容</a>
+      <header class="site-header">
+        <div class="utility-bar">
+          <span>Independent editorial archive</span>
+          <div class="utility-links">
+            <a href="/search/">搜索</a><a href="/rss.xml">RSS</a>
+          </div>
+        </div>
+        <a class="site-brand" href="/" aria-label="小法进阶首页">
+          <span class="site-brand-copy">
+            <span class="site-brand-kicker"
+              >Personal research archive · Est. 2013</span
+            >
+            <strong>小法进阶</strong>
+            <span>法律 · 技术 · 个人知识档案</span>
+          </span>
+          <img
+            class="site-brand-mark"
+            src="/logo-icon.png"
+            width="512"
+            height="512"
+            alt=""
+            aria-hidden="true"
+          />
+        </a>
+        <nav class="primary-nav" aria-label="主要导航">
+          <span class="nav-date">{today}</span>
+          <ul>
+            <li><a href="/archives/">文章</a></li><li>
+              <a href="/topics/">专题</a>
+            </li><li><a href="/movies/">观影</a></li><li>
+              <a href="/about/">关于</a>
+            </li>
+          </ul>
+          <a class="nav-latest" href="/archives/">全部文章 →</a>
+        </nav>
+      </header>
       <main id="main-content" tabindex="-1" data-pagefind-body><slot /></main>
       <footer class="site-footer">
-        <div>
-          <a href="/">小法进阶</a>
-          <span aria-hidden="true">/</span>
-          <a href="/topics/">专题</a>
-          <span aria-hidden="true">/</span>
-          <a href="/archives/">归档</a>
-          <span aria-hidden="true">/</span>
-          <a href="/search/">搜索</a>
-          <span aria-hidden="true">/</span>
-          <a href="/about/">关于</a>
-          <span aria-hidden="true">/</span>
-          <a href="/movies/">观影</a>
-          <span aria-hidden="true">/</span>
-          <a href="/rss.xml">RSS</a>
+        <div class="footer-grid">
+          <div class="footer-identity">
+            <strong>小法进阶</strong><p>
+              以法律专业为主轴、以技术和方法为细节的个人知识档案。历史文本保留其写作时的认识与语境。
+            </p>
+          </div>
+          <div class="footer-links">
+            <b>ARCHIVE</b><a href="/archives/">文章归档</a><a href="/topics/"
+              >专题阅读</a
+            ><a href="/search/">全文搜索</a>
+          </div>
+          <div class="footer-links">
+            <b>INFORMATION</b><a href="/about/">关于本站</a><a href="/movies/"
+              >观影记录</a
+            ><a href="/rss.xml">RSS</a><a href="/atom.xml">Atom</a>
+          </div>
         </div>
-        <p>
-          本站无评论系统，不使用 Google Analytics。Cloudflare Web Analytics
-          仅统计汇总访问数据，不使用 Cookie，也不建立访客画像。
-        </p>
-        <p>
-          原创内容除特别说明外采用 CC BY 4.0；历史文章请结合其发布日期阅读。
-        </p>
+        <div class="footer-bottom">
+          <span>原创内容除特别说明外采用 CC BY 4.0</span><span
+            >静态生成 · 无评论系统 · 无访客画像</span
+          >
+        </div>
       </footer>
     </div>
   </body>

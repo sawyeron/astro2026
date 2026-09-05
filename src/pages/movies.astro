@@ -1,427 +1,75 @@
 ---
+import MediaRail from "../components/movies/MediaRail.astro";
+import CollectionGrid from "../components/movies/CollectionGrid.astro";
+import WatchLog from "../components/movies/WatchLog.astro";
+import ImageFallback from "../components/movies/ImageFallback.astro";
+import ScreeningHeader from "../components/movies/ScreeningHeader.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import movieData from "../data/movies-legacy.json";
+import { collectionMediaCards, type MovieSnapshot } from "../lib/movies";
+import traktData from "../data/trakt-public-history.json";
 
-const watched = [...movieData.watched].sort((a, b) =>
-  String(b.seenDate).localeCompare(String(a.seenDate)),
-);
-const watchlist = movieData.watchlist;
-const years = new Map<string, number>();
-for (const movie of watched) {
-  const year = movie.seenDate?.slice(0, 4) || "未记录";
-  years.set(year, (years.get(year) ?? 0) + 1);
-}
-const yearSummary = [...years].sort((a, b) => b[0].localeCompare(a[0]));
-const notedCount = watched.filter((movie) => movie.comment?.trim()).length;
-const peakYear = [...yearSummary].sort((a, b) => b[1] - a[1])[0];
-const dateRange = watched.length
-  ? `${watched.at(-1)?.seenDate?.slice(0, 4) ?? "—"}—${watched[0]?.seenDate?.slice(0, 4) ?? "—"}`
-  : "—";
+const data = traktData as unknown as MovieSnapshot;
+const movies = collectionMediaCards(data.movies);
+const shows = collectionMediaCards(data.shows);
 ---
 
-<BaseLayout title="观影" description="个人观影记录的历史静态快照。">
-  <header class="cinema-header">
-    <a class="back" href="/">← 小法进阶</a>
-    <div class="reel" aria-hidden="true">
-      <span></span><span></span><span></span><span></span><span></span>
-    </div>
-    <p class="eyebrow">SCREENING LOG · STATIC ARCHIVE</p>
-    <h1>观影<span>记录</span></h1>
-    <div class="header-notes">
-      <p>
-        一份不追求评分权威的私人放映日志：记住看过什么，也保留尚未赴约的片单。
-      </p>
-      <dl>
-        <div><dt>{watched.length}</dt><dd>已看</dd></div>
-        <div><dt>{watchlist.length}</dt><dd>想看</dd></div>
-        <div><dt>{dateRange}</dt><dd>记录跨度</dd></div>
-        <div><dt>{notedCount}</dt><dd>留有备注</dd></div>
-      </dl>
-    </div>
-  </header>
+<BaseLayout title="观影" description="私人观影记录。" theme="cinema">
+  <ScreeningHeader
+    historyCount={data.counts.history}
+    movieCount={data.movies.length}
+    showCount={data.shows.length}
+    history={data.history}
+  />
 
-  <main>
-    <aside class="archive-notice">
-      <strong>历史快照</strong>
-      <p>
-        本页由旧站观影记录导入。原海报来自第三方缓存，为避免继续产生跨站请求，新页面不加载海报；片名、条目链接、观看日期和旧备注仍予保留。未来可接入
-        Trakt 构建期同步并缓存本地快照。
-      </p>
-    </aside>
-
-    <section class="year-strip" aria-labelledby="year-heading">
-      <div class="section-heading">
-        <p>01 / YEARS</p>
-        <h2 id="year-heading">观看刻度</h2>
-      </div>
-      <ol aria-label="按年份跳转">
-        {
-          yearSummary.map(([year, count]) => (
-            <li>
-              <a href={`#year-${year}`}>
-                <span>{year}</span>
-                <strong>{count}</strong>
-              </a>
-            </li>
-          ))
-        }
-      </ol>
-      {
-        peakYear && (
-          <p class="year-summary">
-            高峰年份 {peakYear[0]} · {peakYear[1]} 部
-          </p>
-        )
-      }
-    </section>
-
-    <section aria-labelledby="watched-heading">
-      <div class="section-heading">
-        <p>02 / WATCHED</p>
-        <h2 id="watched-heading">已看</h2>
-      </div>
-      <ol class="film-list">
-        {
-          watched.map((movie, index) => (
-            <li
-              id={
-                index === 0 ||
-                movie.seenDate?.slice(0, 4) !==
-                  watched[index - 1]?.seenDate?.slice(0, 4)
-                  ? `year-${movie.seenDate?.slice(0, 4) || "unknown"}`
-                  : undefined
-              }
-            >
-              <span class="number">{String(index + 1).padStart(3, "0")}</span>
-              <div class="film-mark" aria-hidden="true">
-                {movie.title.slice(0, 1)}
-              </div>
-              <div class="film-info">
-                <a href={movie.url} rel="external nofollow noreferrer">
-                  {movie.title}
-                </a>
-                {movie.metadata && <p>{movie.metadata}</p>}
-                {movie.comment && <blockquote>{movie.comment}</blockquote>}
-              </div>
-              <time datetime={movie.seenDate ?? undefined}>
-                {movie.seenDate || "日期未记"}
-              </time>
-            </li>
-          ))
-        }
-      </ol>
-    </section>
-
-    <section aria-labelledby="watchlist-heading">
-      <div class="section-heading">
-        <p>03 / WATCHLIST</p>
-        <h2 id="watchlist-heading">想看</h2>
-      </div>
-      <ol class="watchlist">
-        {
-          watchlist.map((movie, index) => (
-            <li>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <a href={movie.url} rel="external nofollow noreferrer">
-                {movie.title}
-              </a>
-            </li>
-          ))
-        }
-      </ol>
-    </section>
-  </main>
+  <div class="screening-library">
+    <MediaRail
+      id="movies"
+      index="02"
+      eyebrow="FEATURE FILMS"
+      title="电影"
+      countLabel={`${movies.length} 部`}
+      items={movies.slice(0, 12)}
+    >
+      <CollectionGrid items={movies} title="电影" sectionId="movies" />
+    </MediaRail>
+    <MediaRail
+      id="shows"
+      index="03"
+      eyebrow="SERIES"
+      title="剧集"
+      countLabel={`${shows.length} 部`}
+      items={shows.slice(0, 12)}
+    >
+      <CollectionGrid items={shows} title="剧集" sectionId="shows" />
+    </MediaRail>
+    <WatchLog entries={data.history.slice(0, 8)} />
+  </div>
+  <ImageFallback />
 </BaseLayout>
 
 <style>
-  :global(body) {
-    background: #171918;
-    color: #f2ecdc;
+  .screening-library {
+    padding: clamp(2.2rem, 4vw, 4rem) 0 clamp(5rem, 9vw, 9rem);
   }
-  :global(.site-shell) {
-    width: min(100% - 2rem, 76rem);
-  }
-  :global(.site-footer) {
-    --muted: #aaa89f;
-    --rule: #474944;
-  }
-  .cinema-header {
-    min-height: min(48rem, 88vh);
-    border-top: 4px solid #d94932;
-    position: relative;
-    padding-top: 1rem;
-  }
-  .back,
-  .eyebrow,
-  .section-heading > p,
-  .number,
-  time,
-  .year-strip {
-    font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
-  }
-  .back {
-    color: #c7c4ba;
-    font-size: 0.78rem;
-  }
-  .reel {
-    display: flex;
-    gap: clamp(0.5rem, 2vw, 1.5rem);
-    position: absolute;
-    right: 0;
-    top: 1rem;
-  }
-  .reel span {
-    border: 1px solid #6a6c66;
-    display: block;
-    height: 1rem;
-    width: 1.5rem;
-  }
-  .eyebrow {
-    color: #ed624a;
-    font-size: 0.72rem;
-    letter-spacing: 0.16em;
-    margin: clamp(5rem, 13vw, 10rem) 0 1rem;
-  }
-  h1 {
-    font-size: clamp(5rem, 17vw, 13rem);
-    font-weight: 500;
-    letter-spacing: -0.11em;
-    line-height: 0.7;
-    margin: 0;
-  }
-  h1 span {
-    color: #ed624a;
-    display: block;
-    margin-left: 0.65em;
-  }
-  .header-notes {
-    align-items: end;
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: minmax(16rem, 34rem) 1fr;
-    margin-top: clamp(5rem, 11vw, 9rem);
-  }
-  .header-notes > p {
-    color: #c7c4ba;
-    font-size: clamp(1.05rem, 2.5vw, 1.4rem);
-    margin: 0;
-  }
-  dl {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 0;
-  }
-  dl div {
-    border-left: 1px solid #474944;
-    padding-left: 1rem;
-  }
-  dt {
-    font-size: clamp(1.8rem, 5vw, 3.5rem);
-    line-height: 1;
-  }
-  dd {
-    color: #aaa89f;
-    font-size: 0.72rem;
-    margin: 0.5rem 0 0;
-  }
-  main {
-    margin-top: 6rem;
-  }
-  .archive-notice {
-    border: 1px solid #474944;
-    border-left: 4px solid #ed624a;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 9rem 1fr;
-    padding: 1.2rem 1.5rem;
-  }
-  .archive-notice strong {
-    color: #ed624a;
-    font-family: ui-monospace, monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.12em;
-  }
-  .archive-notice p {
-    color: #c7c4ba;
-    margin: 0;
-  }
-  section {
-    border-top: 1px solid #6a6c66;
-    margin-top: clamp(6rem, 13vw, 10rem);
-    padding-top: 1rem;
-  }
-  .section-heading {
-    align-items: end;
-    display: grid;
-    grid-template-columns: 8rem 1fr;
-    margin-bottom: 3rem;
-  }
-  .section-heading > p {
-    color: #ed624a;
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
-  }
-  h2 {
-    font-size: clamp(2.6rem, 7vw, 5.5rem);
-    font-weight: 500;
-    letter-spacing: -0.07em;
-    line-height: 0.9;
-    margin: 0;
-  }
-  ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .year-strip ol {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
-  }
-  .year-strip li {
-    border-left: 1px solid #474944;
-  }
-  .year-strip a {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.7rem;
-    text-decoration: none;
-  }
-  .year-strip a:hover {
-    background: #272a27;
-  }
-  .year-summary {
-    color: #85877f;
-    font-size: 0.72rem;
-    margin: 1rem 0 0;
-    text-align: right;
-  }
-  .year-strip strong {
-    color: #ed624a;
-  }
-  .film-list li {
-    align-items: start;
-    border-top: 1px solid #353734;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 3rem 3.5rem minmax(0, 1fr) 7rem;
-    padding: 1rem 0 1.3rem;
-    scroll-margin-top: 1rem;
-  }
-  .film-list li[id] {
-    border-top-color: #ed624a;
-  }
-  .number,
-  time {
-    color: #85877f;
-    font-size: 0.7rem;
-    padding-top: 0.45rem;
-  }
-  .film-mark {
-    align-items: center;
-    aspect-ratio: 1;
-    background: #272a27;
-    border: 1px solid #474944;
-    color: #ed624a;
-    display: flex;
-    font-size: 1.35rem;
-    justify-content: center;
-  }
-  .film-info a {
-    color: #f2ecdc;
-    font-size: clamp(1.05rem, 2vw, 1.35rem);
-    font-weight: 700;
-    text-decoration-color: #666861;
-  }
-  .film-info p {
-    color: #999b94;
-    font-size: 0.78rem;
-    line-height: 1.5;
-    margin: 0.35rem 0 0;
-    max-width: 55rem;
-  }
-  blockquote {
-    border-left: 2px solid #ed624a;
-    color: #d2cec2;
-    margin: 0.8rem 0 0;
-    padding-left: 0.8rem;
-  }
-  time {
-    text-align: right;
-  }
-  .watchlist {
-    display: grid;
-    gap: 0 2rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .watchlist li {
-    border-top: 1px solid #353734;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 2.5rem 1fr;
-    padding: 0.8rem 0;
-  }
-  .watchlist span {
-    color: #85877f;
-    font-family: ui-monospace, monospace;
-    font-size: 0.7rem;
-  }
-  .watchlist a {
-    color: #e2ddcf;
-  }
-  @media (max-width: 48rem) {
-    .header-notes,
-    .archive-notice,
-    .section-heading {
-      grid-template-columns: 1fr;
+  @media (prefers-reduced-motion: no-preference) {
+    .screening-library :global(.media-shelf) {
+      animation: reveal 0.45s both ease-out;
     }
-    .film-list li {
-      grid-template-columns: 2rem 2.8rem 1fr;
+    .screening-library :global(.media-shelf:nth-child(2)) {
+      animation-delay: 0.07s;
     }
-    .film-list time {
-      grid-column: 3;
-      text-align: left;
+    .screening-library :global(.media-shelf:nth-child(3)) {
+      animation-delay: 0.14s;
     }
-    .watchlist {
-      grid-template-columns: 1fr;
-    }
-  }
-  @media (max-width: 32rem) {
-    dl {
-      grid-template-columns: 1fr;
-    }
-    dl div {
-      border-bottom: 1px solid #474944;
-      border-left: 0;
-      display: flex;
-      justify-content: space-between;
-      padding: 0.6rem 0;
-    }
-    .film-mark {
-      display: none;
-    }
-    .film-list li {
-      grid-template-columns: 2rem 1fr;
-    }
-    .film-list time {
-      grid-column: 2;
-    }
-  }
-  @media print {
-    :global(body) {
-      background: #fff;
-      color: #000;
-    }
-    .reel {
-      display: none;
-    }
-    .film-info a,
-    .watchlist a {
-      color: #000;
-    }
-    .film-info p,
-    .header-notes > p,
-    .archive-notice p {
-      color: #333;
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: translateY(0.55rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   }
 </style>

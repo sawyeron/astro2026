@@ -1,0 +1,174 @@
+---
+import type { MediaCardItem } from "../../lib/movies";
+type Props = { item: MediaCardItem; fallbackHref: string };
+const { item } = Astro.props;
+const Tag = item.href ? "a" : "div";
+---
+
+<li class="media-card">
+  <Tag
+    href={item.href ?? undefined}
+    rel={item.href ? "external nofollow noreferrer" : undefined}
+    class="card-link"
+  >
+    <figure>
+      <div class="poster">
+        {
+          item.posterSrc ? (
+            <img
+              src={item.posterSrc}
+              alt={`${item.title} 海报`}
+              loading="lazy"
+              decoding="async"
+              width="300"
+              height="450"
+            />
+          ) : (
+            <div class="poster-fallback">
+              <>
+                <span>观影室</span>
+                <b>{item.title}</b>
+                <small>海报待补</small>
+              </>
+            </div>
+          )
+        }
+        {
+          item.href && (
+            <span class="open-label" aria-hidden="true">
+              作品资料 ↗
+            </span>
+          )
+        }
+      </div>
+      <figcaption>
+        <strong>{item.title}</strong><span>{item.subtitle}</span>
+      </figcaption>
+    </figure>
+  </Tag>
+  {
+    item.secondaryTitle && (
+      <p title={item.secondaryTitle}>{item.secondaryTitle}</p>
+    )
+  }
+</li>
+<style>
+  .media-card {
+    flex: 0 0 clamp(10rem, 16vw, 14rem);
+    min-width: 0;
+    scroll-snap-align: start;
+    font-family: var(--font-sans);
+  }
+  .card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+  figure {
+    margin: 0;
+  }
+  .poster {
+    aspect-ratio: 2 / 3;
+    background: var(--cinema-surface);
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px #0005;
+    transition:
+      transform 280ms ease,
+      box-shadow 280ms ease;
+  }
+  a:hover .poster,
+  a:focus-visible .poster {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px #0009;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition:
+      transform 260ms ease,
+      filter 260ms ease;
+  }
+  .open-label {
+    position: absolute;
+    bottom: 0.65rem;
+    right: 0.65rem;
+    padding: 0.3rem 0.55rem;
+    border-radius: 999px;
+    backdrop-filter: blur(16px);
+    background: #18181be8;
+    color: #fff;
+    font-size: 0.68rem;
+    opacity: 0;
+    transform: translateY(0.4rem);
+    transition:
+      opacity 180ms ease,
+      transform 180ms ease;
+  }
+  a:hover img,
+  a:focus-visible img {
+    transform: scale(1.035);
+    filter: brightness(0.8);
+  }
+  a:hover .open-label,
+  a:focus-visible .open-label {
+    opacity: 1;
+    transform: none;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--cinema-accent-bright);
+    outline-offset: 3px;
+  }
+  figcaption {
+    display: grid;
+    gap: 0.3rem;
+    padding-top: 0.7rem;
+  }
+  figcaption strong {
+    font-size: 0.87rem;
+    font-weight: 600;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+  figcaption span {
+    color: var(--cinema-muted);
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
+  .media-card > p {
+    color: var(--cinema-muted);
+    font-size: 0.65rem;
+    line-height: 1.5;
+    margin: 0.25rem 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .poster-fallback {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1rem;
+    background:
+      radial-gradient(ellipse at top right, #505462, transparent 80%), #25262e;
+  }
+  .poster-fallback span,
+  .poster-fallback small {
+    font: 0.7rem/1.5 var(--font-sans);
+    color: var(--cinema-muted);
+  }
+  .poster-fallback b {
+    font: 600 1.4rem/1.4 var(--font-sans);
+    overflow-wrap: anywhere;
+  }
+  @media (hover: none) {
+    .open-label {
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>

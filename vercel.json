@@ -436,6 +436,11 @@
       "source": "/tags/macOS/page/2/",
       "destination": "/tags/macOS/",
       "permanent": true
+    },
+    {
+      "source": "/timeline/",
+      "destination": "/archives/",
+      "permanent": true
     }
   ]
 }

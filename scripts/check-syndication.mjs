@@ -1,11 +1,15 @@
 #!/usr/bin/env node
 import { access, readFile } from "node:fs/promises";
+import { publishedArticles } from "./published-articles.mjs";
 import path from "node:path";
 import process from "node:process";
 
 const projectRoot = path.resolve(import.meta.dirname, "..");
 const distRoot = path.join(projectRoot, "dist");
 const failures = [];
+const articleCount = (
+  await publishedArticles(path.join(projectRoot, "src/content/blog"))
+).length;
 
 async function exists(relative) {
   try {
@@ -44,8 +48,10 @@ for (const [file, expected] of [
     file === "rss.xml"
       ? [...text.matchAll(/<item>/g)].length
       : [...text.matchAll(/<entry>/g)].length;
-  if (itemCount !== 84)
-    failures.push(`${file}: expected 84 entries, found ${itemCount}`);
+  if (itemCount !== articleCount)
+    failures.push(
+      `${file}: expected ${articleCount} entries, found ${itemCount}`,
+    );
 }
 
 const htmlFiles = ["index.html", "404.html"];
@@ -66,5 +72,5 @@ if (failures.length) {
   process.exit(1);
 }
 console.log(
-  "Syndication valid: RSS and Atom each expose 84 articles; robots, sitemap discovery, and 404 output are present.",
+  `Syndication valid: RSS and Atom each expose ${articleCount} articles; robots, sitemap discovery, and 404 output are present.`,
 );

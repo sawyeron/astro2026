@@ -44,12 +44,33 @@ const images = records.filter((record) =>
 );
 const sum = (items) => items.reduce((total, item) => total + item.bytes, 0);
 const largest = (items) => [...items].sort((a, b) => b.bytes - a.bytes)[0];
+// Astro may inline small modules: count unique executable inline scripts too.
+const inlineScripts = new Set();
+for (const record of records.filter((item) =>
+  item.relative.endsWith(".html"),
+)) {
+  const html = await readFile(path.join(dist, record.relative), "utf8");
+  for (const match of html.matchAll(
+    /<script\b([^>]*)>([\s\S]*?)<\/script>/gi,
+  )) {
+    if (/\bsrc\s*=/i.test(match[1]) || /type=["']application\//i.test(match[1]))
+      continue;
+    if (match[2].trim()) inlineScripts.add(match[2]);
+  }
+}
+const inlineJavaScriptBytes = [...inlineScripts].reduce(
+  (total, text) => total + Buffer.byteLength(text),
+  0,
+);
+// Total output includes environment-sensitive generated files. Log it as a
+// diagnostic rather than persisting it in the reproducible budget report.
+console.log(`Build size (diagnostic only): ${sum(records)} bytes`);
 const metrics = {
-  totalBuildBytes: sum(records),
   totalAstroBytes: sum(astro),
   largestAstroAsset: largest(astro) ?? null,
-  totalJavaScriptBytes: sum(js),
-  totalFirstPartyJavaScriptBytes: sum(firstPartyJs),
+  inlineJavaScriptBytes,
+  totalJavaScriptBytes: sum(js) + inlineJavaScriptBytes,
+  totalFirstPartyJavaScriptBytes: sum(firstPartyJs) + inlineJavaScriptBytes,
   largestImage: largest(images) ?? null,
   imageCount: images.length,
 };

@@ -13,7 +13,9 @@ const collectionRoots = {
   drafts: path.join(projectRoot, "src/content/drafts"),
   pages: path.join(projectRoot, "src/content/pages"),
 };
-const expected = { blog: 84, drafts: 19, pages: 3 };
+// Historical import evidence is immutable; timeline was subsequently retired.
+const importedCounts = { blog: 84, drafts: 19, pages: 3 };
+const expected = { ...importedCounts, pages: 2 };
 const failures = [];
 
 async function exists(file) {
@@ -52,7 +54,7 @@ const seenPaths = new Set();
 
 for (const [kind, root] of Object.entries(collectionRoots)) {
   const files = await markdownFiles(root);
-  if (files.length !== expected[kind])
+  if (files.length < expected[kind])
     failures.push(
       `${kind}: expected ${expected[kind]} Markdown files, found ${files.length}`,
     );
@@ -68,7 +70,10 @@ for (const [kind, root] of Object.entries(collectionRoots)) {
       continue;
     }
     const { data, body } = document;
-    if (!text.includes(generatedHeader))
+    if (
+      (data.legacyPath || kind === "pages") &&
+      !text.includes(generatedHeader)
+    )
       failures.push(`${relative}: missing generated-file marker`);
     if (/<!--\s*more\s*-->/i.test(body))
       failures.push(`${relative}: contains a Hexo more marker`);
@@ -93,7 +98,15 @@ for (const [kind, root] of Object.entries(collectionRoots)) {
         );
     }
 
-    if (kind === "blog") {
+    if (kind === "blog" && !data.legacyPath) {
+      if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(data.slug ?? ""))
+        failures.push(`${relative}: new post needs a stable slug`);
+      if (!data.description || data.draft !== false)
+        failures.push(
+          `${relative}: published post needs description and draft=false`,
+        );
+    }
+    if (kind === "blog" && data.legacyPath) {
       if (!data.description)
         failures.push(`${relative}: description is required`);
       if (data.draft !== false)
@@ -160,7 +173,7 @@ if (!(await exists(reportPath)))
   );
 else {
   const report = JSON.parse(await readFile(reportPath, "utf8"));
-  for (const [kind, count] of Object.entries(expected))
+  for (const [kind, count] of Object.entries(importedCounts))
     if (report.counts?.[kind] !== count)
       failures.push(
         `report count ${kind}: expected ${count}, found ${report.counts?.[kind]}`,
@@ -180,5 +193,5 @@ for (const root of Object.values(collectionRoots))
   for (const file of await markdownFiles(root))
     digest.update(await readFile(file));
 console.log(
-  `Content migration valid: 84 articles, 19 private drafts, 3 authored pages, 84 approved historical paths. Digest ${digest.digest("hex")}.`,
+  `Content migration valid: 84 articles, 19 private drafts, 2 current authored pages (3 originally imported), 84 approved historical paths. Digest ${digest.digest("hex")}.`,
 );

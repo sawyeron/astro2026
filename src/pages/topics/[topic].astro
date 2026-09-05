@@ -1,4 +1,5 @@
 ---
+import { articlePath } from "../../lib/article-path";
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { topicDescriptions, topicLabels, type Topic } from "../../lib/topics";
@@ -95,7 +96,7 @@ const formatter = new Intl.DateTimeFormat("zh-CN", {
                 </div>
                 <div class="article-copy">
                   <h3>
-                    <a href={article.data.legacyPath}>{article.data.title}</a>
+                    <a href={articlePath(article)}>{article.data.title}</a>
                   </h3>
                   {article.data.description && (
                     <p>{article.data.description}</p>
