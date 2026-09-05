@@ -30,7 +30,14 @@ jobs:
         run: cp src/data/trakt-public-history.json "$RUNNER_TEMP/trakt-before.json"
       - name: Fetch public history without credentials
         run: npm run sync:trakt-public
-      - name: Validate candidate snapshot
+      - name: Validate history before enrichment
+        run: npm run check:movies:data
+      - name: Trial TMDB enrichment through approved proxy
+        env:
+          TMDB_PROXY_API_KEY: ${{ secrets.TMDB_PROXY_API_KEY }}
+          TMDB_PROXY_BASE: ${{ vars.TMDB_PROXY_BASE }}
+        run: npm run enrich:movie-posters
+      - name: Validate enriched candidate snapshot
         run: npm run check:movies:data
       - name: Summarize changes
         run: |
@@ -47,12 +54,12 @@ jobs:
             added: after.history.filter(e => !oldIds.has(e.id)).length,
             removed: before.history.filter(e => !newIds.has(e.id)).length,
             remotePosters: [...after.movies, ...after.shows].filter(e => e.posterRemote).length,
-            note: 'Trial only: no commit, deployment, or TMDB enrichment.'
+            note: 'Trial only: TMDB enrichment included; no Git write or website publication.'
           };
           await appendFile(process.env.GITHUB_STEP_SUMMARY, '```json\n' + JSON.stringify(report, null, 2) + '\n```\n');
           NODE
       - name: Upload validated candidate (public history only)
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
         with:
           name: trakt-candidate-${{ github.run_id }}
           path: src/data/trakt-public-history.json
