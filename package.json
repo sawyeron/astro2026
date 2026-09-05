@@ -68,7 +68,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
-    "@eslint/js": "^9.39.5",
+    "@eslint/js": "^10.0.1",
     "eslint": "^9.39.4",
     "eslint-plugin-astro": "^1.7.0",
     "pagefind": "^1.5.2",
