@@ -74,6 +74,8 @@ jobs:
           NODE
       - name: Verify site with candidate data
         run: npm run verify
+      - name: Preserve validated candidate before PR action resets checkout
+        run: cp src/data/trakt-public-history.json "$RUNNER_TEMP/trakt-validated-candidate.json"
       - name: Propose snapshot to trial branch only
         uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
         with:
@@ -104,6 +106,6 @@ jobs:
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
         with:
           name: trakt-candidate-${{ github.run_id }}
-          path: src/data/trakt-public-history.json
+          path: ${{ runner.temp }}/trakt-validated-candidate.json
           retention-days: 7
           if-no-files-found: error
