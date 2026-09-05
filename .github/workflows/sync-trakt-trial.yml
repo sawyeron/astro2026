@@ -7,8 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 concurrency:
   group: trakt-cloud-trial
@@ -102,10 +101,21 @@ jobs:
         run: npm run verify
       - name: Preserve validated candidate before PR action resets checkout
         run: cp src/data/trakt-public-history.json "$RUNNER_TEMP/trakt-validated-candidate.json"
+      - name: Create repository-scoped App token after validation
+        id: app_token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3 (Node 24)
+        with:
+          app-id: ${{ vars.TRAKT_SYNC_APP_ID }}
+          private-key: ${{ secrets.TRAKT_SYNC_APP_PRIVATE_KEY }}
+          owner: sawyeron
+          repositories: astro2026
+          permission-contents: write
+          permission-pull-requests: write
       - name: Propose snapshot to trial branch only
         id: candidate_pr
         uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
         with:
+          token: ${{ steps.app_token.outputs.token }}
           base: ci/trakt-cloud-trial
           branch: automation/trakt-trial-data
           add-paths: src/data/trakt-public-history.json
@@ -126,8 +136,8 @@ jobs:
             Data checks and full site verification ran in the creating workflow.
             Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
-            Inspect the separate Verify Astro site check. If it awaits approval, a maintainer must review and approve its execution.
-            If no PR workflow appears, a maintainer can close and reopen this PR using their own GitHub session.
+            Inspect the separate Verify Astro site check. This update uses a repository-scoped GitHub App token.
+            If the check is missing or awaits approval, investigate the run and repository policy; do not bypass protections.
             Do not bypass required checks or retarget this trial PR to main.
       - name: Verify PR snapshot matches preserved artifact input
         env:

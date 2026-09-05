@@ -18,11 +18,11 @@ PR #6 的候选提交 bfe88f6 经维护者批准后，独立 PR 检查完整通�
 
 ## 检查与下载
 
-先检查 PR 的 Verify Astro site。若显示 awaiting approval，由维护者审阅并批准运行。不要关闭仓库安全保护。当前流程需要人工批准，尚不是无人值守。
+先检查 PR 的 Verify Astro site。此前 GITHUB_TOKEN 流程需要人工批准；现已接入受限 App，仍待云端证实独立检查自动启动。若显示 awaiting approval，应调查运行来源与仓库策略，不关闭安全保护。
 
 2026-09-05 核实 [GitHub 官方触发文档](https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-when-your-workflow-runs/triggering-a-workflow)：GITHUB_TOKEN 引起的 pull_request opened/synchronize/reopened 事件会创建 approval-required 运行。不是仓库所有者配置错误，关闭再重开也不是正式解决方案。此前“不触发 PR 检查”的描述不准确。官方支持用 GitHub App installation token 创建/更新 PR，使其不受这项 GITHUB_TOKEN 审批提示限制。
 
-正式候选方案：私有 GitHub App 仅安装到 astro2026，Contents 和 Pull requests 为读写，Metadata 为只读；不申请 Administration、Workflows 写权限，不配置规则绕过或自动合并。私钥仅由所有者保存至 Repository Secret，不发到聊天。启用前另行配置确认，当前尚未切换。
+2026-09-05 所有者确认私有 GitHub App 已创建、仅安装到 astro2026，并配置 Repository Variable `TRAKT_SYNC_APP_ID` 与 Repository Secret `TRAKT_SYNC_APP_PRIVATE_KEY`。工作流默认 GITHUB_TOKEN 降为 contents: read；完整验证后才生成仅限 astro2026、Contents/Pull requests 读写的 installation token，并仅传给 PR Action，任务结束自动撤销。不申请 Administration、Workflows 写权限，不配置规则绕过或自动合并。如果试验 base 的工作流变化导致推送权限错误，停止调查，不通过增加 Workflows 权限解决。
 
 最新公开 API 确认 Trakt run 33964150041 和 Verify run 33964256135 均 success；PR head 8c5b150 相对基准新增 1、删除 0，已有 media 仅 10 处 lastWatchedAt 变化，770 处标题变化已消除。Artifact 9968905323 存在且未过期，但匿名下载返回 401，尚未下载逐字核实。
 
@@ -32,7 +32,8 @@ PR #6 的候选提交 bfe88f6 经维护者批准后，独立 PR 检查完整通�
 
 ## 尚待验证及完善
 
-- 按需模式真实云端已通过；仍待重复运行无提交、新增逐字比较步骤通过，以及 Artifact ZIP 下载核对。
+- run 33964700603 第 2 次运行全部成功；远端候选仍为 2084d91aa4d21a84d267e42aa745d13120af61a7，无变化重跑未产生新提交，PR 与 Artifact 上传输入逐字比较通过。Artifact ZIP 下载核对仍待完成。
+- App 接入后真实推送与独立 PR 检查自动触发仍待云端验收；不能以同步流程内置 verify 替代独立检查。
 - 分页/网络失败注入及完整脚本级回归；当前新增测试仅覆盖纯函数策略。
 - 更新第三方 Action 运行时引用及独立 verify 的旧引用。
 - 正式工作流进入默认分支后才考虑每天 UTC 00:17（北京时间 08:17）定时；上线另行确认。
