@@ -4,6 +4,7 @@ import os from "node:os";
 import process from "node:process";
 import { setTimeout } from "node:timers";
 import { mergeHistoryMedia } from "./movie-snapshot-utils.mjs";
+import { planEnrichment } from "./movie-enrichment-plan.mjs";
 const root = path.resolve(import.meta.dirname, "..");
 const output = path.join(root, "src/data/trakt-public-history.json");
 const reportPath = path.join(os.tmpdir(), "astro2026-tmdb-coverage.json");
@@ -20,10 +21,15 @@ const backup = path.join(
   `astro2026-trakt-before-tmdb-${Date.now()}.json`,
 );
 await copyFile(output, backup);
-const tasks = [
-  ...snapshot.movies.map((item) => ({ kind: "movie", item })),
-  ...snapshot.shows.map((item) => ({ kind: "tv", item })),
-];
+const args = process.argv.slice(2);
+if (args.length && (args.length !== 2 || args[0] !== "--previous"))
+  throw new Error("Usage: enrich-movie-posters.mjs [--previous snapshot.json]");
+const tasks = args.length
+  ? planEnrichment(snapshot, JSON.parse(await readFile(args[1], "utf8")))
+  : [
+      ...snapshot.movies.map((item) => ({ kind: "movie", item })),
+      ...snapshot.shows.map((item) => ({ kind: "tv", item })),
+    ];
 const results = [];
 let fatal = false;
 async function request(url) {
@@ -114,7 +120,17 @@ const report = {
   backup,
 };
 await writeFile(reportPath, JSON.stringify(report, null, 2) + "\n");
-if (fatal || report.verified === 0)
+const expectedMissingOnly =
+  args.length > 0 &&
+  report.failed.every((item) =>
+    ["Metadata HTTP 404", "Missing TMDB ID", "No valid poster path"].includes(
+      item.reason,
+    ),
+  );
+if (
+  fatal ||
+  (tasks.length > 0 && report.verified === 0 && !expectedMissingOnly)
+)
   throw new Error(
     "Proxy enrichment aborted; snapshot retained. See redacted report.",
   );

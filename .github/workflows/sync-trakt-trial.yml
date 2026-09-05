@@ -25,6 +25,8 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
+      - name: Test incremental enrichment policy
+        run: node --test scripts/movie-enrichment-plan.test.mjs
       - name: Install browser and Linux dependencies
         run: npx playwright install --with-deps chrome
       - name: Back up input snapshot
@@ -33,11 +35,21 @@ jobs:
         run: npm run sync:trakt-public
       - name: Validate history before enrichment
         run: npm run check:movies:data
+      - name: Reject removal of previously committed history events
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFile } from 'node:fs/promises';
+          const before = JSON.parse(await readFile(`${process.env.RUNNER_TEMP}/trakt-before.json`, 'utf8'));
+          const after = JSON.parse(await readFile('src/data/trakt-public-history.json', 'utf8'));
+          const ids = new Set(after.history.map(entry => entry.id));
+          const removed = before.history.filter(entry => !ids.has(entry.id)).length;
+          if (removed) throw new Error(`Refusing automated removal of ${removed} history events; manual review required`);
+          NODE
       - name: Trial TMDB enrichment through approved proxy
         env:
           TMDB_PROXY_API_KEY: ${{ secrets.TMDB_PROXY_API_KEY }}
           TMDB_PROXY_BASE: ${{ vars.TMDB_PROXY_BASE }}
-        run: npm run enrich:movie-posters
+        run: npm run enrich:movie-posters -- --previous "$RUNNER_TEMP/trakt-before.json"
       - name: Validate enriched candidate snapshot
         run: npm run check:movies:data
       - name: Summarize changes
@@ -63,14 +75,12 @@ jobs:
         run: |
           node --input-type=module <<'NODE'
           import { readFile, writeFile } from 'node:fs/promises';
-          import { isDeepStrictEqual } from 'node:util';
+          import { sameSnapshotContent } from './scripts/movie-enrichment-plan.mjs';
           const file = 'src/data/trakt-public-history.json';
           const original = await readFile(`${process.env.RUNNER_TEMP}/trakt-before.json`, 'utf8');
           const before = JSON.parse(original);
           const after = JSON.parse(await readFile(file, 'utf8'));
-          delete before.syncedAt;
-          delete after.syncedAt;
-          if (isDeepStrictEqual(before, after)) await writeFile(file, original);
+          if (sameSnapshotContent(before, after)) await writeFile(file, original);
           NODE
       - name: Verify site with candidate data
         run: npm run verify
@@ -99,8 +109,8 @@ jobs:
             Data checks and full site verification ran in the creating workflow.
             Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
-            Default GITHUB_TOKEN-created PRs do not automatically trigger the separate PR verification workflow.
-            To obtain PR checks, a maintainer can close and reopen this PR using their own GitHub session.
+            Inspect the separate Verify Astro site check. If it awaits approval, a maintainer must review and approve its execution.
+            If no PR workflow appears, a maintainer can close and reopen this PR using their own GitHub session.
             Do not bypass required checks or retarget this trial PR to main.
       - name: Upload validated candidate (public history only)
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
