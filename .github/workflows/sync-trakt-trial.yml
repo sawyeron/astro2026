@@ -7,7 +7,8 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
 
 concurrency:
   group: trakt-cloud-trial
@@ -54,10 +55,51 @@ jobs:
             added: after.history.filter(e => !oldIds.has(e.id)).length,
             removed: before.history.filter(e => !newIds.has(e.id)).length,
             remotePosters: [...after.movies, ...after.shows].filter(e => e.posterRemote).length,
-            note: 'Trial only: TMDB enrichment included; no Git write or website publication.'
+            note: 'Validated candidate will be proposed to the trial branch only; no automatic merge or production publication.'
           };
           await appendFile(process.env.GITHUB_STEP_SUMMARY, '```json\n' + JSON.stringify(report, null, 2) + '\n```\n');
           NODE
+      - name: Ignore timestamp-only changes
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFile, writeFile } from 'node:fs/promises';
+          import { isDeepStrictEqual } from 'node:util';
+          const file = 'src/data/trakt-public-history.json';
+          const original = await readFile(`${process.env.RUNNER_TEMP}/trakt-before.json`, 'utf8');
+          const before = JSON.parse(original);
+          const after = JSON.parse(await readFile(file, 'utf8'));
+          delete before.syncedAt;
+          delete after.syncedAt;
+          if (isDeepStrictEqual(before, after)) await writeFile(file, original);
+          NODE
+      - name: Verify site with candidate data
+        run: npm run verify
+      - name: Propose snapshot to trial branch only
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
+        with:
+          base: ci/trakt-cloud-trial
+          branch: automation/trakt-trial-data
+          add-paths: src/data/trakt-public-history.json
+          title: "Review cloud-synchronized Trakt candidate"
+          commit-message: |
+            Topic: Update cloud Trakt candidate snapshot
+
+            Describe(What):
+
+                * What: Refresh public viewing history and verified poster references.
+                * Why: Review cloud synchronization without publishing production.
+                * How: Validate data and run the full site verification before proposing the snapshot.
+
+            Related: Trakt cloud trial.
+          body: |
+            This PR targets **ci/trakt-cloud-trial**, not main. No automatic merge is configured.
+            Only the public viewing snapshot is proposed; TMDB credentials are not included.
+            Data checks and full site verification ran in the creating workflow.
+            Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            Default GITHUB_TOKEN-created PRs do not automatically trigger the separate PR verification workflow.
+            To obtain PR checks, a maintainer can close and reopen this PR using their own GitHub session.
+            Do not bypass required checks or retarget this trial PR to main.
       - name: Upload validated candidate (public history only)
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
         with:
