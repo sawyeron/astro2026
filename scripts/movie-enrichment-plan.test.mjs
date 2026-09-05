@@ -60,3 +60,16 @@ test("only timestamp differences are ignored; additions and deletions remain vis
   assert.ok(!sameSnapshotContent(old, next));
   assert.equal(old.syncedAt, "before");
 });
+
+test("replaying a synchronized candidate preserves semantic equality", () => {
+  const baseline = fixture();
+  const candidate = fixture();
+  candidate.history.push({ id: 2, type: "movie", media: { traktId: 1 } });
+  planEnrichment(candidate, baseline);
+  const replay = structuredClone(candidate);
+  replay.syncedAt = "next-run";
+  replay.movies[0].title = "Transient Trakt title";
+  planEnrichment(replay, baseline);
+  assert.ok(sameSnapshotContent(candidate, replay));
+  assert.ok(!sameSnapshotContent(baseline, replay));
+});

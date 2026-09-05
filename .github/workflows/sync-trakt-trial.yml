@@ -29,6 +29,13 @@ jobs:
         run: node --test scripts/movie-enrichment-plan.test.mjs
       - name: Install browser and Linux dependencies
         run: npx playwright install --with-deps chrome
+      - name: Read existing candidate as data only
+        run: |
+          git ls-remote --heads origin automation/trakt-trial-data > "$RUNNER_TEMP/trakt-candidate-ref"
+          if test -s "$RUNNER_TEMP/trakt-candidate-ref"; then
+            git fetch --no-tags origin refs/heads/automation/trakt-trial-data
+            git show FETCH_HEAD:src/data/trakt-public-history.json > "$RUNNER_TEMP/trakt-existing-candidate.json"
+          fi
       - name: Back up input snapshot
         run: cp src/data/trakt-public-history.json "$RUNNER_TEMP/trakt-before.json"
       - name: Fetch public history without credentials
@@ -75,18 +82,28 @@ jobs:
         run: |
           node --input-type=module <<'NODE'
           import { readFile, writeFile } from 'node:fs/promises';
+          import { existsSync } from 'node:fs';
           import { sameSnapshotContent } from './scripts/movie-enrichment-plan.mjs';
           const file = 'src/data/trakt-public-history.json';
           const original = await readFile(`${process.env.RUNNER_TEMP}/trakt-before.json`, 'utf8');
           const before = JSON.parse(original);
           const after = JSON.parse(await readFile(file, 'utf8'));
-          if (sameSnapshotContent(before, after)) await writeFile(file, original);
+          if (sameSnapshotContent(before, after)) {
+            await writeFile(file, original);
+          } else {
+            const candidatePath = `${process.env.RUNNER_TEMP}/trakt-existing-candidate.json`;
+            if (existsSync(candidatePath)) {
+              const candidate = await readFile(candidatePath, 'utf8');
+              if (sameSnapshotContent(JSON.parse(candidate), after)) await writeFile(file, candidate);
+            }
+          }
           NODE
       - name: Verify site with candidate data
         run: npm run verify
       - name: Preserve validated candidate before PR action resets checkout
         run: cp src/data/trakt-public-history.json "$RUNNER_TEMP/trakt-validated-candidate.json"
       - name: Propose snapshot to trial branch only
+        id: candidate_pr
         uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7
         with:
           base: ci/trakt-cloud-trial
@@ -112,6 +129,20 @@ jobs:
             Inspect the separate Verify Astro site check. If it awaits approval, a maintainer must review and approve its execution.
             If no PR workflow appears, a maintainer can close and reopen this PR using their own GitHub session.
             Do not bypass required checks or retarget this trial PR to main.
+      - name: Verify PR snapshot matches preserved artifact input
+        env:
+          CANDIDATE_SHA: ${{ steps.candidate_pr.outputs.pull-request-head-sha }}
+          PR_OPERATION: ${{ steps.candidate_pr.outputs.pull-request-operation }}
+        run: |
+          if test -n "$CANDIDATE_SHA"; then
+            git fetch --no-tags origin "$CANDIDATE_SHA"
+            git show FETCH_HEAD:src/data/trakt-public-history.json > "$RUNNER_TEMP/trakt-pr-output.json"
+            cmp "$RUNNER_TEMP/trakt-pr-output.json" "$RUNNER_TEMP/trakt-validated-candidate.json"
+          else
+            cmp src/data/trakt-public-history.json "$RUNNER_TEMP/trakt-validated-candidate.json"
+          fi
+          sha256sum "$RUNNER_TEMP/trakt-validated-candidate.json" >> "$GITHUB_STEP_SUMMARY"
+          printf '\nPR operation: %s\n' "$PR_OPERATION" >> "$GITHUB_STEP_SUMMARY"
       - name: Upload validated candidate (public history only)
         uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
         with:
