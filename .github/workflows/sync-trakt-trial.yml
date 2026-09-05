@@ -1,0 +1,60 @@
+name: Trakt cloud trial
+
+on:
+  push:
+    branches: [ci/trakt-cloud-trial]
+    paths: [.github/workflows/sync-trakt-trial.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trakt-cloud-trial
+  cancel-in-progress: false
+
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Install browser and Linux dependencies
+        run: npx playwright install --with-deps chrome
+      - name: Back up input snapshot
+        run: cp src/data/trakt-public-history.json "$RUNNER_TEMP/trakt-before.json"
+      - name: Fetch public history without credentials
+        run: npm run sync:trakt-public
+      - name: Validate candidate snapshot
+        run: npm run check:movies:data
+      - name: Summarize changes
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFile, appendFile } from 'node:fs/promises';
+          const before = JSON.parse(await readFile(`${process.env.RUNNER_TEMP}/trakt-before.json`, 'utf8'));
+          const after = JSON.parse(await readFile('src/data/trakt-public-history.json', 'utf8'));
+          const oldIds = new Set(before.history.map(e => e.id));
+          const newIds = new Set(after.history.map(e => e.id));
+          const report = {
+            before: before.counts,
+            after: after.counts,
+            pages: after.pageCount,
+            added: after.history.filter(e => !oldIds.has(e.id)).length,
+            removed: before.history.filter(e => !newIds.has(e.id)).length,
+            remotePosters: [...after.movies, ...after.shows].filter(e => e.posterRemote).length,
+            note: 'Trial only: no commit, deployment, or TMDB enrichment.'
+          };
+          await appendFile(process.env.GITHUB_STEP_SUMMARY, '```json\n' + JSON.stringify(report, null, 2) + '\n```\n');
+          NODE
+      - name: Upload validated candidate (public history only)
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: trakt-candidate-${{ github.run_id }}
+          path: src/data/trakt-public-history.json
+          retention-days: 7
+          if-no-files-found: error
