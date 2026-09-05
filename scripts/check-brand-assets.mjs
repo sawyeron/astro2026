@@ -1,40 +1,27 @@
 #!/usr/bin/env node
-import { access, readFile } from "node:fs/promises";
+import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import path from "node:path";
-import process from "node:process";
-
 const root = path.resolve(import.meta.dirname, "..");
-const failures = [];
-for (const file of [
-  "public/favicon.svg",
-  "dist/favicon.svg",
-  "dist/index.html",
+const home = await readFile(path.join(root, "dist/index.html"), "utf8");
+for (const name of [
+  "favicon-16x16.png",
+  "favicon-32x32.png",
+  "apple-touch-icon.png",
+  "logo-icon.png",
+  "favicon.ico",
 ]) {
-  try {
-    await access(path.join(root, file));
-  } catch {
-    failures.push(`${file}: missing`);
-  }
-}
-try {
-  const svg = await readFile(path.join(root, "public/favicon.svg"), "utf8");
-  if (!/<title\b/i.test(svg))
-    failures.push("public/favicon.svg: accessible title missing");
-  if (!/viewBox=/i.test(svg))
-    failures.push("public/favicon.svg: viewBox missing");
-  const home = await readFile(path.join(root, "dist/index.html"), "utf8");
-  if (!/<link\s+rel="icon"\s+href="\/favicon\.svg"/i.test(home))
-    failures.push("homepage: favicon discovery link missing");
-} catch (error) {
-  failures.push(`brand asset read failed: ${error.message}`);
-}
-if (failures.length) {
-  console.error(
-    `Brand asset validation failed with ${failures.length} error(s):`,
+  const source = await readFile(path.join(root, "public", name));
+  assert.deepEqual(
+    await readFile(path.join(root, "dist", name)),
+    source,
+    `${name}: published bytes differ`,
   );
-  for (const failure of failures) console.error(`- ${failure}`);
-  process.exit(1);
+  assert.ok(home.includes(`/${name}`), `${name}: homepage reference missing`);
+  if (name.endsWith(".png"))
+    assert.equal(source.subarray(0, 8).toString("hex"), "89504e470d0a1a0a");
+  else assert.equal(source.subarray(0, 4).toString("hex"), "00000100");
 }
 console.log(
-  "Brand assets valid: accessible SVG favicon is published and discovered.",
+  "Brand assets valid: approved raster seal assets published and referenced.",
 );

@@ -41,12 +41,17 @@
     "check:brand": "node scripts/check-brand-assets.mjs",
     "check:interactions": "node scripts/check-interactions.mjs",
     "check:browser": "node scripts/check-browser.mjs",
+    "check:movies:data": "node scripts/check-movie-data.mjs",
+    "check:movies:browser": "node scripts/check-movies-browser.mjs",
     "check:performance": "node scripts/check-performance-budget.mjs",
     "check:content-quality": "node scripts/check-content-quality.mjs",
     "investigate:resources": "node scripts/investigate-content-resources.mjs",
     "check:remote": "node scripts/check-remote.mjs",
     "new:post": "node scripts/new-post.mjs",
-    "import:movies": "node scripts/import-legacy-movies.mjs"
+    "import:movies": "node scripts/import-legacy-movies.mjs",
+    "cache:movie-posters": "node scripts/cache-movie-posters.mjs",
+    "sync:trakt-public": "node scripts/sync-trakt-public.mjs",
+    "enrich:movie-posters": "node scripts/enrich-movie-posters.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.10",

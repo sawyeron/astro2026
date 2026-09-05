@@ -1,0 +1,577 @@
+---
+import type { MovieHistoryEntry } from "../../lib/movies";
+type Props = {
+  historyCount: number;
+  movieCount: number;
+  showCount: number;
+  history: MovieHistoryEntry[];
+};
+const { historyCount, movieCount, showCount, history } = Astro.props;
+const seen = new Set<string>();
+const entries = history
+  .filter((entry) => {
+    const key = `${entry.type}-${entry.media.traktId}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  })
+  .slice(0, 8);
+const date = new Intl.DateTimeFormat("zh-CN", {
+  month: "long",
+  day: "numeric",
+  timeZone: "Asia/Shanghai",
+});
+---
+
+<header>
+  <div class="room-bar">
+    <h1>观影室</h1><nav aria-label="观影内容导航">
+      <a href="#movies">电影</a><a href="#shows">剧集</a><a href="#watch-log"
+        >观看记录</a
+      >
+    </nav>
+  </div>
+  <screening-carousel
+    id="recent"
+    role="region"
+    aria-roledescription="轮播"
+    aria-label="最近观看"
+  >
+    <div class="hero-stage">
+      {
+        entries.map((entry, index) => {
+          const poster = entry.media.posterRemote ?? entry.media.posterLocal;
+          return (
+            <section
+              class:list={[
+                "hero-slide",
+                { active: index === 0, "no-poster": !poster },
+              ]}
+              inert={index !== 0}
+              aria-hidden={index !== 0 ? "true" : "false"}
+              aria-label={`${index + 1} / ${entries.length}：${entry.media.title}`}
+              aria-roledescription="幻灯片"
+            >
+              {poster && (
+                <img
+                  class="ambient"
+                  src={index === 0 ? poster : undefined}
+                  data-src={index !== 0 ? poster : undefined}
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
+              <div class="shade" />
+              <div class="hero-copy">
+                <p class="eyebrow">
+                  最近观看{" "}
+                  <span>· {date.format(new Date(entry.watchedAt))}</span>
+                </p>
+                <h2>{entry.media.title}</h2>
+                <p class="metadata">
+                  {entry.media.year ?? "年份未记"} ·{" "}
+                  {entry.type === "movie"
+                    ? "电影"
+                    : `剧集 · S${entry.episode?.season ?? "?"} E${entry.episode?.number ?? "?"}`}
+                </p>
+                {entry.episode?.title && (
+                  <p class="episode">{entry.episode.title}</p>
+                )}
+                <div class="actions">
+                  {entry.media.url && (
+                    <a
+                      class="primary"
+                      href={entry.media.url}
+                      rel="external nofollow noreferrer"
+                    >
+                      作品资料 ↗
+                    </a>
+                  )}
+                  <a href="#watch-log">观看记录 ↓</a>
+                </div>
+              </div>
+              {poster ? (
+                <div class="hero-art">
+                  <img
+                    src={index === 0 ? poster : undefined}
+                    data-src={index !== 0 ? poster : undefined}
+                    fetchpriority={index === 0 ? "high" : "low"}
+                    alt={`${entry.media.title} 海报`}
+                    width="300"
+                    height="450"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                  />
+                </div>
+              ) : (
+                <div class="text-art" aria-hidden="true">
+                  <span>每个故事</span>
+                  <strong>都有回响。</strong>
+                  <small>记录看过的世界</small>
+                </div>
+              )}
+            </section>
+          );
+        })
+      }
+    </div>
+    <div class="hero-controls" hidden>
+      <span class="hero-caption">最近看过的故事</span>
+      <button class="play-toggle" aria-label="暂停自动轮播">暂停</button>
+      <button class="previous" aria-label="上一部作品">‹</button>
+      <span class="position" aria-live="off"
+        >01 / {String(entries.length).padStart(2, "0")}</span
+      >
+      <button class="next" aria-label="下一部作品">›</button>
+      <span class="announcement sr-only" aria-live="polite"></span>
+    </div>
+  </screening-carousel>
+  <p class="stats">
+    {historyCount.toLocaleString("zh-CN")} 次观看 <span>·</span>
+    {movieCount} 部电影 <span>·</span>
+    {showCount} 部剧集
+  </p>
+</header>
+<script>
+  class ScreeningCarousel extends HTMLElement {
+    private cleanup?: () => void;
+    connectedCallback() {
+      const slides = [...this.querySelectorAll<HTMLElement>(".hero-slide")];
+      if (slides.length < 2) return;
+      const controls = this.querySelector<HTMLElement>(".hero-controls")!;
+      const play = this.querySelector<HTMLButtonElement>(".play-toggle")!;
+      const position = this.querySelector<HTMLElement>(".position")!;
+      const motion = matchMedia("(prefers-reduced-motion: reduce)");
+      const abort = new AbortController();
+      const { signal } = abort;
+      let index = 0,
+        paused = motion.matches,
+        hovered = false,
+        visible = false;
+      let nextAt = Date.now() + 4000;
+      controls.hidden = false;
+      const updatePlay = () => {
+        play.textContent = paused ? "播放" : "暂停";
+        play.setAttribute(
+          "aria-label",
+          paused ? "开启自动轮播" : "暂停自动轮播",
+        );
+        play.disabled = motion.matches;
+        if (motion.matches) {
+          play.textContent = "静止";
+          play.setAttribute("aria-label", "已按系统设置停止自动轮播");
+        }
+      };
+      const hydrate = (i: number, priority: "high" | "low") => {
+        const slide = slides[i];
+        if (!slide) return;
+        const images = [
+          ...slide.querySelectorAll<HTMLImageElement>("img[data-src]"),
+        ];
+        for (const image of images) {
+          image.loading = "eager";
+          image.fetchPriority = priority;
+          image.src = image.dataset.src!;
+          delete image.dataset.src;
+        }
+      };
+      const preloadNext = () => {
+        const image =
+          slides[index]?.querySelector<HTMLImageElement>(".hero-art img");
+        const current = index;
+        const next = () => {
+          if (index === current) hydrate((current + 1) % slides.length, "low");
+        };
+        if (!image || image.complete) next();
+        else image.addEventListener("load", next, { once: true, signal });
+      };
+      const show = (direction: number, manual = false) => {
+        index = (index + direction + slides.length) % slides.length;
+        hydrate(index, "high");
+        preloadNext();
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+          slide.inert = i !== index;
+          slide.setAttribute("aria-hidden", String(i !== index));
+        });
+        position.textContent = `${String(index + 1).padStart(2, "0")} / ${String(slides.length).padStart(2, "0")}`;
+        if (manual)
+          this.querySelector(".announcement")!.textContent =
+            slides[index]?.getAttribute("aria-label") ?? "";
+        nextAt = Date.now() + 4000;
+      };
+      this.querySelector(".previous")!.addEventListener(
+        "click",
+        () => show(-1, true),
+        { signal },
+      );
+      this.querySelector(".next")!.addEventListener(
+        "click",
+        () => show(1, true),
+        { signal },
+      );
+      play.addEventListener(
+        "click",
+        () => {
+          paused = !paused;
+          nextAt = Date.now() + 4000;
+          updatePlay();
+        },
+        { signal },
+      );
+      this.addEventListener(
+        "pointerenter",
+        (e) => {
+          if (e.pointerType === "mouse") hovered = true;
+        },
+        { signal },
+      );
+      this.addEventListener(
+        "pointerleave",
+        () => {
+          hovered = false;
+          nextAt = Date.now() + 4000;
+        },
+        { signal },
+      );
+      this.addEventListener(
+        "focusout",
+        () => {
+          nextAt = Date.now() + 4000;
+        },
+        { signal },
+      );
+      motion.addEventListener(
+        "change",
+        () => {
+          if (motion.matches) paused = true;
+          updatePlay();
+        },
+        { signal },
+      );
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          visible = entry?.isIntersecting ?? false;
+          nextAt = Date.now() + 4000;
+        },
+        { threshold: 0.5 },
+      );
+      observer.observe(this);
+      const timer = window.setInterval(() => {
+        if (
+          document.hidden ||
+          !visible ||
+          hovered ||
+          this.matches(":focus-within") ||
+          paused ||
+          motion.matches
+        ) {
+          nextAt = Date.now() + 4000;
+          return;
+        }
+        if (Date.now() >= nextAt) show(1);
+      }, 500);
+      updatePlay();
+      preloadNext();
+      this.cleanup = () => {
+        abort.abort();
+        observer.disconnect();
+        clearInterval(timer);
+      };
+    }
+    disconnectedCallback() {
+      this.cleanup?.();
+    }
+  }
+  if (!customElements.get("screening-carousel"))
+    customElements.define("screening-carousel", ScreeningCarousel);
+</script>
+<style>
+  .room-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.3rem 0;
+  }
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  nav {
+    display: flex;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    border-radius: 999px;
+    background: #ffffff08;
+  }
+  nav a {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.75rem;
+    text-decoration: none;
+    border-radius: 999px;
+  }
+  nav a:hover {
+    background: #ffffff15;
+  }
+  screening-carousel {
+    display: block;
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #202128;
+    box-shadow: 0 24px 64px #0006;
+  }
+  .hero-stage {
+    display: grid;
+  }
+  .hero-slide {
+    grid-area: 1 / 1;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    min-height: clamp(29rem, 43vw, 39rem);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 650ms ease,
+      visibility 650ms;
+    isolation: isolate;
+    padding-bottom: 4.5rem;
+  }
+  .hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+  .ambient {
+    position: absolute;
+    inset: -10%;
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    filter: blur(48px) saturate(0.8);
+    opacity: 0.5;
+    z-index: -3;
+  }
+  .shade {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, #101116eb, #12131a55),
+      linear-gradient(0deg, #111218, transparent 65%);
+    z-index: -2;
+  }
+  .no-poster {
+    background:
+      radial-gradient(ellipse at 85% 20%, #4b526a, transparent 70%), #202129;
+  }
+  .hero-copy {
+    padding: clamp(1.5rem, 4.5vw, 4.5rem);
+  }
+  .eyebrow {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #eeeef3;
+  }
+  .eyebrow span {
+    color: #bcbcc8;
+    font-weight: 400;
+  }
+  h2 {
+    font: 750 clamp(2.4rem, 4.6vw, 4.8rem)/1.15 var(--font-sans);
+    letter-spacing: -0.04em;
+    margin: 1rem 0;
+    overflow-wrap: anywhere;
+  }
+  .metadata,
+  .episode {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: #d1d1da;
+  }
+  .episode {
+    color: #b5b5c2;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.8rem;
+  }
+  .actions a {
+    padding: 0.8rem 1.25rem;
+    border-radius: 999px;
+    text-decoration: none;
+    background: #ffffff18;
+    color: #f5f5f7;
+    font-size: 0.78rem;
+    backdrop-filter: blur(16px);
+  }
+  .actions .primary {
+    background: #f5f5f7;
+    color: #161617;
+    font-weight: 650;
+  }
+  .actions a:hover {
+    background: #dcdce4;
+    color: #161617;
+  }
+  .hero-art {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .hero-art img {
+    display: block;
+    width: auto;
+    height: clamp(20rem, 31vw, 29rem);
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 22px 50px #0008;
+  }
+  .text-art {
+    display: grid;
+    gap: 0.6rem;
+    text-align: center;
+    padding: 2rem;
+    color: #d6d8e5;
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    letter-spacing: -0.04em;
+  }
+  .text-art small {
+    font-size: 0.8rem;
+    color: #bcbfce;
+    margin-top: 1rem;
+    letter-spacing: 0;
+  }
+  .hero-controls {
+    position: absolute;
+    bottom: 1rem;
+    left: clamp(1.5rem, 4.5vw, 4.5rem);
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    z-index: 3;
+  }
+  .hero-controls[hidden] {
+    display: none;
+  }
+  .hero-caption {
+    margin-right: auto;
+    color: #c4c4d0;
+    font-size: 0.72rem;
+  }
+  button {
+    min-width: 44px;
+    height: 44px;
+    border: 1px solid #ffffff20;
+    border-radius: 999px;
+    color: #f5f5f7;
+    background: #25252dcc;
+    cursor: pointer;
+    backdrop-filter: blur(20px);
+  }
+  button:hover {
+    background: #50505a;
+  }
+  button:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+  .previous,
+  .next {
+    font-size: 1.7rem;
+  }
+  .play-toggle {
+    font-size: 0.7rem;
+    padding: 0 0.85rem;
+  }
+  .position {
+    font-size: 0.7rem;
+    font-variant-numeric: tabular-nums;
+    color: #dddde6;
+  }
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+  }
+  .stats {
+    font-size: 0.73rem;
+    color: var(--cinema-muted);
+    margin: 1.5rem 0.5rem 0;
+  }
+  .stats span {
+    padding: 0 0.6rem;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  @media (max-width: 48rem) {
+    .hero-slide {
+      grid-template-columns: 1fr;
+      grid-template-rows: 15rem 1fr;
+      min-height: 39rem;
+      padding-bottom: 4.5rem;
+    }
+    .hero-art {
+      grid-row: 1;
+      padding: 1.3rem 1rem 0;
+    }
+    .hero-art img {
+      height: 14rem;
+    }
+    .hero-copy {
+      grid-row: 2;
+      padding: 1.3rem 1.5rem;
+      align-self: start;
+    }
+    .text-art {
+      grid-row: 1;
+      font-size: 2rem;
+      padding: 1rem;
+    }
+    h2 {
+      font-size: 2.2rem;
+      margin: 0.6rem 0;
+    }
+    .actions {
+      margin-top: 1.2rem;
+    }
+    .hero-caption {
+      display: none;
+    }
+    .hero-controls {
+      justify-content: flex-end;
+      left: 1rem;
+      right: 1rem;
+    }
+    screening-carousel {
+      border-radius: 20px;
+    }
+    nav a {
+      padding: 0.5rem 0.65rem;
+    }
+    .room-bar {
+      flex-wrap: wrap;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-slide {
+      transition: none;
+    }
+  }
+</style>

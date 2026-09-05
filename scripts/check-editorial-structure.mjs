@@ -15,35 +15,46 @@ async function exists(target) {
 }
 for (const target of [
   "dist/topics/index.html",
-  "dist/timeline/index.html",
   "dist/index.html",
+  "dist/movies/index.html",
 ])
   if (!(await exists(target))) failures.push(`${target}: missing`);
 
 if (await exists("dist/index.html")) {
   const html = await readFile(path.join(root, "dist/index.html"), "utf8");
   for (const marker of [
-    "精选专题",
-    "最近文章",
+    "专题阅读",
+    "最近更新",
     "/topics/",
     "/archives/",
     "/search/",
   ])
     if (!html.includes(marker)) failures.push(`homepage: ${marker} missing`);
 }
-if (await exists("dist/timeline/index.html")) {
+if (await exists("dist/movies/index.html")) {
   const html = await readFile(
-    path.join(root, "dist/timeline/index.html"),
+    path.join(root, "dist/movies/index.html"),
     "utf8",
   );
-  const years = [...html.matchAll(/id="year-(\d{4})"/g)].map((match) =>
-    Number(match[1]),
-  );
-  if (years.length < 5)
-    failures.push("timeline: expected multiple year groups");
-  if (years.some((year, index) => index > 0 && year >= years[index - 1]))
-    failures.push("timeline: year groups are not descending");
+  for (const marker of [
+    'data-theme="cinema"',
+    'id="recent"',
+    "<screening-carousel",
+    'id="movies"',
+    'id="shows"',
+    'class="media-rail"',
+    'loading="lazy"',
+    'decoding="async"',
+  ])
+    if (!html.includes(marker)) failures.push(`movies: ${marker} missing`);
+  if ((html.match(/class="media-rail"/g) ?? []).length !== 2)
+    failures.push("movies: expected exactly two collection media rails");
+  if (/image\.tmdb\.org|media\.trakt\.tv|apiz\.trakt\.tv/.test(html))
+    failures.push("movies: direct Trakt or TMDB resource reference found");
+  if (/TMDB_PROXY_API_KEY|api_key=/.test(html))
+    failures.push("movies: API credential marker found in rendered HTML");
 }
+
 const report = JSON.parse(
   await readFile(
     path.join(root, "docs/audit/content-governance-candidates-v1.json"),
@@ -67,5 +78,5 @@ if (failures.length) {
   process.exit(1);
 }
 console.log(
-  `Editorial structure valid: homepage, grouped timeline, and ${approvedTopics.size} approved topic route(s) checked.`,
+  `Editorial structure valid: homepage, cinema media rails, and ${approvedTopics.size} approved topic route(s) checked.`,
 );

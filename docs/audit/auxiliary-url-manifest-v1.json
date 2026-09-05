@@ -214,7 +214,6 @@
     "/tags/释明权/",
     "/tags/隐私/",
     "/tai-er-gu-shang/",
-    "/timeline/",
     "/tu-ran-jiu-san-shi-liao/",
     "/vcard-yu-er-wei-ma-ming-pian/",
     "/webfont-yu-zhe-zuo-quan/",
@@ -633,6 +632,11 @@
     {
       "source": "/tags/macOS/page/2/",
       "destination": "/tags/macOS/",
+      "permanent": true
+    },
+    {
+      "source": "/timeline/",
+      "destination": "/archives/",
       "permanent": true
     }
   ]

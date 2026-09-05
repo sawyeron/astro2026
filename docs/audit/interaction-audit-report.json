@@ -2,14 +2,14 @@
   "generatedAt": "2026-08-29T12:28:31.516Z",
   "status": "passed",
   "metrics": {
-    "htmlFiles": 241,
-    "fragmentLinks": 549,
-    "uniqueTargets": 869,
+    "htmlFiles": 240,
+    "fragmentLinks": 558,
+    "uniqueTargets": 867,
     "footnoteReferences": 29,
     "footnoteBacklinks": 29,
     "tables": 4,
     "codeBlocks": 30,
-    "inlineSvg": 1
+    "inlineSvg": 3
   },
   "failures": [],
   "warnings": []

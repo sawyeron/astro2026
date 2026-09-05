@@ -1,0 +1,204 @@
+---
+import MediaCard from "./MediaCard.astro";
+import type { MediaCardItem } from "../../lib/movies";
+type Props = { items: MediaCardItem[]; title: string; sectionId: string };
+const { items, title, sectionId } = Astro.props;
+---
+
+<details class="collection-grid title-action" data-smooth-collection>
+  <summary
+    aria-label={`展开或收起更多${title}`}
+    aria-controls={`${sectionId}-collection`}
+  >
+    <span class="action-pill">
+      <span class="expand-label">展开全部</span>
+      <span class="collapse-label">收起全部</span>
+      <svg
+        class="disclosure"
+        aria-hidden="true"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        ><path
+          d="m6 9 6 6 6-6"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path></svg
+      >
+    </span>
+  </summary>
+  <div class="collection-reveal" id={`${sectionId}-collection`}>
+    <ol aria-label={`更多${title}`}>
+      {
+        items
+          .slice(12)
+          .map((item) => (
+            <MediaCard item={item} fallbackHref={`#${sectionId}`} />
+          ))
+      }
+    </ol>
+  </div>
+</details>
+<script>
+  document
+    .querySelectorAll<HTMLDetailsElement>("[data-smooth-collection]")
+    .forEach((details) => {
+      const summary = details.querySelector("summary")!;
+      const content = details.querySelector<HTMLElement>(".collection-reveal")!;
+      let animation: Animation | undefined;
+      let expanded = details.open;
+      summary.addEventListener("click", (event) => {
+        if (matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          animation?.cancel();
+          animation = undefined;
+          content.style.overflow = "";
+          expanded = details.open;
+          return;
+        }
+        event.preventDefault();
+        if (!animation) expanded = details.open;
+        const from = details.open ? content.getBoundingClientRect().height : 0;
+        expanded = !expanded;
+        animation?.cancel();
+        details.open = true;
+        content.style.overflow = "hidden";
+        animation = content.animate(
+          [
+            { height: `${from}px`, opacity: expanded ? 0.4 : 1 },
+            {
+              height: expanded ? `${content.scrollHeight}px` : "0px",
+              opacity: expanded ? 1 : 0.4,
+            },
+          ],
+          { duration: 360, easing: "cubic-bezier(.22, 1, .36, 1)" },
+        );
+        animation.onfinish = () => {
+          details.open = expanded;
+          content.style.overflow = "";
+          animation = undefined;
+        };
+      });
+    });
+</script>
+<style>
+  details {
+    margin-top: 0;
+    padding: 0;
+    border: 0;
+  }
+  summary {
+    cursor: pointer;
+    font: 0.76rem/1.6 var(--font-sans);
+    padding: 0.9rem 0.3rem;
+    font-weight: 600;
+    color: var(--cinema-text-soft);
+  }
+  summary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    min-height: 44px;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  .title-action summary {
+    position: absolute;
+    top: 0.125rem;
+    right: 0.3rem;
+    padding: 0;
+    font-weight: 600;
+    border-radius: 999px;
+  }
+  .action-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    min-height: 44px;
+    min-width: 7.75rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    border: 1px solid #ffffff28;
+    background: #ffffff10;
+    box-shadow:
+      inset 0 1px 0 #ffffff08,
+      0 3px 12px #0002;
+    color: var(--cinema-text-soft);
+    transition:
+      background 200ms ease,
+      border-color 200ms ease,
+      box-shadow 200ms ease,
+      transform 180ms ease;
+  }
+  .title-action .action-pill {
+    background: #ffffff18;
+    border-color: #ffffff38;
+  }
+  summary:hover .action-pill,
+  summary:focus-visible .action-pill {
+    background: #ffffff23;
+    border-color: #ffffff55;
+    box-shadow:
+      inset 0 1px 0 #ffffff12,
+      0 4px 16px #0003;
+    color: #fff;
+  }
+  summary:active .action-pill {
+    transform: scale(0.97);
+  }
+  details[open] .action-pill {
+    background: #ffffff20;
+    border-color: #ffffff48;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .action-pill,
+    .disclosure {
+      transition: none;
+    }
+    summary:active .action-pill {
+      transform: none;
+    }
+  }
+  .disclosure {
+    display: inline-block;
+    flex: 0 0 auto;
+    transition: transform 200ms ease;
+  }
+  .collapse-label {
+    display: none;
+  }
+  details[open] .collapse-label {
+    display: inline;
+  }
+  details[open] .expand-label {
+    display: none;
+  }
+  details[open] .disclosure {
+    transform: rotate(180deg);
+  }
+  summary:focus-visible {
+    outline: 2px solid var(--cinema-accent-bright);
+    outline-offset: 3px;
+    border-radius: 999px;
+  }
+  summary:hover {
+    color: #fff;
+  }
+  ol {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    gap: 1.5rem 1rem;
+    list-style: none;
+    padding: 1rem 0.4rem 2rem;
+    margin: 0;
+  }
+  @media (max-width: 30rem) {
+    ol {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>

@@ -13,7 +13,9 @@ const collectionRoots = {
   drafts: path.join(projectRoot, "src/content/drafts"),
   pages: path.join(projectRoot, "src/content/pages"),
 };
-const expected = { blog: 84, drafts: 19, pages: 3 };
+// Historical import evidence is immutable; timeline was subsequently retired.
+const importedCounts = { blog: 84, drafts: 19, pages: 3 };
+const expected = { ...importedCounts, pages: 2 };
 const failures = [];
 
 async function exists(file) {
@@ -160,7 +162,7 @@ if (!(await exists(reportPath)))
   );
 else {
   const report = JSON.parse(await readFile(reportPath, "utf8"));
-  for (const [kind, count] of Object.entries(expected))
+  for (const [kind, count] of Object.entries(importedCounts))
     if (report.counts?.[kind] !== count)
       failures.push(
         `report count ${kind}: expected ${count}, found ${report.counts?.[kind]}`,
@@ -180,5 +182,5 @@ for (const root of Object.values(collectionRoots))
   for (const file of await markdownFiles(root))
     digest.update(await readFile(file));
 console.log(
-  `Content migration valid: 84 articles, 19 private drafts, 3 authored pages, 84 approved historical paths. Digest ${digest.digest("hex")}.`,
+  `Content migration valid: 84 articles, 19 private drafts, 2 current authored pages (3 originally imported), 84 approved historical paths. Digest ${digest.digest("hex")}.`,
 );

@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { topicLabels, type Topic } from "../lib/topics";
+import { topicDescriptions, topicLabels, type Topic } from "../lib/topics";
 
 const articles = (await getCollection("blog", ({ data }) => !data.draft)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
@@ -12,301 +12,625 @@ for (const article of reviewed)
   for (const topic of article.data.topics)
     topicCounts.set(topic, (topicCounts.get(topic) ?? 0) + 1);
 const featuredTopics = [...topicCounts].sort((a, b) => b[1] - a[1]).slice(0, 4);
+const carouselTopics = [...featuredTopics, ...featuredTopics];
 const legalCount = articles.filter(
   (article) =>
     article.data.contentKind === "legal" ||
     article.data.contentKind === "mixed",
 ).length;
+const lead = articles[0]!;
+const recent = articles.slice(1);
+const yearStart = articles.at(-1)?.data.date.getFullYear();
+const yearEnd = articles[0]?.data.date.getFullYear();
+const date = (value: Date) =>
+  new Intl.DateTimeFormat("zh-CN", {
+    timeZone: "Asia/Shanghai",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(value);
 ---
 
 <BaseLayout
   description="小法进阶：以法律专业为主轴、以技术和方法为细节的个人知识档案。"
 >
-  <header class="hero">
-    <div class="masthead">
-      <span>IMOUYANG.COM</span><span>EST. 2013</span><span
-        >{articles.length} ESSAYS</span
-      >
-    </div>
-    <p class="eyebrow">LAW · TECHNOLOGY · PERSONAL ARCHIVE</p>
-    <h1>小法<br /><em>进阶</em></h1>
-    <div class="hero-footer">
-      <p>以法律专业为主轴、以技术和方法为细节的个人知识档案。</p>
-      <nav aria-label="主要导航">
-        <a href="/topics/">专题</a><a href="/archives/">归档</a><a
-          href="/timeline/">时间线</a
-        ><a href="/search/">搜索</a><a href="/movies/">观影</a><a href="/about/"
-          >关于</a
+  <section class="edition" aria-labelledby="lead-heading">
+    <article class="lead-story">
+      <p class="section-label">LATEST / 最新文章</p>
+      <h1 id="lead-heading">
+        <a href={lead.data.legacyPath}>{lead.data.title}</a>
+      </h1>
+      {lead.data.description && <p class="lead-dek">{lead.data.description}</p>}
+      <p class="story-meta">
+        <time datetime={lead.data.date.toISOString()}
+          >{date(lead.data.date)}</time
+        ><span>·</span><span
+          >{lead.data.contentKind === "legal" ? "法律" : "知识记录"}</span
         >
-      </nav>
-    </div>
-  </header>
-
-  <section class="manifesto" aria-labelledby="manifesto-heading">
-    <p class="section-number">01 / ARCHIVE</p>
-    <div>
-      <h2 id="manifesto-heading">
-        旧文章不被悄悄重写，<br />旧地址也不被轻易遗忘。
-      </h2>
-      <p>
-        本站保存从学生时代至今的法律分析、规则资料、软件笔记与个人观察。历史文本反映写作当时的认识；涉及现行规则和数据时，请结合发布日期阅读。
       </p>
-    </div>
-    <dl>
-      <div><dt>{articles.length}</dt><dd>公开文章</dd></div>
-      <div><dt>{legalCount || "—"}</dt><dd>已审核法律文章</dd></div>
-      <div><dt>{reviewed.length}</dt><dd>已纳入精选专题</dd></div>
-    </dl>
-  </section>
+      <div class="lead-visual" aria-hidden="true">
+        <span>{String(lead.data.date.getFullYear()).slice(2)}</span><p>
+          RATIONAL<br />EDITORIAL<br />ARCHIVE
+        </p>
+      </div>
+    </article>
 
-  <section class="topics" aria-labelledby="topics-heading">
-    <div class="section-heading">
-      <p class="section-number">02 / TOPICS</p>
-      <h2 id="topics-heading">精选专题</h2>
-      <a href="/topics/">查看全部 →</a>
-    </div>
-    {
-      featuredTopics.length ? (
-        <ol>
-          {featuredTopics.map(([topic, count], index) => (
+    <section class="news-column" aria-labelledby="recent-heading">
+      <div class="column-heading">
+        <p>RECENT UPDATES</p><h2 id="recent-heading">最近更新</h2>
+      </div>
+      <ol>
+        {
+          recent.slice(0, 4).map((article) => (
             <li>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <a href={`/topics/${topic}/`}>{topicLabels[topic]}</a>
-              <strong>{count}</strong>
+              <a href={article.data.legacyPath}>{article.data.title}</a>
+              {article.data.description && (
+                <span>{article.data.description}</span>
+              )}
+              <time datetime={article.data.date.toISOString()}>
+                {date(article.data.date)}
+              </time>
             </li>
-          ))}
-        </ol>
-      ) : (
-        <div class="pending">
-          <p>专题编目正在人工复核。</p>
-          <span>
-            候选清单已经覆盖全部 84 篇文章；只有审核通过的条目才会出现在这里。
-          </span>
+          ))
+        }
+      </ol>
+    </section>
+
+    <aside class="index-column" aria-labelledby="index-heading">
+      <div class="column-heading">
+        <p>INDEX</p><h2 id="index-heading">档案索引</h2>
+      </div>
+      <dl>
+        <div>
+          <dt>01</dt><dd>
+            <strong>{articles.length}</strong><span>公开文章</span>
+          </dd>
+        </div><div>
+          <dt>02</dt><dd>
+            <strong>{reviewed.length}</strong><span>专题收录</span>
+          </dd>
+        </div><div>
+          <dt>03</dt><dd>
+            <strong>{legalCount}</strong><span>法律及综合</span>
+          </dd>
+        </div><div>
+          <dt>04</dt><dd>
+            <strong>{yearStart}—{yearEnd}</strong><span>记录跨度</span>
+          </dd>
         </div>
-      )
-    }
+      </dl>
+      <a class="index-link" href="/archives/">进入完整归档 →</a>
+    </aside>
   </section>
 
-  <section class="latest" aria-labelledby="latest-heading">
-    <div class="section-heading">
-      <p class="section-number">03 / LATEST</p>
-      <h2 id="latest-heading">最近文章</h2>
-      <a href="/archives/">完整归档 →</a>
+  <section class="topic-edition" aria-labelledby="topics-heading">
+    <header>
+      <div>
+        <p class="section-label">CURATED PATHS / 01</p>
+        <h2 id="topics-heading">专题阅读</h2>
+      </div>
+      <p>从历史文章中整理出的连续问题与阅读线索。</p>
+      <div class="topic-actions">
+        <a href="#topic-01" aria-label="查看第一项专题">01</a>
+        <a href="#topic-02" aria-label="查看第二项专题">02</a>
+        <a href="#topic-03" aria-label="查看第三项专题">03</a>
+        <a href="#topic-04" aria-label="查看第四项专题">04</a>
+        <a class="topic-all-link" href="/topics/">全部专题 →</a>
+      </div>
+    </header>
+    <div
+      class="topic-carousel"
+      role="region"
+      aria-label="专题阅读自动轮播"
+      aria-roledescription="carousel"
+      tabindex="0"
+    >
+      <div class="topic-track">
+        {
+          carouselTopics.map(([topic, count], index) => {
+            const visibleIndex = index % featuredTopics.length;
+            const isDuplicate = index >= featuredTopics.length;
+            const number = String(visibleIndex + 1).padStart(2, "0");
+
+            return (
+              <article
+                class="topic-slide"
+                id={isDuplicate ? undefined : `topic-${number}`}
+                aria-hidden={isDuplicate ? "true" : undefined}
+                aria-label={
+                  isDuplicate
+                    ? undefined
+                    : `第 ${visibleIndex + 1} 项，共 ${featuredTopics.length} 项`
+                }
+              >
+                <span class="topic-number">{number}</span>
+                <div class="topic-slide-copy">
+                  <p>专题 / {number}</p>
+                  <h3>
+                    <a
+                      href={`/topics/${topic}/`}
+                      tabindex={isDuplicate ? -1 : undefined}
+                    >
+                      {topicLabels[topic]}
+                    </a>
+                  </h3>
+                  <p class="topic-description">{topicDescriptions[topic]}</p>
+                  <a
+                    class="topic-enter"
+                    href={`/topics/${topic}/`}
+                    tabindex={isDuplicate ? -1 : undefined}
+                  >
+                    阅读路径 <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+                <strong>
+                  {count}
+                  <small>篇文章</small>
+                </strong>
+              </article>
+            );
+          })
+        }
+      </div>
     </div>
-    <ol>
-      {
-        articles.slice(0, 10).map((article, index) => (
-          <li>
-            <span>{String(index + 1).padStart(2, "0")}</span>
-            <div>
-              <a href={article.data.legacyPath}>{article.data.title}</a>
-              {article.data.description && <p>{article.data.description}</p>}
-            </div>
-            <time datetime={article.data.date.toISOString()}>
-              {article.data.date.getFullYear()}
-            </time>
-          </li>
-        ))
-      }
-    </ol>
+    <p class="topic-hint">
+      自动巡览 · 悬停或聚焦卡片可暂停 · 可使用编号跳转至指定专题
+    </p>
   </section>
 </BaseLayout>
 
 <style>
-  .hero {
-    min-height: min(48rem, 80vh);
+  .section-label,
+  .story-meta,
+  .column-heading p,
+  .news-column li p,
+  .news-column time,
+  .index-link,
+  .edition dt,
+  .topic-edition li > span,
+  .topic-edition li > strong,
+  .ledger {
+    font-family: var(--font-mono);
   }
-  .masthead {
-    border-bottom: 1px solid var(--ink);
-    border-top: 4px solid var(--ink);
+  .section-label,
+  .column-heading p,
+  .news-column li p {
+    color: var(--color-accent);
+    font-size: var(--font-size-meta);
+    letter-spacing: 0.12em;
+    line-height: 1.35;
+    margin: 0;
+  }
+  .edition {
+    border-bottom: var(--border-hairline);
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(15rem, 0.9fr) minmax(
+        12rem,
+        0.65fr
+      );
+  }
+  .lead-story,
+  .news-column {
+    border-right: var(--border-hairline);
+    padding-right: clamp(1.5rem, 3vw, 3rem);
+  }
+  .news-column,
+  .index-column {
+    padding-left: clamp(1.2rem, 2.5vw, 2.4rem);
+  }
+  .lead-story h1 {
+    font-size: clamp(2.45rem, 4.3vw, 4.35rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.16;
+    margin: 0.9rem 0 1rem;
+    max-width: 13ch;
+    text-wrap: balance;
+  }
+  .lead-story h1 a {
+    text-decoration: none;
+  }
+  .lead-dek {
+    color: var(--color-ink-soft);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    line-height: 1.75;
+    margin: 0;
+    max-width: 42rem;
+  }
+  .story-meta {
+    color: var(--muted);
+    display: flex;
+    font-size: var(--font-size-meta);
+    gap: 0.5rem;
+    margin: 1.2rem 0;
+  }
+  .lead-visual {
+    align-items: end;
+    background: var(--color-paper-deep);
+    border-left: 3px solid var(--color-accent);
+    color: var(--color-ink-soft);
     display: flex;
     justify-content: space-between;
-    padding: 0.65rem 0;
-    font:
-      0.68rem/1 ui-monospace,
-      "SFMono-Regular",
-      Consolas,
-      monospace;
-    letter-spacing: 0.1em;
+    margin-top: 2rem;
+    min-height: clamp(13rem, 25vw, 21rem);
+    overflow: hidden;
+    padding: clamp(1.2rem, 3vw, 2.5rem);
+    position: relative;
   }
-  .eyebrow,
-  .section-number {
-    color: var(--accent);
-    font-family: var(--font-mono);
-    font-size: var(--font-size-xs);
-    letter-spacing: var(--tracking-label);
+  .lead-visual::before {
+    background: repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent calc(12.5% - 1px),
+      color-mix(in srgb, var(--color-accent) 13%, transparent) calc(12.5% - 1px),
+      color-mix(in srgb, var(--color-accent) 13%, transparent) 12.5%
+    );
+    content: "";
+    inset: 0;
+    position: absolute;
   }
-  .eyebrow {
-    margin: clamp(4rem, 10vw, 8rem) 0 1rem;
+  .lead-visual span {
+    color: color-mix(in srgb, var(--color-accent) 40%, var(--color-paper-deep));
+    font: clamp(7rem, 17vw, 15rem)/0.65 var(--font-serif);
+    letter-spacing: -0.1em;
+    opacity: 0.72;
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
   }
-  h1 {
-    font-size: clamp(5rem, 18vw, 13rem);
-    letter-spacing: -0.105em;
-    line-height: 0.68;
+  .lead-visual p {
+    font: var(--font-size-meta)/1.65 var(--font-mono);
+    letter-spacing: 0.16em;
     margin: 0;
+    position: relative;
   }
-  h1 em {
-    color: var(--accent);
-    font-style: normal;
-    margin-left: 0.7em;
+  .column-heading {
+    border-top: 2px solid var(--ink);
+    padding-top: 0.7rem;
   }
-  .hero-footer {
-    align-items: end;
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: minmax(16rem, 31rem) 1fr;
-    margin-top: clamp(5rem, 11vw, 9rem);
+  .column-heading h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0.3rem 0 1rem;
   }
-  .hero-footer > p {
-    font-size: clamp(1.1rem, 2.4vw, 1.45rem);
-    margin: 0;
-  }
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem 1.2rem;
-    justify-content: end;
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-  }
-  section {
-    border-top: 1px solid var(--ink);
-    margin-top: clamp(6rem, 14vw, 11rem);
-    padding-top: 1rem;
-  }
-  .manifesto {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 7rem minmax(0, 1fr) 15rem;
-  }
-  .manifesto h2,
-  .section-heading h2 {
-    font-size: clamp(2.2rem, 5vw, 4.2rem);
-    letter-spacing: -0.055em;
-    line-height: 1.06;
-    margin: 0;
-  }
-  .manifesto > div > p {
-    color: var(--muted);
-    max-width: 39rem;
-  }
-  dl {
-    margin: 0;
-  }
-  dl div {
-    border-bottom: 1px solid var(--rule);
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-  }
-  dt {
-    font-size: 1.8rem;
-    font-weight: 700;
-  }
-  dd {
-    color: var(--muted);
-    font-size: 0.78rem;
-    margin: 0;
-  }
-  .section-heading {
-    align-items: end;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 7rem 1fr auto;
-    margin-bottom: 3rem;
-  }
-  .topics ol,
-  .latest ol {
+  .news-column ol {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  .topics li {
-    align-items: baseline;
-    border-top: 1px solid var(--rule);
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 4rem 1fr auto;
-    padding: 1rem 0;
+  .news-column li {
+    border-top: var(--border-hairline);
+    padding: 0.9rem 0;
   }
-  .topics li span,
-  .topics li strong,
-  .latest li > span,
-  .latest time {
-    color: var(--muted);
-    font:
-      0.75rem/1 ui-monospace,
-      "SFMono-Regular",
-      Consolas,
-      monospace;
+  .news-column li > a {
+    display: block;
+    font-size: 1.08rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0.2rem 0;
+    text-decoration: none;
   }
-  .topics li a {
-    font-size: clamp(1.5rem, 4vw, 2.8rem);
-    font-weight: 700;
-  }
-  .pending {
-    background: var(--color-paper-deep);
-    border-left: 4px solid var(--accent);
-    padding: 1.5rem;
-  }
-  .pending p {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin: 0;
-  }
-  .pending span {
-    color: var(--muted);
-  }
-  .latest li {
-    align-items: start;
-    border-top: 1px solid var(--rule);
-    display: grid;
-    gap: 1.3rem;
-    grid-template-columns: 3rem 1fr 3rem;
-    padding: 1rem 0 1.3rem;
-  }
-  .latest li a {
-    font-size: 1.18rem;
-    font-weight: 700;
-  }
-  .latest li p {
+  .news-column li > span {
     color: var(--muted);
     display: -webkit-box;
-    font-size: 0.88rem;
-    line-height: 1.55;
-    margin: 0.35rem 0 0;
+    font-family: var(--font-sans);
+    font-size: var(--font-size-meta);
+    line-height: 1.65;
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
   }
-  @media (max-width: 48rem) {
-    .hero-footer,
-    .manifesto,
-    .section-heading {
-      grid-template-columns: 1fr;
-    }
-    nav {
-      justify-content: start;
-    }
-    .manifesto dl {
-      max-width: 20rem;
-    }
-    .section-heading {
-      align-items: start;
+  .news-column time {
+    color: var(--muted);
+    display: block;
+    font-size: var(--font-size-meta);
+    margin-top: 0.45rem;
+  }
+  .index-column dl {
+    margin: 0;
+  }
+  .index-column dl > div {
+    border-top: var(--border-hairline);
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: 2rem 1fr;
+    padding: 0.85rem 0;
+  }
+  .edition dt {
+    color: var(--color-rule-strong);
+    font-size: 0.72rem;
+  }
+  .edition dd {
+    margin: 0;
+  }
+  .edition dd strong {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.1;
+  }
+  .edition dd span {
+    color: var(--muted);
+    font-family: var(--font-sans);
+    font-size: 0.64rem;
+  }
+  .index-link {
+    display: block;
+    font-size: 0.62rem;
+    margin-top: 1rem;
+  }
+  .topic-edition {
+    margin-top: clamp(6rem, 12vw, 10rem);
+  }
+  .topic-edition > header {
+    align-items: end;
+    border-top: 2px solid var(--ink);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(14rem, 1fr) minmax(15rem, 26rem) auto;
+    padding: 0.8rem 0 2rem;
+  }
+  .topic-edition h2 {
+    font-size: clamp(2.1rem, 3.8vw, 3.7rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    margin: 0.35rem 0 0;
+  }
+  .topic-edition > header > p {
+    color: var(--muted);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+    margin: 0;
+  }
+  .topic-actions {
+    align-items: center;
+    display: flex;
+    font: var(--font-size-meta)/1 var(--font-mono);
+    gap: 0.55rem;
+    white-space: nowrap;
+  }
+  .topic-actions > a:not(.topic-all-link) {
+    align-items: center;
+    border: 1px solid var(--color-rule-strong);
+    border-radius: 50%;
+    display: inline-flex;
+    height: 1.8rem;
+    justify-content: center;
+    text-decoration: none;
+    width: 1.8rem;
+  }
+  .topic-actions > a:not(.topic-all-link):hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+  }
+  .topic-all-link {
+    margin-left: 0.85rem;
+  }
+  .topic-carousel {
+    margin: 0 calc(var(--space-4) * -1);
+    overflow: hidden;
+    padding: 0 var(--space-4) 1.25rem;
+  }
+  .topic-carousel:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+  }
+  .topic-track {
+    animation: topic-marquee 42s linear infinite;
+    display: flex;
+    gap: clamp(1rem, 2vw, 1.8rem);
+    width: max-content;
+  }
+  .topic-carousel:hover .topic-track,
+  .topic-carousel:focus-within .topic-track {
+    animation-play-state: paused;
+  }
+  .topic-slide {
+    background:
+      linear-gradient(
+        90deg,
+        transparent 0.6rem,
+        var(--color-accent-wash) 0.6rem,
+        var(--color-accent-wash) 0.68rem,
+        transparent 0.68rem
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent 0,
+        transparent 1.7rem,
+        color-mix(in srgb, var(--color-rule) 42%, transparent) 1.72rem,
+        transparent 1.78rem
+      ),
+      var(--color-paper-raised);
+    border: 1px solid var(--color-rule-strong);
+    box-shadow:
+      inset 0 0 0 0.28rem var(--color-paper-raised),
+      inset 0 0 0 0.34rem var(--color-rule);
+    display: grid;
+    flex: 0 0 min(43vw, 37rem);
+    grid-template-columns: auto 1fr auto;
+    min-height: clamp(18rem, 29vw, 23rem);
+    overflow: hidden;
+    padding: clamp(1.25rem, 2.5vw, 2.2rem);
+    position: relative;
+  }
+  .topic-slide::before {
+    border: 1px solid var(--color-accent);
+    content: "藏";
+    color: var(--color-accent);
+    font: 0.72rem/1 var(--font-serif);
+    height: 1.65rem;
+    position: absolute;
+    right: 1.1rem;
+    text-align: center;
+    top: 1.1rem;
+    transform: rotate(8deg);
+    width: 1.65rem;
+  }
+  .topic-slide::after {
+    background: var(--color-accent);
+    bottom: 0;
+    content: "";
+    height: 3px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 180ms ease;
+    width: 100%;
+  }
+  .topic-slide:hover::after,
+  .topic-slide:focus-within::after {
+    transform: scaleX(1);
+  }
+  @keyframes topic-marquee {
+    to {
+      transform: translateX(calc(-50% - clamp(0.5rem, 1vw, 0.9rem)));
     }
   }
-  @media (max-width: 38rem) {
-    .masthead span:nth-child(2) {
+  .topic-number {
+    color: var(--color-accent);
+    font: var(--font-size-meta)/1 var(--font-mono);
+    letter-spacing: 0.08em;
+  }
+  .topic-slide-copy {
+    align-self: center;
+    padding: 1rem clamp(1rem, 2.8vw, 2.5rem);
+  }
+  .topic-slide-copy > p:first-child {
+    color: var(--color-muted);
+    font: var(--font-size-meta)/1 var(--font-mono);
+    letter-spacing: 0.1em;
+    margin: 0 0 1.15rem;
+  }
+  .topic-slide h3 {
+    font-size: clamp(1.8rem, 3.1vw, 3rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+    margin: 0;
+  }
+  .topic-slide h3 a {
+    text-decoration: none;
+  }
+  .topic-description {
+    color: var(--color-ink-soft);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+    margin: 1rem 0 1.7rem;
+  }
+  .topic-enter {
+    color: var(--color-accent);
+    font: var(--font-size-meta)/1.25 var(--font-mono);
+    text-decoration: none;
+  }
+  .topic-enter span {
+    font-size: 1.1em;
+  }
+  .topic-slide > strong {
+    align-self: end;
+    color: var(--color-rule-strong);
+    font: clamp(3.5rem, 7vw, 6.5rem)/0.75 var(--font-serif);
+    letter-spacing: -0.06em;
+    text-align: right;
+  }
+  .topic-slide > strong small {
+    color: var(--color-muted);
+    display: block;
+    font: var(--font-size-meta)/1.2 var(--font-mono);
+    letter-spacing: 0.08em;
+    margin-top: 0.55rem;
+  }
+  .topic-hint {
+    color: var(--color-muted);
+    font: var(--font-size-meta)/1.5 var(--font-mono);
+    margin: 0.5rem 0 0;
+  }
+  @media (max-width: 58rem) {
+    .edition {
+      grid-template-columns: 1.5fr 1fr;
+    }
+    .index-column {
+      border-top: var(--border-hairline);
+      grid-column: 1 / -1;
+      margin-top: 2rem;
+      padding: 2rem 0;
+    }
+    .index-column dl {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .index-column dl > div {
+      padding-right: 1rem;
+    }
+  }
+  @media (max-width: 42rem) {
+    .edition {
+      display: block;
+    }
+    .lead-story,
+    .news-column {
+      border-right: 0;
+      padding: 0;
+    }
+    .news-column,
+    .index-column {
+      border-top: var(--border-hairline);
+      margin-top: 2.5rem;
+      padding: 2rem 0 0;
+    }
+    .lead-story h1 {
+      max-width: 14ch;
+    }
+    .lead-visual {
+      min-height: 15rem;
+    }
+    .topic-edition > header {
+      align-items: start;
+      grid-template-columns: 1fr;
+    }
+    .topic-actions {
+      flex-wrap: wrap;
+    }
+    .topic-carousel {
+      margin: 0 calc(var(--space-3) * -1);
+      padding-inline: var(--space-3);
+    }
+    .topic-slide {
+      flex-basis: min(76vw, 31rem);
+      min-height: 19rem;
+    }
+  }
+  @media (max-width: 30rem) {
+    .index-column dl {
+      grid-template-columns: 1fr 1fr;
+    }
+    .topic-carousel {
+      margin: 0;
+      padding-inline: 0;
+    }
+    .topic-slide {
+      flex-basis: calc(100vw - 3.2rem);
+      grid-template-columns: auto 1fr;
+      min-height: 20rem;
+    }
+    .topic-slide > strong {
       display: none;
     }
-    h1 {
-      font-size: clamp(5rem, 28vw, 8rem);
+    .topic-slide-copy {
+      padding-right: 0;
     }
-    .latest li {
-      grid-template-columns: 2rem 1fr;
-    }
-    .latest time {
-      grid-column: 2;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .topic-track {
+      animation: none;
+      flex-wrap: wrap;
+      width: auto;
     }
   }
 </style>

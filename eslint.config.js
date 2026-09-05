@@ -13,7 +13,9 @@ export default [
     files: ["scripts/**/*.mjs"],
     languageOptions: {
       globals: {
+        AbortSignal: "readonly",
         Buffer: "readonly",
+        fetch: "readonly",
         URL: "readonly",
         console: "readonly",
       },
