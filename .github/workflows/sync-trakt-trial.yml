@@ -24,7 +24,7 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      - name: Test incremental enrichment policy
+      - name: Test snapshot policies and isolated failure regressions
         run: node --test scripts/movie-enrichment-plan.test.mjs scripts/enrich-movie-posters.integration.test.mjs scripts/sync-trakt-public.integration.test.mjs
       - name: Install browser and Linux dependencies
         run: npx playwright install --with-deps chrome

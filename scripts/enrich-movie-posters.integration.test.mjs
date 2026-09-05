@@ -34,7 +34,12 @@ async function scenario(mode, expectedSuccess = false) {
     const original =
       JSON.stringify(
         {
-          movies: [{ traktId: 1, tmdbId: 10, title: "Fixture" }],
+          movies: [
+            { traktId: 1, tmdbId: 10, title: "Fixture" },
+            ...(mode.startsWith("mixed-")
+              ? [{ traktId: 2, tmdbId: 20, title: "Second fixture" }]
+              : []),
+          ],
           shows: [],
           history: [],
         },
@@ -50,10 +55,28 @@ async function scenario(mode, expectedSuccess = false) {
       path.join(root, "mock.mjs"),
       `
 import { writeFileSync } from 'node:fs';
+import timers from 'node:timers';
+import { syncBuiltinESMExports } from 'node:module';
+const trace = {attempts: {}, delays: []};
+const tracePath = ${JSON.stringify(path.join(root, "trace.json"))};
+const save = () => writeFileSync(tracePath, JSON.stringify(trace));
+// Record requested backoff without sleeping; production retry logic is unchanged.
+timers.setTimeout = (callback, delay) => { trace.delays.push(delay); save(); queueMicrotask(callback); };
+syncBuiltinESMExports();
 const mode = ${JSON.stringify(mode)};
 const output = ${JSON.stringify(output)};
 globalThis.fetch = async (url, options) => {
   if (options.redirect !== 'error') throw new Error('Redirect policy missing');
+  const pathname = new URL(url).pathname;
+  trace.attempts[pathname] = (trace.attempts[pathname] ?? 0) + 1; save();
+  if (mode.startsWith('retry-') && pathname.includes('/3/')) {
+    const status = mode.includes('429') ? 429 : 503;
+    if (mode.endsWith('exhausted') || trace.attempts[pathname] < 3) return new Response('', {status});
+  }
+  if (mode.startsWith('mixed-') && pathname.endsWith('/20')) {
+    if (mode === 'mixed-network') throw new Error('simulated network failure');
+    return new Response('', {status: mode === 'mixed-auth' ? 401 : 404});
+  }
   if (mode === 'network') throw new Error('simulated network failure');
   if (mode === '401' || mode === '403' || mode === '404') return new Response('', {status: Number(mode)});
   if (String(url).includes('/3/')) return Response.json({id: mode === 'mismatch' ? 99 : 10, title: 'Verified fixture', poster_path: '/fixture.jpg'});
@@ -93,7 +116,11 @@ globalThis.fetch = async (url, options) => {
     );
     const actual = await readFile(output, "utf8");
     if (mode === "concurrent") assert.equal(actual, "concurrent writer\n");
-    else if (mode === "success")
+    else if (
+      mode === "success" ||
+      (mode.startsWith("retry-") && expectedSuccess) ||
+      (mode.startsWith("mixed-") && expectedSuccess)
+    )
       assert.equal(
         JSON.parse(actual).movies[0].posterRemote,
         "https://fzzapi.imouyang.com/t/p/w342/fixture.jpg",
@@ -107,7 +134,33 @@ globalThis.fetch = async (url, options) => {
     const report = JSON.parse(
       await readFile(path.join(root, "astro2026-tmdb-coverage.json"), "utf8"),
     );
-    if (["401", "403"].includes(mode)) assert.equal(report.fatal, true);
+    const trace = JSON.parse(
+      await readFile(path.join(root, "trace.json"), "utf8"),
+    );
+    if (mode.startsWith("retry-")) {
+      assert.equal(trace.attempts["/3/movie/10"], 3);
+      assert.deepEqual(trace.delays, [1000, 2000]);
+      assert.equal(report.verified, expectedSuccess ? 1 : 0);
+    }
+    if (mode.startsWith("mixed-")) {
+      assert.equal(report.total, 2);
+      assert.equal(report.verified, 1);
+      assert.equal(report.failed.length, 1);
+      assert.equal(report.failed[0].traktId, 2);
+      assert.equal(
+        trace.attempts["/3/movie/20"],
+        mode === "mixed-network" ? 3 : 1,
+      );
+      if (expectedSuccess) {
+        assert.deepEqual(
+          JSON.parse(actual).movies[1],
+          JSON.parse(original).movies[1],
+        );
+        assert.equal(report.fatal, false);
+      }
+    }
+    if (["401", "403", "mixed-auth"].includes(mode))
+      assert.equal(report.fatal, true);
     if (mode === "404")
       assert.equal(report.failed[0].reason, "Metadata HTTP 404");
   } finally {
@@ -128,3 +181,14 @@ test("incremental metadata 404 is nonfatal and retains snapshot", () =>
   scenario("404", true));
 test("verified image is committed by the real entrypoint", () =>
   scenario("success", true));
+for (const status of [429, 503]) {
+  test(`${status} retries twice with increasing backoff then succeeds`, () =>
+    scenario(`retry-${status}`, true));
+  test(`${status} exhaustion retains original snapshot`, () =>
+    scenario(`retry-${status}-exhausted`));
+}
+for (const mode of ["mixed-404", "mixed-network"])
+  test(`${mode} preserves failed item while committing verified artwork`, () =>
+    scenario(mode, true));
+test("mixed authentication failure aborts even when another item succeeds", () =>
+  scenario("mixed-auth"));
