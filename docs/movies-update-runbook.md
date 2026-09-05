@@ -2,6 +2,8 @@
 
 使用 Node 22，在仓库根目录运行。观看记录与图片补全是两步独立操作。
 
+云端受限 App 试验已通过，当前仍仅更新 PR #6，不针对 main、未启用每日定时或自动合并。试验结果见 [trakt-cloud-trial.md](trakt-cloud-trial.md)，正式接入顺序见 [trakt-production-integration-plan.md](trakt-production-integration-plan.md)。以下是本机操作，不等于执行生产发布。
+
 ## 1. 备份并抓取公开观看记录
 
 ```sh
@@ -20,9 +22,11 @@ npm run check:movies:data
 在已加载本机 TMDB_PROXY_API_KEY 和 TMDB_PROXY_BASE 的终端运行：
 
 ```sh
-npm run enrich:movie-posters
+npm run enrich:movie-posters -- --previous /tmp/astro2026-before-sync.json
 npm run check:movies:data
 ```
+
+`--previous` 必须指向本轮采集前的备份；复用可信已有海报，仅新增、缺图或关联改变进入补图队列。本地兜底不会每天重试。若明确需要手动全量刷新标题和海报，才运行不带 `--previous` 的 `npm run enrich:movie-posters`。
 
 元数据和图片都通过 fzzapi；使用 w342。凭据不进入快照。
 个别缺 ID、404、缺海报或图片失败保留原引用；认证失败或全批失败不写入。
@@ -45,4 +49,12 @@ npm run check:movies:browser
 
 2026-09-05：48 页，4780 → 4782 个事件，旧事件遗漏 0；44 部电影、173 部剧集不变。
 216 个远程海报引用全部保留；无完全缺图作品。
-这验证了本次真实输入，不代表所有分页变化和故障场景已模拟覆盖。
+上述是本机历史验收数，不是当前实时总数。随后云端候选曾达到 4783 个事件；判断本轮增删应以该轮输入、候选和摘要为准，不固定写死该数值。
+
+目前已有 30 项策略与脚本入口测试，可运行：
+
+```sh
+node --test scripts/movie-enrichment-plan.test.mjs scripts/enrich-movie-posters.integration.test.mjs scripts/sync-trakt-public.integration.test.mjs
+```
+
+测试使用临时项目、模拟响应及假凭据，覆盖主要分页/补图失败保护，不代表所有真实浏览器和文件系统故障已覆盖。
