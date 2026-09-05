@@ -18,7 +18,7 @@ PR #6 的候选提交 bfe88f6 经维护者批准后，独立 PR 检查完整通�
 
 ## 检查与下载
 
-先检查 PR 的 Verify Astro site。此前 GITHUB_TOKEN 流程需要人工批准；现已接入受限 App，仍待云端证实独立检查自动启动。若显示 awaiting approval，应调查运行来源与仓库策略，不关闭安全保护。
+先检查最新 PR head 的 Verify Astro site。此前 GITHUB_TOKEN 流程需要人工批准；受限 App 已通过云端验证：同步 run 33966415276 全步骤 success，随后独立 Verify run 33966534819 由 `sawyeron-astro2026-sync[bot]` 通过 pull_request 事件触发，第 1 次运行直接 success，actor 与 triggering_actor 均为该 App。新候选 df81c47 的观影 JSON 与旧候选 2084d91 字节相同。旧 head 上的 action_required 不代表最新候选失败。若未来出现 awaiting approval，应调查运行来源与仓库策略，不关闭安全保护。
 
 2026-09-05 核实 [GitHub 官方触发文档](https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-when-your-workflow-runs/triggering-a-workflow)：GITHUB_TOKEN 引起的 pull_request opened/synchronize/reopened 事件会创建 approval-required 运行。不是仓库所有者配置错误，关闭再重开也不是正式解决方案。此前“不触发 PR 检查”的描述不准确。官方支持用 GitHub App installation token 创建/更新 PR，使其不受这项 GITHUB_TOKEN 审批提示限制。
 
@@ -33,8 +33,8 @@ PR #6 的候选提交 bfe88f6 经维护者批准后，独立 PR 检查完整通�
 ## 尚待验证及完善
 
 - run 33964700603 第 2 次运行全部成功；远端候选仍为 2084d91aa4d21a84d267e42aa745d13120af61a7，无变化重跑未产生新提交，PR 与 Artifact 上传输入逐字比较通过。Artifact ZIP 下载核对仍待完成。
-- App 接入后真实推送与独立 PR 检查自动触发仍待云端验收；不能以同步流程内置 verify 替代独立检查。
+- App 接入后真实推送与独立 PR 检查免逐次审批已验收；不代表定时、自动合并或生产发布已启用。
 - 分页/网络失败注入及完整脚本级回归；当前新增测试仅覆盖纯函数策略。
-- 更新第三方 Action 运行时引用及独立 verify 的旧引用。
+- 试验工作流 upload-artifact 升至 v6、create-pull-request 升至 v8，独立 verify 的 checkout/setup-node 升至 v5，均固定 SHA 并使用 Node 24 runtime；项目仍为 Node 22.23.2。此次引用升级仍待云端回归，不启用不安全 Node 20 开关。
 - 正式工作流进入默认分支后才考虑每天 UTC 00:17（北京时间 08:17）定时；上线另行确认。
 - 依赖审计仍有 2 high、1 low，不执行强制主版本升级。
