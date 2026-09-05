@@ -62,8 +62,10 @@ const inlineJavaScriptBytes = [...inlineScripts].reduce(
   (total, text) => total + Buffer.byteLength(text),
   0,
 );
+// Total output includes environment-sensitive generated files. Log it as a
+// diagnostic rather than persisting it in the reproducible budget report.
+console.log(`Build size (diagnostic only): ${sum(records)} bytes`);
 const metrics = {
-  totalBuildBytes: sum(records),
   totalAstroBytes: sum(astro),
   largestAstroAsset: largest(astro) ?? null,
   inlineJavaScriptBytes,

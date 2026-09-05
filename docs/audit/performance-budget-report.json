@@ -9,7 +9,6 @@
     "totalFirstPartyJavaScriptBytes": 20000
   },
   "metrics": {
-    "totalBuildBytes": 43590598,
     "totalAstroBytes": 68723,
     "largestAstroAsset": {
       "relative": "_astro/movies.05cd1z4s.css",
